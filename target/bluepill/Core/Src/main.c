@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -92,8 +92,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  char text[] = "Ciao bel!\n";
   while (1)
   {
+    HAL_Delay(500);
+    HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
