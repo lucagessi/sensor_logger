@@ -1,7 +1,7 @@
 #include "Serial.hpp"
 #include <cstring>
 
-uint32_t Serial::available(){
+uint32_t Serial::available() const{
     return this->_avail_in;
 }
 
@@ -13,6 +13,9 @@ bool Serial::appendChar(char c){
         return false;
     }
 }
+void Serial::in_flush(){
+    this->_avail_in = 0;
+}
 void Serial::reset(){
     this->_avail_in  = 0;
     this->_avail_out = 0;
@@ -20,6 +23,9 @@ void Serial::reset(){
 bool Serial::write(const char * str){
     uint32_t len = strlen(str);
     return len == this->write( str, len );
+}
+const char * Serial::in_buffer(){
+    return this->_in_buffer;
 }
 
 uint32_t Serial::read(char * str, uint32_t len){

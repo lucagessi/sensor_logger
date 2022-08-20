@@ -9,9 +9,11 @@
 class Serial{
     public: 
         virtual void init() = 0;
-        uint32_t available();
+        uint32_t available() const;
         uint32_t read(char *, uint32_t);
         bool write(const char *);
+        const char * in_buffer();
+        void in_flush();
         virtual uint32_t write(const char *, uint32_t) = 0;
     protected:
         bool appendChar(char);

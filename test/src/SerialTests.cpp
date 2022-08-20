@@ -76,3 +76,14 @@ TEST(SerialInputBuffer, EmptyDataAfterReadBackString) {
     ser->read(rc, str.length());
     EXPECT_EQ(ser->available() , 0) << "Serial input buffer not empty after read back" ;
 }
+
+TEST(SerialFakeReceive, FakeReceiveCorrectString) { 
+    const string str = "Hello world!" + std::to_string(56) + " and " + std::to_string(5.6f);
+    char rc[100];
+    SerialFake fake;
+    Serial *ser = &fake;
+    ser->init();
+    fake.receive(str);
+    ser->read(rc, str.length());
+    EXPECT_EQ(ser->available() , 0) << "Serial fake received back in not equal" ;
+}

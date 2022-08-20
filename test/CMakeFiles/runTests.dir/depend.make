@@ -4,9 +4,12 @@
 CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o: ../inc/Serial.hpp
 CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o: /home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp
 
-CMakeFiles/runTests.dir/src/MainTests.cpp.o: src/MainTests.cpp
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: ../inc/CommandsInterpreter.hpp
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: ../inc/Serial.hpp
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: src/CommandsInterpreterTests.cpp
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: inc/SerialFake.hpp
 
-CMakeFiles/runTests.dir/src/SerialFake.cpp.o: src/SerialFake.cpp
+CMakeFiles/runTests.dir/src/MainTests.cpp.o: src/MainTests.cpp
 
 CMakeFiles/runTests.dir/src/SerialTests.cpp.o: ../inc/Serial.hpp
 CMakeFiles/runTests.dir/src/SerialTests.cpp.o: src/SerialTests.cpp

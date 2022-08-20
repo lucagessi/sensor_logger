@@ -150,6 +150,33 @@ home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s:
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s
 .PHONY : home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s
 
+src/CommandsInterpreterTests.o: src/CommandsInterpreterTests.cpp.o
+
+.PHONY : src/CommandsInterpreterTests.o
+
+# target to build an object file
+src/CommandsInterpreterTests.cpp.o:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o
+.PHONY : src/CommandsInterpreterTests.cpp.o
+
+src/CommandsInterpreterTests.i: src/CommandsInterpreterTests.cpp.i
+
+.PHONY : src/CommandsInterpreterTests.i
+
+# target to preprocess a source file
+src/CommandsInterpreterTests.cpp.i:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.i
+.PHONY : src/CommandsInterpreterTests.cpp.i
+
+src/CommandsInterpreterTests.s: src/CommandsInterpreterTests.cpp.s
+
+.PHONY : src/CommandsInterpreterTests.s
+
+# target to generate assembly for a file
+src/CommandsInterpreterTests.cpp.s:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s
+.PHONY : src/CommandsInterpreterTests.cpp.s
+
 src/MainTests.o: src/MainTests.cpp.o
 
 .PHONY : src/MainTests.o
@@ -176,33 +203,6 @@ src/MainTests.s: src/MainTests.cpp.s
 src/MainTests.cpp.s:
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/MainTests.cpp.s
 .PHONY : src/MainTests.cpp.s
-
-src/SerialFake.o: src/SerialFake.cpp.o
-
-.PHONY : src/SerialFake.o
-
-# target to build an object file
-src/SerialFake.cpp.o:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/SerialFake.cpp.o
-.PHONY : src/SerialFake.cpp.o
-
-src/SerialFake.i: src/SerialFake.cpp.i
-
-.PHONY : src/SerialFake.i
-
-# target to preprocess a source file
-src/SerialFake.cpp.i:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/SerialFake.cpp.i
-.PHONY : src/SerialFake.cpp.i
-
-src/SerialFake.s: src/SerialFake.cpp.s
-
-.PHONY : src/SerialFake.s
-
-# target to generate assembly for a file
-src/SerialFake.cpp.s:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/SerialFake.cpp.s
-.PHONY : src/SerialFake.cpp.s
 
 src/SerialTests.o: src/SerialTests.cpp.o
 
@@ -243,12 +243,12 @@ help:
 	@echo "... home/luca/Documents/Embedded/sensor_logger/src/Serial.o"
 	@echo "... home/luca/Documents/Embedded/sensor_logger/src/Serial.i"
 	@echo "... home/luca/Documents/Embedded/sensor_logger/src/Serial.s"
+	@echo "... src/CommandsInterpreterTests.o"
+	@echo "... src/CommandsInterpreterTests.i"
+	@echo "... src/CommandsInterpreterTests.s"
 	@echo "... src/MainTests.o"
 	@echo "... src/MainTests.i"
 	@echo "... src/MainTests.s"
-	@echo "... src/SerialFake.o"
-	@echo "... src/SerialFake.i"
-	@echo "... src/SerialFake.s"
 	@echo "... src/SerialTests.o"
 	@echo "... src/SerialTests.i"
 	@echo "... src/SerialTests.s"

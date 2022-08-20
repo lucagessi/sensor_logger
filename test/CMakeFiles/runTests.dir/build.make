@@ -83,22 +83,9 @@ CMakeFiles/runTests.dir/src/MainTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/MainTests.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/test/src/MainTests.cpp -o CMakeFiles/runTests.dir/src/MainTests.cpp.s
 
-CMakeFiles/runTests.dir/src/SerialFake.cpp.o: CMakeFiles/runTests.dir/flags.make
-CMakeFiles/runTests.dir/src/SerialFake.cpp.o: src/SerialFake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/runTests.dir/src/SerialFake.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/SerialFake.cpp.o -c /home/luca/Documents/Embedded/sensor_logger/test/src/SerialFake.cpp
-
-CMakeFiles/runTests.dir/src/SerialFake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/src/SerialFake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Documents/Embedded/sensor_logger/test/src/SerialFake.cpp > CMakeFiles/runTests.dir/src/SerialFake.cpp.i
-
-CMakeFiles/runTests.dir/src/SerialFake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/SerialFake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/test/src/SerialFake.cpp -o CMakeFiles/runTests.dir/src/SerialFake.cpp.s
-
 CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o: CMakeFiles/runTests.dir/flags.make
 CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o: /home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o -c /home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp
 
 CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.i: cmake_force
@@ -109,20 +96,33 @@ CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp -o CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s
 
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: src/CommandsInterpreterTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o -c /home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp
+
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp > CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.i
+
+CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp -o CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s
+
 # Object files for target runTests
 runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/src/SerialTests.cpp.o" \
 "CMakeFiles/runTests.dir/src/MainTests.cpp.o" \
-"CMakeFiles/runTests.dir/src/SerialFake.cpp.o" \
-"CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o"
+"CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o" \
+"CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o"
 
 # External object files for target runTests
 runTests_EXTERNAL_OBJECTS =
 
 runTests: CMakeFiles/runTests.dir/src/SerialTests.cpp.o
 runTests: CMakeFiles/runTests.dir/src/MainTests.cpp.o
-runTests: CMakeFiles/runTests.dir/src/SerialFake.cpp.o
 runTests: CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o
+runTests: CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o
 runTests: CMakeFiles/runTests.dir/build.make
 runTests: /usr/lib/x86_64-linux-gnu/libgtest.a
 runTests: CMakeFiles/runTests.dir/link.txt
