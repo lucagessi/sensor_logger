@@ -8,6 +8,7 @@
 class CommandsInterpreter{
 
     public:
+        const uint32_t MAX_SINGLE_CAPT_SECS = 60;
         enum command_id{
             single, rcfg
         };
@@ -35,25 +36,24 @@ class CommandsInterpreter{
             bool rx = false;
             if( s >= 4 ){ // rcfg
                 if(strstr(this->_ser->in_buffer(), "rcfg") != NULL){
-                    rx = true;
                     this->cmd.type = rcfg;
                     this->_obs->notify(this->cmd);
                     _ser->in_flush();
+                    return;
                 }
-            }else if(!rx && s >= 8){  // single N
+            }
+            if((s >= 8)){  // single N
                 if(strstr(this->_ser->in_buffer(), "single ") != NULL){
                     sscanf( this->_ser->in_buffer(), "single %d", &(this->cmd.single.N) );            
-                    //if(this->cmd.single.N < 30){ // 30 seconds max
-                        rx = true;
+                    if(this->cmd.single.N <= MAX_SINGLE_CAPT_SECS){ 
                         this->cmd.type = single; 
                         this->_obs->notify(this->cmd);
                         _ser->in_flush();
-                    //}
+                        return;
+                    }
                 }
             }
-            if(!rx){
-                _ser->in_flush();
-            }
+            _ser->in_flush();
         }
     private:
         Serial *_ser;

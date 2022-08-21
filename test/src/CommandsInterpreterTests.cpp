@@ -11,16 +11,18 @@ class DummyCommandsObserver : public CommandsInterpreter::Obserser{
             this->rcfg_cmd_rx = 0;
         }
         void notify(const CommandsInterpreter::command_t &cmd) override{
+            last_cmd = cmd;
             if(cmd.type == CommandsInterpreter::command_id::rcfg){
                 this->rcfg_cmd_rx++;
                 std::cout << "Command received: rcfg" << std::endl;
             }else if(cmd.type == CommandsInterpreter::command_id::single){
-                this->single_cmd_rx = 0;
+                this->single_cmd_rx++;
                 std::cout << "Command received: single. N: " << std::to_string(cmd.single.N) << std::endl;
             }
         }
         uint32_t single_cmd_rx = 0;
         uint32_t rcfg_cmd_rx = 0;
+        CommandsInterpreter::command_t last_cmd;
 };
 
 TEST(CommandsInterpreter, WrongCommandResetInputBuffer) { 
@@ -40,7 +42,7 @@ TEST(CommandsInterpreter, SingleCommandReceived) {
     DummyCommandsObserver observer;
     CommandsInterpreter interpreter(ser, &observer);
     ser->init();
-    fake.receive("single 01");
+    fake.receive("single 50");
     interpreter.refresh();
     EXPECT_EQ(observer.single_cmd_rx , 1);
 }

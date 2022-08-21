@@ -1,0 +1,44 @@
+[==========] Running 10 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from SerialInputBuffer
+[ RUN      ] SerialInputBuffer.EmptyAfterInit
+[       OK ] SerialInputBuffer.EmptyAfterInit (0 ms)
+[ RUN      ] SerialInputBuffer.NotEmptyAfterPushChar
+[       OK ] SerialInputBuffer.NotEmptyAfterPushChar (0 ms)
+[ RUN      ] SerialInputBuffer.ReadEqualsPushed
+[       OK ] SerialInputBuffer.ReadEqualsPushed (0 ms)
+[ RUN      ] SerialInputBuffer.AvailableEqualsStringLengthPushed
+[       OK ] SerialInputBuffer.AvailableEqualsStringLengthPushed (0 ms)
+[ RUN      ] SerialInputBuffer.SameStringPushed
+[       OK ] SerialInputBuffer.SameStringPushed (0 ms)
+[ RUN      ] SerialInputBuffer.EmptyDataAfterReadBackString
+[       OK ] SerialInputBuffer.EmptyDataAfterReadBackString (0 ms)
+[----------] 6 tests from SerialInputBuffer (0 ms total)
+
+[----------] 1 test from SerialFakeReceive
+[ RUN      ] SerialFakeReceive.FakeReceiveCorrectString
+[       OK ] SerialFakeReceive.FakeReceiveCorrectString (0 ms)
+[----------] 1 test from SerialFakeReceive (0 ms total)
+
+[----------] 3 tests from CommandsInterpreter
+[ RUN      ] CommandsInterpreter.WrongCommandResetInputBuffer
+[       OK ] CommandsInterpreter.WrongCommandResetInputBuffer (0 ms)
+[ RUN      ] CommandsInterpreter.SingleCommandReceived
+/home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp:45: Failure
+Expected equality of these values:
+  observer.single_cmd_rx
+    Which is: 0
+  1
+[  FAILED  ] CommandsInterpreter.SingleCommandReceived (0 ms)
+[ RUN      ] CommandsInterpreter.RcfgCommandReceived
+Command received: rcfg
+[       OK ] CommandsInterpreter.RcfgCommandReceived (0 ms)
+[----------] 3 tests from CommandsInterpreter (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 3 test suites ran. (0 ms total)
+[  PASSED  ] 9 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] CommandsInterpreter.SingleCommandReceived
+
+ 1 FAILED TEST
