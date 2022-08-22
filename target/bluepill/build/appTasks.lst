@@ -1,0 +1,242 @@
+ARM GAS  /tmp/ccT5hXCN.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"appTasks.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.StartControllerTask.str1.4,"aMS",%progbits,1
+  18              		.align	2
+  19              	.LC0:
+  20 0000 4369616F 		.ascii	"Ciao bel from FreeRTOS controller task!\012\000"
+  20      2062656C 
+  20      2066726F 
+  20      6D204672 
+  20      65655254 
+  21              		.section	.text.StartControllerTask,"ax",%progbits
+  22              		.align	1
+  23              		.global	StartControllerTask
+  24              		.syntax unified
+  25              		.thumb
+  26              		.thumb_func
+  28              	StartControllerTask:
+  29              	.LVL0:
+  30              	.LFB70:
+  31              		.file 1 "Core/Src/appTasks.cpp"
+   1:Core/Src/appTasks.cpp **** 
+   2:Core/Src/appTasks.cpp **** extern "C"
+   3:Core/Src/appTasks.cpp **** {
+   4:Core/Src/appTasks.cpp ****   #include "FreeRTOS.h"
+   5:Core/Src/appTasks.cpp ****   #include "cmsis_os.h"
+   6:Core/Src/appTasks.cpp ****   #include "task.h"
+   7:Core/Src/appTasks.cpp **** 
+   8:Core/Src/appTasks.cpp ****   #include "main.h"
+   9:Core/Src/appTasks.cpp ****   #include "spi.h"
+  10:Core/Src/appTasks.cpp ****   #include "usart.h"
+  11:Core/Src/appTasks.cpp ****   #include "gpio.h"
+  12:Core/Src/appTasks.cpp ****   #include "string.h"
+  13:Core/Src/appTasks.cpp **** }
+  14:Core/Src/appTasks.cpp **** #include <stdio.h>
+  15:Core/Src/appTasks.cpp **** 
+  16:Core/Src/appTasks.cpp **** extern "C" void StartControllerTask(void *argument)
+  17:Core/Src/appTasks.cpp **** {
+  32              		.loc 1 17 1 view -0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 48
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		.loc 1 17 1 is_stmt 0 view .LVU1
+  37 0000 10B5     		push	{r4, lr}
+ARM GAS  /tmp/ccT5hXCN.s 			page 2
+
+
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 4, -8
+  41              		.cfi_offset 14, -4
+  42 0002 8CB0     		sub	sp, sp, #48
+  43              	.LCFI1:
+  44              		.cfi_def_cfa_offset 56
+  18:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+  45              		.loc 1 18 3 is_stmt 1 view .LVU2
+  46              	.LVL1:
+  19:Core/Src/appTasks.cpp ****   const char text[] = "Ciao bel from FreeRTOS controller task!\n";
+  47              		.loc 1 19 3 view .LVU3
+  48              		.loc 1 19 14 is_stmt 0 view .LVU4
+  49 0004 0DF1040C 		add	ip, sp, #4
+  50 0008 0D4C     		ldr	r4, .L4
+  51 000a 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+  52              	.LVL2:
+  53              		.loc 1 19 14 view .LVU5
+  54 000c ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+  55 0010 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+  56 0012 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+  57 0016 94E80700 		ldm	r4, {r0, r1, r2}
+  58 001a ACE80300 		stmia	ip!, {r0, r1}
+  59 001e 8CF80020 		strb	r2, [ip]
+  60              	.L2:
+  20:Core/Src/appTasks.cpp ****   for(;;)
+  61              		.loc 1 20 3 is_stmt 1 discriminator 1 view .LVU6
+  21:Core/Src/appTasks.cpp ****   {
+  22:Core/Src/appTasks.cpp ****     HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+  62              		.loc 1 22 5 discriminator 1 view .LVU7
+  63              		.loc 1 22 55 is_stmt 0 discriminator 1 view .LVU8
+  64 0022 01A8     		add	r0, sp, #4
+  65 0024 FFF7FEFF 		bl	strlen
+  66              	.LVL3:
+  67              		.loc 1 22 22 discriminator 1 view .LVU9
+  68 0028 4FF4FA73 		mov	r3, #500
+  69 002c 82B2     		uxth	r2, r0
+  70 002e 01A9     		add	r1, sp, #4
+  71 0030 0448     		ldr	r0, .L4+4
+  72 0032 FFF7FEFF 		bl	HAL_UART_Transmit
+  73              	.LVL4:
+  23:Core/Src/appTasks.cpp ****     vTaskDelay(xDelay);
+  74              		.loc 1 23 5 is_stmt 1 discriminator 1 view .LVU10
+  75              		.loc 1 23 15 is_stmt 0 discriminator 1 view .LVU11
+  76 0036 4FF4FA70 		mov	r0, #500
+  77 003a FFF7FEFF 		bl	vTaskDelay
+  78              	.LVL5:
+  20:Core/Src/appTasks.cpp ****   for(;;)
+  79              		.loc 1 20 3 is_stmt 1 discriminator 1 view .LVU12
+  80 003e F0E7     		b	.L2
+  81              	.L5:
+  82              		.align	2
+  83              	.L4:
+  84 0040 00000000 		.word	.LC0
+  85 0044 00000000 		.word	huart1
+  86              		.cfi_endproc
+  87              	.LFE70:
+ARM GAS  /tmp/ccT5hXCN.s 			page 3
+
+
+  89              		.section	.rodata.StartSensorTask.str1.4,"aMS",%progbits,1
+  90              		.align	2
+  91              	.LC1:
+  92 0000 4369616F 		.ascii	"Ciao bel from FreeRTOS sensor task!\012\000"
+  92      2062656C 
+  92      2066726F 
+  92      6D204672 
+  92      65655254 
+  93              		.section	.text.StartSensorTask,"ax",%progbits
+  94              		.align	1
+  95              		.global	StartSensorTask
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+ 100              	StartSensorTask:
+ 101              	.LVL6:
+ 102              	.LFB71:
+  24:Core/Src/appTasks.cpp ****   }
+  25:Core/Src/appTasks.cpp **** }
+  26:Core/Src/appTasks.cpp **** 
+  27:Core/Src/appTasks.cpp **** extern "C" void StartSensorTask(void *argument)
+  28:Core/Src/appTasks.cpp **** {
+ 103              		.loc 1 28 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 40
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		.loc 1 28 1 is_stmt 0 view .LVU14
+ 108 0000 10B5     		push	{r4, lr}
+ 109              	.LCFI2:
+ 110              		.cfi_def_cfa_offset 8
+ 111              		.cfi_offset 4, -8
+ 112              		.cfi_offset 14, -4
+ 113 0002 8AB0     		sub	sp, sp, #40
+ 114              	.LCFI3:
+ 115              		.cfi_def_cfa_offset 48
+  29:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 116              		.loc 1 29 3 is_stmt 1 view .LVU15
+ 117              	.LVL7:
+  30:Core/Src/appTasks.cpp ****   const char text[] = "Ciao bel from FreeRTOS sensor task!\n";
+ 118              		.loc 1 30 3 view .LVU16
+ 119              		.loc 1 30 14 is_stmt 0 view .LVU17
+ 120 0004 EC46     		mov	ip, sp
+ 121 0006 0E4C     		ldr	r4, .L9
+ 122 0008 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 123              	.LVL8:
+ 124              		.loc 1 30 14 view .LVU18
+ 125 000a ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+ 126 000e 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 127 0010 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+ 128 0014 94E80300 		ldm	r4, {r0, r1}
+ 129 0018 4CF8040B 		str	r0, [ip], #4
+ 130 001c 8CF80010 		strb	r1, [ip]
+ 131              	.L7:
+  31:Core/Src/appTasks.cpp ****   for(;;)
+ 132              		.loc 1 31 3 is_stmt 1 discriminator 1 view .LVU19
+  32:Core/Src/appTasks.cpp ****   {
+  33:Core/Src/appTasks.cpp ****     HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+ARM GAS  /tmp/ccT5hXCN.s 			page 4
+
+
+ 133              		.loc 1 33 5 discriminator 1 view .LVU20
+ 134              		.loc 1 33 55 is_stmt 0 discriminator 1 view .LVU21
+ 135 0020 6846     		mov	r0, sp
+ 136 0022 FFF7FEFF 		bl	strlen
+ 137              	.LVL9:
+ 138              		.loc 1 33 22 discriminator 1 view .LVU22
+ 139 0026 4FF4FA73 		mov	r3, #500
+ 140 002a 82B2     		uxth	r2, r0
+ 141 002c 6946     		mov	r1, sp
+ 142 002e 0548     		ldr	r0, .L9+4
+ 143 0030 FFF7FEFF 		bl	HAL_UART_Transmit
+ 144              	.LVL10:
+  34:Core/Src/appTasks.cpp ****     vTaskDelay(xDelay);
+ 145              		.loc 1 34 5 is_stmt 1 discriminator 1 view .LVU23
+ 146              		.loc 1 34 15 is_stmt 0 discriminator 1 view .LVU24
+ 147 0034 4FF4FA70 		mov	r0, #500
+ 148 0038 FFF7FEFF 		bl	vTaskDelay
+ 149              	.LVL11:
+  31:Core/Src/appTasks.cpp ****   for(;;)
+ 150              		.loc 1 31 3 is_stmt 1 discriminator 1 view .LVU25
+ 151 003c F0E7     		b	.L7
+ 152              	.L10:
+ 153 003e 00BF     		.align	2
+ 154              	.L9:
+ 155 0040 00000000 		.word	.LC1
+ 156 0044 00000000 		.word	huart1
+ 157              		.cfi_endproc
+ 158              	.LFE71:
+ 160              		.text
+ 161              	.Letext0:
+ 162              		.file 2 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h"
+ 163              		.file 3 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h"
+ 164              		.file 4 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 165              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 166              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 167              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 168              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 169              		.file 9 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 170              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 171              		.file 11 "Core/Inc/usart.h"
+ARM GAS  /tmp/ccT5hXCN.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 appTasks.cpp
+     /tmp/ccT5hXCN.s:18     .rodata.StartControllerTask.str1.4:0000000000000000 $d
+     /tmp/ccT5hXCN.s:22     .text.StartControllerTask:0000000000000000 $t
+     /tmp/ccT5hXCN.s:28     .text.StartControllerTask:0000000000000000 StartControllerTask
+     /tmp/ccT5hXCN.s:84     .text.StartControllerTask:0000000000000040 $d
+     /tmp/ccT5hXCN.s:90     .rodata.StartSensorTask.str1.4:0000000000000000 $d
+     /tmp/ccT5hXCN.s:94     .text.StartSensorTask:0000000000000000 $t
+     /tmp/ccT5hXCN.s:100    .text.StartSensorTask:0000000000000000 StartSensorTask
+     /tmp/ccT5hXCN.s:155    .text.StartSensorTask:0000000000000040 $d
+
+UNDEFINED SYMBOLS
+strlen
+HAL_UART_Transmit
+vTaskDelay
+huart1
