@@ -38,3 +38,7 @@ Return actual module configuration in the format:
 - format: float m/s<sup>2</sup>. Default value for format which is float per axis as m/s<sup>2</sup>
 
 ## Parameters list
+
+## TODO
+- [ ] CMake file for stm32 project and other
+- [ ] Firmware freertos tasks interaction
