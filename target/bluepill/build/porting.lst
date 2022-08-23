@@ -1,0 +1,238 @@
+ARM GAS  /tmp/ccLZwotj.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"porting.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.LIS3DH_ReadReg,"ax",%progbits
+  18              		.align	1
+  19              		.global	LIS3DH_ReadReg
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	LIS3DH_ReadReg:
+  25              	.LVL0:
+  26              	.LFB65:
+  27              		.file 1 "Core/Src/porting.c"
+   1:Core/Src/porting.c **** #include "spi.h"
+   2:Core/Src/porting.c **** #include "stdint.h"
+   3:Core/Src/porting.c **** #include "gpio.h"
+   4:Core/Src/porting.c **** /*******************************************************************************
+   5:Core/Src/porting.c **** * Function Name		: LIS3DH_ReadReg
+   6:Core/Src/porting.c **** * Description		: Generic Reading function. It must be fullfilled with either
+   7:Core/Src/porting.c **** *			: I2C or SPI reading functions					
+   8:Core/Src/porting.c **** * Input			: Register Address
+   9:Core/Src/porting.c **** * Output		: Data REad
+  10:Core/Src/porting.c **** * Return		: None
+  11:Core/Src/porting.c **** *******************************************************************************/
+  12:Core/Src/porting.c **** uint8_t LIS3DH_ReadReg(uint8_t Reg, uint8_t* Data){
+  28              		.loc 1 12 51 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 12 51 is_stmt 0 view .LVU1
+  33 0000 30B5     		push	{r4, r5, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 12
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39 0002 85B0     		sub	sp, sp, #20
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 32
+  42 0004 0C46     		mov	r4, r1
+  13:Core/Src/porting.c ****     uint8_t tx[2] = { Reg | 0x80, 0xFF }; // Register and dummy data
+  43              		.loc 1 13 5 is_stmt 1 view .LVU2
+  44              		.loc 1 13 13 is_stmt 0 view .LVU3
+  45 0006 60F07F00 		orn	r0, r0, #127
+ARM GAS  /tmp/ccLZwotj.s 			page 2
+
+
+  46              	.LVL1:
+  47              		.loc 1 13 13 view .LVU4
+  48 000a 8DF80C00 		strb	r0, [sp, #12]
+  49 000e FF23     		movs	r3, #255
+  50 0010 8DF80D30 		strb	r3, [sp, #13]
+  14:Core/Src/porting.c ****     uint8_t rx[2];
+  51              		.loc 1 14 5 is_stmt 1 view .LVU5
+  15:Core/Src/porting.c ****     HAL_GPIO_WritePin( SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+  52              		.loc 1 15 5 view .LVU6
+  53 0014 0C4D     		ldr	r5, .L3
+  54 0016 0022     		movs	r2, #0
+  55 0018 1021     		movs	r1, #16
+  56              	.LVL2:
+  57              		.loc 1 15 5 is_stmt 0 view .LVU7
+  58 001a 2846     		mov	r0, r5
+  59 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  60              	.LVL3:
+  16:Core/Src/porting.c ****     HAL_SPI_TransmitReceive( &hspi1, tx, rx, 2, 100 );
+  61              		.loc 1 16 5 is_stmt 1 view .LVU8
+  62 0020 6423     		movs	r3, #100
+  63 0022 0093     		str	r3, [sp]
+  64 0024 0223     		movs	r3, #2
+  65 0026 02AA     		add	r2, sp, #8
+  66 0028 03A9     		add	r1, sp, #12
+  67 002a 0848     		ldr	r0, .L3+4
+  68 002c FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+  69              	.LVL4:
+  17:Core/Src/porting.c ****     HAL_GPIO_WritePin( SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+  70              		.loc 1 17 5 view .LVU9
+  71 0030 0122     		movs	r2, #1
+  72 0032 1021     		movs	r1, #16
+  73 0034 2846     		mov	r0, r5
+  74 0036 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  75              	.LVL5:
+  18:Core/Src/porting.c ****     *Data= rx[1];
+  76              		.loc 1 18 5 view .LVU10
+  77              		.loc 1 18 14 is_stmt 0 view .LVU11
+  78 003a 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
+  79              		.loc 1 18 10 view .LVU12
+  80 003e 2370     		strb	r3, [r4]
+  19:Core/Src/porting.c ****     return 1;
+  81              		.loc 1 19 5 is_stmt 1 view .LVU13
+  20:Core/Src/porting.c **** }
+  82              		.loc 1 20 1 is_stmt 0 view .LVU14
+  83 0040 0120     		movs	r0, #1
+  84 0042 05B0     		add	sp, sp, #20
+  85              	.LCFI2:
+  86              		.cfi_def_cfa_offset 12
+  87              		@ sp needed
+  88 0044 30BD     		pop	{r4, r5, pc}
+  89              	.LVL6:
+  90              	.L4:
+  91              		.loc 1 20 1 view .LVU15
+  92 0046 00BF     		.align	2
+  93              	.L3:
+  94 0048 00080140 		.word	1073809408
+  95 004c 00000000 		.word	hspi1
+ARM GAS  /tmp/ccLZwotj.s 			page 3
+
+
+  96              		.cfi_endproc
+  97              	.LFE65:
+  99              		.section	.text.LIS3DH_WriteReg,"ax",%progbits
+ 100              		.align	1
+ 101              		.global	LIS3DH_WriteReg
+ 102              		.syntax unified
+ 103              		.thumb
+ 104              		.thumb_func
+ 106              	LIS3DH_WriteReg:
+ 107              	.LVL7:
+ 108              	.LFB66:
+  21:Core/Src/porting.c **** 
+  22:Core/Src/porting.c **** 
+  23:Core/Src/porting.c **** /*******************************************************************************
+  24:Core/Src/porting.c **** * Function Name		: LIS3DH_WriteReg
+  25:Core/Src/porting.c **** * Description		: Generic Writing function. It must be fullfilled with either
+  26:Core/Src/porting.c **** *			: I2C or SPI writing function
+  27:Core/Src/porting.c **** * Input			: Register Address, Data to be written
+  28:Core/Src/porting.c **** * Output		: None
+  29:Core/Src/porting.c **** * Return		: None
+  30:Core/Src/porting.c **** *******************************************************************************/
+  31:Core/Src/porting.c **** uint8_t LIS3DH_WriteReg(uint8_t WriteAddr, uint8_t Data){
+ 109              		.loc 1 31 57 is_stmt 1 view -0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 8
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		.loc 1 31 57 is_stmt 0 view .LVU17
+ 114 0000 10B5     		push	{r4, lr}
+ 115              	.LCFI3:
+ 116              		.cfi_def_cfa_offset 8
+ 117              		.cfi_offset 4, -8
+ 118              		.cfi_offset 14, -4
+ 119 0002 82B0     		sub	sp, sp, #8
+ 120              	.LCFI4:
+ 121              		.cfi_def_cfa_offset 16
+  32:Core/Src/porting.c ****     uint8_t tx[2] = { WriteAddr & 0x7F, Data }; // Register and data to write
+ 122              		.loc 1 32 5 is_stmt 1 view .LVU18
+ 123              		.loc 1 32 33 is_stmt 0 view .LVU19
+ 124 0004 00F07F00 		and	r0, r0, #127
+ 125              	.LVL8:
+ 126              		.loc 1 32 13 view .LVU20
+ 127 0008 8DF80400 		strb	r0, [sp, #4]
+ 128 000c 8DF80510 		strb	r1, [sp, #5]
+  33:Core/Src/porting.c ****     HAL_GPIO_WritePin( SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+ 129              		.loc 1 33 5 is_stmt 1 view .LVU21
+ 130 0010 094C     		ldr	r4, .L7
+ 131 0012 0022     		movs	r2, #0
+ 132 0014 1021     		movs	r1, #16
+ 133              	.LVL9:
+ 134              		.loc 1 33 5 is_stmt 0 view .LVU22
+ 135 0016 2046     		mov	r0, r4
+ 136 0018 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 137              	.LVL10:
+  34:Core/Src/porting.c ****     HAL_SPI_Transmit( &hspi1, tx, 2, 100 );
+ 138              		.loc 1 34 5 is_stmt 1 view .LVU23
+ 139 001c 6423     		movs	r3, #100
+ 140 001e 0222     		movs	r2, #2
+ARM GAS  /tmp/ccLZwotj.s 			page 4
+
+
+ 141 0020 01A9     		add	r1, sp, #4
+ 142 0022 0648     		ldr	r0, .L7+4
+ 143 0024 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 144              	.LVL11:
+  35:Core/Src/porting.c ****     HAL_GPIO_WritePin( SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+ 145              		.loc 1 35 5 view .LVU24
+ 146 0028 0122     		movs	r2, #1
+ 147 002a 1021     		movs	r1, #16
+ 148 002c 2046     		mov	r0, r4
+ 149 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 150              	.LVL12:
+  36:Core/Src/porting.c ****     return 1;
+ 151              		.loc 1 36 5 view .LVU25
+  37:Core/Src/porting.c **** }...
+ 152              		.loc 1 37 1 is_stmt 0 view .LVU26
+ 153 0032 0120     		movs	r0, #1
+ 154 0034 02B0     		add	sp, sp, #8
+ 155              	.LCFI5:
+ 156              		.cfi_def_cfa_offset 8
+ 157              		@ sp needed
+ 158 0036 10BD     		pop	{r4, pc}
+ 159              	.L8:
+ 160              		.align	2
+ 161              	.L7:
+ 162 0038 00080140 		.word	1073809408
+ 163 003c 00000000 		.word	hspi1
+ 164              		.cfi_endproc
+ 165              	.LFE66:
+ 167              		.text
+ 168              	.Letext0:
+ 169              		.file 2 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h"
+ 170              		.file 3 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h"
+ 171              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 172              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 173              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 174              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 175              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
+ 176              		.file 9 "Core/Inc/spi.h"
+ARM GAS  /tmp/ccLZwotj.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 porting.c
+     /tmp/ccLZwotj.s:18     .text.LIS3DH_ReadReg:0000000000000000 $t
+     /tmp/ccLZwotj.s:24     .text.LIS3DH_ReadReg:0000000000000000 LIS3DH_ReadReg
+     /tmp/ccLZwotj.s:94     .text.LIS3DH_ReadReg:0000000000000048 $d
+     /tmp/ccLZwotj.s:100    .text.LIS3DH_WriteReg:0000000000000000 $t
+     /tmp/ccLZwotj.s:106    .text.LIS3DH_WriteReg:0000000000000000 LIS3DH_WriteReg
+     /tmp/ccLZwotj.s:162    .text.LIS3DH_WriteReg:0000000000000038 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_SPI_TransmitReceive
+hspi1
+HAL_SPI_Transmit

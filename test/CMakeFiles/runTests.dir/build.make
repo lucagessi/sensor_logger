@@ -96,9 +96,22 @@ CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp -o CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s
 
+CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o: /home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o -c /home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp
+
+CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp > CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i
+
+CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp -o CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s
+
 CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: CMakeFiles/runTests.dir/flags.make
 CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o: src/CommandsInterpreterTests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o -c /home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp
 
 CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.i: cmake_force
@@ -109,12 +122,27 @@ CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp -o CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.s
 
+CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o: src/AccelerometerTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o -c /home/luca/Documents/Embedded/sensor_logger/test/src/AccelerometerTests.cpp
+
+CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Documents/Embedded/sensor_logger/test/src/AccelerometerTests.cpp > CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.i
+
+CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Documents/Embedded/sensor_logger/test/src/AccelerometerTests.cpp -o CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.s
+
 # Object files for target runTests
 runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/src/SerialTests.cpp.o" \
 "CMakeFiles/runTests.dir/src/MainTests.cpp.o" \
 "CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o" \
-"CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o"
+"CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o" \
+"CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o" \
+"CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o"
 
 # External object files for target runTests
 runTests_EXTERNAL_OBJECTS =
@@ -122,11 +150,13 @@ runTests_EXTERNAL_OBJECTS =
 runTests: CMakeFiles/runTests.dir/src/SerialTests.cpp.o
 runTests: CMakeFiles/runTests.dir/src/MainTests.cpp.o
 runTests: CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o
+runTests: CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o
 runTests: CMakeFiles/runTests.dir/src/CommandsInterpreterTests.cpp.o
+runTests: CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o
 runTests: CMakeFiles/runTests.dir/build.make
 runTests: /usr/lib/x86_64-linux-gnu/libgtest.a
 runTests: CMakeFiles/runTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luca/Documents/Embedded/sensor_logger/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable runTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

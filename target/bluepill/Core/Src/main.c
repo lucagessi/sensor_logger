@@ -90,8 +90,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_SPI1_Init();
+  HAL_GPIO_WritePin( SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
   /* USER CODE BEGIN 2 */
-
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -104,11 +104,10 @@ int main(void)
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  char text[] = "Ciao bel!\n";
+
   while (1)
   {
-    HAL_Delay(500);
-    HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

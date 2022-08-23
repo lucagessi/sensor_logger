@@ -123,6 +123,33 @@ runTests/fast:
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
 .PHONY : runTests/fast
 
+home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.o: home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o
+
+.PHONY : home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.o
+
+# target to build an object file
+home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o
+.PHONY : home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.o
+
+home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.i: home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i
+
+.PHONY : home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.i
+
+# target to preprocess a source file
+home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i
+.PHONY : home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.i
+
+home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.s: home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s
+
+.PHONY : home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.s
+
+# target to generate assembly for a file
+home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s
+.PHONY : home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp.s
+
 home/luca/Documents/Embedded/sensor_logger/src/Serial.o: home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.o
 
 .PHONY : home/luca/Documents/Embedded/sensor_logger/src/Serial.o
@@ -149,6 +176,33 @@ home/luca/Documents/Embedded/sensor_logger/src/Serial.s: home/luca/Documents/Emb
 home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s:
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s
 .PHONY : home/luca/Documents/Embedded/sensor_logger/src/Serial.cpp.s
+
+src/AccelerometerTests.o: src/AccelerometerTests.cpp.o
+
+.PHONY : src/AccelerometerTests.o
+
+# target to build an object file
+src/AccelerometerTests.cpp.o:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.o
+.PHONY : src/AccelerometerTests.cpp.o
+
+src/AccelerometerTests.i: src/AccelerometerTests.cpp.i
+
+.PHONY : src/AccelerometerTests.i
+
+# target to preprocess a source file
+src/AccelerometerTests.cpp.i:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.i
+.PHONY : src/AccelerometerTests.cpp.i
+
+src/AccelerometerTests.s: src/AccelerometerTests.cpp.s
+
+.PHONY : src/AccelerometerTests.s
+
+# target to generate assembly for a file
+src/AccelerometerTests.cpp.s:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/src/AccelerometerTests.cpp.s
+.PHONY : src/AccelerometerTests.cpp.s
 
 src/CommandsInterpreterTests.o: src/CommandsInterpreterTests.cpp.o
 
@@ -240,9 +294,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... runTests"
+	@echo "... home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.o"
+	@echo "... home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.i"
+	@echo "... home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.s"
 	@echo "... home/luca/Documents/Embedded/sensor_logger/src/Serial.o"
 	@echo "... home/luca/Documents/Embedded/sensor_logger/src/Serial.i"
 	@echo "... home/luca/Documents/Embedded/sensor_logger/src/Serial.s"
+	@echo "... src/AccelerometerTests.o"
+	@echo "... src/AccelerometerTests.i"
+	@echo "... src/AccelerometerTests.s"
 	@echo "... src/CommandsInterpreterTests.o"
 	@echo "... src/CommandsInterpreterTests.i"
 	@echo "... src/CommandsInterpreterTests.s"

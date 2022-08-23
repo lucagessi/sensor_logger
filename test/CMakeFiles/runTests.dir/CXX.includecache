@@ -6,35 +6,13 @@
 
 #IncludeRegexTransform: 
 
-../inc/CommandsInterpreter.hpp
-Serial.hpp
-../inc/Serial.hpp
+../inc/AccelerometerSensor.hpp
+stdint.h
+../inc/stdint.h
+
+/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.cpp
+AccelerometerSensor.hpp
+/home/luca/Documents/Embedded/sensor_logger/src/AccelerometerSensor.hpp
 cstring
--
-stdio.h
--
-
-../inc/Serial.hpp
-cstdint
--
-
-/home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreterTests.cpp
-CommandsInterpreter.hpp
-/home/luca/Documents/Embedded/sensor_logger/test/src/CommandsInterpreter.hpp
-gtest/gtest.h
--
-SerialFake.hpp
-/home/luca/Documents/Embedded/sensor_logger/test/src/SerialFake.hpp
-iostream
--
-string
--
-
-inc/SerialFake.hpp
-Serial.hpp
-inc/Serial.hpp
-iostream
--
-string
 -
 

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccfwxT0K.s 			page 1
+ARM GAS  /tmp/ccxSlq5K.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
   30:Core/Src/spi.c **** void MX_SPI1_Init(void)
   31:Core/Src/spi.c **** {
   27              		.loc 1 31 1 view -0
-ARM GAS  /tmp/ccfwxT0K.s 			page 2
+ARM GAS  /tmp/ccxSlq5K.s 			page 2
 
 
   28              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
   48:Core/Src/spi.c ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   66              		.loc 1 48 3 is_stmt 1 view .LVU17
   67              		.loc 1 48 23 is_stmt 0 view .LVU18
-ARM GAS  /tmp/ccfwxT0K.s 			page 3
+ARM GAS  /tmp/ccxSlq5K.s 			page 3
 
 
   68 0022 0362     		str	r3, [r0, #32]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
  111              	.LFB66:
   61:Core/Src/spi.c **** 
   62:Core/Src/spi.c **** void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
-ARM GAS  /tmp/ccfwxT0K.s 			page 4
+ARM GAS  /tmp/ccxSlq5K.s 			page 4
 
 
   63:Core/Src/spi.c **** {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
   87:Core/Src/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
   88:Core/Src/spi.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
   89:Core/Src/spi.c **** 
-ARM GAS  /tmp/ccfwxT0K.s 			page 5
+ARM GAS  /tmp/ccxSlq5K.s 			page 5
 
 
   90:Core/Src/spi.c ****     /* SPI1 interrupt Init */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
  178 003a 03F00403 		and	r3, r3, #4
  179 003e 0193     		str	r3, [sp, #4]
   74:Core/Src/spi.c ****     /**SPI1 GPIO Configuration
-ARM GAS  /tmp/ccfwxT0K.s 			page 6
+ARM GAS  /tmp/ccxSlq5K.s 			page 6
 
 
  180              		.loc 1 74 5 view .LVU49
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
  218 0066 FFF7FEFF 		bl	HAL_GPIO_Init
  219              	.LVL7:
   91:Core/Src/spi.c ****     HAL_NVIC_EnableIRQ(SPI1_IRQn);
-ARM GAS  /tmp/ccfwxT0K.s 			page 7
+ARM GAS  /tmp/ccxSlq5K.s 			page 7
 
 
  220              		.loc 1 91 5 view .LVU66
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
  104:Core/Src/spi.c ****   /* USER CODE BEGIN SPI1_MspDeInit 0 */
  105:Core/Src/spi.c **** 
  106:Core/Src/spi.c ****   /* USER CODE END SPI1_MspDeInit 0 */
-ARM GAS  /tmp/ccfwxT0K.s 			page 8
+ARM GAS  /tmp/ccxSlq5K.s 			page 8
 
 
  107:Core/Src/spi.c ****     /* Peripheral clock disable */
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
  303              		.set	.LANCHOR0,. + 0
  306              	hspi1:
  307 0000 00000000 		.space	88
-ARM GAS  /tmp/ccfwxT0K.s 			page 9
+ARM GAS  /tmp/ccxSlq5K.s 			page 9
 
 
  307      00000000 
@@ -497,22 +497,22 @@ ARM GAS  /tmp/ccfwxT0K.s 			page 1
  317              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
  318              		.file 10 "Core/Inc/main.h"
  319              		.file 11 "Core/Inc/spi.h"
-ARM GAS  /tmp/ccfwxT0K.s 			page 10
+ARM GAS  /tmp/ccxSlq5K.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 spi.c
-     /tmp/ccfwxT0K.s:18     .text.MX_SPI1_Init:0000000000000000 $t
-     /tmp/ccfwxT0K.s:24     .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
-     /tmp/ccfwxT0K.s:97     .text.MX_SPI1_Init:000000000000003c $d
-     /tmp/ccfwxT0K.s:103    .text.HAL_SPI_MspInit:0000000000000000 $t
-     /tmp/ccfwxT0K.s:109    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
-     /tmp/ccfwxT0K.s:235    .text.HAL_SPI_MspInit:000000000000007c $d
-     /tmp/ccfwxT0K.s:241    .text.HAL_SPI_MspDeInit:0000000000000000 $t
-     /tmp/ccfwxT0K.s:247    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
-     /tmp/ccfwxT0K.s:294    .text.HAL_SPI_MspDeInit:0000000000000028 $d
-     /tmp/ccfwxT0K.s:306    .bss.hspi1:0000000000000000 hspi1
-     /tmp/ccfwxT0K.s:302    .bss.hspi1:0000000000000000 $d
+     /tmp/ccxSlq5K.s:18     .text.MX_SPI1_Init:0000000000000000 $t
+     /tmp/ccxSlq5K.s:24     .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
+     /tmp/ccxSlq5K.s:97     .text.MX_SPI1_Init:000000000000003c $d
+     /tmp/ccxSlq5K.s:103    .text.HAL_SPI_MspInit:0000000000000000 $t
+     /tmp/ccxSlq5K.s:109    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
+     /tmp/ccxSlq5K.s:235    .text.HAL_SPI_MspInit:000000000000007c $d
+     /tmp/ccxSlq5K.s:241    .text.HAL_SPI_MspDeInit:0000000000000000 $t
+     /tmp/ccxSlq5K.s:247    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
+     /tmp/ccxSlq5K.s:294    .text.HAL_SPI_MspDeInit:0000000000000028 $d
+     /tmp/ccxSlq5K.s:306    .bss.hspi1:0000000000000000 hspi1
+     /tmp/ccxSlq5K.s:302    .bss.hspi1:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

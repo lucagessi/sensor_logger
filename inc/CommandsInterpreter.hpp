@@ -45,7 +45,7 @@ class CommandsInterpreter{
             if((s >= 8)){  // single N
                 if(strstr(this->_ser->in_buffer(), "single ") != NULL){
                     sscanf( this->_ser->in_buffer(), "single %d", &(this->cmd.single.N) );            
-                    if(this->cmd.single.N <= MAX_SINGLE_CAPT_SECS){ 
+                    if(this->cmd.single.N <= MAX_SINGLE_CAPT_SECS){ // 30 seconds max
                         this->cmd.type = single; 
                         this->_obs->notify(this->cmd);
                         _ser->in_flush();
