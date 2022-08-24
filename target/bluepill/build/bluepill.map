@@ -16,8 +16,6 @@ Archive member included to satisfy reference by file (symbol)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (memset)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-on_exit_args.o)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-cxa_atexit.o) (__on_exit_args)
-/home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
-                              build/appTasks.o (sprintf)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
                               build/appTasks.o (sscanf)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
@@ -32,12 +30,8 @@ Archive member included to satisfy reference by file (symbol)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o) (_close_r)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lseekr.o)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o) (_lseek_r)
-/home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o) (_svfprintf_r)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o) (__ssvfscanf_r)
-/home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o) (_scanf_chars)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-readr.o)
@@ -65,15 +59,13 @@ Archive member included to satisfy reference by file (symbol)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o) (__retarget_lock_init_recursive)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o) (memchr)
-/home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o) (memmove)
+                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o) (memchr)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o) (_free_r)
+                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o) (_free_r)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o) (_malloc_r)
+                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o) (_malloc_r)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
-                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+                              /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o) (_realloc_r)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
                               /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
@@ -1574,10 +1566,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/AccelerometerSensor.o
  .data          0x0000000000000000        0x0 build/AccelerometerSensor.o
  .bss           0x0000000000000000        0x0 build/AccelerometerSensor.o
- .text._ZN19AccelerometerSensor7refreshEv
-                0x0000000000000000       0x6c build/AccelerometerSensor.o
- .text._ZN19AccelerometerSensor9getConfigEv
-                0x0000000000000000        0xe build/AccelerometerSensor.o
  .text._ZN19AccelerometerSensor10fullBufferEv
                 0x0000000000000000        0xe build/AccelerometerSensor.o
  .text._ZN19AccelerometerSensor11emptyBufferEv
@@ -1632,11 +1620,6 @@ Discarded input sections
                 0x0000000000000000        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-on_exit_args.o)
  .ARM.attributes
                 0x0000000000000000       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-on_exit_args.o)
- .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
- .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
- .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
- .text._sprintf_r
-                0x0000000000000000       0x38 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
  .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
  .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
  .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
@@ -1680,17 +1663,9 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lseekr.o)
  .ARM.attributes
                 0x0000000000000000       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lseekr.o)
- .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
- .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
- .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
- .text.__ssprint_r
-                0x0000000000000000       0xf6 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
  .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
  .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
  .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
- .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
  .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
  .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
@@ -1821,9 +1796,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
  .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
  .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
- .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
- .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
- .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
  .text          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
  .data          0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
  .bss           0x0000000000000000        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
@@ -2008,7 +1980,7 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                 0x0000000008000000                g_pfnVectors
                 0x000000000800010c                . = ALIGN (0x4)
 
-.text           0x0000000008000110     0x6058
+.text           0x0000000008000110     0x59d0
                 0x0000000008000110                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000110       0x40 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -2567,482 +2539,464 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                 0x00000000080047fc                HAL_GPIO_EXTI_Callback
  *fill*         0x00000000080047fe        0x2 
  .text.StartControllerTask
-                0x0000000008004800      0x150 build/appTasks.o
+                0x0000000008004800       0xfc build/appTasks.o
                 0x0000000008004800                StartControllerTask
  .text.StartSensorTask
-                0x0000000008004950       0x2c build/appTasks.o
-                0x0000000008004950                StartSensorTask
+                0x00000000080048fc       0x34 build/appTasks.o
+                0x00000000080048fc                StartSensorTask
  .text.HAL_UART_RxCpltCallback
-                0x000000000800497c       0x24 build/appTasks.o
-                0x000000000800497c                HAL_UART_RxCpltCallback
+                0x0000000008004930       0x24 build/appTasks.o
+                0x0000000008004930                HAL_UART_RxCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x00000000080049a0       0x18 build/appTasks.o
-                0x00000000080049a0                HAL_UART_ErrorCallback
+                0x0000000008004954       0x18 build/appTasks.o
+                0x0000000008004954                HAL_UART_ErrorCallback
  .text.StartSerialTask
-                0x00000000080049b8      0x130 build/appTasks.o
-                0x00000000080049b8                StartSerialTask
+                0x000000000800496c       0xd0 build/appTasks.o
+                0x000000000800496c                StartSerialTask
  .text._GLOBAL__sub_I_HAL_GPIO_EXTI_Callback
-                0x0000000008004ae8        0xe build/appTasks.o
+                0x0000000008004a3c        0xe build/appTasks.o
+ *fill*         0x0000000008004a4a        0x2 
+ .text._ZN19AccelerometerSensor7refreshEv
+                0x0000000008004a4c       0x6c build/AccelerometerSensor.o
+                0x0000000008004a4c                AccelerometerSensor::refresh()
  .text._ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE
-                0x0000000008004af6        0xe build/AccelerometerSensor.o
-                0x0000000008004af6                AccelerometerSensor::setConfig(AccelerometerSensor::accelerometer_config_t const&)
+                0x0000000008004ab8        0xe build/AccelerometerSensor.o
+                0x0000000008004ab8                AccelerometerSensor::setConfig(AccelerometerSensor::accelerometer_config_t const&)
+ .text._ZN19AccelerometerSensor9getConfigEv
+                0x0000000008004ac6        0xe build/AccelerometerSensor.o
+                0x0000000008004ac6                AccelerometerSensor::getConfig()
  .text._ZN19AccelerometerSensor9availableEv
-                0x0000000008004b04       0x14 build/AccelerometerSensor.o
-                0x0000000008004b04                AccelerometerSensor::available()
+                0x0000000008004ad4       0x14 build/AccelerometerSensor.o
+                0x0000000008004ad4                AccelerometerSensor::available()
  .text._ZN19AccelerometerSensor4readEPNS_9samples_tEm
-                0x0000000008004b18       0x58 build/AccelerometerSensor.o
-                0x0000000008004b18                AccelerometerSensor::read(AccelerometerSensor::samples_t*, unsigned long)
+                0x0000000008004ae8       0x58 build/AccelerometerSensor.o
+                0x0000000008004ae8                AccelerometerSensor::read(AccelerometerSensor::samples_t*, unsigned long)
  .text._ZNK6Serial9availableEv
-                0x0000000008004b70        0x6 build/Serial.o
-                0x0000000008004b70                Serial::available() const
+                0x0000000008004b40        0x6 build/Serial.o
+                0x0000000008004b40                Serial::available() const
  .text._ZN6Serial10appendCharEc
-                0x0000000008004b76       0x20 build/Serial.o
-                0x0000000008004b76                Serial::appendChar(char)
+                0x0000000008004b46       0x20 build/Serial.o
+                0x0000000008004b46                Serial::appendChar(char)
  .text._ZN6Serial8in_flushEv
-                0x0000000008004b96        0x8 build/Serial.o
-                0x0000000008004b96                Serial::in_flush()
+                0x0000000008004b66        0x8 build/Serial.o
+                0x0000000008004b66                Serial::in_flush()
  .text._ZN6Serial9in_bufferEv
-                0x0000000008004b9e        0x4 build/Serial.o
-                0x0000000008004b9e                Serial::in_buffer()
- *fill*         0x0000000008004ba2        0x2 
+                0x0000000008004b6e        0x4 build/Serial.o
+                0x0000000008004b6e                Serial::in_buffer()
+ *fill*         0x0000000008004b72        0x2 
  .text.Reset_Handler
-                0x0000000008004ba4       0x48 build/startup_stm32f103xb.o
-                0x0000000008004ba4                Reset_Handler
+                0x0000000008004b74       0x48 build/startup_stm32f103xb.o
+                0x0000000008004b74                Reset_Handler
  .text.Default_Handler
-                0x0000000008004bec        0x2 build/startup_stm32f103xb.o
-                0x0000000008004bec                RTC_Alarm_IRQHandler
-                0x0000000008004bec                EXTI2_IRQHandler
-                0x0000000008004bec                TIM1_CC_IRQHandler
-                0x0000000008004bec                PVD_IRQHandler
-                0x0000000008004bec                EXTI3_IRQHandler
-                0x0000000008004bec                I2C2_EV_IRQHandler
-                0x0000000008004bec                ADC1_2_IRQHandler
-                0x0000000008004bec                TAMPER_IRQHandler
-                0x0000000008004bec                DMA1_Channel4_IRQHandler
-                0x0000000008004bec                USART3_IRQHandler
-                0x0000000008004bec                RTC_IRQHandler
-                0x0000000008004bec                DMA1_Channel7_IRQHandler
-                0x0000000008004bec                CAN1_RX1_IRQHandler
-                0x0000000008004bec                TIM4_IRQHandler
-                0x0000000008004bec                I2C1_EV_IRQHandler
-                0x0000000008004bec                DMA1_Channel6_IRQHandler
-                0x0000000008004bec                TIM3_IRQHandler
-                0x0000000008004bec                RCC_IRQHandler
-                0x0000000008004bec                TIM1_TRG_COM_IRQHandler
-                0x0000000008004bec                DMA1_Channel1_IRQHandler
-                0x0000000008004bec                Default_Handler
-                0x0000000008004bec                EXTI15_10_IRQHandler
-                0x0000000008004bec                EXTI9_5_IRQHandler
-                0x0000000008004bec                SPI2_IRQHandler
-                0x0000000008004bec                DMA1_Channel5_IRQHandler
-                0x0000000008004bec                EXTI4_IRQHandler
-                0x0000000008004bec                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000008004bec                USB_HP_CAN1_TX_IRQHandler
-                0x0000000008004bec                DMA1_Channel3_IRQHandler
-                0x0000000008004bec                WWDG_IRQHandler
-                0x0000000008004bec                TIM2_IRQHandler
-                0x0000000008004bec                TIM1_BRK_IRQHandler
-                0x0000000008004bec                EXTI1_IRQHandler
-                0x0000000008004bec                USART2_IRQHandler
-                0x0000000008004bec                I2C2_ER_IRQHandler
-                0x0000000008004bec                DMA1_Channel2_IRQHandler
-                0x0000000008004bec                CAN1_SCE_IRQHandler
-                0x0000000008004bec                FLASH_IRQHandler
-                0x0000000008004bec                I2C1_ER_IRQHandler
-                0x0000000008004bec                USBWakeUp_IRQHandler
+                0x0000000008004bbc        0x2 build/startup_stm32f103xb.o
+                0x0000000008004bbc                RTC_Alarm_IRQHandler
+                0x0000000008004bbc                EXTI2_IRQHandler
+                0x0000000008004bbc                TIM1_CC_IRQHandler
+                0x0000000008004bbc                PVD_IRQHandler
+                0x0000000008004bbc                EXTI3_IRQHandler
+                0x0000000008004bbc                I2C2_EV_IRQHandler
+                0x0000000008004bbc                ADC1_2_IRQHandler
+                0x0000000008004bbc                TAMPER_IRQHandler
+                0x0000000008004bbc                DMA1_Channel4_IRQHandler
+                0x0000000008004bbc                USART3_IRQHandler
+                0x0000000008004bbc                RTC_IRQHandler
+                0x0000000008004bbc                DMA1_Channel7_IRQHandler
+                0x0000000008004bbc                CAN1_RX1_IRQHandler
+                0x0000000008004bbc                TIM4_IRQHandler
+                0x0000000008004bbc                I2C1_EV_IRQHandler
+                0x0000000008004bbc                DMA1_Channel6_IRQHandler
+                0x0000000008004bbc                TIM3_IRQHandler
+                0x0000000008004bbc                RCC_IRQHandler
+                0x0000000008004bbc                TIM1_TRG_COM_IRQHandler
+                0x0000000008004bbc                DMA1_Channel1_IRQHandler
+                0x0000000008004bbc                Default_Handler
+                0x0000000008004bbc                EXTI15_10_IRQHandler
+                0x0000000008004bbc                EXTI9_5_IRQHandler
+                0x0000000008004bbc                SPI2_IRQHandler
+                0x0000000008004bbc                DMA1_Channel5_IRQHandler
+                0x0000000008004bbc                EXTI4_IRQHandler
+                0x0000000008004bbc                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008004bbc                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008004bbc                DMA1_Channel3_IRQHandler
+                0x0000000008004bbc                WWDG_IRQHandler
+                0x0000000008004bbc                TIM2_IRQHandler
+                0x0000000008004bbc                TIM1_BRK_IRQHandler
+                0x0000000008004bbc                EXTI1_IRQHandler
+                0x0000000008004bbc                USART2_IRQHandler
+                0x0000000008004bbc                I2C2_ER_IRQHandler
+                0x0000000008004bbc                DMA1_Channel2_IRQHandler
+                0x0000000008004bbc                CAN1_SCE_IRQHandler
+                0x0000000008004bbc                FLASH_IRQHandler
+                0x0000000008004bbc                I2C1_ER_IRQHandler
+                0x0000000008004bbc                USBWakeUp_IRQHandler
  .text.__aeabi_atexit
-                0x0000000008004bee        0xa /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-aeabi_atexit.o)
-                0x0000000008004bee                __aeabi_atexit
+                0x0000000008004bbe        0xa /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-aeabi_atexit.o)
+                0x0000000008004bbe                __aeabi_atexit
  .text.__cxa_atexit
-                0x0000000008004bf8       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-cxa_atexit.o)
-                0x0000000008004bf8                __cxa_atexit
+                0x0000000008004bc8       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-cxa_atexit.o)
+                0x0000000008004bc8                __cxa_atexit
  .text.__libc_init_array
-                0x0000000008004c14       0x48 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
-                0x0000000008004c14                __libc_init_array
- .text.memcpy   0x0000000008004c5c       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
-                0x0000000008004c5c                memcpy
- .text.memset   0x0000000008004c78       0x10 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
-                0x0000000008004c78                memset
- .text.sprintf  0x0000000008004c88       0x40 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
-                0x0000000008004c88                sprintf
-                0x0000000008004c88                siprintf
- .text.sscanf   0x0000000008004cc8       0x54 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
-                0x0000000008004cc8                sscanf
-                0x0000000008004cc8                siscanf
+                0x0000000008004be4       0x48 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000008004be4                __libc_init_array
+ .text.memcpy   0x0000000008004c2c       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000008004c2c                memcpy
+ .text.memset   0x0000000008004c48       0x10 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x0000000008004c48                memset
+ .text.sscanf   0x0000000008004c58       0x54 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
+                0x0000000008004c58                sscanf
+                0x0000000008004c58                siscanf
  .text.__seofread
-                0x0000000008004d1c        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
-                0x0000000008004d1c                __seofread
- .text.strstr   0x0000000008004d20       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strstr.o)
-                0x0000000008004d20                strstr
- .text.__ssputs_r
-                0x0000000008004d4c       0xb6 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008004d4c                __ssputs_r
- *fill*         0x0000000008004e02        0x2 
- .text._svfprintf_r
-                0x0000000008004e04      0x200 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008004e04                _svfprintf_r
-                0x0000000008004e04                _svfiprintf_r
+                0x0000000008004cac        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x0000000008004cac                __seofread
+ .text.strstr   0x0000000008004cb0       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strstr.o)
+                0x0000000008004cb0                strstr
  .text._sungetc_r
-                0x0000000008005004       0x7a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
-                0x0000000008005004                _sungetc_r
+                0x0000000008004cdc       0x7a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
+                0x0000000008004cdc                _sungetc_r
  .text.__ssrefill_r
-                0x000000000800507e       0x3a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
-                0x000000000800507e                __ssrefill_r
+                0x0000000008004d56       0x3a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
+                0x0000000008004d56                __ssrefill_r
  .text.__ssvfscanf_r
-                0x00000000080050b8      0x2f4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
-                0x00000000080050b8                __ssvfscanf_r
-                0x00000000080050b8                __ssvfiscanf_r
- .text._printf_common
-                0x00000000080053ac       0xde /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00000000080053ac                _printf_common
- *fill*         0x000000000800548a        0x2 
- .text._printf_i
-                0x000000000800548c      0x24c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000800548c                _printf_i
+                0x0000000008004d90      0x2f4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
+                0x0000000008004d90                __ssvfscanf_r
+                0x0000000008004d90                __ssvfiscanf_r
  .text._scanf_chars
-                0x00000000080056d8       0xb4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
-                0x00000000080056d8                _scanf_chars
+                0x0000000008005084       0xb4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+                0x0000000008005084                _scanf_chars
  .text._scanf_i
-                0x000000000800578c      0x1f0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
-                0x000000000800578c                _scanf_i
- .text.__sccl   0x000000000800597c       0x70 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sccl.o)
-                0x000000000800597c                __sccl
+                0x0000000008005138      0x1f0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+                0x0000000008005138                _scanf_i
+ .text.__sccl   0x0000000008005328       0x70 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sccl.o)
+                0x0000000008005328                __sccl
  .text._strtol_l.constprop.0
-                0x00000000080059ec       0xf8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
+                0x0000000008005398       0xf8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
  .text._strtol_r
-                0x0000000008005ae4        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
-                0x0000000008005ae4                _strtol_r
+                0x0000000008005490        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
+                0x0000000008005490                _strtol_r
  .text._strtoul_l.constprop.0
-                0x0000000008005ae8       0xe4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
+                0x0000000008005494       0xe4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
  .text._strtoul_r
-                0x0000000008005bcc        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
-                0x0000000008005bcc                _strtoul_r
+                0x0000000008005578        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
+                0x0000000008005578                _strtoul_r
  .text.__submore
-                0x0000000008005bd0       0x70 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
-                0x0000000008005bd0                __submore
- .text.__errno  0x0000000008005c40        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
-                0x0000000008005c40                __errno
+                0x000000000800557c       0x70 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
+                0x000000000800557c                __submore
+ .text.__errno  0x00000000080055ec        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
+                0x00000000080055ec                __errno
  .text.__retarget_lock_acquire_recursive
-                0x0000000008005c4c        0x2 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008005c4c                __retarget_lock_acquire_recursive
+                0x00000000080055f8        0x2 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x00000000080055f8                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008005c4e        0x2 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008005c4e                __retarget_lock_release_recursive
- .text.memchr   0x0000000008005c50       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
-                0x0000000008005c50                memchr
- .text.memmove  0x0000000008005c6c       0x34 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
-                0x0000000008005c6c                memmove
- .text._free_r  0x0000000008005ca0       0x90 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008005ca0                _free_r
+                0x00000000080055fa        0x2 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x00000000080055fa                __retarget_lock_release_recursive
+ .text.memchr   0x00000000080055fc       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+                0x00000000080055fc                memchr
+ .text._free_r  0x0000000008005618       0x90 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000008005618                _free_r
  .text.sbrk_aligned
-                0x0000000008005d30       0x40 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000080056a8       0x40 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
  .text._malloc_r
-                0x0000000008005d70       0xe8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008005d70                _malloc_r
+                0x00000000080056e8       0xe8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000080056e8                _malloc_r
  .text._realloc_r
-                0x0000000008005e58       0x5e /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000000008005e58                _realloc_r
- *fill*         0x0000000008005eb6        0x2 
- .text._sbrk_r  0x0000000008005eb8       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
-                0x0000000008005eb8                _sbrk_r
+                0x00000000080057d0       0x5e /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+                0x00000000080057d0                _realloc_r
+ *fill*         0x000000000800582e        0x2 
+ .text._sbrk_r  0x0000000008005830       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000008005830                _sbrk_r
  .text.__malloc_lock
-                0x0000000008005ed8        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x0000000008005ed8                __malloc_lock
+                0x0000000008005850        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x0000000008005850                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008005ee4        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x0000000008005ee4                __malloc_unlock
+                0x000000000800585c        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x000000000800585c                __malloc_unlock
  .text._malloc_usable_size_r
-                0x0000000008005ef0       0x10 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
-                0x0000000008005ef0                _malloc_usable_size_r
- .text._sbrk    0x0000000008005f00       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
-                0x0000000008005f00                _sbrk
+                0x0000000008005868       0x10 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000008005868                _malloc_usable_size_r
+ .text._sbrk    0x0000000008005878       0x1c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
+                0x0000000008005878                _sbrk
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
-                0x0000000008005f1c       0x32 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005f1c                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+                0x0000000008005894       0x32 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x0000000008005894                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
  .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
-                0x0000000008005f4e        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005f4e                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
- *fill*         0x0000000008005f5a        0x2 
+                0x00000000080058c6        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x00000000080058c6                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ *fill*         0x00000000080058d2        0x2 
  .text._ZN10__cxxabiv117__class_type_infoD2Ev
-                0x0000000008005f5c       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005f5c                __cxxabiv1::__class_type_info::~__class_type_info()
-                0x0000000008005f5c                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x00000000080058d4       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x00000000080058d4                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x00000000080058d4                __cxxabiv1::__class_type_info::~__class_type_info()
  .text._ZN10__cxxabiv117__class_type_infoD0Ev
-                0x0000000008005f70       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005f70                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x00000000080058e8       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x00000000080058e8                __cxxabiv1::__class_type_info::~__class_type_info()
  .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
-                0x0000000008005f84       0x3e /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005f84                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+                0x00000000080058fc       0x3e /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x00000000080058fc                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
-                0x0000000008005fc2       0x18 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005fc2                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+                0x000000000800593a       0x18 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x000000000800593a                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
  .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
-                0x0000000008005fda       0x2a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008005fda                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
- .text._ZdlPv   0x0000000008006004        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_op.o)
-                0x0000000008006004                operator delete(void*)
- .text._ZdlPvj  0x0000000008006008        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_ops.o)
-                0x0000000008006008                operator delete(void*, unsigned int)
+                0x0000000008005952       0x2a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x0000000008005952                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+ .text._ZdlPv   0x000000000800597c        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_op.o)
+                0x000000000800597c                operator delete(void*)
+ .text._ZdlPvj  0x0000000008005980        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_ops.o)
+                0x0000000008005980                operator delete(void*, unsigned int)
  .text._ZN10__cxxabiv120__si_class_type_infoD2Ev
-                0x000000000800600c       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x000000000800600c                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
-                0x000000000800600c                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x0000000008005984       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000008005984                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x0000000008005984                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
  .text._ZN10__cxxabiv120__si_class_type_infoD0Ev
-                0x0000000008006020       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x0000000008006020                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x0000000008005998       0x14 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000008005998                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
  .text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
-                0x0000000008006034       0x3c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x0000000008006034                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+                0x00000000080059ac       0x3c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x00000000080059ac                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
  .text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
-                0x0000000008006070       0x74 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x0000000008006070                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+                0x00000000080059e8       0x74 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x00000000080059e8                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
  .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
-                0x00000000080060e4       0x2a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x00000000080060e4                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+                0x0000000008005a5c       0x2a /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000008005a5c                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
  .text._ZNSt9type_infoD2Ev
-                0x000000000800610e        0x2 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
-                0x000000000800610e                std::type_info::~type_info()
-                0x000000000800610e                std::type_info::~type_info()
+                0x0000000008005a86        0x2 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+                0x0000000008005a86                std::type_info::~type_info()
+                0x0000000008005a86                std::type_info::~type_info()
  .text._ZNKSt9type_info14__is_pointer_pEv
-                0x0000000008006110        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
-                0x0000000008006110                std::type_info::__is_function_p() const
-                0x0000000008006110                std::type_info::__is_pointer_p() const
+                0x0000000008005a88        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+                0x0000000008005a88                std::type_info::__is_function_p() const
+                0x0000000008005a88                std::type_info::__is_pointer_p() const
  .text._ZNKSt9type_infoeqERKS_
-                0x0000000008006114       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
-                0x0000000008006114                std::type_info::operator==(std::type_info const&) const
- .text.free     0x0000000008006140       0x10 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
-                0x0000000008006140                free
+                0x0000000008005a8c       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+                0x0000000008005a8c                std::type_info::operator==(std::type_info const&) const
+ .text.free     0x0000000008005ab8       0x10 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
+                0x0000000008005ab8                free
  *(.glue_7)
- .glue_7        0x0000000008006150        0x0 linker stubs
+ .glue_7        0x0000000008005ac8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008006150        0x0 linker stubs
+ .glue_7t       0x0000000008005ac8        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008006150        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008005ac8        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008006150        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008006150                _init
- .init          0x0000000008006154        0x8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x0000000008005ac8        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008005ac8                _init
+ .init          0x0000000008005acc        0x8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x000000000800615c        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
-                0x000000000800615c                _fini
- .fini          0x0000000008006160        0x8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
-                0x0000000008006168                . = ALIGN (0x4)
-                0x0000000008006168                _etext = .
+ .fini          0x0000000008005ad4        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008005ad4                _fini
+ .fini          0x0000000008005ad8        0x8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000008005ae0                . = ALIGN (0x4)
+                0x0000000008005ae0                _etext = .
 
-.vfp11_veneer   0x0000000008006168        0x0
- .vfp11_veneer  0x0000000008006168        0x0 linker stubs
+.vfp11_veneer   0x0000000008005ae0        0x0
+ .vfp11_veneer  0x0000000008005ae0        0x0 linker stubs
 
-.v4_bx          0x0000000008006168        0x0
- .v4_bx         0x0000000008006168        0x0 linker stubs
+.v4_bx          0x0000000008005ae0        0x0
+ .v4_bx         0x0000000008005ae0        0x0 linker stubs
 
-.iplt           0x0000000008006168        0x0
- .iplt          0x0000000008006168        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x0000000008005ae0        0x0
+ .iplt          0x0000000008005ae0        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x0000000008006168      0x5e4
-                0x0000000008006168                . = ALIGN (0x4)
+.rodata         0x0000000008005ae0      0x550
+                0x0000000008005ae0                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008006168       0x32 build/appTasks.o
- *fill*         0x000000000800619a        0x2 
- .rodata        0x000000000800619c        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+ .rodata        0x0000000008005ae0       0x32 build/appTasks.o
+ *fill*         0x0000000008005b12        0x2 
+ .rodata        0x0000000008005b14        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
  *(.rodata*)
  .rodata.HAL_RCC_GetSysClockFreq.str1.4
-                0x00000000080061a8       0x11 build/stm32f1xx_hal_rcc.o
- *fill*         0x00000000080061b9        0x3 
+                0x0000000008005b20       0x11 build/stm32f1xx_hal_rcc.o
+ *fill*         0x0000000008005b31        0x3 
  .rodata.AHBPrescTable
-                0x00000000080061bc       0x10 build/system_stm32f1xx.o
-                0x00000000080061bc                AHBPrescTable
+                0x0000000008005b34       0x10 build/system_stm32f1xx.o
+                0x0000000008005b34                AHBPrescTable
  .rodata.APBPrescTable
-                0x00000000080061cc        0x8 build/system_stm32f1xx.o
-                0x00000000080061cc                APBPrescTable
+                0x0000000008005b44        0x8 build/system_stm32f1xx.o
+                0x0000000008005b44                APBPrescTable
  .rodata.str1.4
-                0x00000000080061d4       0x27 build/freertos.o
- *fill*         0x00000000080061fb        0x1 
+                0x0000000008005b4c       0x27 build/freertos.o
+ *fill*         0x0000000008005b73        0x1 
  .rodata.controllerTask_attributes
-                0x00000000080061fc       0x24 build/freertos.o
-                0x00000000080061fc                controllerTask_attributes
+                0x0000000008005b74       0x24 build/freertos.o
+                0x0000000008005b74                controllerTask_attributes
  .rodata.sensorTask_attributes
-                0x0000000008006220       0x24 build/freertos.o
-                0x0000000008006220                sensorTask_attributes
+                0x0000000008005b98       0x24 build/freertos.o
+                0x0000000008005b98                sensorTask_attributes
  .rodata.serialTask_attributes
-                0x0000000008006244       0x24 build/freertos.o
-                0x0000000008006244                serialTask_attributes
+                0x0000000008005bbc       0x24 build/freertos.o
+                0x0000000008005bbc                serialTask_attributes
  .rodata.vTaskStartScheduler.str1.4
-                0x0000000008006268        0x5 build/tasks.o
- *fill*         0x000000000800626d        0x3 
+                0x0000000008005be0        0x5 build/tasks.o
+ *fill*         0x0000000008005be5        0x3 
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x0000000008006270        0x5 build/timers.o
- *fill*         0x0000000008006275        0x3 
+                0x0000000008005be8        0x5 build/timers.o
+ *fill*         0x0000000008005bed        0x3 
  .rodata.xTimerCreateTimerTask.str1.4
-                0x0000000008006278        0x8 build/timers.o
+                0x0000000008005bf0        0x8 build/timers.o
  .rodata.StartControllerTask.str1.4
-                0x0000000008006280       0x68 build/appTasks.o
-                                         0x6c (size before relaxing)
+                0x0000000008005bf8       0x11 build/appTasks.o
+ *fill*         0x0000000008005c09        0x3 
  .rodata.StartSerialTask.str1.4
-                0x00000000080062e8       0x2a build/appTasks.o
- *fill*         0x0000000008006312        0x2 
+                0x0000000008005c0c       0x1a build/appTasks.o
+ *fill*         0x0000000008005c26        0x2 
  .rodata._ZTSN19AccelerometerSensor13EventListenerE
-                0x0000000008006314       0x27 build/appTasks.o
-                0x0000000008006314                typeinfo name for AccelerometerSensor::EventListener
- *fill*         0x000000000800633b        0x1 
+                0x0000000008005c28       0x27 build/appTasks.o
+                0x0000000008005c28                typeinfo name for AccelerometerSensor::EventListener
+ *fill*         0x0000000008005c4f        0x1 
  .rodata._ZTIN19AccelerometerSensor13EventListenerE
-                0x000000000800633c        0x8 build/appTasks.o
-                0x000000000800633c                typeinfo for AccelerometerSensor::EventListener
+                0x0000000008005c50        0x8 build/appTasks.o
+                0x0000000008005c50                typeinfo for AccelerometerSensor::EventListener
  .rodata._ZTSN19AccelerometerSensor6DriverE
-                0x0000000008006344       0x1f build/appTasks.o
-                0x0000000008006344                typeinfo name for AccelerometerSensor::Driver
- *fill*         0x0000000008006363        0x1 
+                0x0000000008005c58       0x1f build/appTasks.o
+                0x0000000008005c58                typeinfo name for AccelerometerSensor::Driver
+ *fill*         0x0000000008005c77        0x1 
  .rodata._ZTIN19AccelerometerSensor6DriverE
-                0x0000000008006364        0x8 build/appTasks.o
-                0x0000000008006364                typeinfo for AccelerometerSensor::Driver
+                0x0000000008005c78        0x8 build/appTasks.o
+                0x0000000008005c78                typeinfo for AccelerometerSensor::Driver
  .rodata._ZTS6Serial
-                0x000000000800636c        0x8 build/appTasks.o
-                0x000000000800636c                typeinfo name for Serial
+                0x0000000008005c80        0x8 build/appTasks.o
+                0x0000000008005c80                typeinfo name for Serial
  .rodata._ZTI6Serial
-                0x0000000008006374        0x8 build/appTasks.o
-                0x0000000008006374                typeinfo for Serial
+                0x0000000008005c88        0x8 build/appTasks.o
+                0x0000000008005c88                typeinfo for Serial
  .rodata._ZTSN19CommandsInterpreter8ObserserE
-                0x000000000800637c       0x21 build/appTasks.o
-                0x000000000800637c                typeinfo name for CommandsInterpreter::Obserser
- *fill*         0x000000000800639d        0x3 
+                0x0000000008005c90       0x21 build/appTasks.o
+                0x0000000008005c90                typeinfo name for CommandsInterpreter::Obserser
+ *fill*         0x0000000008005cb1        0x3 
  .rodata._ZTIN19CommandsInterpreter8ObserserE
-                0x00000000080063a0        0x8 build/appTasks.o
-                0x00000000080063a0                typeinfo for CommandsInterpreter::Obserser
+                0x0000000008005cb4        0x8 build/appTasks.o
+                0x0000000008005cb4                typeinfo for CommandsInterpreter::Obserser
  .rodata._ZTS10UartSerial
-                0x00000000080063a8        0xd build/appTasks.o
-                0x00000000080063a8                typeinfo name for UartSerial
- *fill*         0x00000000080063b5        0x3 
+                0x0000000008005cbc        0xd build/appTasks.o
+                0x0000000008005cbc                typeinfo name for UartSerial
+ *fill*         0x0000000008005cc9        0x3 
  .rodata._ZTI10UartSerial
-                0x00000000080063b8        0xc build/appTasks.o
-                0x00000000080063b8                typeinfo for UartSerial
+                0x0000000008005ccc        0xc build/appTasks.o
+                0x0000000008005ccc                typeinfo for UartSerial
  .rodata._ZTS23SensorTaskEventListener
-                0x00000000080063c4       0x1a build/appTasks.o
-                0x00000000080063c4                typeinfo name for SensorTaskEventListener
- *fill*         0x00000000080063de        0x2 
+                0x0000000008005cd8       0x1a build/appTasks.o
+                0x0000000008005cd8                typeinfo name for SensorTaskEventListener
+ *fill*         0x0000000008005cf2        0x2 
  .rodata._ZTI23SensorTaskEventListener
-                0x00000000080063e0        0xc build/appTasks.o
-                0x00000000080063e0                typeinfo for SensorTaskEventListener
+                0x0000000008005cf4        0xc build/appTasks.o
+                0x0000000008005cf4                typeinfo for SensorTaskEventListener
  .rodata._ZTS13LIS3DH_Driver
-                0x00000000080063ec       0x10 build/appTasks.o
-                0x00000000080063ec                typeinfo name for LIS3DH_Driver
+                0x0000000008005d00       0x10 build/appTasks.o
+                0x0000000008005d00                typeinfo name for LIS3DH_Driver
  .rodata._ZTI13LIS3DH_Driver
-                0x00000000080063fc        0xc build/appTasks.o
-                0x00000000080063fc                typeinfo for LIS3DH_Driver
+                0x0000000008005d10        0xc build/appTasks.o
+                0x0000000008005d10                typeinfo for LIS3DH_Driver
  .rodata._ZTS15CommandListener
-                0x0000000008006408       0x12 build/appTasks.o
-                0x0000000008006408                typeinfo name for CommandListener
- *fill*         0x000000000800641a        0x2 
+                0x0000000008005d1c       0x12 build/appTasks.o
+                0x0000000008005d1c                typeinfo name for CommandListener
+ *fill*         0x0000000008005d2e        0x2 
  .rodata._ZTI15CommandListener
-                0x000000000800641c        0xc build/appTasks.o
-                0x000000000800641c                typeinfo for CommandListener
+                0x0000000008005d30        0xc build/appTasks.o
+                0x0000000008005d30                typeinfo for CommandListener
  .rodata._ZTVN19AccelerometerSensor13EventListenerE
-                0x0000000008006428       0x14 build/appTasks.o
-                0x0000000008006428                vtable for AccelerometerSensor::EventListener
+                0x0000000008005d3c       0x14 build/appTasks.o
+                0x0000000008005d3c                vtable for AccelerometerSensor::EventListener
  .rodata._ZTVN19AccelerometerSensor6DriverE
-                0x000000000800643c       0x20 build/appTasks.o
-                0x000000000800643c                vtable for AccelerometerSensor::Driver
+                0x0000000008005d50       0x20 build/appTasks.o
+                0x0000000008005d50                vtable for AccelerometerSensor::Driver
  .rodata._ZTV6Serial
-                0x000000000800645c       0x10 build/appTasks.o
-                0x000000000800645c                vtable for Serial
+                0x0000000008005d70       0x10 build/appTasks.o
+                0x0000000008005d70                vtable for Serial
  .rodata._ZTVN19CommandsInterpreter8ObserserE
-                0x000000000800646c        0xc build/appTasks.o
-                0x000000000800646c                vtable for CommandsInterpreter::Obserser
+                0x0000000008005d80        0xc build/appTasks.o
+                0x0000000008005d80                vtable for CommandsInterpreter::Obserser
  .rodata._ZTV10UartSerial
-                0x0000000008006478       0x10 build/appTasks.o
-                0x0000000008006478                vtable for UartSerial
+                0x0000000008005d8c       0x10 build/appTasks.o
+                0x0000000008005d8c                vtable for UartSerial
  .rodata._ZTV23SensorTaskEventListener
-                0x0000000008006488       0x14 build/appTasks.o
-                0x0000000008006488                vtable for SensorTaskEventListener
+                0x0000000008005d9c       0x14 build/appTasks.o
+                0x0000000008005d9c                vtable for SensorTaskEventListener
  .rodata._ZTV13LIS3DH_Driver
-                0x000000000800649c       0x20 build/appTasks.o
-                0x000000000800649c                vtable for LIS3DH_Driver
+                0x0000000008005db0       0x20 build/appTasks.o
+                0x0000000008005db0                vtable for LIS3DH_Driver
  .rodata._ZTV15CommandListener
-                0x00000000080064bc        0xc build/appTasks.o
-                0x00000000080064bc                vtable for CommandListener
- .rodata._svfprintf_r.str1.1
-                0x00000000080064c8       0x11 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008005dd0        0xc build/appTasks.o
+                0x0000000008005dd0                vtable for CommandListener
  .rodata.__ssvfscanf_r.str1.1
-                0x00000000080064d9        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
- .rodata._printf_i.str1.1
-                0x00000000080064d9       0x22 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008005ddc        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
  .rodata.str1.1
-                0x00000000080064fb        0x9 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+                0x0000000008005de0        0x9 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
  .rodata._scanf_i.str1.1
-                0x0000000008006504       0x12 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+                0x0000000008005de9       0x12 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
  .rodata._ctype_
-                0x0000000008006516      0x101 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ctype_.o)
-                0x0000000008006516                _ctype_
- *fill*         0x0000000008006617        0x1 
+                0x0000000008005dfb      0x101 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ctype_.o)
+                0x0000000008005dfb                _ctype_
  .rodata.__sf_fake_stderr
-                0x0000000008006618       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008006618                __sf_fake_stderr
+                0x0000000008005efc       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008005efc                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x0000000008006638       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008006638                __sf_fake_stdin
+                0x0000000008005f1c       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008005f1c                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x0000000008006658       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008006658                __sf_fake_stdout
+                0x0000000008005f3c       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008005f3c                __sf_fake_stdout
  .rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x0000000008006678        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008006678                typeinfo for __cxxabiv1::__class_type_info
+                0x0000000008005f5c        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x0000000008005f5c                typeinfo for __cxxabiv1::__class_type_info
  .rodata._ZTSN10__cxxabiv117__class_type_infoE
-                0x0000000008006684       0x22 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x0000000008006684                typeinfo name for __cxxabiv1::__class_type_info
- *fill*         0x00000000080066a6        0x2 
+                0x0000000008005f68       0x22 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x0000000008005f68                typeinfo name for __cxxabiv1::__class_type_info
+ *fill*         0x0000000008005f8a        0x2 
  .rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x00000000080066a8       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
-                0x00000000080066a8                vtable for __cxxabiv1::__class_type_info
+                0x0000000008005f8c       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x0000000008005f8c                vtable for __cxxabiv1::__class_type_info
  .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x00000000080066d4        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x00000000080066d4                typeinfo for __cxxabiv1::__si_class_type_info
+                0x0000000008005fb8        0xc /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000008005fb8                typeinfo for __cxxabiv1::__si_class_type_info
  .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
-                0x00000000080066e0       0x25 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x00000000080066e0                typeinfo name for __cxxabiv1::__si_class_type_info
- *fill*         0x0000000008006705        0x3 
+                0x0000000008005fc4       0x25 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000008005fc4                typeinfo name for __cxxabiv1::__si_class_type_info
+ *fill*         0x0000000008005fe9        0x3 
  .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x0000000008006708       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
-                0x0000000008006708                vtable for __cxxabiv1::__si_class_type_info
+                0x0000000008005fec       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000008005fec                vtable for __cxxabiv1::__si_class_type_info
  .rodata._ZTISt9type_info
-                0x0000000008006734        0x8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
-                0x0000000008006734                typeinfo for std::type_info
+                0x0000000008006018        0x8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+                0x0000000008006018                typeinfo for std::type_info
  .rodata._ZTSSt9type_info
-                0x000000000800673c        0xd /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
-                0x000000000800673c                typeinfo name for std::type_info
-                0x000000000800674c                . = ALIGN (0x4)
- *fill*         0x0000000008006749        0x3 
+                0x0000000008006020        0xd /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+                0x0000000008006020                typeinfo name for std::type_info
+                0x0000000008006030                . = ALIGN (0x4)
+ *fill*         0x000000000800602d        0x3 
 
-.rel.dyn        0x000000000800674c        0x0
- .rel.iplt      0x000000000800674c        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008006030        0x0
+ .rel.iplt      0x0000000008006030        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000800674c        0x0
-                0x000000000800674c                __exidx_start = .
+.ARM            0x0000000008006030        0x0
+                0x0000000008006030                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000800674c                __exidx_end = .
+                0x0000000008006030                __exidx_end = .
 
-.preinit_array  0x000000000800674c        0x0
-                0x000000000800674c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008006030        0x0
+                0x0000000008006030                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000800674c                PROVIDE (__preinit_array_end = .)
+                0x0000000008006030                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000000800674c        0x8
-                0x000000000800674c                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008006030        0x8
+                0x0000000008006030                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800674c        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
- .init_array    0x0000000008006750        0x4 build/appTasks.o
-                0x0000000008006754                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008006030        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .init_array    0x0000000008006034        0x4 build/appTasks.o
+                0x0000000008006038                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008006754        0x4
+.fini_array     0x0000000008006038        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008006754        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x0000000008006038        0x4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008006758                _sidata = LOADADDR (.data)
+                0x000000000800603c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x78 load address 0x0000000008006758
+.data           0x0000000020000000       0x78 load address 0x000000000800603c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3069,11 +3023,11 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                 0x0000000020000078                . = ALIGN (0x4)
                 0x0000000020000078                _edata = .
 
-.igot.plt       0x0000000020000078        0x0 load address 0x00000000080067d0
+.igot.plt       0x0000000020000078        0x0 load address 0x00000000080060b4
  .igot.plt      0x0000000020000078        0x0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x0000000020000078                . = ALIGN (0x4)
 
-.bss            0x0000000020000078     0x3074 load address 0x00000000080067d0
+.bss            0x0000000020000078     0x3074 load address 0x00000000080060b4
                 0x0000000020000078                _sbss = .
                 0x0000000020000078                __bss_start__ = _sbss
  *(.bss)
@@ -3219,7 +3173,7 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                 0x00000000200030ec                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200030ec      0x604 load address 0x00000000080067d0
+                0x00000000200030ec      0x604 load address 0x00000000080060b4
                 0x00000000200030f0                . = ALIGN (0x8)
  *fill*         0x00000000200030ec        0x4 
                 0x00000000200030f0                PROVIDE (end = .)
@@ -3317,86 +3271,78 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .ARM.attributes
                 0x0000000000000692       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000000000006bf       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
+                0x00000000000006bf       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
  .ARM.attributes
-                0x00000000000006ec       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
+                0x00000000000006ec       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
  .ARM.attributes
-                0x0000000000000719       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x0000000000000719       0x17 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strlen.o)
  .ARM.attributes
-                0x0000000000000746       0x17 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strlen.o)
+                0x0000000000000730       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strstr.o)
  .ARM.attributes
-                0x000000000000075d       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strstr.o)
+                0x000000000000075d       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
  .ARM.attributes
-                0x000000000000078a       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x000000000000078a       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
  .ARM.attributes
-                0x00000000000007b7       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
+                0x00000000000007b7       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000000000007e4       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000000007e4       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sccl.o)
  .ARM.attributes
-                0x0000000000000811       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+                0x0000000000000811       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
  .ARM.attributes
-                0x000000000000083e       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
+                0x000000000000083e       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
  .ARM.attributes
-                0x000000000000086b       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sccl.o)
+                0x000000000000086b       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
  .ARM.attributes
-                0x0000000000000898       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
+                0x0000000000000898       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ctype_.o)
  .ARM.attributes
-                0x00000000000008c5       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
+                0x00000000000008c5       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000000000008f2       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
+                0x00000000000008f2       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
  .ARM.attributes
-                0x000000000000091f       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ctype_.o)
+                0x000000000000091f       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
  .ARM.attributes
-                0x000000000000094c       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
+                0x000000000000094c       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x0000000000000979       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000000000979       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x00000000000009a6       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x00000000000009a6       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x00000000000009d3       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+                0x00000000000009d3       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x0000000000000a00       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
+                0x0000000000000a00       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x0000000000000a2d       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000000a2d       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
  .ARM.attributes
-                0x0000000000000a5a       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000000a5a       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
  .ARM.attributes
-                0x0000000000000a87       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000000000a87       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
  .ARM.attributes
-                0x0000000000000ab4       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000000ab4       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
  .ARM.attributes
-                0x0000000000000ae1       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x0000000000000ae1       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_op.o)
  .ARM.attributes
-                0x0000000000000b0e       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000000000b0e       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_ops.o)
  .ARM.attributes
-                0x0000000000000b3b       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
+                0x0000000000000b3b       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
  .ARM.attributes
-                0x0000000000000b68       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+                0x0000000000000b68       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
  .ARM.attributes
-                0x0000000000000b95       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_op.o)
+                0x0000000000000b95       0x1d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
  .ARM.attributes
-                0x0000000000000bc2       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_ops.o)
+                0x0000000000000bb2       0x1d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x0000000000000bef       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+                0x0000000000000bcf       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
  .ARM.attributes
-                0x0000000000000c1c       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+                0x0000000000000bfc       0x1b /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strcmp.o)
  .ARM.attributes
-                0x0000000000000c49       0x1d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
- .ARM.attributes
-                0x0000000000000c66       0x1d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .ARM.attributes
-                0x0000000000000c83       0x2d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
- .ARM.attributes
-                0x0000000000000cb0       0x1b /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strcmp.o)
- .ARM.attributes
-                0x0000000000000ccb       0x1d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000000000c17       0x1d /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
 OUTPUT(build/bluepill.elf elf32-littlearm)
 LOAD linker stubs
 LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a
 LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
 LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
 
-.debug_info     0x0000000000000000    0x24178
+.debug_info     0x0000000000000000    0x23e90
  .debug_info    0x0000000000000000      0x9ff build/main.o
  .debug_info    0x00000000000009ff      0xd62 build/stm32f1xx_it.o
  .debug_info    0x0000000000001761      0x311 build/stm32f1xx_hal_msp.o
@@ -3424,12 +3370,12 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_info    0x000000000001d7c5      0x569 build/port.o
  .debug_info    0x000000000001dd2e     0x1ade build/lis3dh_driver.o
  .debug_info    0x000000000001f80c      0x848 build/porting.o
- .debug_info    0x0000000000020054     0x31c2 build/appTasks.o
- .debug_info    0x0000000000023216      0x77f build/AccelerometerSensor.o
- .debug_info    0x0000000000023995      0x7c1 build/Serial.o
- .debug_info    0x0000000000024156       0x22 build/startup_stm32f103xb.o
+ .debug_info    0x0000000000020054     0x2eda build/appTasks.o
+ .debug_info    0x0000000000022f2e      0x77f build/AccelerometerSensor.o
+ .debug_info    0x00000000000236ad      0x7c1 build/Serial.o
+ .debug_info    0x0000000000023e6e       0x22 build/startup_stm32f103xb.o
 
-.debug_abbrev   0x0000000000000000     0x4906
+.debug_abbrev   0x0000000000000000     0x494d
  .debug_abbrev  0x0000000000000000      0x214 build/main.o
  .debug_abbrev  0x0000000000000214      0x1b8 build/stm32f1xx_it.o
  .debug_abbrev  0x00000000000003cc      0x10a build/stm32f1xx_hal_msp.o
@@ -3457,12 +3403,12 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_abbrev  0x0000000000003783      0x29d build/port.o
  .debug_abbrev  0x0000000000003a20      0x17a build/lis3dh_driver.o
  .debug_abbrev  0x0000000000003b9a      0x1c8 build/porting.o
- .debug_abbrev  0x0000000000003d62      0x6be build/appTasks.o
- .debug_abbrev  0x0000000000004420      0x2db build/AccelerometerSensor.o
- .debug_abbrev  0x00000000000046fb      0x1f9 build/Serial.o
- .debug_abbrev  0x00000000000048f4       0x12 build/startup_stm32f103xb.o
+ .debug_abbrev  0x0000000000003d62      0x705 build/appTasks.o
+ .debug_abbrev  0x0000000000004467      0x2db build/AccelerometerSensor.o
+ .debug_abbrev  0x0000000000004742      0x1f9 build/Serial.o
+ .debug_abbrev  0x000000000000493b       0x12 build/startup_stm32f103xb.o
 
-.debug_loc      0x0000000000000000    0x1d1af
+.debug_loc      0x0000000000000000    0x1d00c
  .debug_loc     0x0000000000000000       0xc8 build/main.o
  .debug_loc     0x00000000000000c8       0x80 build/stm32f1xx_it.o
  .debug_loc     0x0000000000000148       0x38 build/stm32f1xx_hal_msp.o
@@ -3490,9 +3436,9 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_loc     0x000000000001a880      0x16c build/port.o
  .debug_loc     0x000000000001a9ec     0x1463 build/lis3dh_driver.o
  .debug_loc     0x000000000001be4f      0x11f build/porting.o
- .debug_loc     0x000000000001bf6e      0xdb8 build/appTasks.o
- .debug_loc     0x000000000001cd26      0x2bd build/AccelerometerSensor.o
- .debug_loc     0x000000000001cfe3      0x1cc build/Serial.o
+ .debug_loc     0x000000000001bf6e      0xc15 build/appTasks.o
+ .debug_loc     0x000000000001cb83      0x2bd build/AccelerometerSensor.o
+ .debug_loc     0x000000000001ce40      0x1cc build/Serial.o
 
 .debug_aranges  0x0000000000000000     0x18a8
  .debug_aranges
@@ -3558,7 +3504,7 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_aranges
                 0x0000000000001880       0x28 build/startup_stm32f103xb.o
 
-.debug_ranges   0x0000000000000000     0x1960
+.debug_ranges   0x0000000000000000     0x1990
  .debug_ranges  0x0000000000000000       0x28 build/main.o
  .debug_ranges  0x0000000000000028       0x58 build/stm32f1xx_it.o
  .debug_ranges  0x0000000000000080       0x10 build/stm32f1xx_hal_msp.o
@@ -3586,12 +3532,12 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_ranges  0x00000000000015a0       0x68 build/port.o
  .debug_ranges  0x0000000000001608      0x188 build/lis3dh_driver.o
  .debug_ranges  0x0000000000001790       0x18 build/porting.o
- .debug_ranges  0x00000000000017a8      0x118 build/appTasks.o
- .debug_ranges  0x00000000000018c0       0x40 build/AccelerometerSensor.o
- .debug_ranges  0x0000000000001900       0x40 build/Serial.o
- .debug_ranges  0x0000000000001940       0x20 build/startup_stm32f103xb.o
+ .debug_ranges  0x00000000000017a8      0x148 build/appTasks.o
+ .debug_ranges  0x00000000000018f0       0x40 build/AccelerometerSensor.o
+ .debug_ranges  0x0000000000001930       0x40 build/Serial.o
+ .debug_ranges  0x0000000000001970       0x20 build/startup_stm32f103xb.o
 
-.debug_line     0x0000000000000000    0x1a5f1
+.debug_line     0x0000000000000000    0x1a554
  .debug_line    0x0000000000000000      0x38a build/main.o
  .debug_line    0x000000000000038a      0x2fd build/stm32f1xx_it.o
  .debug_line    0x0000000000000687      0x184 build/stm32f1xx_hal_msp.o
@@ -3619,12 +3565,12 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_line    0x00000000000172fe      0x5f7 build/port.o
  .debug_line    0x00000000000178f5     0x1569 build/lis3dh_driver.o
  .debug_line    0x0000000000018e5e      0x20e build/porting.o
- .debug_line    0x000000000001906c      0xcf2 build/appTasks.o
- .debug_line    0x0000000000019d5e      0x452 build/AccelerometerSensor.o
- .debug_line    0x000000000001a1b0      0x3cc build/Serial.o
- .debug_line    0x000000000001a57c       0x75 build/startup_stm32f103xb.o
+ .debug_line    0x000000000001906c      0xc55 build/appTasks.o
+ .debug_line    0x0000000000019cc1      0x452 build/AccelerometerSensor.o
+ .debug_line    0x000000000001a113      0x3cc build/Serial.o
+ .debug_line    0x000000000001a4df       0x75 build/startup_stm32f103xb.o
 
-.debug_str      0x0000000000000000     0x8976
+.debug_str      0x0000000000000000     0x8972
  .debug_str     0x0000000000000000      0x768 build/main.o
                                         0x878 (size before relaxing)
  .debug_str     0x0000000000000768      0x41c build/stm32f1xx_it.o
@@ -3679,13 +3625,13 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                                         0xc30 (size before relaxing)
  .debug_str     0x00000000000075ec       0x1d build/porting.o
                                         0x5f7 (size before relaxing)
- .debug_str     0x0000000000007609     0x12f2 build/appTasks.o
-                                       0x1ece (size before relaxing)
- .debug_str     0x00000000000088fb       0x42 build/AccelerometerSensor.o
+ .debug_str     0x0000000000007609     0x12f6 build/appTasks.o
+                                       0x1ed8 (size before relaxing)
+ .debug_str     0x00000000000088ff       0x3a build/AccelerometerSensor.o
                                         0x5d4 (size before relaxing)
- .debug_str     0x000000000000893d       0x15 build/Serial.o
+ .debug_str     0x0000000000008939       0x15 build/Serial.o
                                         0x526 (size before relaxing)
- .debug_str     0x0000000000008952       0x24 build/startup_stm32f103xb.o
+ .debug_str     0x000000000000894e       0x24 build/startup_stm32f103xb.o
                                          0x60 (size before relaxing)
 
 .comment        0x0000000000000000       0x49
@@ -3721,7 +3667,7 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .comment       0x0000000000000049       0x4a build/AccelerometerSensor.o
  .comment       0x0000000000000049       0x4a build/Serial.o
 
-.debug_frame    0x0000000000000000     0x5288
+.debug_frame    0x0000000000000000     0x5104
  .debug_frame   0x0000000000000000       0x70 build/main.o
  .debug_frame   0x0000000000000070       0xd0 build/stm32f1xx_it.o
  .debug_frame   0x0000000000000140       0x2c build/stm32f1xx_hal_msp.o
@@ -3757,40 +3703,36 @@ LOAD /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
  .debug_frame   0x000000000000460c       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
  .debug_frame   0x0000000000004638       0x28 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
  .debug_frame   0x0000000000004660       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000004680       0x6c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
- .debug_frame   0x00000000000046ec       0x80 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
- .debug_frame   0x000000000000476c       0x88 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
- .debug_frame   0x00000000000047f4       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strstr.o)
- .debug_frame   0x0000000000004820       0x90 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00000000000048b0       0x74 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
- .debug_frame   0x0000000000004924       0x60 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000000000004984       0x64 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
- .debug_frame   0x00000000000049e8       0x5c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000004a44       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sccl.o)
- .debug_frame   0x0000000000004a70       0x64 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
- .debug_frame   0x0000000000004ad4       0x64 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
- .debug_frame   0x0000000000004b38       0x5c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
- .debug_frame   0x0000000000004b94       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
- .debug_frame   0x0000000000004bb4      0x14c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
- .debug_frame   0x0000000000004d00       0xb0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
- .debug_frame   0x0000000000004db0       0x28 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x0000000000004dd8       0x28 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x0000000000004e00       0x38 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000004e38       0x4c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000000000004e84       0x3c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x0000000000004ec0       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000004eec       0x30 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000004f1c       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000000000004f3c       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
- .debug_frame   0x0000000000004f5c       0xd8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
- .debug_frame   0x0000000000005034       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_op.o)
- .debug_frame   0x0000000000005054       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_ops.o)
- .debug_frame   0x0000000000005074       0xd4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
- .debug_frame   0x0000000000005148       0x80 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
- .debug_frame   0x00000000000051c8       0x24 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
- .debug_frame   0x00000000000051ec       0x4c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x0000000000005238       0x30 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x0000000000005268       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strcmp.o)
+ .debug_frame   0x0000000000004680       0x80 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
+ .debug_frame   0x0000000000004700       0x88 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000004788       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strstr.o)
+ .debug_frame   0x00000000000047b4       0x74 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
+ .debug_frame   0x0000000000004828       0x64 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
+ .debug_frame   0x000000000000488c       0x5c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x00000000000048e8       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sccl.o)
+ .debug_frame   0x0000000000004914       0x64 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
+ .debug_frame   0x0000000000004978       0x64 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
+ .debug_frame   0x00000000000049dc       0x5c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
+ .debug_frame   0x0000000000004a38       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000000000004a58      0x14c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000004ba4       0xb0 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-lock.o)
+ .debug_frame   0x0000000000004c54       0x28 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x0000000000004c7c       0x38 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000004cb4       0x4c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000004d00       0x3c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000004d3c       0x2c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000004d68       0x30 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000004d98       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000004db8       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000004dd8       0xd8 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(class_type_info.o)
+ .debug_frame   0x0000000000004eb0       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_op.o)
+ .debug_frame   0x0000000000004ed0       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(del_ops.o)
+ .debug_frame   0x0000000000004ef0       0xd4 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(si_class_type_info.o)
+ .debug_frame   0x0000000000004fc4       0x80 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)
+ .debug_frame   0x0000000000005044       0x24 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .debug_frame   0x0000000000005068       0x4c /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00000000000050b4       0x30 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00000000000050e4       0x20 /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strcmp.o)
 
 .stabstr        0x0000000000000000       0xdf
  .stabstr       0x0000000000000000       0xdf /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(close.o)
@@ -3818,9 +3760,11 @@ AccelerometerSensor::available()                  build/AccelerometerSensor.o
 AccelerometerSensor::emptyBuffer()                build/AccelerometerSensor.o
 AccelerometerSensor::fullBuffer()                 build/AccelerometerSensor.o
 AccelerometerSensor::getConfig()                  build/AccelerometerSensor.o
+                                                  build/appTasks.o
 AccelerometerSensor::read(AccelerometerSensor::samples_t*, unsigned long) build/AccelerometerSensor.o
                                                   build/appTasks.o
 AccelerometerSensor::refresh()                    build/AccelerometerSensor.o
+                                                  build/appTasks.o
 AccelerometerSensor::setConfig(AccelerometerSensor::accelerometer_config_t const&) build/AccelerometerSensor.o
                                                   build/appTasks.o
 BusFault_Handler                                  build/stm32f1xx_it.o
@@ -4547,8 +4491,6 @@ __sread                                           /home/luca/gcc-arm-none-eabi-1
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
 __sseek                                           /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
-__ssprint_r                                       /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-__ssputs_r                                        /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 __ssrefill_r                                      /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
 __ssvfiscanf_r                                    /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
 __ssvfscanf_r                                     /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
@@ -4585,7 +4527,6 @@ _free_r                                           /home/luca/gcc-arm-none-eabi-1
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fflush.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 _fwalk                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fwalk.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
 _fwalk_reent                                      /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-fwalk.o)
@@ -4605,7 +4546,6 @@ _impure_ptr                                       /home/luca/gcc-arm-none-eabi-1
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtol.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
 _init                                             /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-init.o)
 _lseek                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(lseek.o)
@@ -4618,20 +4558,14 @@ _malloc_r                                         /home/luca/gcc-arm-none-eabi-1
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 _malloc_usable_size_r                             /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-msizer.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
-_printf_common                                    /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-_printf_float                                     /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-_printf_i                                         /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 _read                                             /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(read.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-readr.o)
 _read_r                                           /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-readr.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-stdio.o)
 _realloc_r                                        /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 _reclaim_reent                                    /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-reent.o)
 _sbrk                                             /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(sbrk.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sbrkr.o)
@@ -4645,9 +4579,7 @@ _scanf_i                                          /home/luca/gcc-arm-none-eabi-1
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
 _sdata                                            build/startup_stm32f103xb.o
 _sidata                                           build/startup_stm32f103xb.o
-_siprintf_r                                       /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
 _siscanf_r                                        /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
-_sprintf_r                                        /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
 _sscanf_r                                         /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
 _stack_init                                       /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
 _start                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
@@ -4656,9 +4588,6 @@ _strtol_r                                         /home/luca/gcc-arm-none-eabi-1
 _strtoul_r                                        /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-strtoul.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
 _sungetc_r                                        /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
-_svfiprintf_r                                     /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-_svfprintf_r                                      /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
 _ungetc_r                                         /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
 _write                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libnosys.a(write.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-writer.o)
@@ -4703,20 +4632,15 @@ main                                              build/main.o
 malloc                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-malloc.o)
 memchr                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfscanf_i.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfscanf.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 memcpy                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy-stub.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-reallocr.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-ungetc.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
                                                   build/Serial.o
                                                   build/AccelerometerSensor.o
                                                   build/cmsis_os2.o
                                                   build/stream_buffer.o
                                                   build/queue.o
-memmove                                           /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memmove.o)
-                                                  /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-nano-svfprintf.o)
 memset                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memset.o)
                                                   /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-findfp.o)
                                                   build/tasks.o
@@ -4823,11 +4747,8 @@ sensorTaskHandle                                  build/freertos.o
 sensorTask_attributes                             build/freertos.o
 serialTaskHandle                                  build/freertos.o
 serialTask_attributes                             build/freertos.o
-siprintf                                          /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
 siscanf                                           /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
 software_init_hook                                /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
-sprintf                                           /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sprintf.o)
-                                                  build/appTasks.o
 sscanf                                            /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-sscanf.o)
                                                   build/appTasks.o
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const /home/luca/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(tinfo.o)

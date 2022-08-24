@@ -8,6 +8,7 @@ uint32_t Serial::available() const{
 bool Serial::appendChar(char c){
     if(this->_avail_in < SERIAL_IN_BUFFER_SIZE){
         this->_in_buffer[this->_avail_in++] = c;
+        this->_in_buffer[this->_avail_in] = 00; // String delimiter 
         return true;
     }else{
         return false;

@@ -87,3 +87,23 @@ TEST(SerialFakeReceive, FakeReceiveCorrectString) {
     ser->read(rc, str.length());
     EXPECT_EQ(ser->available() , 0) << "Serial fake received back in not equal" ;
 }
+
+TEST(SerialInputBuffer, Push80Chars) { 
+    char c = '?';
+    SerialFake fake;
+    Serial *ser = &fake;
+    ser->init();
+    for(uint32_t i=0;i < 20;i++){
+        fake.push(c);
+    }
+    for(uint32_t i=0;i < 20;i++){
+        fake.push(c);
+    }
+    for(uint32_t i=0;i < 20;i++){
+        fake.push(c);
+    }
+    for(uint32_t i=0;i < 20;i++){
+        fake.push(c);
+    }
+    EXPECT_EQ(ser->available() , 80);
+}

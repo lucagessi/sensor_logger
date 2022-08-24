@@ -149,7 +149,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     // vTaskNotifyGiveFromISR( sensorTaskHandle, &priority );
   }
 }
-
+#define CTRL_STATE_IDLE    0
+#define CTRL_STATE_SNG_CPT 1
 extern "C" void StartControllerTask(void *argument)
 {
   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
@@ -160,37 +161,48 @@ extern "C" void StartControllerTask(void *argument)
   messageQueue = xQueueCreate( 10, sizeof(controller_message_t) );
   bool received;
   controller_message_t msg;
+  uint16_t num_samples = 0;
+  uint32_t state = CTRL_STATE_IDLE;
   for(;;)
   {
-    //HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
-    //xTaskNotifyWait(0, 0xffffffffUL, &notification, xDelay);
     received = xQueueReceive(messageQueue,  (void *)&msg, xDelay) == pdTRUE;
     if(received){
       if(msg.type == CTRL_MSG_NEW_DATA){
-        sprintf( text, "Notification received!\n" );
-        HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+        //sprintf( text, "Notification received!\n" );
+        //HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
         vTaskSuspendAll();
         uint32_t max = acc.available();
+        if(state == CTRL_STATE_SNG_CPT)
+          max = max > num_samples ? num_samples : max;
         for(uint32_t idx=0; idx<max; idx++)
         {
           acc.read(&sample, 1);
-          serial.write( (char *)&sample, sizeof(AccelerometerSensor::samples_t ) );
+          if(state == CTRL_STATE_SNG_CPT){
+            serial.write( (char *)&sample, sizeof(AccelerometerSensor::samples_t ) );
+          }
         }
-        serial.write( "\n", 1 );
+        if(state == CTRL_STATE_SNG_CPT){
+          num_samples-=max;
+          if(num_samples == 0)
+            state = CTRL_STATE_IDLE;
+        }
+        //serial.write( "\n", 1 );
         xTaskResumeAll();
-      }else if(msg.type == CTRL_MSG_NEW_CMD){
-      if(msg.command.type == CommandsInterpreter::rcfg){
+      }else if((msg.type == CTRL_MSG_NEW_CMD)){
+        if(msg.command.type == CommandsInterpreter::rcfg){
           sprintf( text, "Read config cmd\n" );
           serial.write( (char *)text, strlen(text) );
         }else if(msg.command.type == CommandsInterpreter::single){
-          sprintf( text, "Start single capture cmd. %d s\n", msg.command.single.N );
-          serial.write( (char *)text, strlen(text) );
+          num_samples = msg.command.single.N * acc.getConfig()->odr;
+          state = CTRL_STATE_SNG_CPT;
+          //sprintf( text, "Start single capture cmd. %d s. Samples %d \n", msg.command.single.N, num_samples );
+          //serial.write( (char *)text, strlen(text) );
         }
       }
     }else{
-      sprintf( text, "Notification NOT received!\n" );
-      serial.write( (char *)text, strlen(text) );
-    }
+      //sprintf( text, "Notification NOT received!\n" );
+      //serial.write( (char *)text, strlen(text) );
+    }//
   }
 }
 
@@ -203,7 +215,7 @@ extern "C" void StartSensorTask(void *argument)
   for(;;)
   {
     vTaskDelay( xDelay );
-    //acc.refresh();
+    acc.refresh();
   }
 }
 
@@ -258,13 +270,13 @@ extern "C" void StartSerialTask(void *argument)
   for(;;)
   {
     vTaskDelay( xDelay );
-    if(serial.available()){
-      len = serial.available();
-      sprintf( text, "Ser avail %d\n", len);
-      serial.write( (char *)text, strlen(text) );
-      serial.write( serial.in_buffer(), len );
-      serial.write( (char *)"\n", 1 );
-    }
+    //if(serial.available()){
+    //  len = serial.available();
+    //  sprintf( text, "Ser avail %d\n", len);
+    //  serial.write( (char *)text, strlen(text) );
+    //  serial.write( serial.in_buffer(), len );
+    //  serial.write( (char *)"\n", 1 );
+    //}
     interpreter.refresh();
   }
 }

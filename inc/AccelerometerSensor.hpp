@@ -11,14 +11,14 @@ class AccelerometerSensor{
     public:
         typedef struct{
             uint32_t odr;        // Hz
-            float    resolution; // Resolution in m/s^2
-            float    fullscale;  // Full scale
+            float    resolution; // Resolution in mg
+            float    fullscale;  // Full scale in mg
         }accelerometer_config_t; 
         class EventListener{
             public:
-                virtual void OnFullBufferEvent() = 0;
-                virtual void OnEmptyBufferEvent() = 0;
-                virtual void OnNewDataAvailableEvent() = 0;
+                virtual void OnFullBufferEvent() {};
+                virtual void OnEmptyBufferEvent() {};
+                virtual void OnNewDataAvailableEvent() {};
         };
         typedef struct{
             float x;
@@ -27,10 +27,10 @@ class AccelerometerSensor{
         }samples_t;
         class Driver{
             public:
-                virtual bool setConfig(const accelerometer_config_t &config) = 0;
-                virtual uint32_t read(uint8_t *data, uint32_t N) = 0;             // Read N samples from accelerometer
-                virtual const accelerometer_config_t * getConfig() = 0;     
-                virtual uint32_t available() = 0;                                 // Return data available in FIFO HW
+                virtual bool setConfig(const accelerometer_config_t &config){return false;};
+                virtual uint32_t read(uint8_t *data, uint32_t N){return 0;};             // Read N samples from accelerometer
+                virtual const accelerometer_config_t * getConfig(){return nullptr;};     
+                virtual uint32_t available(){return 0;};                                 // Return data available in FIFO HW
                 virtual ~Driver(){};
         };
         AccelerometerSensor(Driver *drv, EventListener *listener){

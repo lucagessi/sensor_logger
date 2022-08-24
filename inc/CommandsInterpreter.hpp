@@ -25,7 +25,7 @@ class CommandsInterpreter{
         }command_t;
         class Obserser{
             public:
-                virtual void notify(const command_t &cmd) = 0;
+                virtual void notify(const command_t &cmd){};
         };
         CommandsInterpreter(Serial *ser, Obserser *obs){
             this->_ser = ser;
