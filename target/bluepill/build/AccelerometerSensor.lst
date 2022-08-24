@@ -1,0 +1,509 @@
+ARM GAS  /tmp/cckOIzDC.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"AccelerometerSensor.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text._ZN19AccelerometerSensor7refreshEv,"ax",%progbits
+  18              		.align	1
+  19              		.global	_ZN19AccelerometerSensor7refreshEv
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	_ZN19AccelerometerSensor7refreshEv:
+  25              	.LVL0:
+  26              	.LFB19:
+  27              		.file 1 "../../src/AccelerometerSensor.cpp"
+   1:../../src/AccelerometerSensor.cpp **** #include "AccelerometerSensor.hpp"
+   2:../../src/AccelerometerSensor.cpp **** #include <cstring>
+   3:../../src/AccelerometerSensor.cpp **** 
+   4:../../src/AccelerometerSensor.cpp **** void AccelerometerSensor::refresh(){
+  28              		.loc 1 4 36 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 4 36 is_stmt 0 view .LVU1
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 3, -16
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 5, -8
+  39              		.cfi_offset 14, -4
+  40 0002 0546     		mov	r5, r0
+   5:../../src/AccelerometerSensor.cpp ****     uint32_t N = this->_drv->available();  // Number of samples, which is to be multipled by 3 axis
+  41              		.loc 1 5 5 is_stmt 1 view .LVU2
+  42              		.loc 1 5 24 is_stmt 0 view .LVU3
+  43 0004 D0F8F400 		ldr	r0, [r0, #244]
+  44              	.LVL1:
+  45              		.loc 1 5 40 view .LVU4
+  46 0008 0368     		ldr	r3, [r0]
+  47 000a DB68     		ldr	r3, [r3, #12]
+  48              		.loc 1 5 39 view .LVU5
+  49 000c 9847     		blx	r3
+  50              	.LVL2:
+  51 000e 0446     		mov	r4, r0
+  52              	.LVL3:
+   6:../../src/AccelerometerSensor.cpp ****     uint32_t bytes = N * sizeof(samples_t); // 3 axis
+ARM GAS  /tmp/cckOIzDC.s 			page 2
+
+
+  53              		.loc 1 6 5 is_stmt 1 view .LVU6
+  54              		.loc 1 6 14 is_stmt 0 view .LVU7
+  55 0010 00EB4002 		add	r2, r0, r0, lsl #1
+  56              	.LVL4:
+   7:../../src/AccelerometerSensor.cpp ****     uint32_t samplesToRead = bytes > (ACCELEROMETER_SENSOR_BUFFER_SIZE - this->_buff_lvl) ? 
+  57              		.loc 1 7 5 is_stmt 1 view .LVU8
+  58              		.loc 1 7 80 is_stmt 0 view .LVU9
+  59 0014 D5F8F010 		ldr	r1, [r5, #240]
+  60              		.loc 1 7 72 view .LVU10
+  61 0018 C1F1F003 		rsb	r3, r1, #240
+  62              		.loc 1 7 91 view .LVU11
+  63 001c B3EB820F 		cmp	r3, r2, lsl #2
+  64 0020 03D2     		bcs	.L2
+  65              		.loc 1 7 91 discriminator 1 view .LVU12
+  66 0022 114C     		ldr	r4, .L7
+  67 0024 A4FB0323 		umull	r2, r3, r4, r3
+  68              	.LVL5:
+  69              		.loc 1 7 91 discriminator 1 view .LVU13
+  70 0028 DC08     		lsrs	r4, r3, #3
+  71              	.L2:
+  72              	.LVL6:
+   8:../../src/AccelerometerSensor.cpp ****                             (ACCELEROMETER_SENSOR_BUFFER_SIZE - this->_buff_lvl)/sizeof(samples_t) 
+   9:../../src/AccelerometerSensor.cpp ****     this->_drv->read( this->_buffer+this->_buff_lvl, samplesToRead);
+  73              		.loc 1 9 5 is_stmt 1 discriminator 4 view .LVU14
+  74              		.loc 1 9 11 is_stmt 0 discriminator 4 view .LVU15
+  75 002a D5F8F400 		ldr	r0, [r5, #244]
+  76              	.LVL7:
+  77              		.loc 1 9 67 discriminator 4 view .LVU16
+  78 002e 0368     		ldr	r3, [r0]
+  79 0030 5B68     		ldr	r3, [r3, #4]
+  80              		.loc 1 9 21 discriminator 4 view .LVU17
+  81 0032 2246     		mov	r2, r4
+  82 0034 2944     		add	r1, r1, r5
+  83 0036 9847     		blx	r3
+  84              	.LVL8:
+  10:../../src/AccelerometerSensor.cpp ****     this->_buff_lvl+=samplesToRead * sizeof(samples_t);
+  85              		.loc 1 10 5 is_stmt 1 discriminator 4 view .LVU18
+  86              		.loc 1 10 36 is_stmt 0 discriminator 4 view .LVU19
+  87 0038 04EB4403 		add	r3, r4, r4, lsl #1
+  88              		.loc 1 10 20 discriminator 4 view .LVU20
+  89 003c D5F8F020 		ldr	r2, [r5, #240]
+  90 0040 02EB8303 		add	r3, r2, r3, lsl #2
+  91 0044 C5F8F030 		str	r3, [r5, #240]
+  11:../../src/AccelerometerSensor.cpp ****     if(samplesToRead && (this->_buff_lvl == ACCELEROMETER_SENSOR_BUFFER_SIZE)){
+  92              		.loc 1 11 5 is_stmt 1 discriminator 4 view .LVU21
+  93 0048 0CB1     		cbz	r4, .L3
+  94              		.loc 1 11 22 is_stmt 0 discriminator 1 view .LVU22
+  95 004a F02B     		cmp	r3, #240
+  96 004c 06D0     		beq	.L6
+  97              	.L3:
+  12:../../src/AccelerometerSensor.cpp ****         this->_listener->OnFullBufferEvent();
+  13:../../src/AccelerometerSensor.cpp ****     }
+  14:../../src/AccelerometerSensor.cpp ****     if(samplesToRead)
+  98              		.loc 1 14 5 is_stmt 1 view .LVU23
+  99 004e 24B1     		cbz	r4, .L1
+  15:../../src/AccelerometerSensor.cpp ****         this->_listener->OnNewDataAvailableEvent();
+ 100              		.loc 1 15 9 view .LVU24
+ARM GAS  /tmp/cckOIzDC.s 			page 3
+
+
+ 101              		.loc 1 15 15 is_stmt 0 view .LVU25
+ 102 0050 D5F8F800 		ldr	r0, [r5, #248]
+ 103              		.loc 1 15 50 view .LVU26
+ 104 0054 0368     		ldr	r3, [r0]
+ 105 0056 9B68     		ldr	r3, [r3, #8]
+ 106              		.loc 1 15 49 view .LVU27
+ 107 0058 9847     		blx	r3
+ 108              	.LVL9:
+ 109              	.L1:
+  16:../../src/AccelerometerSensor.cpp **** }
+ 110              		.loc 1 16 1 view .LVU28
+ 111 005a 38BD     		pop	{r3, r4, r5, pc}
+ 112              	.LVL10:
+ 113              	.L6:
+  12:../../src/AccelerometerSensor.cpp ****         this->_listener->OnFullBufferEvent();
+ 114              		.loc 1 12 9 is_stmt 1 view .LVU29
+  12:../../src/AccelerometerSensor.cpp ****         this->_listener->OnFullBufferEvent();
+ 115              		.loc 1 12 15 is_stmt 0 view .LVU30
+ 116 005c D5F8F800 		ldr	r0, [r5, #248]
+  12:../../src/AccelerometerSensor.cpp ****         this->_listener->OnFullBufferEvent();
+ 117              		.loc 1 12 44 view .LVU31
+ 118 0060 0368     		ldr	r3, [r0]
+ 119 0062 1B68     		ldr	r3, [r3]
+  12:../../src/AccelerometerSensor.cpp ****         this->_listener->OnFullBufferEvent();
+ 120              		.loc 1 12 43 view .LVU32
+ 121 0064 9847     		blx	r3
+ 122              	.LVL11:
+ 123 0066 F2E7     		b	.L3
+ 124              	.L8:
+ 125              		.align	2
+ 126              	.L7:
+ 127 0068 ABAAAAAA 		.word	-1431655765
+ 128              		.cfi_endproc
+ 129              	.LFE19:
+ 131              		.section	.text._ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE,"ax",%progbits
+ 132              		.align	1
+ 133              		.global	_ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE
+ 134              		.syntax unified
+ 135              		.thumb
+ 136              		.thumb_func
+ 138              	_ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE:
+ 139              	.LVL12:
+ 140              	.LFB20:
+  17:../../src/AccelerometerSensor.cpp **** 
+  18:../../src/AccelerometerSensor.cpp **** bool AccelerometerSensor::setConfig( const accelerometer_config_t &config ){
+ 141              		.loc 1 18 76 is_stmt 1 view -0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              		.loc 1 18 76 is_stmt 0 view .LVU34
+ 146 0000 08B5     		push	{r3, lr}
+ 147              	.LCFI1:
+ 148              		.cfi_def_cfa_offset 8
+ 149              		.cfi_offset 3, -8
+ 150              		.cfi_offset 14, -4
+  19:../../src/AccelerometerSensor.cpp ****     return this->_drv->setConfig( config );
+ 151              		.loc 1 19 5 is_stmt 1 view .LVU35
+ARM GAS  /tmp/cckOIzDC.s 			page 4
+
+
+ 152              		.loc 1 19 18 is_stmt 0 view .LVU36
+ 153 0002 D0F8F400 		ldr	r0, [r0, #244]
+ 154              	.LVL13:
+ 155              		.loc 1 19 42 view .LVU37
+ 156 0006 0368     		ldr	r3, [r0]
+ 157 0008 1B68     		ldr	r3, [r3]
+ 158              		.loc 1 19 33 view .LVU38
+ 159 000a 9847     		blx	r3
+ 160              	.LVL14:
+  20:../../src/AccelerometerSensor.cpp **** }
+ 161              		.loc 1 20 1 view .LVU39
+ 162 000c 08BD     		pop	{r3, pc}
+ 163              		.cfi_endproc
+ 164              	.LFE20:
+ 166              		.section	.text._ZN19AccelerometerSensor9getConfigEv,"ax",%progbits
+ 167              		.align	1
+ 168              		.global	_ZN19AccelerometerSensor9getConfigEv
+ 169              		.syntax unified
+ 170              		.thumb
+ 171              		.thumb_func
+ 173              	_ZN19AccelerometerSensor9getConfigEv:
+ 174              	.LVL15:
+ 175              	.LFB21:
+  21:../../src/AccelerometerSensor.cpp **** 
+  22:../../src/AccelerometerSensor.cpp **** const AccelerometerSensor::accelerometer_config_t * AccelerometerSensor::getConfig(){
+ 176              		.loc 1 22 85 is_stmt 1 view -0
+ 177              		.cfi_startproc
+ 178              		@ args = 0, pretend = 0, frame = 0
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180              		.loc 1 22 85 is_stmt 0 view .LVU41
+ 181 0000 08B5     		push	{r3, lr}
+ 182              	.LCFI2:
+ 183              		.cfi_def_cfa_offset 8
+ 184              		.cfi_offset 3, -8
+ 185              		.cfi_offset 14, -4
+  23:../../src/AccelerometerSensor.cpp ****     return this->_drv->getConfig();
+ 186              		.loc 1 23 5 is_stmt 1 view .LVU42
+ 187              		.loc 1 23 18 is_stmt 0 view .LVU43
+ 188 0002 D0F8F400 		ldr	r0, [r0, #244]
+ 189              	.LVL16:
+ 190              		.loc 1 23 34 view .LVU44
+ 191 0006 0368     		ldr	r3, [r0]
+ 192 0008 9B68     		ldr	r3, [r3, #8]
+ 193              		.loc 1 23 33 view .LVU45
+ 194 000a 9847     		blx	r3
+ 195              	.LVL17:
+  24:../../src/AccelerometerSensor.cpp **** }
+ 196              		.loc 1 24 1 view .LVU46
+ 197 000c 08BD     		pop	{r3, pc}
+ 198              		.cfi_endproc
+ 199              	.LFE21:
+ 201              		.section	.text._ZN19AccelerometerSensor10fullBufferEv,"ax",%progbits
+ 202              		.align	1
+ 203              		.global	_ZN19AccelerometerSensor10fullBufferEv
+ 204              		.syntax unified
+ 205              		.thumb
+ 206              		.thumb_func
+ARM GAS  /tmp/cckOIzDC.s 			page 5
+
+
+ 208              	_ZN19AccelerometerSensor10fullBufferEv:
+ 209              	.LVL18:
+ 210              	.LFB22:
+  25:../../src/AccelerometerSensor.cpp **** 
+  26:../../src/AccelerometerSensor.cpp **** bool AccelerometerSensor::fullBuffer(){
+ 211              		.loc 1 26 39 is_stmt 1 view -0
+ 212              		.cfi_startproc
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215              		@ link register save eliminated.
+  27:../../src/AccelerometerSensor.cpp ****     return this->_buff_lvl == ACCELEROMETER_SENSOR_BUFFER_SIZE;
+ 216              		.loc 1 27 5 view .LVU48
+ 217              		.loc 1 27 18 is_stmt 0 view .LVU49
+ 218 0000 D0F8F000 		ldr	r0, [r0, #240]
+ 219              	.LVL19:
+  28:../../src/AccelerometerSensor.cpp **** }
+ 220              		.loc 1 28 1 view .LVU50
+ 221 0004 F028     		cmp	r0, #240
+ 222 0006 14BF     		ite	ne
+ 223 0008 0020     		movne	r0, #0
+ 224 000a 0120     		moveq	r0, #1
+ 225 000c 7047     		bx	lr
+ 226              		.cfi_endproc
+ 227              	.LFE22:
+ 229              		.section	.text._ZN19AccelerometerSensor11emptyBufferEv,"ax",%progbits
+ 230              		.align	1
+ 231              		.global	_ZN19AccelerometerSensor11emptyBufferEv
+ 232              		.syntax unified
+ 233              		.thumb
+ 234              		.thumb_func
+ 236              	_ZN19AccelerometerSensor11emptyBufferEv:
+ 237              	.LVL20:
+ 238              	.LFB23:
+  29:../../src/AccelerometerSensor.cpp **** 
+  30:../../src/AccelerometerSensor.cpp **** bool AccelerometerSensor::emptyBuffer(){
+ 239              		.loc 1 30 40 is_stmt 1 view -0
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243              		@ link register save eliminated.
+  31:../../src/AccelerometerSensor.cpp ****     return this->_buff_lvl == 0;
+ 244              		.loc 1 31 5 view .LVU52
+ 245              		.loc 1 31 18 is_stmt 0 view .LVU53
+ 246 0000 D0F8F000 		ldr	r0, [r0, #240]
+ 247              	.LVL21:
+  32:../../src/AccelerometerSensor.cpp **** }
+ 248              		.loc 1 32 1 view .LVU54
+ 249 0004 B0FA80F0 		clz	r0, r0
+ 250 0008 4009     		lsrs	r0, r0, #5
+ 251 000a 7047     		bx	lr
+ 252              		.cfi_endproc
+ 253              	.LFE23:
+ 255              		.section	.text._ZN19AccelerometerSensor9availableEv,"ax",%progbits
+ 256              		.align	1
+ 257              		.global	_ZN19AccelerometerSensor9availableEv
+ 258              		.syntax unified
+ 259              		.thumb
+ARM GAS  /tmp/cckOIzDC.s 			page 6
+
+
+ 260              		.thumb_func
+ 262              	_ZN19AccelerometerSensor9availableEv:
+ 263              	.LVL22:
+ 264              	.LFB24:
+  33:../../src/AccelerometerSensor.cpp **** 
+  34:../../src/AccelerometerSensor.cpp **** uint32_t AccelerometerSensor::available(){
+ 265              		.loc 1 34 42 is_stmt 1 view -0
+ 266              		.cfi_startproc
+ 267              		@ args = 0, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269              		@ link register save eliminated.
+  35:../../src/AccelerometerSensor.cpp ****     return this->_buff_lvl / sizeof(samples_t); // To get better saving actual samples in buffer
+ 270              		.loc 1 35 5 view .LVU56
+ 271              		.loc 1 35 18 is_stmt 0 view .LVU57
+ 272 0000 D0F8F000 		ldr	r0, [r0, #240]
+ 273              	.LVL23:
+ 274              		.loc 1 35 46 view .LVU58
+ 275 0004 024B     		ldr	r3, .L16
+ 276 0006 A3FB0030 		umull	r3, r0, r3, r0
+  36:../../src/AccelerometerSensor.cpp **** }
+ 277              		.loc 1 36 1 view .LVU59
+ 278 000a C008     		lsrs	r0, r0, #3
+ 279 000c 7047     		bx	lr
+ 280              	.L17:
+ 281 000e 00BF     		.align	2
+ 282              	.L16:
+ 283 0010 ABAAAAAA 		.word	-1431655765
+ 284              		.cfi_endproc
+ 285              	.LFE24:
+ 287              		.section	.text._ZN19AccelerometerSensor4readEPNS_9samples_tEm,"ax",%progbits
+ 288              		.align	1
+ 289              		.global	_ZN19AccelerometerSensor4readEPNS_9samples_tEm
+ 290              		.syntax unified
+ 291              		.thumb
+ 292              		.thumb_func
+ 294              	_ZN19AccelerometerSensor4readEPNS_9samples_tEm:
+ 295              	.LVL24:
+ 296              	.LFB25:
+  37:../../src/AccelerometerSensor.cpp **** 
+  38:../../src/AccelerometerSensor.cpp **** uint32_t AccelerometerSensor::read( samples_t * samples, uint32_t N ){
+ 297              		.loc 1 38 70 is_stmt 1 view -0
+ 298              		.cfi_startproc
+ 299              		@ args = 0, pretend = 0, frame = 0
+ 300              		@ frame_needed = 0, uses_anonymous_args = 0
+ 301              		.loc 1 38 70 is_stmt 0 view .LVU61
+ 302 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 303              	.LCFI3:
+ 304              		.cfi_def_cfa_offset 24
+ 305              		.cfi_offset 4, -24
+ 306              		.cfi_offset 5, -20
+ 307              		.cfi_offset 6, -16
+ 308              		.cfi_offset 7, -12
+ 309              		.cfi_offset 8, -8
+ 310              		.cfi_offset 14, -4
+ 311 0004 0646     		mov	r6, r0
+ 312 0006 8846     		mov	r8, r1
+ 313 0008 1446     		mov	r4, r2
+ARM GAS  /tmp/cckOIzDC.s 			page 7
+
+
+  39:../../src/AccelerometerSensor.cpp ****     uint32_t M, max = this->available();
+ 314              		.loc 1 39 5 is_stmt 1 view .LVU62
+ 315              		.loc 1 39 38 is_stmt 0 view .LVU63
+ 316 000a FFF7FEFF 		bl	_ZN19AccelerometerSensor9availableEv
+ 317              	.LVL25:
+ 318              		.loc 1 39 38 view .LVU64
+ 319 000e 0546     		mov	r5, r0
+ 320              	.LVL26:
+  40:../../src/AccelerometerSensor.cpp ****     if(max > N)
+ 321              		.loc 1 40 5 is_stmt 1 view .LVU65
+ 322 0010 A042     		cmp	r0, r4
+ 323 0012 00D8     		bhi	.L19
+  41:../../src/AccelerometerSensor.cpp ****         M = N;
+  42:../../src/AccelerometerSensor.cpp ****     else
+  43:../../src/AccelerometerSensor.cpp ****         M = max;
+ 324              		.loc 1 43 11 is_stmt 0 view .LVU66
+ 325 0014 0446     		mov	r4, r0
+ 326              	.LVL27:
+ 327              	.L19:
+  44:../../src/AccelerometerSensor.cpp ****     memcpy(samples, this->_buffer, sizeof(samples_t)*M);
+ 328              		.loc 1 44 5 is_stmt 1 view .LVU67
+ 329              		.loc 1 44 53 is_stmt 0 view .LVU68
+ 330 0016 04EB4407 		add	r7, r4, r4, lsl #1
+ 331 001a BF00     		lsls	r7, r7, #2
+ 332              		.loc 1 44 11 view .LVU69
+ 333 001c 3A46     		mov	r2, r7
+ 334 001e 3146     		mov	r1, r6
+ 335 0020 4046     		mov	r0, r8
+ 336              	.LVL28:
+ 337              		.loc 1 44 11 view .LVU70
+ 338 0022 FFF7FEFF 		bl	memcpy
+ 339              	.LVL29:
+  45:../../src/AccelerometerSensor.cpp ****     // Cycle the buffer if necessary
+  46:../../src/AccelerometerSensor.cpp ****     if(M != max){
+ 340              		.loc 1 46 5 is_stmt 1 view .LVU71
+ 341              	.LBB2:
+ 342 0026 AC42     		cmp	r4, r5
+ 343 0028 0AD1     		bne	.L24
+  47:../../src/AccelerometerSensor.cpp ****         uint32_t R = max-M;
+  48:../../src/AccelerometerSensor.cpp ****         uint32_t rem_bytes = R*sizeof(samples_t);
+  49:../../src/AccelerometerSensor.cpp ****         memcpy(this->_buffer, this->_buffer+sizeof(samples_t)*M, rem_bytes);
+  50:../../src/AccelerometerSensor.cpp ****         this->_buff_lvl = rem_bytes;
+  51:../../src/AccelerometerSensor.cpp ****     }else{
+  52:../../src/AccelerometerSensor.cpp ****         this->_buff_lvl = 0;
+ 344              		.loc 1 52 9 view .LVU72
+ 345              		.loc 1 52 25 is_stmt 0 view .LVU73
+ 346 002a 0023     		movs	r3, #0
+ 347 002c C6F8F030 		str	r3, [r6, #240]
+  53:../../src/AccelerometerSensor.cpp ****         this->_listener->OnEmptyBufferEvent();
+ 348              		.loc 1 53 9 is_stmt 1 view .LVU74
+ 349              		.loc 1 53 15 is_stmt 0 view .LVU75
+ 350 0030 D6F8F800 		ldr	r0, [r6, #248]
+ 351              		.loc 1 53 45 view .LVU76
+ 352 0034 0368     		ldr	r3, [r0]
+ 353 0036 5B68     		ldr	r3, [r3, #4]
+ 354              		.loc 1 53 44 view .LVU77
+ 355 0038 9847     		blx	r3
+ARM GAS  /tmp/cckOIzDC.s 			page 8
+
+
+ 356              	.LVL30:
+ 357              	.LBE2:
+  54:../../src/AccelerometerSensor.cpp ****     }
+  55:../../src/AccelerometerSensor.cpp ****     return M;
+ 358              		.loc 1 55 5 is_stmt 1 view .LVU78
+ 359              	.L18:
+  56:../../src/AccelerometerSensor.cpp **** }...
+ 360              		.loc 1 56 1 is_stmt 0 view .LVU79
+ 361 003a 2046     		mov	r0, r4
+ 362 003c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 363              	.LVL31:
+ 364              	.L24:
+ 365              	.LBB4:
+ 366              	.LBB3:
+  47:../../src/AccelerometerSensor.cpp ****         uint32_t R = max-M;
+ 367              		.loc 1 47 9 is_stmt 1 view .LVU80
+  47:../../src/AccelerometerSensor.cpp ****         uint32_t R = max-M;
+ 368              		.loc 1 47 18 is_stmt 0 view .LVU81
+ 369 0040 2D1B     		subs	r5, r5, r4
+ 370              	.LVL32:
+  48:../../src/AccelerometerSensor.cpp ****         uint32_t rem_bytes = R*sizeof(samples_t);
+ 371              		.loc 1 48 9 is_stmt 1 view .LVU82
+  48:../../src/AccelerometerSensor.cpp ****         uint32_t rem_bytes = R*sizeof(samples_t);
+ 372              		.loc 1 48 18 is_stmt 0 view .LVU83
+ 373 0042 05EB4505 		add	r5, r5, r5, lsl #1
+ 374              	.LVL33:
+  48:../../src/AccelerometerSensor.cpp ****         uint32_t rem_bytes = R*sizeof(samples_t);
+ 375              		.loc 1 48 18 view .LVU84
+ 376 0046 AD00     		lsls	r5, r5, #2
+ 377              	.LVL34:
+  49:../../src/AccelerometerSensor.cpp ****         memcpy(this->_buffer, this->_buffer+sizeof(samples_t)*M, rem_bytes);
+ 378              		.loc 1 49 9 is_stmt 1 view .LVU85
+  49:../../src/AccelerometerSensor.cpp ****         memcpy(this->_buffer, this->_buffer+sizeof(samples_t)*M, rem_bytes);
+ 379              		.loc 1 49 15 is_stmt 0 view .LVU86
+ 380 0048 2A46     		mov	r2, r5
+ 381 004a F119     		adds	r1, r6, r7
+ 382 004c 3046     		mov	r0, r6
+ 383 004e FFF7FEFF 		bl	memcpy
+ 384              	.LVL35:
+  50:../../src/AccelerometerSensor.cpp ****         this->_buff_lvl = rem_bytes;
+ 385              		.loc 1 50 9 is_stmt 1 view .LVU87
+  50:../../src/AccelerometerSensor.cpp ****         this->_buff_lvl = rem_bytes;
+ 386              		.loc 1 50 25 is_stmt 0 view .LVU88
+ 387 0052 C6F8F050 		str	r5, [r6, #240]
+ 388              	.LBE3:
+ 389 0056 F0E7     		b	.L18
+ 390              	.LBE4:
+ 391              		.cfi_endproc
+ 392              	.LFE25:
+ 394              		.text
+ 395              	.Letext0:
+ 396              		.file 2 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h"
+ 397              		.file 3 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h"
+ 398              		.file 4 "../../inc/AccelerometerSensor.hpp"
+ 399              		.file 5 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/cstring"
+ 400              		.file 6 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/
+ 401              		.file 7 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ARM GAS  /tmp/cckOIzDC.s 			page 9
+
+
+ 402              		.file 8 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 403              		.file 9 "<built-in>"
+ARM GAS  /tmp/cckOIzDC.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 AccelerometerSensor.cpp
+     /tmp/cckOIzDC.s:18     .text._ZN19AccelerometerSensor7refreshEv:0000000000000000 $t
+     /tmp/cckOIzDC.s:24     .text._ZN19AccelerometerSensor7refreshEv:0000000000000000 _ZN19AccelerometerSensor7refreshEv
+     /tmp/cckOIzDC.s:127    .text._ZN19AccelerometerSensor7refreshEv:0000000000000068 $d
+     /tmp/cckOIzDC.s:132    .text._ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE:0000000000000000 $t
+     /tmp/cckOIzDC.s:138    .text._ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE:0000000000000000 _ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE
+     /tmp/cckOIzDC.s:167    .text._ZN19AccelerometerSensor9getConfigEv:0000000000000000 $t
+     /tmp/cckOIzDC.s:173    .text._ZN19AccelerometerSensor9getConfigEv:0000000000000000 _ZN19AccelerometerSensor9getConfigEv
+     /tmp/cckOIzDC.s:202    .text._ZN19AccelerometerSensor10fullBufferEv:0000000000000000 $t
+     /tmp/cckOIzDC.s:208    .text._ZN19AccelerometerSensor10fullBufferEv:0000000000000000 _ZN19AccelerometerSensor10fullBufferEv
+     /tmp/cckOIzDC.s:230    .text._ZN19AccelerometerSensor11emptyBufferEv:0000000000000000 $t
+     /tmp/cckOIzDC.s:236    .text._ZN19AccelerometerSensor11emptyBufferEv:0000000000000000 _ZN19AccelerometerSensor11emptyBufferEv
+     /tmp/cckOIzDC.s:256    .text._ZN19AccelerometerSensor9availableEv:0000000000000000 $t
+     /tmp/cckOIzDC.s:262    .text._ZN19AccelerometerSensor9availableEv:0000000000000000 _ZN19AccelerometerSensor9availableEv
+     /tmp/cckOIzDC.s:283    .text._ZN19AccelerometerSensor9availableEv:0000000000000010 $d
+     /tmp/cckOIzDC.s:288    .text._ZN19AccelerometerSensor4readEPNS_9samples_tEm:0000000000000000 $t
+     /tmp/cckOIzDC.s:294    .text._ZN19AccelerometerSensor4readEPNS_9samples_tEm:0000000000000000 _ZN19AccelerometerSensor4readEPNS_9samples_tEm
+
+UNDEFINED SYMBOLS
+memcpy

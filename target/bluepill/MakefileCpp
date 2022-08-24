@@ -77,7 +77,9 @@ Core/Src/lis3dh_driver.c \
 Core/Src/porting.c 
 
 CXX_SOURCES = \
-Core/Src/appTasks.cpp
+Core/Src/appTasks.cpp \
+../../src/AccelerometerSensor.cpp \
+../../src/Serial.cpp
 
 # ASM sources
 ASM_SOURCES =  \
@@ -145,7 +147,8 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
 
-CXX_INCLUDES = $(C_INCLUDES)
+CXX_INCLUDES = $(C_INCLUDES) \
+-I../../inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
@@ -175,7 +178,7 @@ CXXFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 LDSCRIPT = STM32F103C8Tx_FLASH.ld
 
 # libraries
-LIBS = -lc -lm -lnosys 
+LIBS = -lc -lm -lnosys -lstdc++
 LIBDIR = 
 LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 

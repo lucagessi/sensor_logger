@@ -51,15 +51,22 @@
 osThreadId_t controllerTaskHandle;
 const osThreadAttr_t controllerTask_attributes = {
   .name = "controllerTask",
-  .stack_size = 128 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for sensorTask */
 osThreadId_t sensorTaskHandle;
 const osThreadAttr_t sensorTask_attributes = {
   .name = "sensorTask",
-  .stack_size = 128 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityNormal4,
+};
+/* Definitions for serialTask */
+osThreadId_t serialTaskHandle;
+const osThreadAttr_t serialTask_attributes = {
+  .name = "serialTask",
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -69,6 +76,7 @@ const osThreadAttr_t sensorTask_attributes = {
 
 void StartControllerTask(void *argument);
 void StartSensorTask(void *argument);
+void StartSerialTask(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -104,6 +112,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of sensorTask */
   sensorTaskHandle = osThreadNew(StartSensorTask, NULL, &sensorTask_attributes);
+
+  /* creation of serialTask */
+  serialTaskHandle = osThreadNew(StartSerialTask, NULL, &serialTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -149,6 +160,24 @@ __weak void StartSensorTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartSensorTask */
+}
+
+/* USER CODE BEGIN Header_StartSerialTask */
+/**
+* @brief Function implementing the serialTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartSerialTask */
+__weak void StartSerialTask(void *argument)
+{
+  /* USER CODE BEGIN StartSerialTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartSerialTask */
 }
 
 /* Private application code --------------------------------------------------*/

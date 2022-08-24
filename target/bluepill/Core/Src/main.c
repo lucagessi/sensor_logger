@@ -90,7 +90,6 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_SPI1_Init();
-  HAL_GPIO_WritePin( SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
   /* USER CODE BEGIN 2 */
   /* USER CODE END 2 */
 

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccRc6kBV.s 			page 1
+ARM GAS  /tmp/ccociAVi.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -17,350 +17,3373 @@ ARM GAS  /tmp/ccRc6kBV.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.section	.rodata.StartControllerTask.str1.4,"aMS",%progbits,1
-  18              		.align	2
-  19              	.LC0:
-  20 0000 4369616F 		.ascii	"Ciao bel from FreeRTOS controller task!\012\000"
-  20      2062656C 
-  20      2066726F 
-  20      6D204672 
-  20      65655254 
-  21              		.section	.text.StartControllerTask,"ax",%progbits
-  22              		.align	1
-  23              		.global	StartControllerTask
-  24              		.syntax unified
-  25              		.thumb
-  26              		.thumb_func
-  28              	StartControllerTask:
-  29              	.LVL0:
-  30              	.LFB70:
-  31              		.file 1 "Core/Src/appTasks.cpp"
-   1:Core/Src/appTasks.cpp **** 
-   2:Core/Src/appTasks.cpp **** extern "C"
-   3:Core/Src/appTasks.cpp **** {
-   4:Core/Src/appTasks.cpp ****   #include "FreeRTOS.h"
-   5:Core/Src/appTasks.cpp ****   #include "cmsis_os.h"
-   6:Core/Src/appTasks.cpp ****   #include "task.h"
-   7:Core/Src/appTasks.cpp **** 
-   8:Core/Src/appTasks.cpp ****   #include "main.h"
-   9:Core/Src/appTasks.cpp ****   #include "spi.h"
-  10:Core/Src/appTasks.cpp ****   #include "usart.h"
-  11:Core/Src/appTasks.cpp ****   #include "gpio.h"
-  12:Core/Src/appTasks.cpp ****   #include "string.h"
-  13:Core/Src/appTasks.cpp ****   #include "lis3dh_driver.h"
-  14:Core/Src/appTasks.cpp **** }
-  15:Core/Src/appTasks.cpp **** #include <stdio.h>
-  16:Core/Src/appTasks.cpp **** 
-  17:Core/Src/appTasks.cpp **** extern osThreadId_t controllerTaskHandle;
-  18:Core/Src/appTasks.cpp **** extern osThreadId_t sensorTaskHandle;
-  19:Core/Src/appTasks.cpp **** 
-  20:Core/Src/appTasks.cpp **** extern "C" void StartControllerTask(void *argument)
-  21:Core/Src/appTasks.cpp **** {
-  32              		.loc 1 21 1 view -0
-  33              		.cfi_startproc
-ARM GAS  /tmp/ccRc6kBV.s 			page 2
+  17              		.section	.text._ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv,"axG",%progbits,_ZN19A
+  18              		.align	1
+  19              		.weak	_ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  24              	_ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv:
+  25              	.LVL0:
+  26              	.LFB70:
+  27              		.file 1 "../../inc/AccelerometerSensor.hpp"
+   1:../../inc/AccelerometerSensor.hpp **** #ifndef SENSOR_LOGGER_ACCELEROMETER_SENSOR_H
+   2:../../inc/AccelerometerSensor.hpp **** #define SENSOR_LOGGER_ACCELEROMETER_SENSOR_H
+   3:../../inc/AccelerometerSensor.hpp **** 
+   4:../../inc/AccelerometerSensor.hpp **** #include "stdint.h"
+   5:../../inc/AccelerometerSensor.hpp **** 
+   6:../../inc/AccelerometerSensor.hpp **** #define ACCELEROMETER_SENSOR_BUFFER_SIZE      240 // Bytes
+   7:../../inc/AccelerometerSensor.hpp **** #define ACCELEROMETER_SAMPLES_SIZE            4   // Float as default data for semplicity
+   8:../../inc/AccelerometerSensor.hpp **** 
+   9:../../inc/AccelerometerSensor.hpp **** class AccelerometerSensor{
+  10:../../inc/AccelerometerSensor.hpp **** 
+  11:../../inc/AccelerometerSensor.hpp ****     public:
+  12:../../inc/AccelerometerSensor.hpp ****         typedef struct{
+  13:../../inc/AccelerometerSensor.hpp ****             uint32_t odr;        // Hz
+  14:../../inc/AccelerometerSensor.hpp ****             float    resolution; // Resolution in mg
+  15:../../inc/AccelerometerSensor.hpp ****             float    fullscale;  // Full scale in mg
+  16:../../inc/AccelerometerSensor.hpp ****         }accelerometer_config_t; 
+  17:../../inc/AccelerometerSensor.hpp ****         class EventListener{
+  18:../../inc/AccelerometerSensor.hpp ****             public:
+  19:../../inc/AccelerometerSensor.hpp ****                 virtual void OnFullBufferEvent() {};
+  28              		.loc 1 19 30 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              		.loc 1 19 51 is_stmt 0 view .LVU1
+  34 0000 7047     		bx	lr
+  35              		.cfi_endproc
+  36              	.LFE70:
+  38              		.section	.text._ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv,"axG",%progbits,_ZN19
+  39              		.align	1
+  40              		.weak	_ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv
+ARM GAS  /tmp/ccociAVi.s 			page 2
 
 
-  34              		@ args = 0, pretend = 0, frame = 48
-  35              		@ frame_needed = 0, uses_anonymous_args = 0
-  36              		.loc 1 21 1 is_stmt 0 view .LVU1
-  37 0000 10B5     		push	{r4, lr}
-  38              	.LCFI0:
-  39              		.cfi_def_cfa_offset 8
-  40              		.cfi_offset 4, -8
-  41              		.cfi_offset 14, -4
-  42 0002 8CB0     		sub	sp, sp, #48
-  43              	.LCFI1:
-  44              		.cfi_def_cfa_offset 56
-  22:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
-  45              		.loc 1 22 3 is_stmt 1 view .LVU2
+  41              		.syntax unified
+  42              		.thumb
+  43              		.thumb_func
+  45              	_ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv:
   46              	.LVL1:
-  23:Core/Src/appTasks.cpp ****   const char text[] = "Ciao bel from FreeRTOS controller task!\n";
-  47              		.loc 1 23 3 view .LVU3
-  48              		.loc 1 23 14 is_stmt 0 view .LVU4
-  49 0004 0DF1040C 		add	ip, sp, #4
-  50 0008 0D4C     		ldr	r4, .L4
-  51 000a 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
-  52              	.LVL2:
-  53              		.loc 1 23 14 view .LVU5
-  54 000c ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
-  55 0010 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
-  56 0012 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
-  57 0016 94E80700 		ldm	r4, {r0, r1, r2}
-  58 001a ACE80300 		stmia	ip!, {r0, r1}
-  59 001e 8CF80020 		strb	r2, [ip]
-  60              	.L2:
-  24:Core/Src/appTasks.cpp ****   for(;;)
-  61              		.loc 1 24 3 is_stmt 1 discriminator 1 view .LVU6
-  25:Core/Src/appTasks.cpp ****   {
-  26:Core/Src/appTasks.cpp ****     HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
-  62              		.loc 1 26 5 discriminator 1 view .LVU7
-  63              		.loc 1 26 55 is_stmt 0 discriminator 1 view .LVU8
-  64 0022 01A8     		add	r0, sp, #4
-  65 0024 FFF7FEFF 		bl	strlen
-  66              	.LVL3:
-  67              		.loc 1 26 22 discriminator 1 view .LVU9
-  68 0028 4FF4FA73 		mov	r3, #500
-  69 002c 82B2     		uxth	r2, r0
-  70 002e 01A9     		add	r1, sp, #4
-  71 0030 0448     		ldr	r0, .L4+4
-  72 0032 FFF7FEFF 		bl	HAL_UART_Transmit
-  73              	.LVL4:
-  27:Core/Src/appTasks.cpp ****     vTaskDelay(xDelay);
-  74              		.loc 1 27 5 is_stmt 1 discriminator 1 view .LVU10
-  75              		.loc 1 27 15 is_stmt 0 discriminator 1 view .LVU11
-  76 0036 4FF4FA70 		mov	r0, #500
-  77 003a FFF7FEFF 		bl	vTaskDelay
-  78              	.LVL5:
-  24:Core/Src/appTasks.cpp ****   for(;;)
-  79              		.loc 1 24 3 is_stmt 1 discriminator 1 view .LVU12
-  80 003e F0E7     		b	.L2
-  81              	.L5:
-  82              		.align	2
-  83              	.L4:
-ARM GAS  /tmp/ccRc6kBV.s 			page 3
+  47              	.LFB71:
+  20:../../inc/AccelerometerSensor.hpp ****                 virtual void OnEmptyBufferEvent() {};
+  48              		.loc 1 20 30 is_stmt 1 view -0
+  49              		.cfi_startproc
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+  52              		@ link register save eliminated.
+  53              		.loc 1 20 52 is_stmt 0 view .LVU3
+  54 0000 7047     		bx	lr
+  55              		.cfi_endproc
+  56              	.LFE71:
+  58              		.section	.text._ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv,"axG",%progbits,
+  59              		.align	1
+  60              		.weak	_ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv
+  61              		.syntax unified
+  62              		.thumb
+  63              		.thumb_func
+  65              	_ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv:
+  66              	.LVL2:
+  67              	.LFB72:
+  21:../../inc/AccelerometerSensor.hpp ****                 virtual void OnNewDataAvailableEvent() {};
+  68              		.loc 1 21 30 is_stmt 1 view -0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+  73              		.loc 1 21 57 is_stmt 0 view .LVU5
+  74 0000 7047     		bx	lr
+  75              		.cfi_endproc
+  76              	.LFE72:
+  78              		.section	.text._ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE,"axG",%pro
+  79              		.align	1
+  80              		.weak	_ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE
+  81              		.syntax unified
+  82              		.thumb
+  83              		.thumb_func
+  85              	_ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE:
+  86              	.LVL3:
+  87              	.LFB73:
+  22:../../inc/AccelerometerSensor.hpp ****         };
+  23:../../inc/AccelerometerSensor.hpp ****         typedef struct{
+  24:../../inc/AccelerometerSensor.hpp ****             float x;
+  25:../../inc/AccelerometerSensor.hpp ****             float y;
+  26:../../inc/AccelerometerSensor.hpp ****             float z;
+  27:../../inc/AccelerometerSensor.hpp ****         }samples_t;
+  28:../../inc/AccelerometerSensor.hpp ****         class Driver{
+  29:../../inc/AccelerometerSensor.hpp ****             public:
+  30:../../inc/AccelerometerSensor.hpp ****                 virtual bool setConfig(const accelerometer_config_t &config){return false;};
+  88              		.loc 1 30 30 is_stmt 1 view -0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccociAVi.s 			page 3
 
 
-  84 0040 00000000 		.word	.LC0
-  85 0044 00000000 		.word	huart1
-  86              		.cfi_endproc
-  87              	.LFE70:
-  89              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
-  90              		.align	1
-  91              		.global	HAL_GPIO_EXTI_Callback
-  92              		.syntax unified
-  93              		.thumb
-  94              		.thumb_func
-  96              	HAL_GPIO_EXTI_Callback:
-  97              	.LVL6:
-  98              	.LFB71:
-  28:Core/Src/appTasks.cpp ****   }
-  29:Core/Src/appTasks.cpp **** }
-  30:Core/Src/appTasks.cpp **** 
-  31:Core/Src/appTasks.cpp **** // Accelerometer interrupt
-  32:Core/Src/appTasks.cpp **** void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-  33:Core/Src/appTasks.cpp **** {
-  99              		.loc 1 33 1 view -0
- 100              		.cfi_startproc
- 101              		@ args = 0, pretend = 0, frame = 8
- 102              		@ frame_needed = 0, uses_anonymous_args = 0
-  34:Core/Src/appTasks.cpp ****   if(GPIO_Pin == ACC_INT1_Pin){
- 103              		.loc 1 34 3 view .LVU14
- 104              	.LBB2:
- 105 0000 0128     		cmp	r0, #1
- 106 0002 00D0     		beq	.L12
- 107 0004 7047     		bx	lr
- 108              	.L12:
- 109              	.LBE2:
-  33:Core/Src/appTasks.cpp ****   if(GPIO_Pin == ACC_INT1_Pin){
- 110              		.loc 1 33 1 is_stmt 0 view .LVU15
- 111 0006 00B5     		push	{lr}
- 112              	.LCFI2:
- 113              		.cfi_def_cfa_offset 4
- 114              		.cfi_offset 14, -4
- 115 0008 83B0     		sub	sp, sp, #12
- 116              	.LCFI3:
- 117              		.cfi_def_cfa_offset 16
- 118              	.LBB4:
- 119              	.LBB3:
-  35:Core/Src/appTasks.cpp ****     BaseType_t priority;
- 120              		.loc 1 35 5 is_stmt 1 view .LVU16
-  36:Core/Src/appTasks.cpp ****     // Sensor task notification
-  37:Core/Src/appTasks.cpp ****     vTaskNotifyGiveFromISR( sensorTaskHandle, &priority );
- 121              		.loc 1 37 5 view .LVU17
- 122              		.loc 1 37 27 is_stmt 0 view .LVU18
- 123 000a 01A9     		add	r1, sp, #4
- 124 000c 034B     		ldr	r3, .L13
- 125 000e 1868     		ldr	r0, [r3]
- 126              	.LVL7:
- 127              		.loc 1 37 27 view .LVU19
- 128 0010 FFF7FEFF 		bl	vTaskNotifyGiveFromISR
- 129              	.LVL8:
- 130              	.LBE3:
- 131              	.LBE4:
-ARM GAS  /tmp/ccRc6kBV.s 			page 4
+  92              		@ link register save eliminated.
+  93              		.loc 1 30 78 view .LVU7
+  94              		.loc 1 30 91 is_stmt 0 view .LVU8
+  95 0000 0020     		movs	r0, #0
+  96              	.LVL4:
+  97              		.loc 1 30 91 view .LVU9
+  98 0002 7047     		bx	lr
+  99              		.cfi_endproc
+ 100              	.LFE73:
+ 102              		.section	.text._ZN19AccelerometerSensor6Driver4readEPhm,"axG",%progbits,_ZN19AccelerometerSensor6D
+ 103              		.align	1
+ 104              		.weak	_ZN19AccelerometerSensor6Driver4readEPhm
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 109              	_ZN19AccelerometerSensor6Driver4readEPhm:
+ 110              	.LVL5:
+ 111              	.LFB74:
+  31:../../inc/AccelerometerSensor.hpp ****                 virtual uint32_t read(uint8_t *data, uint32_t N){return 0;};             // Read N 
+ 112              		.loc 1 31 34 is_stmt 1 view -0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              		@ link register save eliminated.
+ 117              		.loc 1 31 66 view .LVU11
+ 118              		.loc 1 31 75 is_stmt 0 view .LVU12
+ 119 0000 0020     		movs	r0, #0
+ 120              	.LVL6:
+ 121              		.loc 1 31 75 view .LVU13
+ 122 0002 7047     		bx	lr
+ 123              		.cfi_endproc
+ 124              	.LFE74:
+ 126              		.section	.text._ZN19AccelerometerSensor6Driver9getConfigEv,"axG",%progbits,_ZN19AccelerometerSenso
+ 127              		.align	1
+ 128              		.weak	_ZN19AccelerometerSensor6Driver9getConfigEv
+ 129              		.syntax unified
+ 130              		.thumb
+ 131              		.thumb_func
+ 133              	_ZN19AccelerometerSensor6Driver9getConfigEv:
+ 134              	.LVL7:
+ 135              	.LFB75:
+  32:../../inc/AccelerometerSensor.hpp ****                 virtual const accelerometer_config_t * getConfig(){return nullptr;};     
+ 136              		.loc 1 32 56 is_stmt 1 view -0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140              		@ link register save eliminated.
+ 141              		.loc 1 32 68 view .LVU15
+ 142              		.loc 1 32 83 is_stmt 0 view .LVU16
+ 143 0000 0020     		movs	r0, #0
+ 144              	.LVL8:
+ 145              		.loc 1 32 83 view .LVU17
+ 146 0002 7047     		bx	lr
+ 147              		.cfi_endproc
+ 148              	.LFE75:
+ 150              		.section	.text._ZN19AccelerometerSensor6Driver9availableEv,"axG",%progbits,_ZN19AccelerometerSenso
+ 151              		.align	1
+ARM GAS  /tmp/ccociAVi.s 			page 4
 
 
-  38:Core/Src/appTasks.cpp ****   }
-  39:Core/Src/appTasks.cpp **** }
- 132              		.loc 1 39 1 view .LVU20
- 133 0014 03B0     		add	sp, sp, #12
- 134              	.LCFI4:
- 135              		.cfi_def_cfa_offset 4
- 136              		@ sp needed
- 137 0016 5DF804FB 		ldr	pc, [sp], #4
- 138              	.L14:
- 139 001a 00BF     		.align	2
- 140              	.L13:
- 141 001c 00000000 		.word	sensorTaskHandle
- 142              		.cfi_endproc
- 143              	.LFE71:
- 145              		.section	.rodata.StartSensorTask.str1.4,"aMS",%progbits,1
- 146              		.align	2
- 147              	.LC1:
- 148 0000 53656E73 		.ascii	"Sensor task, whoiam: 0x%02X \012\000"
- 148      6F722074 
- 148      61736B2C 
- 148      2077686F 
- 148      69616D3A 
- 149 001e 0000     		.align	2
- 150              	.LC2:
- 151 0020 53656E73 		.ascii	"Sensor task, whoiam reding error\012\000"
- 151      6F722074 
- 151      61736B2C 
- 151      2077686F 
- 151      69616D20 
- 152              		.section	.text.StartSensorTask,"ax",%progbits
- 153              		.align	1
- 154              		.global	StartSensorTask
- 155              		.syntax unified
- 156              		.thumb
- 157              		.thumb_func
- 159              	StartSensorTask:
- 160              	.LVL9:
- 161              	.LFB72:
-  40:Core/Src/appTasks.cpp **** 
-  41:Core/Src/appTasks.cpp **** extern "C" void StartSensorTask(void *argument)
-  42:Core/Src/appTasks.cpp **** {
- 162              		.loc 1 42 1 is_stmt 1 view -0
- 163              		.cfi_startproc
- 164              		@ args = 0, pretend = 0, frame = 48
- 165              		@ frame_needed = 0, uses_anonymous_args = 0
- 166              		.loc 1 42 1 is_stmt 0 view .LVU22
- 167 0000 10B5     		push	{r4, lr}
- 168              	.LCFI5:
- 169              		.cfi_def_cfa_offset 8
- 170              		.cfi_offset 4, -8
- 171              		.cfi_offset 14, -4
- 172 0002 8CB0     		sub	sp, sp, #48
- 173              	.LCFI6:
- 174              		.cfi_def_cfa_offset 56
-  43:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
- 175              		.loc 1 43 3 is_stmt 1 view .LVU23
- 176              	.LVL10:
-ARM GAS  /tmp/ccRc6kBV.s 			page 5
-
-
-  44:Core/Src/appTasks.cpp ****   char text[40];
- 177              		.loc 1 44 3 view .LVU24
-  45:Core/Src/appTasks.cpp ****   uint8_t whoiam;
- 178              		.loc 1 45 3 view .LVU25
-  46:Core/Src/appTasks.cpp ****   if( LIS3DH_GetWHO_AM_I(&whoiam) ){
- 179              		.loc 1 46 3 view .LVU26
- 180              		.loc 1 46 25 is_stmt 0 view .LVU27
- 181 0004 0DF10700 		add	r0, sp, #7
+ 152              		.weak	_ZN19AccelerometerSensor6Driver9availableEv
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 157              	_ZN19AccelerometerSensor6Driver9availableEv:
+ 158              	.LVL9:
+ 159              	.LFB76:
+  33:../../inc/AccelerometerSensor.hpp ****                 virtual uint32_t available(){return 0;};                                 // Return 
+ 160              		.loc 1 33 34 is_stmt 1 view -0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+ 165              		.loc 1 33 46 view .LVU19
+ 166              		.loc 1 33 55 is_stmt 0 view .LVU20
+ 167 0000 0020     		movs	r0, #0
+ 168              	.LVL10:
+ 169              		.loc 1 33 55 view .LVU21
+ 170 0002 7047     		bx	lr
+ 171              		.cfi_endproc
+ 172              	.LFE76:
+ 174              		.section	.text._ZN19AccelerometerSensor6DriverD2Ev,"axG",%progbits,_ZN19AccelerometerSensor6Driver
+ 175              		.align	1
+ 176              		.weak	_ZN19AccelerometerSensor6DriverD2Ev
+ 177              		.syntax unified
+ 178              		.thumb
+ 179              		.thumb_func
+ 181              	_ZN19AccelerometerSensor6DriverD2Ev:
  182              	.LVL11:
- 183              		.loc 1 46 25 view .LVU28
- 184 0008 FFF7FEFF 		bl	LIS3DH_GetWHO_AM_I
- 185              	.LVL12:
- 186              		.loc 1 46 3 view .LVU29
- 187 000c B8B1     		cbz	r0, .L16
-  47:Core/Src/appTasks.cpp ****     sprintf( text, "Sensor task, whoiam: 0x%02X \n", whoiam );
- 188              		.loc 1 47 5 is_stmt 1 view .LVU30
- 189              		.loc 1 47 12 is_stmt 0 view .LVU31
- 190 000e 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
- 191 0012 1149     		ldr	r1, .L20
- 192 0014 02A8     		add	r0, sp, #8
- 193 0016 FFF7FEFF 		bl	sprintf
- 194              	.LVL13:
- 195              	.L17:
-  48:Core/Src/appTasks.cpp ****   }else{
-  49:Core/Src/appTasks.cpp ****     sprintf( text, "Sensor task, whoiam reding error\n" );
-  50:Core/Src/appTasks.cpp ****   }
-  51:Core/Src/appTasks.cpp ****   LIS3DH_SetODR( LIS3DH_ODR_25Hz );
- 196              		.loc 1 51 3 is_stmt 1 view .LVU32
- 197              		.loc 1 51 16 is_stmt 0 view .LVU33
- 198 001a 0320     		movs	r0, #3
- 199 001c FFF7FEFF 		bl	LIS3DH_SetODR
- 200              	.LVL14:
-  52:Core/Src/appTasks.cpp ****   HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 1000);    vTaskDelay(xDelay);
- 201              		.loc 1 52 3 is_stmt 1 view .LVU34
- 202              		.loc 1 52 53 is_stmt 0 view .LVU35
- 203 0020 02A8     		add	r0, sp, #8
- 204 0022 FFF7FEFF 		bl	strlen
- 205              	.LVL15:
- 206              		.loc 1 52 20 view .LVU36
- 207 0026 4FF47A73 		mov	r3, #1000
- 208 002a 82B2     		uxth	r2, r0
- 209 002c 02A9     		add	r1, sp, #8
- 210 002e 0B48     		ldr	r0, .L20+4
- 211 0030 FFF7FEFF 		bl	HAL_UART_Transmit
- 212              	.LVL16:
- 213              		.loc 1 52 71 is_stmt 1 view .LVU37
- 214              		.loc 1 52 81 is_stmt 0 view .LVU38
- 215 0034 4FF4FA70 		mov	r0, #500
- 216 0038 FFF7FEFF 		bl	vTaskDelay
- 217              	.LVL17:
- 218              	.L18:
-  53:Core/Src/appTasks.cpp **** 
-  54:Core/Src/appTasks.cpp ****   for(;;)
- 219              		.loc 1 54 3 is_stmt 1 discriminator 1 view .LVU39
- 220              		.loc 1 54 3 discriminator 1 view .LVU40
- 221 003c FEE7     		b	.L18
- 222              	.L16:
-ARM GAS  /tmp/ccRc6kBV.s 			page 6
+ 183              	.LFB78:
+  34:../../inc/AccelerometerSensor.hpp ****                 virtual ~Driver(){};
+ 184              		.loc 1 34 25 is_stmt 1 view -0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188              		@ link register save eliminated.
+ 189              	.LBB81:
+ 190              		.loc 1 34 34 is_stmt 0 view .LVU23
+ 191 0000 014B     		ldr	r3, .L9
+ 192 0002 0360     		str	r3, [r0]
+ 193              	.LBE81:
+ 194              		.loc 1 34 35 view .LVU24
+ 195 0004 7047     		bx	lr
+ 196              	.L10:
+ 197 0006 00BF     		.align	2
+ 198              	.L9:
+ 199 0008 08000000 		.word	_ZTVN19AccelerometerSensor6DriverE+8
+ 200              		.cfi_endproc
+ 201              	.LFE78:
+ 203              		.weak	_ZN19AccelerometerSensor6DriverD1Ev
+ 204              		.thumb_set _ZN19AccelerometerSensor6DriverD1Ev,_ZN19AccelerometerSensor6DriverD2Ev
+ 205              		.section	.text._ZN6Serial4initEv,"axG",%progbits,_ZN6Serial4initEv,comdat
+ 206              		.align	1
+ 207              		.weak	_ZN6Serial4initEv
+ 208              		.syntax unified
+ 209              		.thumb
+ 210              		.thumb_func
+ARM GAS  /tmp/ccociAVi.s 			page 5
 
 
-  49:Core/Src/appTasks.cpp ****   }
- 223              		.loc 1 49 5 view .LVU41
-  49:Core/Src/appTasks.cpp ****   }
- 224              		.loc 1 49 12 is_stmt 0 view .LVU42
- 225 003e 0DF1080C 		add	ip, sp, #8
- 226 0042 074C     		ldr	r4, .L20+8
- 227 0044 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
- 228 0046 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
- 229 004a 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
- 230 004c ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
- 231 0050 2368     		ldr	r3, [r4]
- 232 0052 ACF80030 		strh	r3, [ip]	@ movhi
- 233 0056 E0E7     		b	.L17
- 234              	.L21:
- 235              		.align	2
- 236              	.L20:
- 237 0058 00000000 		.word	.LC1
- 238 005c 00000000 		.word	huart1
- 239 0060 20000000 		.word	.LC2
- 240              		.cfi_endproc
- 241              	.LFE72:
- 243              		.text
- 244              	.Letext0:
- 245              		.file 2 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h"
- 246              		.file 3 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h"
- 247              		.file 4 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
- 248              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
- 249              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 250              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 251              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 252              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
- 253              		.file 10 "Core/Inc/lis3dh_driver.h"
- 254              		.file 11 "Core/Inc/usart.h"
- 255              		.file 12 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
- 256              		.file 13 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
- 257              		.file 14 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-ARM GAS  /tmp/ccRc6kBV.s 			page 7
+ 212              	_ZN6Serial4initEv:
+ 213              	.LVL12:
+ 214              	.LFB84:
+ 215              		.file 2 "../../inc/Serial.hpp"
+   1:../../inc/Serial.hpp **** #ifndef SERIAL_HPP
+   2:../../inc/Serial.hpp **** #define SERIAL_HPP
+   3:../../inc/Serial.hpp **** 
+   4:../../inc/Serial.hpp **** #include <cstdint>
+   5:../../inc/Serial.hpp **** 
+   6:../../inc/Serial.hpp **** #define SERIAL_IN_BUFFER_SIZE 100
+   7:../../inc/Serial.hpp **** #define SERIAL_OUT_BUFFER_SIZE 100
+   8:../../inc/Serial.hpp **** 
+   9:../../inc/Serial.hpp **** class Serial{
+  10:../../inc/Serial.hpp ****     public: 
+  11:../../inc/Serial.hpp ****         virtual void init(){};
+ 216              		.loc 2 11 22 is_stmt 1 view -0
+ 217              		.cfi_startproc
+ 218              		@ args = 0, pretend = 0, frame = 0
+ 219              		@ frame_needed = 0, uses_anonymous_args = 0
+ 220              		@ link register save eliminated.
+ 221              		.loc 2 11 29 is_stmt 0 view .LVU26
+ 222 0000 7047     		bx	lr
+ 223              		.cfi_endproc
+ 224              	.LFE84:
+ 226              		.section	.text._ZN6Serial5writeEPKcm,"axG",%progbits,_ZN6Serial5writeEPKcm,comdat
+ 227              		.align	1
+ 228              		.weak	_ZN6Serial5writeEPKcm
+ 229              		.syntax unified
+ 230              		.thumb
+ 231              		.thumb_func
+ 233              	_ZN6Serial5writeEPKcm:
+ 234              	.LVL13:
+ 235              	.LFB85:
+  12:../../inc/Serial.hpp ****         uint32_t available() const;
+  13:../../inc/Serial.hpp ****         uint32_t read(char *, uint32_t);
+  14:../../inc/Serial.hpp ****         bool write(const char *);
+  15:../../inc/Serial.hpp ****         const char * in_buffer();
+  16:../../inc/Serial.hpp ****         void in_flush();
+  17:../../inc/Serial.hpp ****         virtual uint32_t write(const char *, uint32_t) {return 0;};
+ 236              		.loc 2 17 26 is_stmt 1 view -0
+ 237              		.cfi_startproc
+ 238              		@ args = 0, pretend = 0, frame = 0
+ 239              		@ frame_needed = 0, uses_anonymous_args = 0
+ 240              		@ link register save eliminated.
+ 241              		.loc 2 17 57 view .LVU28
+ 242              		.loc 2 17 66 is_stmt 0 view .LVU29
+ 243 0000 0020     		movs	r0, #0
+ 244              	.LVL14:
+ 245              		.loc 2 17 66 view .LVU30
+ 246 0002 7047     		bx	lr
+ 247              		.cfi_endproc
+ 248              	.LFE85:
+ 250              		.section	.text._ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE,"axG",%progbits,_ZN19Comm
+ 251              		.align	1
+ 252              		.weak	_ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE
+ 253              		.syntax unified
+ 254              		.thumb
+ARM GAS  /tmp/ccociAVi.s 			page 6
+
+
+ 255              		.thumb_func
+ 257              	_ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE:
+ 258              	.LVL15:
+ 259              	.LFB91:
+ 260              		.file 3 "../../inc/CommandsInterpreter.hpp"
+   1:../../inc/CommandsInterpreter.hpp **** #ifndef COMMANDSINTERPRETER_HPP
+   2:../../inc/CommandsInterpreter.hpp **** #define COMMANDSINTERPRETER_HPP
+   3:../../inc/CommandsInterpreter.hpp **** 
+   4:../../inc/CommandsInterpreter.hpp **** #include "Serial.hpp"
+   5:../../inc/CommandsInterpreter.hpp **** #include <cstring>
+   6:../../inc/CommandsInterpreter.hpp **** #include <stdio.h>
+   7:../../inc/CommandsInterpreter.hpp **** 
+   8:../../inc/CommandsInterpreter.hpp **** class CommandsInterpreter{
+   9:../../inc/CommandsInterpreter.hpp **** 
+  10:../../inc/CommandsInterpreter.hpp ****     public:
+  11:../../inc/CommandsInterpreter.hpp ****         const uint32_t MAX_SINGLE_CAPT_SECS = 60;
+  12:../../inc/CommandsInterpreter.hpp ****         enum command_id{
+  13:../../inc/CommandsInterpreter.hpp ****             single, rcfg
+  14:../../inc/CommandsInterpreter.hpp ****         };
+  15:../../inc/CommandsInterpreter.hpp ****         typedef struct{
+  16:../../inc/CommandsInterpreter.hpp ****             command_id type;
+  17:../../inc/CommandsInterpreter.hpp ****             union{
+  18:../../inc/CommandsInterpreter.hpp ****                 struct{
+  19:../../inc/CommandsInterpreter.hpp ****                     uint32_t N; // seconds to acquire
+  20:../../inc/CommandsInterpreter.hpp ****                 }single;
+  21:../../inc/CommandsInterpreter.hpp ****                 struct{
+  22:../../inc/CommandsInterpreter.hpp **** 
+  23:../../inc/CommandsInterpreter.hpp ****                 }rcfg;
+  24:../../inc/CommandsInterpreter.hpp ****             };
+  25:../../inc/CommandsInterpreter.hpp ****         }command_t;
+  26:../../inc/CommandsInterpreter.hpp ****         class Obserser{
+  27:../../inc/CommandsInterpreter.hpp ****             public:
+  28:../../inc/CommandsInterpreter.hpp ****                 virtual void notify(const command_t &cmd){};
+ 261              		.loc 3 28 30 is_stmt 1 view -0
+ 262              		.cfi_startproc
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265              		@ link register save eliminated.
+ 266              		.loc 3 28 59 is_stmt 0 view .LVU32
+ 267 0000 7047     		bx	lr
+ 268              		.cfi_endproc
+ 269              	.LFE91:
+ 271              		.section	.text._ZN23SensorTaskEventListener18OnEmptyBufferEventEv,"axG",%progbits,_ZN23SensorTaskE
+ 272              		.align	1
+ 273              		.weak	_ZN23SensorTaskEventListener18OnEmptyBufferEventEv
+ 274              		.syntax unified
+ 275              		.thumb
+ 276              		.thumb_func
+ 278              	_ZN23SensorTaskEventListener18OnEmptyBufferEventEv:
+ 279              	.LVL16:
+ 280              	.LFB109:
+ 281              		.file 4 "Core/Src/appTasks.cpp"
+   1:Core/Src/appTasks.cpp **** extern "C"
+   2:Core/Src/appTasks.cpp **** {
+   3:Core/Src/appTasks.cpp ****   #include "FreeRTOS.h"
+   4:Core/Src/appTasks.cpp ****   #include "cmsis_os.h"
+   5:Core/Src/appTasks.cpp ****   #include "task.h"
+ARM GAS  /tmp/ccociAVi.s 			page 7
+
+
+   6:Core/Src/appTasks.cpp ****   #include "queue.h"
+   7:Core/Src/appTasks.cpp ****   #include "main.h"
+   8:Core/Src/appTasks.cpp ****   #include "spi.h"
+   9:Core/Src/appTasks.cpp ****   #include "usart.h"
+  10:Core/Src/appTasks.cpp ****   #include "gpio.h"
+  11:Core/Src/appTasks.cpp ****   #include "string.h"
+  12:Core/Src/appTasks.cpp ****   #include "lis3dh_driver.h"
+  13:Core/Src/appTasks.cpp **** }
+  14:Core/Src/appTasks.cpp **** #include <stdio.h>
+  15:Core/Src/appTasks.cpp **** #include "AccelerometerSensor.hpp"
+  16:Core/Src/appTasks.cpp **** #include "CommandsInterpreter.hpp"
+  17:Core/Src/appTasks.cpp **** #include "Serial.hpp"
+  18:Core/Src/appTasks.cpp **** 
+  19:Core/Src/appTasks.cpp **** #define APP_NEW_SENSOR_DATA_EVENT     0X01
+  20:Core/Src/appTasks.cpp **** #define APP_RX_SINGLEN_CMD_EVENT      0X02
+  21:Core/Src/appTasks.cpp **** #define APP_RX_READ_CONFIG_CMD_EVENT  0X04
+  22:Core/Src/appTasks.cpp **** 
+  23:Core/Src/appTasks.cpp **** extern osThreadId_t controllerTaskHandle;
+  24:Core/Src/appTasks.cpp **** extern osThreadId_t sensorTaskHandle;
+  25:Core/Src/appTasks.cpp **** static QueueHandle_t messageQueue;
+  26:Core/Src/appTasks.cpp **** 
+  27:Core/Src/appTasks.cpp **** #define CTRL_MSG_NEW_DATA  1
+  28:Core/Src/appTasks.cpp **** #define CTRL_MSG_NEW_CMD   2
+  29:Core/Src/appTasks.cpp **** 
+  30:Core/Src/appTasks.cpp **** typedef struct{
+  31:Core/Src/appTasks.cpp ****   uint32_t type;       // 1 = New data available in accelerometer, 2 = new command from serial
+  32:Core/Src/appTasks.cpp ****   union{
+  33:Core/Src/appTasks.cpp ****     CommandsInterpreter::command_t command;
+  34:Core/Src/appTasks.cpp ****   };
+  35:Core/Src/appTasks.cpp **** }controller_message_t;
+  36:Core/Src/appTasks.cpp **** 
+  37:Core/Src/appTasks.cpp **** class UartSerial : public Serial{
+  38:Core/Src/appTasks.cpp ****   public:
+  39:Core/Src/appTasks.cpp ****     UartSerial(UART_HandleTypeDef *huart){
+  40:Core/Src/appTasks.cpp ****       this->_huart = huart;
+  41:Core/Src/appTasks.cpp ****     }
+  42:Core/Src/appTasks.cpp ****     uint32_t write( const char *str, uint32_t len) override{
+  43:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+  44:Core/Src/appTasks.cpp ****       return len;
+  45:Core/Src/appTasks.cpp ****     }
+  46:Core/Src/appTasks.cpp ****   private:
+  47:Core/Src/appTasks.cpp ****     UART_HandleTypeDef *_huart;
+  48:Core/Src/appTasks.cpp **** };
+  49:Core/Src/appTasks.cpp **** 
+  50:Core/Src/appTasks.cpp **** class SensorTaskEventListener : public AccelerometerSensor::EventListener{
+  51:Core/Src/appTasks.cpp ****   public:
+  52:Core/Src/appTasks.cpp ****     SensorTaskEventListener(){
+  53:Core/Src/appTasks.cpp ****     }
+  54:Core/Src/appTasks.cpp ****     void OnEmptyBufferEvent() override{
+ 282              		.loc 4 54 10 is_stmt 1 view -0
+ 283              		.cfi_startproc
+ 284              		@ args = 0, pretend = 0, frame = 0
+ 285              		@ frame_needed = 0, uses_anonymous_args = 0
+ 286              		@ link register save eliminated.
+  55:Core/Src/appTasks.cpp **** 
+  56:Core/Src/appTasks.cpp ****     }
+ 287              		.loc 4 56 5 is_stmt 0 view .LVU34
+ARM GAS  /tmp/ccociAVi.s 			page 8
+
+
+ 288 0000 7047     		bx	lr
+ 289              		.cfi_endproc
+ 290              	.LFE109:
+ 292              		.section	.text._ZN23SensorTaskEventListener17OnFullBufferEventEv,"axG",%progbits,_ZN23SensorTaskEv
+ 293              		.align	1
+ 294              		.weak	_ZN23SensorTaskEventListener17OnFullBufferEventEv
+ 295              		.syntax unified
+ 296              		.thumb
+ 297              		.thumb_func
+ 299              	_ZN23SensorTaskEventListener17OnFullBufferEventEv:
+ 300              	.LVL17:
+ 301              	.LFB111:
+  57:Core/Src/appTasks.cpp ****     void OnNewDataAvailableEvent() override{
+  58:Core/Src/appTasks.cpp ****       controller_message_t msg;
+  59:Core/Src/appTasks.cpp ****       // Push notification 
+  60:Core/Src/appTasks.cpp ****       //xTaskNotify( this->_task, APP_NEW_SENSOR_DATA_EVENT, eSetBits );
+  61:Core/Src/appTasks.cpp ****       // Send a message to queue
+  62:Core/Src/appTasks.cpp ****       msg.type = CTRL_MSG_NEW_DATA;
+  63:Core/Src/appTasks.cpp ****       xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+  64:Core/Src/appTasks.cpp ****     }
+  65:Core/Src/appTasks.cpp ****     void OnFullBufferEvent() override{
+ 302              		.loc 4 65 10 is_stmt 1 view -0
+ 303              		.cfi_startproc
+ 304              		@ args = 0, pretend = 0, frame = 0
+ 305              		@ frame_needed = 0, uses_anonymous_args = 0
+ 306              		@ link register save eliminated.
+  66:Core/Src/appTasks.cpp ****     }
+ 307              		.loc 4 66 5 is_stmt 0 view .LVU36
+ 308 0000 7047     		bx	lr
+ 309              		.cfi_endproc
+ 310              	.LFE111:
+ 312              		.section	.text._ZN13LIS3DH_Driver9getConfigEv,"axG",%progbits,_ZN13LIS3DH_Driver9getConfigEv,comda
+ 313              		.align	1
+ 314              		.weak	_ZN13LIS3DH_Driver9getConfigEv
+ 315              		.syntax unified
+ 316              		.thumb
+ 317              		.thumb_func
+ 319              	_ZN13LIS3DH_Driver9getConfigEv:
+ 320              	.LVL18:
+ 321              	.LFB121:
+  67:Core/Src/appTasks.cpp ****     void setTask(osThreadId_t task){
+  68:Core/Src/appTasks.cpp ****         this->_task = task;
+  69:Core/Src/appTasks.cpp ****     }
+  70:Core/Src/appTasks.cpp ****   private:
+  71:Core/Src/appTasks.cpp ****     osThreadId_t _task;
+  72:Core/Src/appTasks.cpp **** };
+  73:Core/Src/appTasks.cpp **** 
+  74:Core/Src/appTasks.cpp **** 
+  75:Core/Src/appTasks.cpp **** class LIS3DH_Driver : public AccelerometerSensor::Driver{
+  76:Core/Src/appTasks.cpp ****   public:
+  77:Core/Src/appTasks.cpp ****     LIS3DH_Driver(){
+  78:Core/Src/appTasks.cpp ****       // Static configuration!
+  79:Core/Src/appTasks.cpp ****       this->_config.fullscale = 4000;          // +- 2000mg
+  80:Core/Src/appTasks.cpp ****       this->_config.odr = 25;
+  81:Core/Src/appTasks.cpp ****       this->_config.resolution = 1;//0.9765625;    // mg
+  82:Core/Src/appTasks.cpp ****     }
+  83:Core/Src/appTasks.cpp ****     bool setConfig(const AccelerometerSensor::accelerometer_config_t &config) override {
+ARM GAS  /tmp/ccociAVi.s 			page 9
+
+
+  84:Core/Src/appTasks.cpp ****       // Only static configuration at first
+  85:Core/Src/appTasks.cpp ****       uint8_t reg;
+  86:Core/Src/appTasks.cpp ****       LIS3DH_GetWHO_AM_I(&reg);
+  87:Core/Src/appTasks.cpp ****       if(reg != 0x33)
+  88:Core/Src/appTasks.cpp ****         return false;
+  89:Core/Src/appTasks.cpp ****       if(!LIS3DH_SetFullScale( LIS3DH_FULLSCALE_2 ))
+  90:Core/Src/appTasks.cpp ****         return false;
+  91:Core/Src/appTasks.cpp ****       if(!LIS3DH_SetMode( LIS3DH_NORMAL ))
+  92:Core/Src/appTasks.cpp ****         return false;
+  93:Core/Src/appTasks.cpp ****       if(!LIS3DH_SetODR( LIS3DH_ODR_25Hz ))
+  94:Core/Src/appTasks.cpp ****         return false;
+  95:Core/Src/appTasks.cpp ****       if(!LIS3DH_FIFOModeEnable( LIS3DH_FIFO_STREAM_MODE ))
+  96:Core/Src/appTasks.cpp ****         return false;
+  97:Core/Src/appTasks.cpp ****       return true;
+  98:Core/Src/appTasks.cpp ****     }
+  99:Core/Src/appTasks.cpp ****     uint32_t read(uint8_t *data, uint32_t N) override{
+ 100:Core/Src/appTasks.cpp ****       AccelerometerSensor::samples_t *sample = (AccelerometerSensor::samples_t *)data;
+ 101:Core/Src/appTasks.cpp ****       uint8_t fifo_stored = this->available();
+ 102:Core/Src/appTasks.cpp ****       uint8_t max;
+ 103:Core/Src/appTasks.cpp ****       AxesRaw_t raw_vals;
+ 104:Core/Src/appTasks.cpp ****       uint8_t idx=0;
+ 105:Core/Src/appTasks.cpp ****       max = N > fifo_stored ? fifo_stored : N;
+ 106:Core/Src/appTasks.cpp ****       // Read all FIFO
+ 107:Core/Src/appTasks.cpp ****       for(; idx<max;idx++){
+ 108:Core/Src/appTasks.cpp ****         if(!LIS3DH_GetAccAxesRaw( &raw_vals ))
+ 109:Core/Src/appTasks.cpp ****           return idx;
+ 110:Core/Src/appTasks.cpp ****         // Convert from raw to m/s^2
+ 111:Core/Src/appTasks.cpp ****         sample->x = this->_config.resolution * (raw_vals.AXIS_X >> 4); 
+ 112:Core/Src/appTasks.cpp ****         sample->y = this->_config.resolution * (raw_vals.AXIS_Y >> 4); 
+ 113:Core/Src/appTasks.cpp ****         sample->z = this->_config.resolution * (raw_vals.AXIS_Z >> 4); 
+ 114:Core/Src/appTasks.cpp ****         sample = &(sample[1]);
+ 115:Core/Src/appTasks.cpp ****       }
+ 116:Core/Src/appTasks.cpp ****       return idx;
+ 117:Core/Src/appTasks.cpp ****     }
+ 118:Core/Src/appTasks.cpp ****     const AccelerometerSensor::accelerometer_config_t * getConfig() override{
+ 322              		.loc 4 118 57 is_stmt 1 view -0
+ 323              		.cfi_startproc
+ 324              		@ args = 0, pretend = 0, frame = 0
+ 325              		@ frame_needed = 0, uses_anonymous_args = 0
+ 326              		@ link register save eliminated.
+ 119:Core/Src/appTasks.cpp ****       return &(this->_config);
+ 327              		.loc 4 119 7 view .LVU38
+ 120:Core/Src/appTasks.cpp ****     }
+ 328              		.loc 4 120 5 is_stmt 0 view .LVU39
+ 329 0000 0430     		adds	r0, r0, #4
+ 330              	.LVL19:
+ 331              		.loc 4 120 5 view .LVU40
+ 332 0002 7047     		bx	lr
+ 333              		.cfi_endproc
+ 334              	.LFE121:
+ 336              		.section	.text._ZN13LIS3DH_DriverD2Ev,"axG",%progbits,_ZN13LIS3DH_DriverD5Ev,comdat
+ 337              		.align	1
+ 338              		.weak	_ZN13LIS3DH_DriverD2Ev
+ 339              		.syntax unified
+ 340              		.thumb
+ 341              		.thumb_func
+ 343              	_ZN13LIS3DH_DriverD2Ev:
+ARM GAS  /tmp/ccociAVi.s 			page 10
+
+
+ 344              	.LVL20:
+ 345              	.LFB124:
+ 121:Core/Src/appTasks.cpp ****     uint32_t available() override{
+ 122:Core/Src/appTasks.cpp ****       uint8_t fifo_stored;
+ 123:Core/Src/appTasks.cpp ****       if(!LIS3DH_GetFifoSourceFSS(&fifo_stored)){
+ 124:Core/Src/appTasks.cpp ****         return 0;
+ 125:Core/Src/appTasks.cpp ****       }
+ 126:Core/Src/appTasks.cpp ****       return fifo_stored;
+ 127:Core/Src/appTasks.cpp ****     }
+ 128:Core/Src/appTasks.cpp ****     ~LIS3DH_Driver(){
+ 346              		.loc 4 128 5 is_stmt 1 view -0
+ 347              		.cfi_startproc
+ 348              		@ args = 0, pretend = 0, frame = 0
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ 350              		@ link register save eliminated.
+ 351              	.LBB82:
+ 352              		.loc 4 128 21 is_stmt 0 view .LVU42
+ 353 0000 024A     		ldr	r2, .L18
+ 354 0002 0260     		str	r2, [r0]
+ 355              	.LVL21:
+ 356              	.LBB83:
+ 357              	.LBI83:
+ 358              		.loc 1 34 25 is_stmt 1 view .LVU43
+ 359              	.LBB84:
+ 360              		.loc 1 34 34 is_stmt 0 view .LVU44
+ 361 0004 024A     		ldr	r2, .L18+4
+ 362 0006 0260     		str	r2, [r0]
+ 363              	.LVL22:
+ 364              		.loc 1 34 34 view .LVU45
+ 365              	.LBE84:
+ 366              	.LBE83:
+ 367              	.LBE82:
+ 129:Core/Src/appTasks.cpp **** 
+ 130:Core/Src/appTasks.cpp ****     }
+ 368              		.loc 4 130 5 view .LVU46
+ 369 0008 7047     		bx	lr
+ 370              	.L19:
+ 371 000a 00BF     		.align	2
+ 372              	.L18:
+ 373 000c 08000000 		.word	_ZTV13LIS3DH_Driver+8
+ 374 0010 08000000 		.word	_ZTVN19AccelerometerSensor6DriverE+8
+ 375              		.cfi_endproc
+ 376              	.LFE124:
+ 378              		.weak	_ZN13LIS3DH_DriverD1Ev
+ 379              		.thumb_set _ZN13LIS3DH_DriverD1Ev,_ZN13LIS3DH_DriverD2Ev
+ 380              		.section	.text._ZN10UartSerial5writeEPKcm,"axG",%progbits,_ZN10UartSerial5writeEPKcm,comdat
+ 381              		.align	1
+ 382              		.weak	_ZN10UartSerial5writeEPKcm
+ 383              		.syntax unified
+ 384              		.thumb
+ 385              		.thumb_func
+ 387              	_ZN10UartSerial5writeEPKcm:
+ 388              	.LVL23:
+ 389              	.LFB102:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 390              		.loc 4 42 14 is_stmt 1 view -0
+ 391              		.cfi_startproc
+ARM GAS  /tmp/ccociAVi.s 			page 11
+
+
+ 392              		@ args = 0, pretend = 0, frame = 0
+ 393              		@ frame_needed = 0, uses_anonymous_args = 0
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 394              		.loc 4 42 14 is_stmt 0 view .LVU48
+ 395 0000 10B5     		push	{r4, lr}
+ 396              	.LCFI0:
+ 397              		.cfi_def_cfa_offset 8
+ 398              		.cfi_offset 4, -8
+ 399              		.cfi_offset 14, -4
+ 400 0002 1446     		mov	r4, r2
+  43:Core/Src/appTasks.cpp ****       return len;
+ 401              		.loc 4 43 7 is_stmt 1 view .LVU49
+  43:Core/Src/appTasks.cpp ****       return len;
+ 402              		.loc 4 43 24 is_stmt 0 view .LVU50
+ 403 0004 4FF4FA73 		mov	r3, #500
+ 404 0008 92B2     		uxth	r2, r2
+ 405              	.LVL24:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 406              		.loc 4 43 24 view .LVU51
+ 407 000a 0248     		ldr	r0, .L22
+ 408              	.LVL25:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 409              		.loc 4 43 24 view .LVU52
+ 410 000c FFF7FEFF 		bl	HAL_UART_Transmit
+ 411              	.LVL26:
+  44:Core/Src/appTasks.cpp ****     }
+ 412              		.loc 4 44 7 is_stmt 1 view .LVU53
+  45:Core/Src/appTasks.cpp ****   private:
+ 413              		.loc 4 45 5 is_stmt 0 view .LVU54
+ 414 0010 2046     		mov	r0, r4
+ 415 0012 10BD     		pop	{r4, pc}
+ 416              	.LVL27:
+ 417              	.L23:
+  45:Core/Src/appTasks.cpp ****   private:
+ 418              		.loc 4 45 5 view .LVU55
+ 419              		.align	2
+ 420              	.L22:
+ 421 0014 00000000 		.word	huart1
+ 422              		.cfi_endproc
+ 423              	.LFE102:
+ 425              		.section	.text._ZN23SensorTaskEventListener23OnNewDataAvailableEventEv,"axG",%progbits,_ZN23Sensor
+ 426              		.align	1
+ 427              		.weak	_ZN23SensorTaskEventListener23OnNewDataAvailableEventEv
+ 428              		.syntax unified
+ 429              		.thumb
+ 430              		.thumb_func
+ 432              	_ZN23SensorTaskEventListener23OnNewDataAvailableEventEv:
+ 433              	.LVL28:
+ 434              	.LFB110:
+  57:Core/Src/appTasks.cpp ****       controller_message_t msg;
+ 435              		.loc 4 57 10 is_stmt 1 view -0
+ 436              		.cfi_startproc
+ 437              		@ args = 0, pretend = 0, frame = 16
+ 438              		@ frame_needed = 0, uses_anonymous_args = 0
+  57:Core/Src/appTasks.cpp ****       controller_message_t msg;
+ 439              		.loc 4 57 10 is_stmt 0 view .LVU57
+ 440 0000 00B5     		push	{lr}
+ARM GAS  /tmp/ccociAVi.s 			page 12
+
+
+ 441              	.LCFI1:
+ 442              		.cfi_def_cfa_offset 4
+ 443              		.cfi_offset 14, -4
+ 444 0002 85B0     		sub	sp, sp, #20
+ 445              	.LCFI2:
+ 446              		.cfi_def_cfa_offset 24
+  58:Core/Src/appTasks.cpp ****       // Push notification 
+ 447              		.loc 4 58 7 is_stmt 1 view .LVU58
+  62:Core/Src/appTasks.cpp ****       xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 448              		.loc 4 62 7 view .LVU59
+  62:Core/Src/appTasks.cpp ****       xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 449              		.loc 4 62 16 is_stmt 0 view .LVU60
+ 450 0004 0123     		movs	r3, #1
+ 451 0006 0193     		str	r3, [sp, #4]
+  63:Core/Src/appTasks.cpp ****     }
+ 452              		.loc 4 63 7 is_stmt 1 view .LVU61
+ 453 0008 0023     		movs	r3, #0
+ 454 000a 1A46     		mov	r2, r3
+ 455 000c 01A9     		add	r1, sp, #4
+ 456 000e 0348     		ldr	r0, .L26
+ 457              	.LVL29:
+  63:Core/Src/appTasks.cpp ****     }
+ 458              		.loc 4 63 7 is_stmt 0 view .LVU62
+ 459 0010 0068     		ldr	r0, [r0]
+ 460 0012 FFF7FEFF 		bl	xQueueGenericSend
+ 461              	.LVL30:
+  64:Core/Src/appTasks.cpp ****     void OnFullBufferEvent() override{
+ 462              		.loc 4 64 5 view .LVU63
+ 463 0016 05B0     		add	sp, sp, #20
+ 464              	.LCFI3:
+ 465              		.cfi_def_cfa_offset 4
+ 466              		@ sp needed
+ 467 0018 5DF804FB 		ldr	pc, [sp], #4
+ 468              	.L27:
+ 469              		.align	2
+ 470              	.L26:
+ 471 001c 00000000 		.word	.LANCHOR0
+ 472              		.cfi_endproc
+ 473              	.LFE110:
+ 475              		.section	.text._ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE,"axG",%progbits,_ZN
+ 476              		.align	1
+ 477              		.weak	_ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE
+ 478              		.syntax unified
+ 479              		.thumb
+ 480              		.thumb_func
+ 482              	_ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE:
+ 483              	.LVL31:
+ 484              	.LFB130:
+ 131:Core/Src/appTasks.cpp ****   private:
+ 132:Core/Src/appTasks.cpp ****     AccelerometerSensor::accelerometer_config_t _config;
+ 133:Core/Src/appTasks.cpp **** };
+ 134:Core/Src/appTasks.cpp **** 
+ 135:Core/Src/appTasks.cpp **** static LIS3DH_Driver drv;
+ 136:Core/Src/appTasks.cpp **** static AccelerometerSensor::accelerometer_config_t config;
+ 137:Core/Src/appTasks.cpp **** //acc.setConfig( config );
+ 138:Core/Src/appTasks.cpp **** static SensorTaskEventListener listener;
+ 139:Core/Src/appTasks.cpp **** static AccelerometerSensor acc( &drv, &listener );
+ARM GAS  /tmp/ccociAVi.s 			page 13
+
+
+ 140:Core/Src/appTasks.cpp **** static UartSerial serial(&huart1);
+ 141:Core/Src/appTasks.cpp **** 
+ 142:Core/Src/appTasks.cpp **** 
+ 143:Core/Src/appTasks.cpp **** // Accelerometer interrupt
+ 144:Core/Src/appTasks.cpp **** void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+ 145:Core/Src/appTasks.cpp **** {
+ 146:Core/Src/appTasks.cpp ****   if(GPIO_Pin == ACC_INT1_Pin){
+ 147:Core/Src/appTasks.cpp ****     // BaseType_t priority;
+ 148:Core/Src/appTasks.cpp ****     // Sensor task notification
+ 149:Core/Src/appTasks.cpp ****     // vTaskNotifyGiveFromISR( sensorTaskHandle, &priority );
+ 150:Core/Src/appTasks.cpp ****   }
+ 151:Core/Src/appTasks.cpp **** }
+ 152:Core/Src/appTasks.cpp **** 
+ 153:Core/Src/appTasks.cpp **** extern "C" void StartControllerTask(void *argument)
+ 154:Core/Src/appTasks.cpp **** {
+ 155:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 156:Core/Src/appTasks.cpp ****   uint32_t notification;
+ 157:Core/Src/appTasks.cpp ****   char text[50] = "Ciao bel from FreeRTOS controller task!\n";
+ 158:Core/Src/appTasks.cpp ****   AccelerometerSensor::samples_t sample;
+ 159:Core/Src/appTasks.cpp ****   // Create queue
+ 160:Core/Src/appTasks.cpp ****   messageQueue = xQueueCreate( 10, sizeof(controller_message_t) );
+ 161:Core/Src/appTasks.cpp ****   bool received;
+ 162:Core/Src/appTasks.cpp ****   controller_message_t msg;
+ 163:Core/Src/appTasks.cpp ****   for(;;)
+ 164:Core/Src/appTasks.cpp ****   {
+ 165:Core/Src/appTasks.cpp ****     //HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+ 166:Core/Src/appTasks.cpp ****     //xTaskNotifyWait(0, 0xffffffffUL, &notification, xDelay);
+ 167:Core/Src/appTasks.cpp ****     received = xQueueReceive(messageQueue,  (void *)&msg, xDelay) == pdTRUE;
+ 168:Core/Src/appTasks.cpp ****     if(received){
+ 169:Core/Src/appTasks.cpp ****       if(msg.type == CTRL_MSG_NEW_DATA){
+ 170:Core/Src/appTasks.cpp ****         sprintf( text, "Notification received!\n" );
+ 171:Core/Src/appTasks.cpp ****         HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+ 172:Core/Src/appTasks.cpp ****         vTaskSuspendAll();
+ 173:Core/Src/appTasks.cpp ****         uint32_t max = acc.available();
+ 174:Core/Src/appTasks.cpp ****         for(uint32_t idx=0; idx<max; idx++)
+ 175:Core/Src/appTasks.cpp ****         {
+ 176:Core/Src/appTasks.cpp ****           acc.read(&sample, 1);
+ 177:Core/Src/appTasks.cpp ****           serial.write( (char *)&sample, sizeof(AccelerometerSensor::samples_t ) );
+ 178:Core/Src/appTasks.cpp ****         }
+ 179:Core/Src/appTasks.cpp ****         serial.write( "\n", 1 );
+ 180:Core/Src/appTasks.cpp ****         xTaskResumeAll();
+ 181:Core/Src/appTasks.cpp ****       }else if(msg.type == CTRL_MSG_NEW_CMD){
+ 182:Core/Src/appTasks.cpp ****       if(msg.command.type == CommandsInterpreter::rcfg){
+ 183:Core/Src/appTasks.cpp ****           sprintf( text, "Read config cmd\n" );
+ 184:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 185:Core/Src/appTasks.cpp ****         }else if(msg.command.type == CommandsInterpreter::single){
+ 186:Core/Src/appTasks.cpp ****           sprintf( text, "Start single capture cmd. %d s\n", msg.command.single.N );
+ 187:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 188:Core/Src/appTasks.cpp ****         }
+ 189:Core/Src/appTasks.cpp ****       }
+ 190:Core/Src/appTasks.cpp ****     }else{
+ 191:Core/Src/appTasks.cpp ****       sprintf( text, "Notification NOT received!\n" );
+ 192:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 193:Core/Src/appTasks.cpp ****     }
+ 194:Core/Src/appTasks.cpp ****   }
+ 195:Core/Src/appTasks.cpp **** }
+ 196:Core/Src/appTasks.cpp **** 
+ARM GAS  /tmp/ccociAVi.s 			page 14
+
+
+ 197:Core/Src/appTasks.cpp **** 
+ 198:Core/Src/appTasks.cpp **** extern "C" void StartSensorTask(void *argument)
+ 199:Core/Src/appTasks.cpp **** {
+ 200:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 201:Core/Src/appTasks.cpp ****   acc.setConfig( config );
+ 202:Core/Src/appTasks.cpp ****   listener.setTask(controllerTaskHandle);
+ 203:Core/Src/appTasks.cpp ****   for(;;)
+ 204:Core/Src/appTasks.cpp ****   {
+ 205:Core/Src/appTasks.cpp ****     vTaskDelay( xDelay );
+ 206:Core/Src/appTasks.cpp ****     //acc.refresh();
+ 207:Core/Src/appTasks.cpp ****   }
+ 208:Core/Src/appTasks.cpp **** }
+ 209:Core/Src/appTasks.cpp **** 
+ 210:Core/Src/appTasks.cpp **** class CommandListener : public CommandsInterpreter::Obserser{
+ 211:Core/Src/appTasks.cpp ****   public: 
+ 212:Core/Src/appTasks.cpp ****     void notify(const CommandsInterpreter::command_t &cmd) override{
+ 485              		.loc 4 212 10 is_stmt 1 view -0
+ 486              		.cfi_startproc
+ 487              		@ args = 0, pretend = 0, frame = 16
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 489              		.loc 4 212 10 is_stmt 0 view .LVU65
+ 490 0000 10B5     		push	{r4, lr}
+ 491              	.LCFI4:
+ 492              		.cfi_def_cfa_offset 8
+ 493              		.cfi_offset 4, -8
+ 494              		.cfi_offset 14, -4
+ 495 0002 84B0     		sub	sp, sp, #16
+ 496              	.LCFI5:
+ 497              		.cfi_def_cfa_offset 24
+ 498 0004 0C46     		mov	r4, r1
+ 213:Core/Src/appTasks.cpp ****       controller_message_t msg;
+ 499              		.loc 4 213 7 is_stmt 1 view .LVU66
+ 214:Core/Src/appTasks.cpp ****       if(cmd.type == CommandsInterpreter::command_id::rcfg){
+ 500              		.loc 4 214 7 view .LVU67
+ 501              		.loc 4 214 14 is_stmt 0 view .LVU68
+ 502 0006 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 503              		.loc 4 214 7 view .LVU69
+ 504 0008 012B     		cmp	r3, #1
+ 505 000a 02D0     		beq	.L32
+ 215:Core/Src/appTasks.cpp ****           // Notify controller task. How pass N?
+ 216:Core/Src/appTasks.cpp ****           // Maybe its better to use a queue?
+ 217:Core/Src/appTasks.cpp ****           //xTaskNotify( this->_task, APP_RX_READ_CONFIG_CMD_EVENT, eSetBits );
+ 218:Core/Src/appTasks.cpp ****           msg.type = CTRL_MSG_NEW_CMD;
+ 219:Core/Src/appTasks.cpp ****           msg.command = cmd;
+ 220:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 221:Core/Src/appTasks.cpp ****       }else if(cmd.type == CommandsInterpreter::command_id::single){
+ 506              		.loc 4 221 13 is_stmt 1 view .LVU70
+ 507 000c 83B1     		cbz	r3, .L33
+ 508              	.LVL32:
+ 509              	.L28:
+ 222:Core/Src/appTasks.cpp ****           // Notify controller task
+ 223:Core/Src/appTasks.cpp ****           xTaskNotify( this->_task, APP_RX_SINGLEN_CMD_EVENT, eSetBits );
+ 224:Core/Src/appTasks.cpp ****           msg.type = CTRL_MSG_NEW_CMD;
+ 225:Core/Src/appTasks.cpp ****           msg.command = cmd;
+ 226:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 227:Core/Src/appTasks.cpp ****       }
+ 228:Core/Src/appTasks.cpp ****     }
+ARM GAS  /tmp/ccociAVi.s 			page 15
+
+
+ 510              		.loc 4 228 5 is_stmt 0 view .LVU71
+ 511 000e 04B0     		add	sp, sp, #16
+ 512              	.LCFI6:
+ 513              		.cfi_remember_state
+ 514              		.cfi_def_cfa_offset 8
+ 515              		@ sp needed
+ 516 0010 10BD     		pop	{r4, pc}
+ 517              	.LVL33:
+ 518              	.L32:
+ 519              	.LCFI7:
+ 520              		.cfi_restore_state
+ 218:Core/Src/appTasks.cpp ****           msg.command = cmd;
+ 521              		.loc 4 218 11 is_stmt 1 view .LVU72
+ 218:Core/Src/appTasks.cpp ****           msg.command = cmd;
+ 522              		.loc 4 218 20 is_stmt 0 view .LVU73
+ 523 0012 0223     		movs	r3, #2
+ 524 0014 0193     		str	r3, [sp, #4]
+ 219:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 525              		.loc 4 219 11 is_stmt 1 view .LVU74
+ 219:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 526              		.loc 4 219 23 is_stmt 0 view .LVU75
+ 527 0016 D1E90001 		ldrd	r0, r1, [r1]
+ 528              	.LVL34:
+ 219:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 529              		.loc 4 219 23 view .LVU76
+ 530 001a 04AB     		add	r3, sp, #16
+ 531 001c 03E90300 		stmdb	r3, {r0, r1}
+ 220:Core/Src/appTasks.cpp ****       }else if(cmd.type == CommandsInterpreter::command_id::single){
+ 532              		.loc 4 220 11 is_stmt 1 view .LVU77
+ 533 0020 0023     		movs	r3, #0
+ 534 0022 1A46     		mov	r2, r3
+ 535 0024 01A9     		add	r1, sp, #4
+ 536 0026 0C48     		ldr	r0, .L34
+ 537 0028 0068     		ldr	r0, [r0]
+ 538 002a FFF7FEFF 		bl	xQueueGenericSend
+ 539              	.LVL35:
+ 540 002e EEE7     		b	.L28
+ 541              	.LVL36:
+ 542              	.L33:
+ 223:Core/Src/appTasks.cpp ****           msg.type = CTRL_MSG_NEW_CMD;
+ 543              		.loc 4 223 11 view .LVU78
+ 544 0030 0122     		movs	r2, #1
+ 545 0032 0221     		movs	r1, #2
+ 546              	.LVL37:
+ 223:Core/Src/appTasks.cpp ****           msg.type = CTRL_MSG_NEW_CMD;
+ 547              		.loc 4 223 11 is_stmt 0 view .LVU79
+ 548 0034 4068     		ldr	r0, [r0, #4]
+ 549              	.LVL38:
+ 223:Core/Src/appTasks.cpp ****           msg.type = CTRL_MSG_NEW_CMD;
+ 550              		.loc 4 223 11 view .LVU80
+ 551 0036 FFF7FEFF 		bl	xTaskGenericNotify
+ 552              	.LVL39:
+ 224:Core/Src/appTasks.cpp ****           msg.command = cmd;
+ 553              		.loc 4 224 11 is_stmt 1 view .LVU81
+ 224:Core/Src/appTasks.cpp ****           msg.command = cmd;
+ 554              		.loc 4 224 20 is_stmt 0 view .LVU82
+ 555 003a 0223     		movs	r3, #2
+ARM GAS  /tmp/ccociAVi.s 			page 16
+
+
+ 556 003c 0193     		str	r3, [sp, #4]
+ 225:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 557              		.loc 4 225 11 is_stmt 1 view .LVU83
+ 225:Core/Src/appTasks.cpp ****           xQueueSend( messageQueue, (void *)&msg, (TickType_t)0 );
+ 558              		.loc 4 225 23 is_stmt 0 view .LVU84
+ 559 003e 94E80300 		ldm	r4, {r0, r1}
+ 560 0042 04AB     		add	r3, sp, #16
+ 561 0044 03E90300 		stmdb	r3, {r0, r1}
+ 226:Core/Src/appTasks.cpp ****       }
+ 562              		.loc 4 226 11 is_stmt 1 view .LVU85
+ 563 0048 0023     		movs	r3, #0
+ 564 004a 1A46     		mov	r2, r3
+ 565 004c 01A9     		add	r1, sp, #4
+ 566 004e 0248     		ldr	r0, .L34
+ 567 0050 0068     		ldr	r0, [r0]
+ 568 0052 FFF7FEFF 		bl	xQueueGenericSend
+ 569              	.LVL40:
+ 570              		.loc 4 228 5 is_stmt 0 view .LVU86
+ 571 0056 DAE7     		b	.L28
+ 572              	.L35:
+ 573              		.align	2
+ 574              	.L34:
+ 575 0058 00000000 		.word	.LANCHOR0
+ 576              		.cfi_endproc
+ 577              	.LFE130:
+ 579              		.section	.text._Z41__static_initialization_and_destruction_0ii,"ax",%progbits
+ 580              		.align	1
+ 581              		.syntax unified
+ 582              		.thumb
+ 583              		.thumb_func
+ 585              	_Z41__static_initialization_and_destruction_0ii:
+ 586              	.LVL41:
+ 587              	.LFB141:
+ 229:Core/Src/appTasks.cpp ****     void setTask(osThreadId_t task){
+ 230:Core/Src/appTasks.cpp ****         this->_task = task;
+ 231:Core/Src/appTasks.cpp ****     }
+ 232:Core/Src/appTasks.cpp ****   private:
+ 233:Core/Src/appTasks.cpp ****     osThreadId_t _task;
+ 234:Core/Src/appTasks.cpp **** 
+ 235:Core/Src/appTasks.cpp **** };
+ 236:Core/Src/appTasks.cpp **** 
+ 237:Core/Src/appTasks.cpp **** static uint8_t rx_data;
+ 238:Core/Src/appTasks.cpp **** extern "C" void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+ 239:Core/Src/appTasks.cpp ****   serial.appendChar( rx_data );
+ 240:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 241:Core/Src/appTasks.cpp **** }
+ 242:Core/Src/appTasks.cpp **** 
+ 243:Core/Src/appTasks.cpp **** extern "C" void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart){
+ 244:Core/Src/appTasks.cpp ****   //HAL_UART_AbortReceive_IT(&huart1);
+ 245:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 246:Core/Src/appTasks.cpp **** }
+ 247:Core/Src/appTasks.cpp **** 
+ 248:Core/Src/appTasks.cpp **** extern "C" void StartSerialTask(void *argument)
+ 249:Core/Src/appTasks.cpp **** {
+ 250:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 200 / portTICK_PERIOD_MS;
+ 251:Core/Src/appTasks.cpp ****   CommandListener cmdListener;
+ 252:Core/Src/appTasks.cpp ****   cmdListener.setTask( controllerTaskHandle );
+ARM GAS  /tmp/ccociAVi.s 			page 17
+
+
+ 253:Core/Src/appTasks.cpp ****   CommandsInterpreter interpreter(&serial, &cmdListener);
+ 254:Core/Src/appTasks.cpp ****   char text[40];
+ 255:Core/Src/appTasks.cpp ****   uint32_t len;
+ 256:Core/Src/appTasks.cpp ****   huart1.pRxBuffPtr = &rx_data;
+ 257:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 258:Core/Src/appTasks.cpp ****   for(;;)
+ 259:Core/Src/appTasks.cpp ****   {
+ 260:Core/Src/appTasks.cpp ****     vTaskDelay( xDelay );
+ 261:Core/Src/appTasks.cpp ****     if(serial.available()){
+ 262:Core/Src/appTasks.cpp ****       len = serial.available();
+ 263:Core/Src/appTasks.cpp ****       sprintf( text, "Ser avail %d\n", len);
+ 264:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 265:Core/Src/appTasks.cpp ****       serial.write( serial.in_buffer(), len );
+ 266:Core/Src/appTasks.cpp ****       serial.write( (char *)"\n", 1 );
+ 267:Core/Src/appTasks.cpp ****     }
+ 268:Core/Src/appTasks.cpp ****     interpreter.refresh();
+ 269:Core/Src/appTasks.cpp ****   }
+ 270:Core/Src/appTasks.cpp **** }
+ 588              		.loc 4 270 1 is_stmt 1 view -0
+ 589              		.cfi_startproc
+ 590              		@ args = 0, pretend = 0, frame = 0
+ 591              		@ frame_needed = 0, uses_anonymous_args = 0
+ 592              		.loc 4 270 1 is_stmt 0 view .LVU88
+ 593 0000 0128     		cmp	r0, #1
+ 594 0002 00D0     		beq	.L42
+ 595              	.L39:
+ 596 0004 7047     		bx	lr
+ 597              	.L42:
+ 598              		.loc 4 270 1 discriminator 1 view .LVU89
+ 599 0006 4FF6FF73 		movw	r3, #65535
+ 600 000a 9942     		cmp	r1, r3
+ 601 000c FAD1     		bne	.L39
+ 602              		.loc 4 270 1 view .LVU90
+ 603 000e 10B5     		push	{r4, lr}
+ 604              	.LCFI8:
+ 605              		.cfi_def_cfa_offset 8
+ 606              		.cfi_offset 4, -8
+ 607              		.cfi_offset 14, -4
+ 608              	.LVL42:
+ 609              	.LBB85:
+ 610              	.LBI85:
+  77:Core/Src/appTasks.cpp ****       // Static configuration!
+ 611              		.loc 4 77 5 is_stmt 1 view .LVU91
+ 612              	.LBB86:
+ 613              	.LBB87:
+ 614              	.LBB88:
+ 615              	.LBI88:
+  28:../../inc/AccelerometerSensor.hpp ****             public:
+ 616              		.loc 1 28 15 view .LVU92
+ 617              	.LBB89:
+ 618 0010 134C     		ldr	r4, .L43
+ 619 0012 144B     		ldr	r3, .L43+4
+ 620 0014 2360     		str	r3, [r4]
+ 621              	.LVL43:
+  28:../../inc/AccelerometerSensor.hpp ****             public:
+ 622              		.loc 1 28 15 is_stmt 0 view .LVU93
+ 623              	.LBE89:
+ARM GAS  /tmp/ccociAVi.s 			page 18
+
+
+ 624              	.LBE88:
+  77:Core/Src/appTasks.cpp ****       // Static configuration!
+ 625              		.loc 4 77 20 view .LVU94
+ 626 0016 144B     		ldr	r3, .L43+8
+ 627 0018 2360     		str	r3, [r4]
+  79:Core/Src/appTasks.cpp ****       this->_config.odr = 25;
+ 628              		.loc 4 79 7 is_stmt 1 view .LVU95
+  79:Core/Src/appTasks.cpp ****       this->_config.odr = 25;
+ 629              		.loc 4 79 31 is_stmt 0 view .LVU96
+ 630 001a 144B     		ldr	r3, .L43+12
+ 631 001c E360     		str	r3, [r4, #12]	@ float
+  80:Core/Src/appTasks.cpp ****       this->_config.resolution = 1;//0.9765625;    // mg
+ 632              		.loc 4 80 7 is_stmt 1 view .LVU97
+  80:Core/Src/appTasks.cpp ****       this->_config.resolution = 1;//0.9765625;    // mg
+ 633              		.loc 4 80 25 is_stmt 0 view .LVU98
+ 634 001e 1923     		movs	r3, #25
+ 635 0020 6360     		str	r3, [r4, #4]
+  81:Core/Src/appTasks.cpp ****     }
+ 636              		.loc 4 81 7 is_stmt 1 view .LVU99
+  81:Core/Src/appTasks.cpp ****     }
+ 637              		.loc 4 81 32 is_stmt 0 view .LVU100
+ 638 0022 4FF07E53 		mov	r3, #1065353216
+ 639 0026 A360     		str	r3, [r4, #8]	@ float
+ 640              	.LVL44:
+  81:Core/Src/appTasks.cpp ****     }
+ 641              		.loc 4 81 32 view .LVU101
+ 642              	.LBE87:
+ 643              	.LBE86:
+ 644              	.LBE85:
+ 135:Core/Src/appTasks.cpp **** static AccelerometerSensor::accelerometer_config_t config;
+ 645              		.loc 4 135 22 view .LVU102
+ 646 0028 114A     		ldr	r2, .L43+16
+ 647 002a 1249     		ldr	r1, .L43+20
+ 648              	.LVL45:
+ 135:Core/Src/appTasks.cpp **** static AccelerometerSensor::accelerometer_config_t config;
+ 649              		.loc 4 135 22 view .LVU103
+ 650 002c 2046     		mov	r0, r4
+ 651              	.LVL46:
+ 135:Core/Src/appTasks.cpp **** static AccelerometerSensor::accelerometer_config_t config;
+ 652              		.loc 4 135 22 view .LVU104
+ 653 002e FFF7FEFF 		bl	__aeabi_atexit
+ 654              	.LVL47:
+ 655              	.LBB90:
+ 656              	.LBI90:
+  52:Core/Src/appTasks.cpp ****     }
+ 657              		.loc 4 52 5 is_stmt 1 view .LVU105
+ 658              	.LBB91:
+ 659              	.LBB92:
+ 660              	.LBB93:
+ 661              	.LBI93:
+  17:../../inc/AccelerometerSensor.hpp ****             public:
+ 662              		.loc 1 17 15 view .LVU106
+ 663              	.LBB94:
+ 664 0032 114A     		ldr	r2, .L43+24
+ 665 0034 114B     		ldr	r3, .L43+28
+ 666 0036 1360     		str	r3, [r2]
+ 667              	.LVL48:
+ARM GAS  /tmp/ccociAVi.s 			page 19
+
+
+  17:../../inc/AccelerometerSensor.hpp ****             public:
+ 668              		.loc 1 17 15 is_stmt 0 view .LVU107
+ 669              	.LBE94:
+ 670              	.LBE93:
+  52:Core/Src/appTasks.cpp ****     }
+ 671              		.loc 4 52 30 view .LVU108
+ 672 0038 114B     		ldr	r3, .L43+32
+ 673 003a 1360     		str	r3, [r2]
+ 674              	.LVL49:
+  52:Core/Src/appTasks.cpp ****     }
+ 675              		.loc 4 52 30 view .LVU109
+ 676              	.LBE92:
+ 677              	.LBE91:
+ 678              	.LBE90:
+ 679              	.LBB95:
+ 680              	.LBI95:
+  35:../../inc/AccelerometerSensor.hpp ****         };
+  36:../../inc/AccelerometerSensor.hpp ****         AccelerometerSensor(Driver *drv, EventListener *listener){
+ 681              		.loc 1 36 9 is_stmt 1 view .LVU110
+ 682              	.LBB96:
+ 683              	.LBB97:
+  37:../../inc/AccelerometerSensor.hpp ****             this->_drv = drv;
+ 684              		.loc 1 37 13 view .LVU111
+ 685              		.loc 1 37 24 is_stmt 0 view .LVU112
+ 686 003c 114B     		ldr	r3, .L43+36
+ 687 003e C3F8F440 		str	r4, [r3, #244]
+  38:../../inc/AccelerometerSensor.hpp ****             this->_listener = listener;
+ 688              		.loc 1 38 13 is_stmt 1 view .LVU113
+ 689              		.loc 1 38 29 is_stmt 0 view .LVU114
+ 690 0042 C3F8F820 		str	r2, [r3, #248]
+  39:../../inc/AccelerometerSensor.hpp ****             this->_buff_lvl = 0;
+ 691              		.loc 1 39 13 is_stmt 1 view .LVU115
+ 692              		.loc 1 39 29 is_stmt 0 view .LVU116
+ 693 0046 0022     		movs	r2, #0
+ 694 0048 C3F8F020 		str	r2, [r3, #240]
+ 695              	.LVL50:
+ 696              		.loc 1 39 29 view .LVU117
+ 697              	.LBE97:
+ 698              	.LBE96:
+ 699              	.LBE95:
+ 700              	.LBB98:
+ 701              	.LBI98:
+  39:Core/Src/appTasks.cpp ****       this->_huart = huart;
+ 702              		.loc 4 39 5 is_stmt 1 view .LVU118
+ 703              	.LBB99:
+ 704              	.LBB100:
+ 705              	.LBB101:
+ 706              	.LBI101:
+   9:../../inc/Serial.hpp ****     public: 
+ 707              		.loc 2 9 7 view .LVU119
+ 708              	.LBB102:
+ 709 004c 0E4B     		ldr	r3, .L43+40
+ 710 004e 0F4A     		ldr	r2, .L43+44
+ 711 0050 1A60     		str	r2, [r3]
+ 712              	.LVL51:
+   9:../../inc/Serial.hpp ****     public: 
+ 713              		.loc 2 9 7 is_stmt 0 view .LVU120
+ARM GAS  /tmp/ccociAVi.s 			page 20
+
+
+ 714              	.LBE102:
+ 715              	.LBE101:
+  39:Core/Src/appTasks.cpp ****       this->_huart = huart;
+ 716              		.loc 4 39 42 view .LVU121
+ 717 0052 0F4A     		ldr	r2, .L43+48
+ 718 0054 1A60     		str	r2, [r3]
+  40:Core/Src/appTasks.cpp ****     }
+ 719              		.loc 4 40 7 is_stmt 1 view .LVU122
+  40:Core/Src/appTasks.cpp ****     }
+ 720              		.loc 4 40 20 is_stmt 0 view .LVU123
+ 721 0056 0F4A     		ldr	r2, .L43+52
+ 722 0058 C3F8D420 		str	r2, [r3, #212]
+ 723              	.LVL52:
+  40:Core/Src/appTasks.cpp ****     }
+ 724              		.loc 4 40 20 view .LVU124
+ 725              	.LBE100:
+ 726              	.LBE99:
+ 727              	.LBE98:
+ 728              		.loc 4 270 1 view .LVU125
+ 729 005c 10BD     		pop	{r4, pc}
+ 730              	.L44:
+ 731 005e 00BF     		.align	2
+ 732              	.L43:
+ 733 0060 00000000 		.word	.LANCHOR1
+ 734 0064 08000000 		.word	_ZTVN19AccelerometerSensor6DriverE+8
+ 735 0068 08000000 		.word	_ZTV13LIS3DH_Driver+8
+ 736 006c 00007A45 		.word	1165623296
+ 737 0070 00000000 		.word	__dso_handle
+ 738 0074 00000000 		.word	_ZN13LIS3DH_DriverD1Ev
+ 739 0078 00000000 		.word	.LANCHOR2
+ 740 007c 08000000 		.word	_ZTVN19AccelerometerSensor13EventListenerE+8
+ 741 0080 08000000 		.word	_ZTV23SensorTaskEventListener+8
+ 742 0084 00000000 		.word	.LANCHOR3
+ 743 0088 00000000 		.word	.LANCHOR4
+ 744 008c 08000000 		.word	_ZTV6Serial+8
+ 745 0090 08000000 		.word	_ZTV10UartSerial+8
+ 746 0094 00000000 		.word	huart1
+ 747              		.cfi_endproc
+ 748              	.LFE141:
+ 750              		.section	.text._ZN13LIS3DH_DriverD0Ev,"axG",%progbits,_ZN13LIS3DH_DriverD5Ev,comdat
+ 751              		.align	1
+ 752              		.weak	_ZN13LIS3DH_DriverD0Ev
+ 753              		.syntax unified
+ 754              		.thumb
+ 755              		.thumb_func
+ 757              	_ZN13LIS3DH_DriverD0Ev:
+ 758              	.LVL53:
+ 759              	.LFB126:
+ 128:Core/Src/appTasks.cpp **** 
+ 760              		.loc 4 128 5 is_stmt 1 view -0
+ 761              		.cfi_startproc
+ 762              		@ args = 0, pretend = 0, frame = 0
+ 763              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128:Core/Src/appTasks.cpp **** 
+ 764              		.loc 4 128 5 is_stmt 0 view .LVU127
+ 765 0000 10B5     		push	{r4, lr}
+ 766              	.LCFI9:
+ARM GAS  /tmp/ccociAVi.s 			page 21
+
+
+ 767              		.cfi_def_cfa_offset 8
+ 768              		.cfi_offset 4, -8
+ 769              		.cfi_offset 14, -4
+ 770 0002 0446     		mov	r4, r0
+ 771              	.LVL54:
+ 772              	.LBB103:
+ 773              	.LBI103:
+ 128:Core/Src/appTasks.cpp **** 
+ 774              		.loc 4 128 5 is_stmt 1 view .LVU128
+ 775              	.LBB104:
+ 128:Core/Src/appTasks.cpp **** 
+ 776              		.loc 4 128 21 is_stmt 0 view .LVU129
+ 777 0004 034B     		ldr	r3, .L47
+ 778 0006 0360     		str	r3, [r0]
+ 779              	.LVL55:
+ 780              	.LBB105:
+ 781              	.LBI105:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 782              		.loc 1 34 25 is_stmt 1 view .LVU130
+ 783              	.LBB106:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 784              		.loc 1 34 34 is_stmt 0 view .LVU131
+ 785 0008 034B     		ldr	r3, .L47+4
+ 786 000a 0360     		str	r3, [r0]
+ 787              	.LVL56:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 788              		.loc 1 34 34 view .LVU132
+ 789              	.LBE106:
+ 790              	.LBE105:
+ 791              	.LBE104:
+ 792              	.LBE103:
+ 130:Core/Src/appTasks.cpp ****   private:
+ 793              		.loc 4 130 5 view .LVU133
+ 794 000c FFF7FEFF 		bl	_ZdlPv
+ 795              	.LVL57:
+ 130:Core/Src/appTasks.cpp ****   private:
+ 796              		.loc 4 130 5 view .LVU134
+ 797 0010 2046     		mov	r0, r4
+ 798 0012 10BD     		pop	{r4, pc}
+ 799              	.LVL58:
+ 800              	.L48:
+ 130:Core/Src/appTasks.cpp ****   private:
+ 801              		.loc 4 130 5 view .LVU135
+ 802              		.align	2
+ 803              	.L47:
+ 804 0014 08000000 		.word	_ZTV13LIS3DH_Driver+8
+ 805 0018 08000000 		.word	_ZTVN19AccelerometerSensor6DriverE+8
+ 806              		.cfi_endproc
+ 807              	.LFE126:
+ 809              		.section	.text._ZN19AccelerometerSensor6DriverD0Ev,"axG",%progbits,_ZN19AccelerometerSensor6Driver
+ 810              		.align	1
+ 811              		.weak	_ZN19AccelerometerSensor6DriverD0Ev
+ 812              		.syntax unified
+ 813              		.thumb
+ 814              		.thumb_func
+ 816              	_ZN19AccelerometerSensor6DriverD0Ev:
+ 817              	.LVL59:
+ARM GAS  /tmp/ccociAVi.s 			page 22
+
+
+ 818              	.LFB80:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 819              		.loc 1 34 25 is_stmt 1 view -0
+ 820              		.cfi_startproc
+ 821              		@ args = 0, pretend = 0, frame = 0
+ 822              		@ frame_needed = 0, uses_anonymous_args = 0
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 823              		.loc 1 34 25 is_stmt 0 view .LVU137
+ 824 0000 10B5     		push	{r4, lr}
+ 825              	.LCFI10:
+ 826              		.cfi_def_cfa_offset 8
+ 827              		.cfi_offset 4, -8
+ 828              		.cfi_offset 14, -4
+ 829 0002 0446     		mov	r4, r0
+ 830              	.LVL60:
+ 831              	.LBB107:
+ 832              	.LBI107:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 833              		.loc 1 34 25 is_stmt 1 view .LVU138
+ 834              	.LBB108:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 835              		.loc 1 34 34 is_stmt 0 view .LVU139
+ 836 0004 024B     		ldr	r3, .L51
+ 837 0006 0360     		str	r3, [r0]
+ 838              	.LVL61:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 839              		.loc 1 34 34 view .LVU140
+ 840              	.LBE108:
+ 841              	.LBE107:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 842              		.loc 1 34 35 view .LVU141
+ 843 0008 FFF7FEFF 		bl	_ZdlPv
+ 844              	.LVL62:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 845              		.loc 1 34 35 view .LVU142
+ 846 000c 2046     		mov	r0, r4
+ 847 000e 10BD     		pop	{r4, pc}
+ 848              	.LVL63:
+ 849              	.L52:
+  34:../../inc/AccelerometerSensor.hpp ****         };
+ 850              		.loc 1 34 35 view .LVU143
+ 851              		.align	2
+ 852              	.L51:
+ 853 0010 08000000 		.word	_ZTVN19AccelerometerSensor6DriverE+8
+ 854              		.cfi_endproc
+ 855              	.LFE80:
+ 857              		.section	.text._ZN13LIS3DH_Driver9availableEv,"axG",%progbits,_ZN13LIS3DH_Driver9availableEv,comda
+ 858              		.align	1
+ 859              		.weak	_ZN13LIS3DH_Driver9availableEv
+ 860              		.syntax unified
+ 861              		.thumb
+ 862              		.thumb_func
+ 864              	_ZN13LIS3DH_Driver9availableEv:
+ 865              	.LVL64:
+ 866              	.LFB122:
+ 121:Core/Src/appTasks.cpp ****       uint8_t fifo_stored;
+ 867              		.loc 4 121 14 is_stmt 1 view -0
+ARM GAS  /tmp/ccociAVi.s 			page 23
+
+
+ 868              		.cfi_startproc
+ 869              		@ args = 0, pretend = 0, frame = 8
+ 870              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121:Core/Src/appTasks.cpp ****       uint8_t fifo_stored;
+ 871              		.loc 4 121 14 is_stmt 0 view .LVU145
+ 872 0000 00B5     		push	{lr}
+ 873              	.LCFI11:
+ 874              		.cfi_def_cfa_offset 4
+ 875              		.cfi_offset 14, -4
+ 876 0002 83B0     		sub	sp, sp, #12
+ 877              	.LCFI12:
+ 878              		.cfi_def_cfa_offset 16
+ 122:Core/Src/appTasks.cpp ****       if(!LIS3DH_GetFifoSourceFSS(&fifo_stored)){
+ 879              		.loc 4 122 7 is_stmt 1 view .LVU146
+ 123:Core/Src/appTasks.cpp ****         return 0;
+ 880              		.loc 4 123 7 view .LVU147
+ 123:Core/Src/appTasks.cpp ****         return 0;
+ 881              		.loc 4 123 34 is_stmt 0 view .LVU148
+ 882 0004 0DF10700 		add	r0, sp, #7
+ 883              	.LVL65:
+ 123:Core/Src/appTasks.cpp ****         return 0;
+ 884              		.loc 4 123 34 view .LVU149
+ 885 0008 FFF7FEFF 		bl	LIS3DH_GetFifoSourceFSS
+ 886              	.LVL66:
+ 123:Core/Src/appTasks.cpp ****         return 0;
+ 887              		.loc 4 123 7 view .LVU150
+ 888 000c 20B1     		cbz	r0, .L55
+ 126:Core/Src/appTasks.cpp ****     }
+ 889              		.loc 4 126 7 is_stmt 1 view .LVU151
+ 126:Core/Src/appTasks.cpp ****     }
+ 890              		.loc 4 126 14 is_stmt 0 view .LVU152
+ 891 000e 9DF80700 		ldrb	r0, [sp, #7]	@ zero_extendqisi2
+ 892              	.L53:
+ 127:Core/Src/appTasks.cpp ****     ~LIS3DH_Driver(){
+ 893              		.loc 4 127 5 view .LVU153
+ 894 0012 03B0     		add	sp, sp, #12
+ 895              	.LCFI13:
+ 896              		.cfi_remember_state
+ 897              		.cfi_def_cfa_offset 4
+ 898              		@ sp needed
+ 899 0014 5DF804FB 		ldr	pc, [sp], #4
+ 900              	.L55:
+ 901              	.LCFI14:
+ 902              		.cfi_restore_state
+ 124:Core/Src/appTasks.cpp ****       }
+ 903              		.loc 4 124 16 view .LVU154
+ 904 0018 0020     		movs	r0, #0
+ 905 001a FAE7     		b	.L53
+ 906              		.cfi_endproc
+ 907              	.LFE122:
+ 909              		.global	__aeabi_i2f
+ 910              		.global	__aeabi_fmul
+ 911              		.section	.text._ZN13LIS3DH_Driver4readEPhm,"axG",%progbits,_ZN13LIS3DH_Driver4readEPhm,comdat
+ 912              		.align	1
+ 913              		.weak	_ZN13LIS3DH_Driver4readEPhm
+ 914              		.syntax unified
+ 915              		.thumb
+ARM GAS  /tmp/ccociAVi.s 			page 24
+
+
+ 916              		.thumb_func
+ 918              	_ZN13LIS3DH_Driver4readEPhm:
+ 919              	.LVL67:
+ 920              	.LFB120:
+  99:Core/Src/appTasks.cpp ****       AccelerometerSensor::samples_t *sample = (AccelerometerSensor::samples_t *)data;
+ 921              		.loc 4 99 14 is_stmt 1 view -0
+ 922              		.cfi_startproc
+ 923              		@ args = 0, pretend = 0, frame = 8
+ 924              		@ frame_needed = 0, uses_anonymous_args = 0
+  99:Core/Src/appTasks.cpp ****       AccelerometerSensor::samples_t *sample = (AccelerometerSensor::samples_t *)data;
+ 925              		.loc 4 99 14 is_stmt 0 view .LVU156
+ 926 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 927              	.LCFI15:
+ 928              		.cfi_def_cfa_offset 24
+ 929              		.cfi_offset 4, -24
+ 930              		.cfi_offset 5, -20
+ 931              		.cfi_offset 6, -16
+ 932              		.cfi_offset 7, -12
+ 933              		.cfi_offset 8, -8
+ 934              		.cfi_offset 14, -4
+ 935 0004 82B0     		sub	sp, sp, #8
+ 936              	.LCFI16:
+ 937              		.cfi_def_cfa_offset 32
+ 938 0006 0646     		mov	r6, r0
+ 939 0008 0D46     		mov	r5, r1
+ 940 000a 1446     		mov	r4, r2
+ 100:Core/Src/appTasks.cpp ****       uint8_t fifo_stored = this->available();
+ 941              		.loc 4 100 7 is_stmt 1 view .LVU157
+ 942              	.LVL68:
+ 101:Core/Src/appTasks.cpp ****       uint8_t max;
+ 943              		.loc 4 101 7 view .LVU158
+ 101:Core/Src/appTasks.cpp ****       uint8_t max;
+ 944              		.loc 4 101 45 is_stmt 0 view .LVU159
+ 945 000c 0368     		ldr	r3, [r0]
+ 946 000e DB68     		ldr	r3, [r3, #12]
+ 101:Core/Src/appTasks.cpp ****       uint8_t max;
+ 947              		.loc 4 101 44 view .LVU160
+ 948 0010 9847     		blx	r3
+ 949              	.LVL69:
+ 102:Core/Src/appTasks.cpp ****       AxesRaw_t raw_vals;
+ 950              		.loc 4 102 7 is_stmt 1 view .LVU161
+ 103:Core/Src/appTasks.cpp ****       uint8_t idx=0;
+ 951              		.loc 4 103 7 view .LVU162
+ 104:Core/Src/appTasks.cpp ****       max = N > fifo_stored ? fifo_stored : N;
+ 952              		.loc 4 104 7 view .LVU163
+ 105:Core/Src/appTasks.cpp ****       // Read all FIFO
+ 953              		.loc 4 105 7 view .LVU164
+ 105:Core/Src/appTasks.cpp ****       // Read all FIFO
+ 954              		.loc 4 105 29 is_stmt 0 view .LVU165
+ 955 0012 5FFA80F8 		uxtb	r8, r0
+ 956 0016 A045     		cmp	r8, r4
+ 957 0018 28BF     		it	cs
+ 958 001a A046     		movcs	r8, r4
+ 105:Core/Src/appTasks.cpp ****       // Read all FIFO
+ 959              		.loc 4 105 11 view .LVU166
+ 960 001c 5FFA88F8 		uxtb	r8, r8
+ 961              	.LVL70:
+ARM GAS  /tmp/ccociAVi.s 			page 25
+
+
+ 104:Core/Src/appTasks.cpp ****       max = N > fifo_stored ? fifo_stored : N;
+ 962              		.loc 4 104 15 view .LVU167
+ 963 0020 0024     		movs	r4, #0
+ 964              	.LVL71:
+ 104:Core/Src/appTasks.cpp ****       max = N > fifo_stored ? fifo_stored : N;
+ 965              		.loc 4 104 15 view .LVU168
+ 966 0022 20E0     		b	.L61
+ 967              	.LVL72:
+ 968              	.L59:
+ 111:Core/Src/appTasks.cpp ****         sample->y = this->_config.resolution * (raw_vals.AXIS_Y >> 4); 
+ 969              		.loc 4 111 9 is_stmt 1 view .LVU169
+ 111:Core/Src/appTasks.cpp ****         sample->y = this->_config.resolution * (raw_vals.AXIS_Y >> 4); 
+ 970              		.loc 4 111 35 is_stmt 0 view .LVU170
+ 971 0024 B768     		ldr	r7, [r6, #8]	@ float
+ 111:Core/Src/appTasks.cpp ****         sample->y = this->_config.resolution * (raw_vals.AXIS_Y >> 4); 
+ 972              		.loc 4 111 58 view .LVU171
+ 973 0026 BDF90000 		ldrsh	r0, [sp]
+ 111:Core/Src/appTasks.cpp ****         sample->y = this->_config.resolution * (raw_vals.AXIS_Y >> 4); 
+ 974              		.loc 4 111 46 view .LVU172
+ 975 002a 0011     		asrs	r0, r0, #4
+ 976 002c FFF7FEFF 		bl	__aeabi_i2f
+ 977              	.LVL73:
+ 978 0030 3946     		mov	r1, r7
+ 979 0032 FFF7FEFF 		bl	__aeabi_fmul
+ 980              	.LVL74:
+ 111:Core/Src/appTasks.cpp ****         sample->y = this->_config.resolution * (raw_vals.AXIS_Y >> 4); 
+ 981              		.loc 4 111 19 view .LVU173
+ 982 0036 2860     		str	r0, [r5]	@ float
+ 112:Core/Src/appTasks.cpp ****         sample->z = this->_config.resolution * (raw_vals.AXIS_Z >> 4); 
+ 983              		.loc 4 112 9 is_stmt 1 view .LVU174
+ 112:Core/Src/appTasks.cpp ****         sample->z = this->_config.resolution * (raw_vals.AXIS_Z >> 4); 
+ 984              		.loc 4 112 35 is_stmt 0 view .LVU175
+ 985 0038 B768     		ldr	r7, [r6, #8]	@ float
+ 112:Core/Src/appTasks.cpp ****         sample->z = this->_config.resolution * (raw_vals.AXIS_Z >> 4); 
+ 986              		.loc 4 112 58 view .LVU176
+ 987 003a BDF90200 		ldrsh	r0, [sp, #2]
+ 112:Core/Src/appTasks.cpp ****         sample->z = this->_config.resolution * (raw_vals.AXIS_Z >> 4); 
+ 988              		.loc 4 112 46 view .LVU177
+ 989 003e 0011     		asrs	r0, r0, #4
+ 990 0040 FFF7FEFF 		bl	__aeabi_i2f
+ 991              	.LVL75:
+ 992 0044 3946     		mov	r1, r7
+ 993 0046 FFF7FEFF 		bl	__aeabi_fmul
+ 994              	.LVL76:
+ 112:Core/Src/appTasks.cpp ****         sample->z = this->_config.resolution * (raw_vals.AXIS_Z >> 4); 
+ 995              		.loc 4 112 19 view .LVU178
+ 996 004a 6860     		str	r0, [r5, #4]	@ float
+ 113:Core/Src/appTasks.cpp ****         sample = &(sample[1]);
+ 997              		.loc 4 113 9 is_stmt 1 view .LVU179
+ 113:Core/Src/appTasks.cpp ****         sample = &(sample[1]);
+ 998              		.loc 4 113 35 is_stmt 0 view .LVU180
+ 999 004c B768     		ldr	r7, [r6, #8]	@ float
+ 113:Core/Src/appTasks.cpp ****         sample = &(sample[1]);
+ 1000              		.loc 4 113 58 view .LVU181
+ 1001 004e BDF90400 		ldrsh	r0, [sp, #4]
+ 113:Core/Src/appTasks.cpp ****         sample = &(sample[1]);
+ 1002              		.loc 4 113 46 view .LVU182
+ARM GAS  /tmp/ccociAVi.s 			page 26
+
+
+ 1003 0052 0011     		asrs	r0, r0, #4
+ 1004 0054 FFF7FEFF 		bl	__aeabi_i2f
+ 1005              	.LVL77:
+ 1006 0058 3946     		mov	r1, r7
+ 1007 005a FFF7FEFF 		bl	__aeabi_fmul
+ 1008              	.LVL78:
+ 113:Core/Src/appTasks.cpp ****         sample = &(sample[1]);
+ 1009              		.loc 4 113 19 view .LVU183
+ 1010 005e A860     		str	r0, [r5, #8]	@ float
+ 114:Core/Src/appTasks.cpp ****       }
+ 1011              		.loc 4 114 9 is_stmt 1 view .LVU184
+ 114:Core/Src/appTasks.cpp ****       }
+ 1012              		.loc 4 114 16 is_stmt 0 view .LVU185
+ 1013 0060 0C35     		adds	r5, r5, #12
+ 1014              	.LVL79:
+ 107:Core/Src/appTasks.cpp ****         if(!LIS3DH_GetAccAxesRaw( &raw_vals ))
+ 1015              		.loc 4 107 7 is_stmt 1 view .LVU186
+ 1016 0062 0134     		adds	r4, r4, #1
+ 1017              	.LVL80:
+ 107:Core/Src/appTasks.cpp ****         if(!LIS3DH_GetAccAxesRaw( &raw_vals ))
+ 1018              		.loc 4 107 7 is_stmt 0 view .LVU187
+ 1019 0064 E4B2     		uxtb	r4, r4
+ 1020              	.LVL81:
+ 1021              	.L61:
+ 107:Core/Src/appTasks.cpp ****         if(!LIS3DH_GetAccAxesRaw( &raw_vals ))
+ 1022              		.loc 4 107 7 is_stmt 1 discriminator 1 view .LVU188
+ 107:Core/Src/appTasks.cpp ****         if(!LIS3DH_GetAccAxesRaw( &raw_vals ))
+ 1023              		.loc 4 107 16 discriminator 1 view .LVU189
+ 1024 0066 4445     		cmp	r4, r8
+ 1025 0068 06D2     		bcs	.L58
+ 108:Core/Src/appTasks.cpp ****           return idx;
+ 1026              		.loc 4 108 9 view .LVU190
+ 108:Core/Src/appTasks.cpp ****           return idx;
+ 1027              		.loc 4 108 33 is_stmt 0 view .LVU191
+ 1028 006a 6846     		mov	r0, sp
+ 1029 006c FFF7FEFF 		bl	LIS3DH_GetAccAxesRaw
+ 1030              	.LVL82:
+ 108:Core/Src/appTasks.cpp ****           return idx;
+ 1031              		.loc 4 108 9 view .LVU192
+ 1032 0070 0028     		cmp	r0, #0
+ 1033 0072 D7D1     		bne	.L59
+ 109:Core/Src/appTasks.cpp ****         // Convert from raw to m/s^2
+ 1034              		.loc 4 109 11 is_stmt 1 view .LVU193
+ 109:Core/Src/appTasks.cpp ****         // Convert from raw to m/s^2
+ 1035              		.loc 4 109 18 is_stmt 0 view .LVU194
+ 1036 0074 2046     		mov	r0, r4
+ 1037 0076 00E0     		b	.L57
+ 1038              	.L58:
+ 116:Core/Src/appTasks.cpp ****     }
+ 1039              		.loc 4 116 7 is_stmt 1 view .LVU195
+ 116:Core/Src/appTasks.cpp ****     }
+ 1040              		.loc 4 116 14 is_stmt 0 view .LVU196
+ 1041 0078 2046     		mov	r0, r4
+ 1042              	.L57:
+ 117:Core/Src/appTasks.cpp ****     const AccelerometerSensor::accelerometer_config_t * getConfig() override{
+ 1043              		.loc 4 117 5 view .LVU197
+ 1044 007a 02B0     		add	sp, sp, #8
+ARM GAS  /tmp/ccociAVi.s 			page 27
+
+
+ 1045              	.LCFI17:
+ 1046              		.cfi_def_cfa_offset 24
+ 1047              		@ sp needed
+ 1048 007c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 117:Core/Src/appTasks.cpp ****     const AccelerometerSensor::accelerometer_config_t * getConfig() override{
+ 1049              		.loc 4 117 5 view .LVU198
+ 1050              		.cfi_endproc
+ 1051              	.LFE120:
+ 1053              		.section	.text._ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE,"axG
+ 1054              		.align	1
+ 1055              		.weak	_ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE
+ 1056              		.syntax unified
+ 1057              		.thumb
+ 1058              		.thumb_func
+ 1060              	_ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE:
+ 1061              	.LVL83:
+ 1062              	.LFB119:
+  83:Core/Src/appTasks.cpp ****       // Only static configuration at first
+ 1063              		.loc 4 83 10 is_stmt 1 view -0
+ 1064              		.cfi_startproc
+ 1065              		@ args = 0, pretend = 0, frame = 8
+ 1066              		@ frame_needed = 0, uses_anonymous_args = 0
+  83:Core/Src/appTasks.cpp ****       // Only static configuration at first
+ 1067              		.loc 4 83 10 is_stmt 0 view .LVU200
+ 1068 0000 00B5     		push	{lr}
+ 1069              	.LCFI18:
+ 1070              		.cfi_def_cfa_offset 4
+ 1071              		.cfi_offset 14, -4
+ 1072 0002 83B0     		sub	sp, sp, #12
+ 1073              	.LCFI19:
+ 1074              		.cfi_def_cfa_offset 16
+  85:Core/Src/appTasks.cpp ****       LIS3DH_GetWHO_AM_I(&reg);
+ 1075              		.loc 4 85 7 is_stmt 1 view .LVU201
+  86:Core/Src/appTasks.cpp ****       if(reg != 0x33)
+ 1076              		.loc 4 86 7 view .LVU202
+  86:Core/Src/appTasks.cpp ****       if(reg != 0x33)
+ 1077              		.loc 4 86 25 is_stmt 0 view .LVU203
+ 1078 0004 0DF10700 		add	r0, sp, #7
+ 1079              	.LVL84:
+  86:Core/Src/appTasks.cpp ****       if(reg != 0x33)
+ 1080              		.loc 4 86 25 view .LVU204
+ 1081 0008 FFF7FEFF 		bl	LIS3DH_GetWHO_AM_I
+ 1082              	.LVL85:
+  87:Core/Src/appTasks.cpp ****         return false;
+ 1083              		.loc 4 87 7 is_stmt 1 view .LVU205
+  87:Core/Src/appTasks.cpp ****         return false;
+ 1084              		.loc 4 87 14 is_stmt 0 view .LVU206
+ 1085 000c 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+  87:Core/Src/appTasks.cpp ****         return false;
+ 1086              		.loc 4 87 7 view .LVU207
+ 1087 0010 332B     		cmp	r3, #51
+ 1088 0012 03D0     		beq	.L71
+  88:Core/Src/appTasks.cpp ****       if(!LIS3DH_SetFullScale( LIS3DH_FULLSCALE_2 ))
+ 1089              		.loc 4 88 16 view .LVU208
+ 1090 0014 0020     		movs	r0, #0
+ 1091              	.L64:
+  98:Core/Src/appTasks.cpp ****     uint32_t read(uint8_t *data, uint32_t N) override{
+ARM GAS  /tmp/ccociAVi.s 			page 28
+
+
+ 1092              		.loc 4 98 5 view .LVU209
+ 1093 0016 03B0     		add	sp, sp, #12
+ 1094              	.LCFI20:
+ 1095              		.cfi_remember_state
+ 1096              		.cfi_def_cfa_offset 4
+ 1097              		@ sp needed
+ 1098 0018 5DF804FB 		ldr	pc, [sp], #4
+ 1099              	.L71:
+ 1100              	.LCFI21:
+ 1101              		.cfi_restore_state
+  89:Core/Src/appTasks.cpp ****         return false;
+ 1102              		.loc 4 89 7 is_stmt 1 view .LVU210
+  89:Core/Src/appTasks.cpp ****         return false;
+ 1103              		.loc 4 89 30 is_stmt 0 view .LVU211
+ 1104 001c 0020     		movs	r0, #0
+ 1105 001e FFF7FEFF 		bl	LIS3DH_SetFullScale
+ 1106              	.LVL86:
+  89:Core/Src/appTasks.cpp ****         return false;
+ 1107              		.loc 4 89 7 view .LVU212
+ 1108 0022 08B9     		cbnz	r0, .L72
+  90:Core/Src/appTasks.cpp ****       if(!LIS3DH_SetMode( LIS3DH_NORMAL ))
+ 1109              		.loc 4 90 16 view .LVU213
+ 1110 0024 0020     		movs	r0, #0
+ 1111 0026 F6E7     		b	.L64
+ 1112              	.L72:
+  91:Core/Src/appTasks.cpp ****         return false;
+ 1113              		.loc 4 91 7 is_stmt 1 view .LVU214
+  91:Core/Src/appTasks.cpp ****         return false;
+ 1114              		.loc 4 91 25 is_stmt 0 view .LVU215
+ 1115 0028 0220     		movs	r0, #2
+ 1116 002a FFF7FEFF 		bl	LIS3DH_SetMode
+ 1117              	.LVL87:
+  91:Core/Src/appTasks.cpp ****         return false;
+ 1118              		.loc 4 91 7 view .LVU216
+ 1119 002e 08B9     		cbnz	r0, .L73
+  92:Core/Src/appTasks.cpp ****       if(!LIS3DH_SetODR( LIS3DH_ODR_25Hz ))
+ 1120              		.loc 4 92 16 view .LVU217
+ 1121 0030 0020     		movs	r0, #0
+ 1122 0032 F0E7     		b	.L64
+ 1123              	.L73:
+  93:Core/Src/appTasks.cpp ****         return false;
+ 1124              		.loc 4 93 7 is_stmt 1 view .LVU218
+  93:Core/Src/appTasks.cpp ****         return false;
+ 1125              		.loc 4 93 24 is_stmt 0 view .LVU219
+ 1126 0034 0320     		movs	r0, #3
+ 1127 0036 FFF7FEFF 		bl	LIS3DH_SetODR
+ 1128              	.LVL88:
+  93:Core/Src/appTasks.cpp ****         return false;
+ 1129              		.loc 4 93 7 view .LVU220
+ 1130 003a 08B9     		cbnz	r0, .L74
+  94:Core/Src/appTasks.cpp ****       if(!LIS3DH_FIFOModeEnable( LIS3DH_FIFO_STREAM_MODE ))
+ 1131              		.loc 4 94 16 view .LVU221
+ 1132 003c 0020     		movs	r0, #0
+ 1133 003e EAE7     		b	.L64
+ 1134              	.L74:
+  95:Core/Src/appTasks.cpp ****         return false;
+ 1135              		.loc 4 95 7 is_stmt 1 view .LVU222
+ARM GAS  /tmp/ccociAVi.s 			page 29
+
+
+  95:Core/Src/appTasks.cpp ****         return false;
+ 1136              		.loc 4 95 32 is_stmt 0 view .LVU223
+ 1137 0040 0220     		movs	r0, #2
+ 1138 0042 FFF7FEFF 		bl	LIS3DH_FIFOModeEnable
+ 1139              	.LVL89:
+  95:Core/Src/appTasks.cpp ****         return false;
+ 1140              		.loc 4 95 7 view .LVU224
+ 1141 0046 08B1     		cbz	r0, .L69
+  97:Core/Src/appTasks.cpp ****     }
+ 1142              		.loc 4 97 14 view .LVU225
+ 1143 0048 0120     		movs	r0, #1
+ 1144 004a E4E7     		b	.L64
+ 1145              	.L69:
+  96:Core/Src/appTasks.cpp ****       return true;
+ 1146              		.loc 4 96 16 view .LVU226
+ 1147 004c 0020     		movs	r0, #0
+ 1148 004e E2E7     		b	.L64
+ 1149              		.cfi_endproc
+ 1150              	.LFE119:
+ 1152              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 1153              		.align	1
+ 1154              		.global	HAL_GPIO_EXTI_Callback
+ 1155              		.syntax unified
+ 1156              		.thumb
+ 1157              		.thumb_func
+ 1159              	HAL_GPIO_EXTI_Callback:
+ 1160              	.LVL90:
+ 1161              	.LFB127:
+ 145:Core/Src/appTasks.cpp ****   if(GPIO_Pin == ACC_INT1_Pin){
+ 1162              		.loc 4 145 1 is_stmt 1 view -0
+ 1163              		.cfi_startproc
+ 1164              		@ args = 0, pretend = 0, frame = 0
+ 1165              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1166              		@ link register save eliminated.
+ 146:Core/Src/appTasks.cpp ****     // BaseType_t priority;
+ 1167              		.loc 4 146 3 view .LVU228
+ 151:Core/Src/appTasks.cpp **** 
+ 1168              		.loc 4 151 1 is_stmt 0 view .LVU229
+ 1169 0000 7047     		bx	lr
+ 1170              		.cfi_endproc
+ 1171              	.LFE127:
+ 1173              		.section	.rodata.StartControllerTask.str1.4,"aMS",%progbits,1
+ 1174              		.align	2
+ 1175              	.LC1:
+ 1176 0000 4E6F7469 		.ascii	"Notification received!\012\000"
+ 1176      66696361 
+ 1176      74696F6E 
+ 1176      20726563 
+ 1176      65697665 
+ 1177              		.align	2
+ 1178              	.LC2:
+ 1179 0018 0A00     		.ascii	"\012\000"
+ 1180 001a 0000     		.align	2
+ 1181              	.LC3:
+ 1182 001c 52656164 		.ascii	"Read config cmd\012\000"
+ 1182      20636F6E 
+ 1182      66696720 
+ARM GAS  /tmp/ccociAVi.s 			page 30
+
+
+ 1182      636D640A 
+ 1182      00
+ 1183 002d 000000   		.align	2
+ 1184              	.LC4:
+ 1185 0030 53746172 		.ascii	"Start single capture cmd. %d s\012\000"
+ 1185      74207369 
+ 1185      6E676C65 
+ 1185      20636170 
+ 1185      74757265 
+ 1186              		.align	2
+ 1187              	.LC5:
+ 1188 0050 4E6F7469 		.ascii	"Notification NOT received!\012\000"
+ 1188      66696361 
+ 1188      74696F6E 
+ 1188      204E4F54 
+ 1188      20726563 
+ 1189              		.section	.text.StartControllerTask,"ax",%progbits
+ 1190              		.align	1
+ 1191              		.global	StartControllerTask
+ 1192              		.syntax unified
+ 1193              		.thumb
+ 1194              		.thumb_func
+ 1196              	StartControllerTask:
+ 1197              	.LVL91:
+ 1198              	.LFB128:
+ 154:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 1199              		.loc 4 154 1 is_stmt 1 view -0
+ 1200              		.cfi_startproc
+ 1201              		@ args = 0, pretend = 0, frame = 80
+ 1202              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 1203              		.loc 4 154 1 is_stmt 0 view .LVU231
+ 1204 0000 30B5     		push	{r4, r5, lr}
+ 1205              	.LCFI22:
+ 1206              		.cfi_def_cfa_offset 12
+ 1207              		.cfi_offset 4, -12
+ 1208              		.cfi_offset 5, -8
+ 1209              		.cfi_offset 14, -4
+ 1210 0002 95B0     		sub	sp, sp, #84
+ 1211              	.LCFI23:
+ 1212              		.cfi_def_cfa_offset 96
+ 155:Core/Src/appTasks.cpp ****   uint32_t notification;
+ 1213              		.loc 4 155 3 is_stmt 1 view .LVU232
+ 1214              	.LVL92:
+ 156:Core/Src/appTasks.cpp ****   char text[50] = "Ciao bel from FreeRTOS controller task!\n";
+ 1215              		.loc 4 156 3 view .LVU233
+ 157:Core/Src/appTasks.cpp ****   AccelerometerSensor::samples_t sample;
+ 1216              		.loc 4 157 3 view .LVU234
+ 157:Core/Src/appTasks.cpp ****   AccelerometerSensor::samples_t sample;
+ 1217              		.loc 4 157 8 is_stmt 0 view .LVU235
+ 1218 0004 07AC     		add	r4, sp, #28
+ 1219 0006 494D     		ldr	r5, .L88
+ 1220 0008 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 1221              	.LVL93:
+ 157:Core/Src/appTasks.cpp ****   AccelerometerSensor::samples_t sample;
+ 1222              		.loc 4 157 8 view .LVU236
+ 1223 000a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ARM GAS  /tmp/ccociAVi.s 			page 31
+
+
+ 1224 000c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 1225 000e 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 1226 0010 95E80700 		ldm	r5, {r0, r1, r2}
+ 1227 0014 03C4     		stmia	r4!, {r0, r1}
+ 1228 0016 2270     		strb	r2, [r4]
+ 1229 0018 0022     		movs	r2, #0
+ 1230 001a CDF84520 		str	r2, [sp, #69]	@ unaligned
+ 1231 001e CDF84920 		str	r2, [sp, #73]	@ unaligned
+ 1232 0022 8DF84D20 		strb	r2, [sp, #77]
+ 158:Core/Src/appTasks.cpp ****   // Create queue
+ 1233              		.loc 4 158 3 is_stmt 1 view .LVU237
+ 160:Core/Src/appTasks.cpp ****   bool received;
+ 1234              		.loc 4 160 3 view .LVU238
+ 160:Core/Src/appTasks.cpp ****   bool received;
+ 1235              		.loc 4 160 18 is_stmt 0 view .LVU239
+ 1236 0026 0C21     		movs	r1, #12
+ 1237 0028 0A20     		movs	r0, #10
+ 1238 002a FFF7FEFF 		bl	xQueueGenericCreate
+ 1239              	.LVL94:
+ 160:Core/Src/appTasks.cpp ****   bool received;
+ 1240              		.loc 4 160 16 view .LVU240
+ 1241 002e 404B     		ldr	r3, .L88+4
+ 1242 0030 1860     		str	r0, [r3]
+ 1243 0032 57E0     		b	.L77
+ 1244              	.LVL95:
+ 1245              	.L86:
+ 1246              	.LBB109:
+ 1247              	.LBB110:
+ 1248              	.LBB111:
+ 1249              	.LBB112:
+ 170:Core/Src/appTasks.cpp ****         HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+ 1250              		.loc 4 170 9 is_stmt 1 view .LVU241
+ 170:Core/Src/appTasks.cpp ****         HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+ 1251              		.loc 4 170 16 is_stmt 0 view .LVU242
+ 1252 0034 07AC     		add	r4, sp, #28
+ 1253 0036 3F4D     		ldr	r5, .L88+8
+ 1254 0038 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 1255              	.LVL96:
+ 170:Core/Src/appTasks.cpp ****         HAL_UART_Transmit(&huart1, (uint8_t *)text, strlen(text), 500);
+ 1256              		.loc 4 170 16 view .LVU243
+ 1257 003a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 1258 003c 95E80300 		ldm	r5, {r0, r1}
+ 1259 0040 84E80300 		stm	r4, {r0, r1}
+ 171:Core/Src/appTasks.cpp ****         vTaskSuspendAll();
+ 1260              		.loc 4 171 9 is_stmt 1 view .LVU244
+ 171:Core/Src/appTasks.cpp ****         vTaskSuspendAll();
+ 1261              		.loc 4 171 59 is_stmt 0 view .LVU245
+ 1262 0044 07A8     		add	r0, sp, #28
+ 1263 0046 FFF7FEFF 		bl	strlen
+ 1264              	.LVL97:
+ 171:Core/Src/appTasks.cpp ****         vTaskSuspendAll();
+ 1265              		.loc 4 171 26 view .LVU246
+ 1266 004a 4FF4FA73 		mov	r3, #500
+ 1267 004e 82B2     		uxth	r2, r0
+ 1268 0050 07A9     		add	r1, sp, #28
+ 1269 0052 3948     		ldr	r0, .L88+12
+ 1270 0054 FFF7FEFF 		bl	HAL_UART_Transmit
+ARM GAS  /tmp/ccociAVi.s 			page 32
+
+
+ 1271              	.LVL98:
+ 172:Core/Src/appTasks.cpp ****         uint32_t max = acc.available();
+ 1272              		.loc 4 172 9 is_stmt 1 view .LVU247
+ 172:Core/Src/appTasks.cpp ****         uint32_t max = acc.available();
+ 1273              		.loc 4 172 24 is_stmt 0 view .LVU248
+ 1274 0058 FFF7FEFF 		bl	vTaskSuspendAll
+ 1275              	.LVL99:
+ 173:Core/Src/appTasks.cpp ****         for(uint32_t idx=0; idx<max; idx++)
+ 1276              		.loc 4 173 9 is_stmt 1 view .LVU249
+ 173:Core/Src/appTasks.cpp ****         for(uint32_t idx=0; idx<max; idx++)
+ 1277              		.loc 4 173 37 is_stmt 0 view .LVU250
+ 1278 005c 3748     		ldr	r0, .L88+16
+ 1279 005e FFF7FEFF 		bl	_ZN19AccelerometerSensor9availableEv
+ 1280              	.LVL100:
+ 1281 0062 0546     		mov	r5, r0
+ 1282              	.LVL101:
+ 174:Core/Src/appTasks.cpp ****         {
+ 1283              		.loc 4 174 9 is_stmt 1 view .LVU251
+ 1284              	.LBB113:
+ 174:Core/Src/appTasks.cpp ****         {
+ 1285              		.loc 4 174 22 is_stmt 0 view .LVU252
+ 1286 0064 0024     		movs	r4, #0
+ 1287 0066 0CE0     		b	.L81
+ 1288              	.LVL102:
+ 1289              	.L85:
+ 176:Core/Src/appTasks.cpp ****           serial.write( (char *)&sample, sizeof(AccelerometerSensor::samples_t ) );
+ 1290              		.loc 4 176 11 is_stmt 1 discriminator 2 view .LVU253
+ 176:Core/Src/appTasks.cpp ****           serial.write( (char *)&sample, sizeof(AccelerometerSensor::samples_t ) );
+ 1291              		.loc 4 176 19 is_stmt 0 discriminator 2 view .LVU254
+ 1292 0068 0122     		movs	r2, #1
+ 1293 006a 04A9     		add	r1, sp, #16
+ 1294 006c 3348     		ldr	r0, .L88+16
+ 1295 006e FFF7FEFF 		bl	_ZN19AccelerometerSensor4readEPNS_9samples_tEm
+ 1296              	.LVL103:
+ 177:Core/Src/appTasks.cpp ****         }
+ 1297              		.loc 4 177 11 is_stmt 1 discriminator 2 view .LVU255
+ 1298              	.LBB114:
+ 1299              	.LBI114:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1300              		.loc 4 42 14 discriminator 2 view .LVU256
+ 1301              	.LBB115:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1302              		.loc 4 43 7 discriminator 2 view .LVU257
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1303              		.loc 4 43 24 is_stmt 0 discriminator 2 view .LVU258
+ 1304 0072 4FF4FA73 		mov	r3, #500
+ 1305 0076 0C22     		movs	r2, #12
+ 1306 0078 04A9     		add	r1, sp, #16
+ 1307              	.LVL104:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1308              		.loc 4 43 24 discriminator 2 view .LVU259
+ 1309 007a 2F48     		ldr	r0, .L88+12
+ 1310 007c FFF7FEFF 		bl	HAL_UART_Transmit
+ 1311              	.LVL105:
+  44:Core/Src/appTasks.cpp ****     }
+ 1312              		.loc 4 44 7 is_stmt 1 discriminator 2 view .LVU260
+  44:Core/Src/appTasks.cpp ****     }
+ARM GAS  /tmp/ccociAVi.s 			page 33
+
+
+ 1313              		.loc 4 44 7 is_stmt 0 discriminator 2 view .LVU261
+ 1314              	.LBE115:
+ 1315              	.LBE114:
+ 174:Core/Src/appTasks.cpp ****         {
+ 1316              		.loc 4 174 9 is_stmt 1 discriminator 2 view .LVU262
+ 1317 0080 0134     		adds	r4, r4, #1
+ 1318              	.LVL106:
+ 1319              	.L81:
+ 174:Core/Src/appTasks.cpp ****         {
+ 1320              		.loc 4 174 32 discriminator 3 view .LVU263
+ 1321 0082 AC42     		cmp	r4, r5
+ 1322 0084 F0D3     		bcc	.L85
+ 1323              	.LBE113:
+ 179:Core/Src/appTasks.cpp ****         xTaskResumeAll();
+ 1324              		.loc 4 179 9 view .LVU264
+ 1325              	.LVL107:
+ 1326              	.LBB116:
+ 1327              	.LBI116:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1328              		.loc 4 42 14 view .LVU265
+ 1329              	.LBB117:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1330              		.loc 4 43 7 view .LVU266
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1331              		.loc 4 43 24 is_stmt 0 view .LVU267
+ 1332 0086 4FF4FA73 		mov	r3, #500
+ 1333 008a 0122     		movs	r2, #1
+ 1334 008c 2C49     		ldr	r1, .L88+20
+ 1335 008e 2A48     		ldr	r0, .L88+12
+ 1336 0090 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1337              	.LVL108:
+  44:Core/Src/appTasks.cpp ****     }
+ 1338              		.loc 4 44 7 is_stmt 1 view .LVU268
+  44:Core/Src/appTasks.cpp ****     }
+ 1339              		.loc 4 44 7 is_stmt 0 view .LVU269
+ 1340              	.LBE117:
+ 1341              	.LBE116:
+ 180:Core/Src/appTasks.cpp ****       }else if(msg.type == CTRL_MSG_NEW_CMD){
+ 1342              		.loc 4 180 9 is_stmt 1 view .LVU270
+ 180:Core/Src/appTasks.cpp ****       }else if(msg.type == CTRL_MSG_NEW_CMD){
+ 1343              		.loc 4 180 23 is_stmt 0 view .LVU271
+ 1344 0094 FFF7FEFF 		bl	xTaskResumeAll
+ 1345              	.LVL109:
+ 1346              	.LBE112:
+ 1347 0098 24E0     		b	.L77
+ 1348              	.LVL110:
+ 1349              	.L87:
+ 183:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 1350              		.loc 4 183 11 is_stmt 1 view .LVU272
+ 183:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 1351              		.loc 4 183 18 is_stmt 0 view .LVU273
+ 1352 009a 07AC     		add	r4, sp, #28
+ 1353 009c 294D     		ldr	r5, .L88+24
+ 1354 009e 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 1355              	.LVL111:
+ 183:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 1356              		.loc 4 183 18 view .LVU274
+ARM GAS  /tmp/ccociAVi.s 			page 34
+
+
+ 1357 00a0 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 1358 00a2 2B68     		ldr	r3, [r5]
+ 1359 00a4 2370     		strb	r3, [r4]
+ 184:Core/Src/appTasks.cpp ****         }else if(msg.command.type == CommandsInterpreter::single){
+ 1360              		.loc 4 184 11 is_stmt 1 view .LVU275
+ 184:Core/Src/appTasks.cpp ****         }else if(msg.command.type == CommandsInterpreter::single){
+ 1361              		.loc 4 184 45 is_stmt 0 view .LVU276
+ 1362 00a6 07A8     		add	r0, sp, #28
+ 1363 00a8 FFF7FEFF 		bl	strlen
+ 1364              	.LVL112:
+ 1365              	.LBB118:
+ 1366              	.LBI118:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1367              		.loc 4 42 14 is_stmt 1 view .LVU277
+ 1368              	.LBB119:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1369              		.loc 4 43 7 view .LVU278
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1370              		.loc 4 43 24 is_stmt 0 view .LVU279
+ 1371 00ac 4FF4FA73 		mov	r3, #500
+ 1372 00b0 82B2     		uxth	r2, r0
+ 1373 00b2 07A9     		add	r1, sp, #28
+ 1374              	.LVL113:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1375              		.loc 4 43 24 view .LVU280
+ 1376 00b4 2048     		ldr	r0, .L88+12
+ 1377              	.LVL114:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1378              		.loc 4 43 24 view .LVU281
+ 1379 00b6 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1380              	.LVL115:
+  44:Core/Src/appTasks.cpp ****     }
+ 1381              		.loc 4 44 7 is_stmt 1 view .LVU282
+  44:Core/Src/appTasks.cpp ****     }
+ 1382              		.loc 4 44 14 is_stmt 0 view .LVU283
+ 1383 00ba 13E0     		b	.L77
+ 1384              	.LVL116:
+ 1385              	.L78:
+  44:Core/Src/appTasks.cpp ****     }
+ 1386              		.loc 4 44 14 view .LVU284
+ 1387              	.LBE119:
+ 1388              	.LBE118:
+ 1389              	.LBE111:
+ 191:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 1390              		.loc 4 191 7 is_stmt 1 view .LVU285
+ 191:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 1391              		.loc 4 191 14 is_stmt 0 view .LVU286
+ 1392 00bc 0DF11C0C 		add	ip, sp, #28
+ 1393 00c0 214C     		ldr	r4, .L88+28
+ 1394 00c2 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 1395              	.LVL117:
+ 191:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 1396              		.loc 4 191 14 view .LVU287
+ 1397 00c4 ACE80F00 		stmia	ip!, {r0, r1, r2, r3}
+ 1398 00c8 94E80700 		ldm	r4, {r0, r1, r2}
+ 1399 00cc 8CE80700 		stm	ip, {r0, r1, r2}
+ 192:Core/Src/appTasks.cpp ****     }
+ARM GAS  /tmp/ccociAVi.s 			page 35
+
+
+ 1400              		.loc 4 192 7 is_stmt 1 view .LVU288
+ 192:Core/Src/appTasks.cpp ****     }
+ 1401              		.loc 4 192 41 is_stmt 0 view .LVU289
+ 1402 00d0 07A8     		add	r0, sp, #28
+ 1403 00d2 FFF7FEFF 		bl	strlen
+ 1404              	.LVL118:
+ 1405              	.LBB122:
+ 1406              	.LBI122:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1407              		.loc 4 42 14 is_stmt 1 view .LVU290
+ 1408              	.LBB123:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1409              		.loc 4 43 7 view .LVU291
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1410              		.loc 4 43 24 is_stmt 0 view .LVU292
+ 1411 00d6 4FF4FA73 		mov	r3, #500
+ 1412 00da 82B2     		uxth	r2, r0
+ 1413 00dc 07A9     		add	r1, sp, #28
+ 1414              	.LVL119:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1415              		.loc 4 43 24 view .LVU293
+ 1416 00de 1648     		ldr	r0, .L88+12
+ 1417              	.LVL120:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1418              		.loc 4 43 24 view .LVU294
+ 1419 00e0 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1420              	.LVL121:
+  44:Core/Src/appTasks.cpp ****     }
+ 1421              		.loc 4 44 7 is_stmt 1 view .LVU295
+ 1422              	.L77:
+  44:Core/Src/appTasks.cpp ****     }
+ 1423              		.loc 4 44 7 is_stmt 0 view .LVU296
+ 1424              	.LBE123:
+ 1425              	.LBE122:
+ 1426              	.LBE110:
+ 1427              	.LBE109:
+ 161:Core/Src/appTasks.cpp ****   controller_message_t msg;
+ 1428              		.loc 4 161 3 is_stmt 1 view .LVU297
+ 162:Core/Src/appTasks.cpp ****   for(;;)
+ 1429              		.loc 4 162 3 view .LVU298
+ 163:Core/Src/appTasks.cpp ****   {
+ 1430              		.loc 4 163 3 view .LVU299
+ 1431              	.LBB127:
+ 167:Core/Src/appTasks.cpp ****     if(received){
+ 1432              		.loc 4 167 5 view .LVU300
+ 167:Core/Src/appTasks.cpp ****     if(received){
+ 1433              		.loc 4 167 29 is_stmt 0 view .LVU301
+ 1434 00e4 4FF4FA72 		mov	r2, #500
+ 1435 00e8 01A9     		add	r1, sp, #4
+ 1436 00ea 114B     		ldr	r3, .L88+4
+ 1437 00ec 1868     		ldr	r0, [r3]
+ 1438 00ee FFF7FEFF 		bl	xQueueReceive
+ 1439              	.LVL122:
+ 168:Core/Src/appTasks.cpp ****       if(msg.type == CTRL_MSG_NEW_DATA){
+ 1440              		.loc 4 168 5 is_stmt 1 view .LVU302
+ 1441              	.LBB125:
+ 1442 00f2 0128     		cmp	r0, #1
+ARM GAS  /tmp/ccociAVi.s 			page 36
+
+
+ 1443 00f4 E2D1     		bne	.L78
+ 1444              	.LBE125:
+ 1445              	.LBE127:
+ 169:Core/Src/appTasks.cpp ****         sprintf( text, "Notification received!\n" );
+ 1446              		.loc 4 169 7 view .LVU303
+ 1447              	.LBB128:
+ 1448              	.LBB126:
+ 1449              	.LBB124:
+ 169:Core/Src/appTasks.cpp ****         sprintf( text, "Notification received!\n" );
+ 1450              		.loc 4 169 14 is_stmt 0 view .LVU304
+ 1451 00f6 019B     		ldr	r3, [sp, #4]
+ 169:Core/Src/appTasks.cpp ****         sprintf( text, "Notification received!\n" );
+ 1452              		.loc 4 169 7 view .LVU305
+ 1453 00f8 012B     		cmp	r3, #1
+ 1454 00fa 9BD0     		beq	.L86
+ 181:Core/Src/appTasks.cpp ****       if(msg.command.type == CommandsInterpreter::rcfg){
+ 1455              		.loc 4 181 13 is_stmt 1 view .LVU306
+ 1456 00fc 022B     		cmp	r3, #2
+ 1457 00fe F1D1     		bne	.L77
+ 182:Core/Src/appTasks.cpp ****           sprintf( text, "Read config cmd\n" );
+ 1458              		.loc 4 182 7 view .LVU307
+ 182:Core/Src/appTasks.cpp ****           sprintf( text, "Read config cmd\n" );
+ 1459              		.loc 4 182 22 is_stmt 0 view .LVU308
+ 1460 0100 9DF80830 		ldrb	r3, [sp, #8]	@ zero_extendqisi2
+ 182:Core/Src/appTasks.cpp ****           sprintf( text, "Read config cmd\n" );
+ 1461              		.loc 4 182 7 view .LVU309
+ 1462 0104 012B     		cmp	r3, #1
+ 1463 0106 C8D0     		beq	.L87
+ 185:Core/Src/appTasks.cpp ****           sprintf( text, "Start single capture cmd. %d s\n", msg.command.single.N );
+ 1464              		.loc 4 185 15 is_stmt 1 view .LVU310
+ 1465 0108 002B     		cmp	r3, #0
+ 1466 010a EBD1     		bne	.L77
+ 186:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 1467              		.loc 4 186 11 view .LVU311
+ 186:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 1468              		.loc 4 186 18 is_stmt 0 view .LVU312
+ 1469 010c 039A     		ldr	r2, [sp, #12]
+ 1470 010e 0F49     		ldr	r1, .L88+32
+ 1471 0110 07A8     		add	r0, sp, #28
+ 1472              	.LVL123:
+ 186:Core/Src/appTasks.cpp ****           serial.write( (char *)text, strlen(text) );
+ 1473              		.loc 4 186 18 view .LVU313
+ 1474 0112 FFF7FEFF 		bl	sprintf
+ 1475              	.LVL124:
+ 187:Core/Src/appTasks.cpp ****         }
+ 1476              		.loc 4 187 11 is_stmt 1 view .LVU314
+ 187:Core/Src/appTasks.cpp ****         }
+ 1477              		.loc 4 187 45 is_stmt 0 view .LVU315
+ 1478 0116 07A8     		add	r0, sp, #28
+ 1479 0118 FFF7FEFF 		bl	strlen
+ 1480              	.LVL125:
+ 1481              	.LBB120:
+ 1482              	.LBI120:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1483              		.loc 4 42 14 is_stmt 1 view .LVU316
+ 1484              	.LBB121:
+  43:Core/Src/appTasks.cpp ****       return len;
+ARM GAS  /tmp/ccociAVi.s 			page 37
+
+
+ 1485              		.loc 4 43 7 view .LVU317
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1486              		.loc 4 43 24 is_stmt 0 view .LVU318
+ 1487 011c 4FF4FA73 		mov	r3, #500
+ 1488 0120 82B2     		uxth	r2, r0
+ 1489 0122 07A9     		add	r1, sp, #28
+ 1490              	.LVL126:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1491              		.loc 4 43 24 view .LVU319
+ 1492 0124 0448     		ldr	r0, .L88+12
+ 1493              	.LVL127:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1494              		.loc 4 43 24 view .LVU320
+ 1495 0126 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1496              	.LVL128:
+  44:Core/Src/appTasks.cpp ****     }
+ 1497              		.loc 4 44 7 is_stmt 1 view .LVU321
+  44:Core/Src/appTasks.cpp ****     }
+ 1498              		.loc 4 44 14 is_stmt 0 view .LVU322
+ 1499 012a DBE7     		b	.L77
+ 1500              	.L89:
+ 1501              		.align	2
+ 1502              	.L88:
+ 1503 012c 00000000 		.word	.LANCHOR5
+ 1504 0130 00000000 		.word	.LANCHOR0
+ 1505 0134 00000000 		.word	.LC1
+ 1506 0138 00000000 		.word	huart1
+ 1507 013c 00000000 		.word	.LANCHOR3
+ 1508 0140 18000000 		.word	.LC2
+ 1509 0144 1C000000 		.word	.LC3
+ 1510 0148 50000000 		.word	.LC5
+ 1511 014c 30000000 		.word	.LC4
+ 1512              	.LBE121:
+ 1513              	.LBE120:
+ 1514              	.LBE124:
+ 1515              	.LBE126:
+ 1516              	.LBE128:
+ 1517              		.cfi_endproc
+ 1518              	.LFE128:
+ 1520              		.section	.text.StartSensorTask,"ax",%progbits
+ 1521              		.align	1
+ 1522              		.global	StartSensorTask
+ 1523              		.syntax unified
+ 1524              		.thumb
+ 1525              		.thumb_func
+ 1527              	StartSensorTask:
+ 1528              	.LVL129:
+ 1529              	.LFB129:
+ 199:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 1530              		.loc 4 199 1 is_stmt 1 view -0
+ 1531              		.cfi_startproc
+ 1532              		@ args = 0, pretend = 0, frame = 0
+ 1533              		@ frame_needed = 0, uses_anonymous_args = 0
+ 199:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+ 1534              		.loc 4 199 1 is_stmt 0 view .LVU324
+ 1535 0000 08B5     		push	{r3, lr}
+ 1536              	.LCFI24:
+ARM GAS  /tmp/ccociAVi.s 			page 38
+
+
+ 1537              		.cfi_def_cfa_offset 8
+ 1538              		.cfi_offset 3, -8
+ 1539              		.cfi_offset 14, -4
+ 200:Core/Src/appTasks.cpp ****   acc.setConfig( config );
+ 1540              		.loc 4 200 3 is_stmt 1 view .LVU325
+ 1541              	.LVL130:
+ 201:Core/Src/appTasks.cpp ****   listener.setTask(controllerTaskHandle);
+ 1542              		.loc 4 201 3 view .LVU326
+ 201:Core/Src/appTasks.cpp ****   listener.setTask(controllerTaskHandle);
+ 1543              		.loc 4 201 16 is_stmt 0 view .LVU327
+ 1544 0002 0649     		ldr	r1, .L93
+ 1545 0004 0648     		ldr	r0, .L93+4
+ 1546              	.LVL131:
+ 201:Core/Src/appTasks.cpp ****   listener.setTask(controllerTaskHandle);
+ 1547              		.loc 4 201 16 view .LVU328
+ 1548 0006 FFF7FEFF 		bl	_ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE
+ 1549              	.LVL132:
+ 202:Core/Src/appTasks.cpp ****   for(;;)
+ 1550              		.loc 4 202 3 is_stmt 1 view .LVU329
+ 202:Core/Src/appTasks.cpp ****   for(;;)
+ 1551              		.loc 4 202 19 is_stmt 0 view .LVU330
+ 1552 000a 064B     		ldr	r3, .L93+8
+ 1553 000c 1A68     		ldr	r2, [r3]
+ 1554              	.LVL133:
+ 1555              	.LBB129:
+ 1556              	.LBI129:
+  67:Core/Src/appTasks.cpp ****         this->_task = task;
+ 1557              		.loc 4 67 10 is_stmt 1 view .LVU331
+ 1558              	.LBB130:
+  68:Core/Src/appTasks.cpp ****     }
+ 1559              		.loc 4 68 9 view .LVU332
+  68:Core/Src/appTasks.cpp ****     }
+ 1560              		.loc 4 68 21 is_stmt 0 view .LVU333
+ 1561 000e 064B     		ldr	r3, .L93+12
+ 1562 0010 5A60     		str	r2, [r3, #4]
+ 1563              	.LVL134:
+ 1564              	.L91:
+  68:Core/Src/appTasks.cpp ****     }
+ 1565              		.loc 4 68 21 view .LVU334
+ 1566              	.LBE130:
+ 1567              	.LBE129:
+ 203:Core/Src/appTasks.cpp ****   {
+ 1568              		.loc 4 203 3 is_stmt 1 discriminator 1 view .LVU335
+ 205:Core/Src/appTasks.cpp ****     //acc.refresh();
+ 1569              		.loc 4 205 5 discriminator 1 view .LVU336
+ 205:Core/Src/appTasks.cpp ****     //acc.refresh();
+ 1570              		.loc 4 205 15 is_stmt 0 discriminator 1 view .LVU337
+ 1571 0012 4FF4FA70 		mov	r0, #500
+ 1572 0016 FFF7FEFF 		bl	vTaskDelay
+ 1573              	.LVL135:
+ 203:Core/Src/appTasks.cpp ****   {
+ 1574              		.loc 4 203 3 is_stmt 1 discriminator 1 view .LVU338
+ 1575 001a FAE7     		b	.L91
+ 1576              	.L94:
+ 1577              		.align	2
+ 1578              	.L93:
+ 1579 001c 00000000 		.word	.LANCHOR6
+ARM GAS  /tmp/ccociAVi.s 			page 39
+
+
+ 1580 0020 00000000 		.word	.LANCHOR3
+ 1581 0024 00000000 		.word	controllerTaskHandle
+ 1582 0028 00000000 		.word	.LANCHOR2
+ 1583              		.cfi_endproc
+ 1584              	.LFE129:
+ 1586              		.section	.text.HAL_UART_RxCpltCallback,"ax",%progbits
+ 1587              		.align	1
+ 1588              		.global	HAL_UART_RxCpltCallback
+ 1589              		.syntax unified
+ 1590              		.thumb
+ 1591              		.thumb_func
+ 1593              	HAL_UART_RxCpltCallback:
+ 1594              	.LVL136:
+ 1595              	.LFB132:
+ 238:Core/Src/appTasks.cpp ****   serial.appendChar( rx_data );
+ 1596              		.loc 4 238 67 view -0
+ 1597              		.cfi_startproc
+ 1598              		@ args = 0, pretend = 0, frame = 0
+ 1599              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238:Core/Src/appTasks.cpp ****   serial.appendChar( rx_data );
+ 1600              		.loc 4 238 67 is_stmt 0 view .LVU340
+ 1601 0000 10B5     		push	{r4, lr}
+ 1602              	.LCFI25:
+ 1603              		.cfi_def_cfa_offset 8
+ 1604              		.cfi_offset 4, -8
+ 1605              		.cfi_offset 14, -4
+ 239:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 1606              		.loc 4 239 3 is_stmt 1 view .LVU341
+ 239:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 1607              		.loc 4 239 20 is_stmt 0 view .LVU342
+ 1608 0002 054C     		ldr	r4, .L97
+ 1609 0004 2178     		ldrb	r1, [r4]	@ zero_extendqisi2
+ 1610 0006 0548     		ldr	r0, .L97+4
+ 1611              	.LVL137:
+ 239:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 1612              		.loc 4 239 20 view .LVU343
+ 1613 0008 FFF7FEFF 		bl	_ZN6Serial10appendCharEc
+ 1614              	.LVL138:
+ 240:Core/Src/appTasks.cpp **** }
+ 1615              		.loc 4 240 3 is_stmt 1 view .LVU344
+ 240:Core/Src/appTasks.cpp **** }
+ 1616              		.loc 4 240 22 is_stmt 0 view .LVU345
+ 1617 000c 0122     		movs	r2, #1
+ 1618 000e 2146     		mov	r1, r4
+ 1619 0010 0348     		ldr	r0, .L97+8
+ 1620 0012 FFF7FEFF 		bl	HAL_UART_Receive_IT
+ 1621              	.LVL139:
+ 241:Core/Src/appTasks.cpp **** 
+ 1622              		.loc 4 241 1 view .LVU346
+ 1623 0016 10BD     		pop	{r4, pc}
+ 1624              	.L98:
+ 1625              		.align	2
+ 1626              	.L97:
+ 1627 0018 00000000 		.word	.LANCHOR7
+ 1628 001c 00000000 		.word	.LANCHOR4
+ 1629 0020 00000000 		.word	huart1
+ 1630              		.cfi_endproc
+ARM GAS  /tmp/ccociAVi.s 			page 40
+
+
+ 1631              	.LFE132:
+ 1633              		.section	.text.HAL_UART_ErrorCallback,"ax",%progbits
+ 1634              		.align	1
+ 1635              		.global	HAL_UART_ErrorCallback
+ 1636              		.syntax unified
+ 1637              		.thumb
+ 1638              		.thumb_func
+ 1640              	HAL_UART_ErrorCallback:
+ 1641              	.LVL140:
+ 1642              	.LFB133:
+ 243:Core/Src/appTasks.cpp ****   //HAL_UART_AbortReceive_IT(&huart1);
+ 1643              		.loc 4 243 66 is_stmt 1 view -0
+ 1644              		.cfi_startproc
+ 1645              		@ args = 0, pretend = 0, frame = 0
+ 1646              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243:Core/Src/appTasks.cpp ****   //HAL_UART_AbortReceive_IT(&huart1);
+ 1647              		.loc 4 243 66 is_stmt 0 view .LVU348
+ 1648 0000 08B5     		push	{r3, lr}
+ 1649              	.LCFI26:
+ 1650              		.cfi_def_cfa_offset 8
+ 1651              		.cfi_offset 3, -8
+ 1652              		.cfi_offset 14, -4
+ 245:Core/Src/appTasks.cpp **** }
+ 1653              		.loc 4 245 3 is_stmt 1 view .LVU349
+ 245:Core/Src/appTasks.cpp **** }
+ 1654              		.loc 4 245 22 is_stmt 0 view .LVU350
+ 1655 0002 0122     		movs	r2, #1
+ 1656 0004 0249     		ldr	r1, .L101
+ 1657 0006 0348     		ldr	r0, .L101+4
+ 1658              	.LVL141:
+ 245:Core/Src/appTasks.cpp **** }
+ 1659              		.loc 4 245 22 view .LVU351
+ 1660 0008 FFF7FEFF 		bl	HAL_UART_Receive_IT
+ 1661              	.LVL142:
+ 246:Core/Src/appTasks.cpp **** 
+ 1662              		.loc 4 246 1 view .LVU352
+ 1663 000c 08BD     		pop	{r3, pc}
+ 1664              	.L102:
+ 1665 000e 00BF     		.align	2
+ 1666              	.L101:
+ 1667 0010 00000000 		.word	.LANCHOR7
+ 1668 0014 00000000 		.word	huart1
+ 1669              		.cfi_endproc
+ 1670              	.LFE133:
+ 1672              		.section	.rodata.StartSerialTask.str1.4,"aMS",%progbits,1
+ 1673              		.align	2
+ 1674              	.LC6:
+ 1675 0000 53657220 		.ascii	"Ser avail %d\012\000"
+ 1675      61766169 
+ 1675      6C202564 
+ 1675      0A00
+ 1676 000e 0000     		.align	2
+ 1677              	.LC7:
+ 1678 0010 72636667 		.ascii	"rcfg\000"
+ 1678      00
+ 1679 0015 000000   		.align	2
+ 1680              	.LC8:
+ARM GAS  /tmp/ccociAVi.s 			page 41
+
+
+ 1681 0018 73696E67 		.ascii	"single \000"
+ 1681      6C652000 
+ 1682              		.align	2
+ 1683              	.LC9:
+ 1684 0020 73696E67 		.ascii	"single %d\000"
+ 1684      6C652025 
+ 1684      6400
+ 1685              		.section	.text.StartSerialTask,"ax",%progbits
+ 1686              		.align	1
+ 1687              		.global	StartSerialTask
+ 1688              		.syntax unified
+ 1689              		.thumb
+ 1690              		.thumb_func
+ 1692              	StartSerialTask:
+ 1693              	.LVL143:
+ 1694              	.LFB134:
+ 249:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 200 / portTICK_PERIOD_MS;
+ 1695              		.loc 4 249 1 is_stmt 1 view -0
+ 1696              		.cfi_startproc
+ 1697              		@ args = 0, pretend = 0, frame = 72
+ 1698              		@ frame_needed = 0, uses_anonymous_args = 0
+ 249:Core/Src/appTasks.cpp ****   const TickType_t xDelay = 200 / portTICK_PERIOD_MS;
+ 1699              		.loc 4 249 1 is_stmt 0 view .LVU354
+ 1700 0000 70B5     		push	{r4, r5, r6, lr}
+ 1701              	.LCFI27:
+ 1702              		.cfi_def_cfa_offset 16
+ 1703              		.cfi_offset 4, -16
+ 1704              		.cfi_offset 5, -12
+ 1705              		.cfi_offset 6, -8
+ 1706              		.cfi_offset 14, -4
+ 1707 0002 92B0     		sub	sp, sp, #72
+ 1708              	.LCFI28:
+ 1709              		.cfi_def_cfa_offset 88
+ 250:Core/Src/appTasks.cpp ****   CommandListener cmdListener;
+ 1710              		.loc 4 250 3 is_stmt 1 view .LVU355
+ 1711              	.LVL144:
+ 251:Core/Src/appTasks.cpp ****   cmdListener.setTask( controllerTaskHandle );
+ 1712              		.loc 4 251 3 view .LVU356
+ 1713              	.LBB148:
+ 1714              	.LBI148:
+ 210:Core/Src/appTasks.cpp ****   public: 
+ 1715              		.loc 4 210 7 view .LVU357
+ 1716              	.LBB149:
+ 1717              	.LBB150:
+ 1718              	.LBI150:
+  26:../../inc/CommandsInterpreter.hpp ****             public:
+ 1719              		.loc 3 26 15 view .LVU358
+ 1720              	.LBB151:
+ 1721 0004 3F4B     		ldr	r3, .L111
+ 1722 0006 1093     		str	r3, [sp, #64]
+ 1723              	.LVL145:
+  26:../../inc/CommandsInterpreter.hpp ****             public:
+ 1724              		.loc 3 26 15 is_stmt 0 view .LVU359
+ 1725              	.LBE151:
+ 1726              	.LBE150:
+ 210:Core/Src/appTasks.cpp ****   public: 
+ 1727              		.loc 4 210 7 view .LVU360
+ARM GAS  /tmp/ccociAVi.s 			page 42
+
+
+ 1728 0008 3F4B     		ldr	r3, .L111+4
+ 1729 000a 1093     		str	r3, [sp, #64]
+ 1730              	.LVL146:
+ 210:Core/Src/appTasks.cpp ****   public: 
+ 1731              		.loc 4 210 7 view .LVU361
+ 1732              	.LBE149:
+ 1733              	.LBE148:
+ 252:Core/Src/appTasks.cpp ****   CommandsInterpreter interpreter(&serial, &cmdListener);
+ 1734              		.loc 4 252 3 is_stmt 1 view .LVU362
+ 252:Core/Src/appTasks.cpp ****   CommandsInterpreter interpreter(&serial, &cmdListener);
+ 1735              		.loc 4 252 22 is_stmt 0 view .LVU363
+ 1736 000c 3F4B     		ldr	r3, .L111+8
+ 1737 000e 1B68     		ldr	r3, [r3]
+ 1738              	.LVL147:
+ 1739              	.LBB152:
+ 1740              	.LBI152:
+ 229:Core/Src/appTasks.cpp ****         this->_task = task;
+ 1741              		.loc 4 229 10 is_stmt 1 view .LVU364
+ 1742              	.LBB153:
+ 230:Core/Src/appTasks.cpp ****     }
+ 1743              		.loc 4 230 9 view .LVU365
+ 230:Core/Src/appTasks.cpp ****     }
+ 1744              		.loc 4 230 21 is_stmt 0 view .LVU366
+ 1745 0010 1193     		str	r3, [sp, #68]
+ 1746              	.LVL148:
+ 230:Core/Src/appTasks.cpp ****     }
+ 1747              		.loc 4 230 21 view .LVU367
+ 1748              	.LBE153:
+ 1749              	.LBE152:
+ 253:Core/Src/appTasks.cpp ****   char text[40];
+ 1750              		.loc 4 253 3 is_stmt 1 view .LVU368
+ 1751              	.LBB154:
+ 1752              	.LBI154:
+  29:../../inc/CommandsInterpreter.hpp ****         };
+  30:../../inc/CommandsInterpreter.hpp ****         CommandsInterpreter(Serial *ser, Obserser *obs){
+ 1753              		.loc 3 30 9 view .LVU369
+ 1754              	.LBB155:
+ 1755              	.LBB156:
+ 1756              		.loc 3 30 56 is_stmt 0 view .LVU370
+ 1757 0012 3C23     		movs	r3, #60
+ 1758 0014 0B93     		str	r3, [sp, #44]
+  31:../../inc/CommandsInterpreter.hpp ****             this->_ser = ser;
+ 1759              		.loc 3 31 13 is_stmt 1 view .LVU371
+ 1760              		.loc 3 31 24 is_stmt 0 view .LVU372
+ 1761 0016 3E4B     		ldr	r3, .L111+12
+ 1762 0018 0C93     		str	r3, [sp, #48]
+  32:../../inc/CommandsInterpreter.hpp ****             this->_obs = obs;
+ 1763              		.loc 3 32 13 is_stmt 1 view .LVU373
+ 1764              		.loc 3 32 24 is_stmt 0 view .LVU374
+ 1765 001a 10AB     		add	r3, sp, #64
+ 1766              	.LVL149:
+ 1767              		.loc 3 32 24 view .LVU375
+ 1768 001c 0D93     		str	r3, [sp, #52]
+ 1769              	.LVL150:
+ 1770              		.loc 3 32 24 view .LVU376
+ 1771              	.LBE156:
+ 1772              	.LBE155:
+ARM GAS  /tmp/ccociAVi.s 			page 43
+
+
+ 1773              	.LBE154:
+ 254:Core/Src/appTasks.cpp ****   uint32_t len;
+ 1774              		.loc 4 254 3 is_stmt 1 view .LVU377
+ 255:Core/Src/appTasks.cpp ****   huart1.pRxBuffPtr = &rx_data;
+ 1775              		.loc 4 255 3 view .LVU378
+ 256:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 1776              		.loc 4 256 3 view .LVU379
+ 256:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 1777              		.loc 4 256 21 is_stmt 0 view .LVU380
+ 1778 001e 3D48     		ldr	r0, .L111+16
+ 1779              	.LVL151:
+ 256:Core/Src/appTasks.cpp ****   HAL_UART_Receive_IT( &huart1, &rx_data, 1 );
+ 1780              		.loc 4 256 21 view .LVU381
+ 1781 0020 3D49     		ldr	r1, .L111+20
+ 1782 0022 8162     		str	r1, [r0, #40]
+ 257:Core/Src/appTasks.cpp ****   for(;;)
+ 1783              		.loc 4 257 3 is_stmt 1 view .LVU382
+ 257:Core/Src/appTasks.cpp ****   for(;;)
+ 1784              		.loc 4 257 22 is_stmt 0 view .LVU383
+ 1785 0024 0122     		movs	r2, #1
+ 1786 0026 FFF7FEFF 		bl	HAL_UART_Receive_IT
+ 1787              	.LVL152:
+ 1788 002a 16E0     		b	.L108
+ 1789              	.LVL153:
+ 1790              	.L110:
+ 1791              	.LBB157:
+ 1792              	.LBB158:
+  33:../../inc/CommandsInterpreter.hpp ****         }
+  34:../../inc/CommandsInterpreter.hpp ****         void refresh(){
+  35:../../inc/CommandsInterpreter.hpp ****             uint32_t s = this->_ser->available();
+  36:../../inc/CommandsInterpreter.hpp ****             bool rx = false;
+  37:../../inc/CommandsInterpreter.hpp ****             if( s >= 4 ){ // rcfg
+  38:../../inc/CommandsInterpreter.hpp ****                 if(strstr(this->_ser->in_buffer(), "rcfg") != NULL){
+ 1793              		.loc 3 38 17 is_stmt 1 view .LVU384
+ 1794              		.loc 3 38 26 is_stmt 0 view .LVU385
+ 1795 002c 0C98     		ldr	r0, [sp, #48]
+ 1796              	.LVL154:
+ 1797              		.loc 3 38 26 view .LVU386
+ 1798 002e FFF7FEFF 		bl	_ZN6Serial9in_bufferEv
+ 1799              	.LVL155:
+ 1800 0032 3A49     		ldr	r1, .L111+24
+ 1801 0034 FFF7FEFF 		bl	strstr
+ 1802              	.LVL156:
+ 1803              		.loc 3 38 17 view .LVU387
+ 1804 0038 0028     		cmp	r0, #0
+ 1805 003a 41D0     		beq	.L105
+  39:../../inc/CommandsInterpreter.hpp ****                     this->cmd.type = rcfg;
+ 1806              		.loc 3 39 21 is_stmt 1 view .LVU388
+ 1807              		.loc 3 39 36 is_stmt 0 view .LVU389
+ 1808 003c 0123     		movs	r3, #1
+ 1809 003e 8DF83830 		strb	r3, [sp, #56]
+  40:../../inc/CommandsInterpreter.hpp ****                     this->_obs->notify(this->cmd);
+ 1810              		.loc 3 40 21 is_stmt 1 view .LVU390
+ 1811              		.loc 3 40 27 is_stmt 0 view .LVU391
+ 1812 0042 0D98     		ldr	r0, [sp, #52]
+ 1813              		.loc 3 40 49 view .LVU392
+ 1814 0044 0368     		ldr	r3, [r0]
+ARM GAS  /tmp/ccociAVi.s 			page 44
+
+
+ 1815 0046 1B68     		ldr	r3, [r3]
+ 1816              		.loc 3 40 39 view .LVU393
+ 1817 0048 0EA9     		add	r1, sp, #56
+ 1818 004a 9847     		blx	r3
+ 1819              	.LVL157:
+  41:../../inc/CommandsInterpreter.hpp ****                     _ser->in_flush();
+ 1820              		.loc 3 41 21 is_stmt 1 view .LVU394
+ 1821              		.loc 3 41 35 is_stmt 0 view .LVU395
+ 1822 004c 0C98     		ldr	r0, [sp, #48]
+ 1823 004e FFF7FEFF 		bl	_ZN6Serial8in_flushEv
+ 1824              	.LVL158:
+  42:../../inc/CommandsInterpreter.hpp ****                     return;
+ 1825              		.loc 3 42 21 is_stmt 1 view .LVU396
+ 1826 0052 02E0     		b	.L108
+ 1827              	.L107:
+  43:../../inc/CommandsInterpreter.hpp ****                 }
+  44:../../inc/CommandsInterpreter.hpp ****             }
+  45:../../inc/CommandsInterpreter.hpp ****             if((s >= 8)){  // single N
+  46:../../inc/CommandsInterpreter.hpp ****                 if(strstr(this->_ser->in_buffer(), "single ") != NULL){
+  47:../../inc/CommandsInterpreter.hpp ****                     sscanf( this->_ser->in_buffer(), "single %d", &(this->cmd.single.N) );         
+  48:../../inc/CommandsInterpreter.hpp ****                     if(this->cmd.single.N <= MAX_SINGLE_CAPT_SECS){ // 30 seconds max
+  49:../../inc/CommandsInterpreter.hpp ****                         this->cmd.type = single; 
+  50:../../inc/CommandsInterpreter.hpp ****                         this->_obs->notify(this->cmd);
+  51:../../inc/CommandsInterpreter.hpp ****                         _ser->in_flush();
+  52:../../inc/CommandsInterpreter.hpp ****                         return;
+  53:../../inc/CommandsInterpreter.hpp ****                     }
+  54:../../inc/CommandsInterpreter.hpp ****                 }
+  55:../../inc/CommandsInterpreter.hpp ****             }
+  56:../../inc/CommandsInterpreter.hpp ****             _ser->in_flush();
+ 1828              		.loc 3 56 13 view .LVU397
+ 1829              		.loc 3 56 27 is_stmt 0 view .LVU398
+ 1830 0054 0C98     		ldr	r0, [sp, #48]
+ 1831 0056 FFF7FEFF 		bl	_ZN6Serial8in_flushEv
+ 1832              	.LVL159:
+ 1833              	.L108:
+ 1834              		.loc 3 56 27 view .LVU399
+ 1835              	.LBE158:
+ 1836              	.LBE157:
+ 258:Core/Src/appTasks.cpp ****   {
+ 1837              		.loc 4 258 3 is_stmt 1 view .LVU400
+ 260:Core/Src/appTasks.cpp ****     if(serial.available()){
+ 1838              		.loc 4 260 5 view .LVU401
+ 260:Core/Src/appTasks.cpp ****     if(serial.available()){
+ 1839              		.loc 4 260 15 is_stmt 0 view .LVU402
+ 1840 005a C820     		movs	r0, #200
+ 1841 005c FFF7FEFF 		bl	vTaskDelay
+ 1842              	.LVL160:
+ 261:Core/Src/appTasks.cpp ****       len = serial.available();
+ 1843              		.loc 4 261 5 is_stmt 1 view .LVU403
+ 261:Core/Src/appTasks.cpp ****       len = serial.available();
+ 1844              		.loc 4 261 24 is_stmt 0 view .LVU404
+ 1845 0060 2B48     		ldr	r0, .L111+12
+ 1846 0062 FFF7FEFF 		bl	_ZNK6Serial9availableEv
+ 1847              	.LVL161:
+ 261:Core/Src/appTasks.cpp ****       len = serial.available();
+ 1848              		.loc 4 261 5 view .LVU405
+ 1849 0066 28B3     		cbz	r0, .L104
+ARM GAS  /tmp/ccociAVi.s 			page 45
+
+
+ 262:Core/Src/appTasks.cpp ****       sprintf( text, "Ser avail %d\n", len);
+ 1850              		.loc 4 262 7 is_stmt 1 view .LVU406
+ 262:Core/Src/appTasks.cpp ****       sprintf( text, "Ser avail %d\n", len);
+ 1851              		.loc 4 262 29 is_stmt 0 view .LVU407
+ 1852 0068 294E     		ldr	r6, .L111+12
+ 1853 006a 3046     		mov	r0, r6
+ 1854 006c FFF7FEFF 		bl	_ZNK6Serial9availableEv
+ 1855              	.LVL162:
+ 1856 0070 0446     		mov	r4, r0
+ 1857              	.LVL163:
+ 263:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 1858              		.loc 4 263 7 is_stmt 1 view .LVU408
+ 263:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 1859              		.loc 4 263 14 is_stmt 0 view .LVU409
+ 1860 0072 0246     		mov	r2, r0
+ 1861 0074 2A49     		ldr	r1, .L111+28
+ 1862 0076 01A8     		add	r0, sp, #4
+ 1863              	.LVL164:
+ 263:Core/Src/appTasks.cpp ****       serial.write( (char *)text, strlen(text) );
+ 1864              		.loc 4 263 14 view .LVU410
+ 1865 0078 FFF7FEFF 		bl	sprintf
+ 1866              	.LVL165:
+ 264:Core/Src/appTasks.cpp ****       serial.write( serial.in_buffer(), len );
+ 1867              		.loc 4 264 7 is_stmt 1 view .LVU411
+ 264:Core/Src/appTasks.cpp ****       serial.write( serial.in_buffer(), len );
+ 1868              		.loc 4 264 41 is_stmt 0 view .LVU412
+ 1869 007c 01A8     		add	r0, sp, #4
+ 1870 007e FFF7FEFF 		bl	strlen
+ 1871              	.LVL166:
+ 1872              	.LBB160:
+ 1873              	.LBI160:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1874              		.loc 4 42 14 is_stmt 1 view .LVU413
+ 1875              	.LBB161:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1876              		.loc 4 43 7 view .LVU414
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1877              		.loc 4 43 24 is_stmt 0 view .LVU415
+ 1878 0082 244D     		ldr	r5, .L111+16
+ 1879 0084 4FF4FA73 		mov	r3, #500
+ 1880 0088 82B2     		uxth	r2, r0
+ 1881 008a 01A9     		add	r1, sp, #4
+ 1882              	.LVL167:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1883              		.loc 4 43 24 view .LVU416
+ 1884 008c 2846     		mov	r0, r5
+ 1885              	.LVL168:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1886              		.loc 4 43 24 view .LVU417
+ 1887 008e FFF7FEFF 		bl	HAL_UART_Transmit
+ 1888              	.LVL169:
+  44:Core/Src/appTasks.cpp ****     }
+ 1889              		.loc 4 44 7 is_stmt 1 view .LVU418
+  44:Core/Src/appTasks.cpp ****     }
+ 1890              		.loc 4 44 7 is_stmt 0 view .LVU419
+ 1891              	.LBE161:
+ 1892              	.LBE160:
+ARM GAS  /tmp/ccociAVi.s 			page 46
+
+
+ 265:Core/Src/appTasks.cpp ****       serial.write( (char *)"\n", 1 );
+ 1893              		.loc 4 265 7 is_stmt 1 view .LVU420
+ 265:Core/Src/appTasks.cpp ****       serial.write( (char *)"\n", 1 );
+ 1894              		.loc 4 265 19 is_stmt 0 view .LVU421
+ 1895 0092 3046     		mov	r0, r6
+ 1896 0094 FFF7FEFF 		bl	_ZN6Serial9in_bufferEv
+ 1897              	.LVL170:
+ 1898 0098 0146     		mov	r1, r0
+ 1899              	.LVL171:
+ 1900              	.LBB162:
+ 1901              	.LBI162:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1902              		.loc 4 42 14 is_stmt 1 view .LVU422
+ 1903              	.LBB163:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1904              		.loc 4 43 7 view .LVU423
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1905              		.loc 4 43 24 is_stmt 0 view .LVU424
+ 1906 009a 4FF4FA73 		mov	r3, #500
+ 1907 009e A2B2     		uxth	r2, r4
+ 1908 00a0 2846     		mov	r0, r5
+ 1909              	.LVL172:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1910              		.loc 4 43 24 view .LVU425
+ 1911 00a2 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1912              	.LVL173:
+  44:Core/Src/appTasks.cpp ****     }
+ 1913              		.loc 4 44 7 is_stmt 1 view .LVU426
+  44:Core/Src/appTasks.cpp ****     }
+ 1914              		.loc 4 44 7 is_stmt 0 view .LVU427
+ 1915              	.LBE163:
+ 1916              	.LBE162:
+ 266:Core/Src/appTasks.cpp ****     }
+ 1917              		.loc 4 266 7 is_stmt 1 view .LVU428
+ 1918              	.LBB164:
+ 1919              	.LBI164:
+  42:Core/Src/appTasks.cpp ****       HAL_UART_Transmit(&huart1, (uint8_t *)str, len, 500);
+ 1920              		.loc 4 42 14 view .LVU429
+ 1921              	.LBB165:
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1922              		.loc 4 43 7 view .LVU430
+  43:Core/Src/appTasks.cpp ****       return len;
+ 1923              		.loc 4 43 24 is_stmt 0 view .LVU431
+ 1924 00a6 4FF4FA73 		mov	r3, #500
+ 1925 00aa 0122     		movs	r2, #1
+ 1926 00ac 1D49     		ldr	r1, .L111+32
+ 1927 00ae 2846     		mov	r0, r5
+ 1928 00b0 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1929              	.LVL174:
+  44:Core/Src/appTasks.cpp ****     }
+ 1930              		.loc 4 44 7 is_stmt 1 view .LVU432
+ 1931              	.L104:
+  44:Core/Src/appTasks.cpp ****     }
+ 1932              		.loc 4 44 7 is_stmt 0 view .LVU433
+ 1933              	.LBE165:
+ 1934              	.LBE164:
+ 268:Core/Src/appTasks.cpp ****   }
+ARM GAS  /tmp/ccociAVi.s 			page 47
+
+
+ 1935              		.loc 4 268 5 is_stmt 1 view .LVU434
+ 1936              	.LBB166:
+ 1937              	.LBI157:
+  34:../../inc/CommandsInterpreter.hpp ****             uint32_t s = this->_ser->available();
+ 1938              		.loc 3 34 14 view .LVU435
+ 1939              	.LBB159:
+  35:../../inc/CommandsInterpreter.hpp ****             bool rx = false;
+ 1940              		.loc 3 35 13 view .LVU436
+  35:../../inc/CommandsInterpreter.hpp ****             bool rx = false;
+ 1941              		.loc 3 35 47 is_stmt 0 view .LVU437
+ 1942 00b4 0C98     		ldr	r0, [sp, #48]
+ 1943 00b6 FFF7FEFF 		bl	_ZNK6Serial9availableEv
+ 1944              	.LVL175:
+ 1945 00ba 0446     		mov	r4, r0
+ 1946              	.LVL176:
+  36:../../inc/CommandsInterpreter.hpp ****             if( s >= 4 ){ // rcfg
+ 1947              		.loc 3 36 13 is_stmt 1 view .LVU438
+  37:../../inc/CommandsInterpreter.hpp ****                 if(strstr(this->_ser->in_buffer(), "rcfg") != NULL){
+ 1948              		.loc 3 37 13 view .LVU439
+ 1949 00bc 0328     		cmp	r0, #3
+ 1950 00be B5D8     		bhi	.L110
+ 1951              	.LVL177:
+ 1952              	.L105:
+  45:../../inc/CommandsInterpreter.hpp ****                 if(strstr(this->_ser->in_buffer(), "single ") != NULL){
+ 1953              		.loc 3 45 13 view .LVU440
+ 1954 00c0 072C     		cmp	r4, #7
+ 1955 00c2 C7D9     		bls	.L107
+  46:../../inc/CommandsInterpreter.hpp ****                     sscanf( this->_ser->in_buffer(), "single %d", &(this->cmd.single.N) );         
+ 1956              		.loc 3 46 17 view .LVU441
+  46:../../inc/CommandsInterpreter.hpp ****                     sscanf( this->_ser->in_buffer(), "single %d", &(this->cmd.single.N) );         
+ 1957              		.loc 3 46 26 is_stmt 0 view .LVU442
+ 1958 00c4 0C98     		ldr	r0, [sp, #48]
+ 1959 00c6 FFF7FEFF 		bl	_ZN6Serial9in_bufferEv
+ 1960              	.LVL178:
+ 1961 00ca 1749     		ldr	r1, .L111+36
+ 1962 00cc FFF7FEFF 		bl	strstr
+ 1963              	.LVL179:
+  46:../../inc/CommandsInterpreter.hpp ****                     sscanf( this->_ser->in_buffer(), "single %d", &(this->cmd.single.N) );         
+ 1964              		.loc 3 46 17 view .LVU443
+ 1965 00d0 0028     		cmp	r0, #0
+ 1966 00d2 BFD0     		beq	.L107
+  47:../../inc/CommandsInterpreter.hpp ****                     if(this->cmd.single.N <= MAX_SINGLE_CAPT_SECS){ // 30 seconds max
+ 1967              		.loc 3 47 21 is_stmt 1 view .LVU444
+  47:../../inc/CommandsInterpreter.hpp ****                     if(this->cmd.single.N <= MAX_SINGLE_CAPT_SECS){ // 30 seconds max
+ 1968              		.loc 3 47 27 is_stmt 0 view .LVU445
+ 1969 00d4 0C98     		ldr	r0, [sp, #48]
+ 1970 00d6 FFF7FEFF 		bl	_ZN6Serial9in_bufferEv
+ 1971              	.LVL180:
+ 1972 00da 0FAA     		add	r2, sp, #60
+ 1973 00dc 1349     		ldr	r1, .L111+40
+ 1974 00de FFF7FEFF 		bl	sscanf
+ 1975              	.LVL181:
+  48:../../inc/CommandsInterpreter.hpp ****                         this->cmd.type = single; 
+ 1976              		.loc 3 48 21 is_stmt 1 view .LVU446
+ 1977 00e2 0F9A     		ldr	r2, [sp, #60]
+ 1978 00e4 0B9B     		ldr	r3, [sp, #44]
+ 1979 00e6 9A42     		cmp	r2, r3
+ARM GAS  /tmp/ccociAVi.s 			page 48
+
+
+ 1980 00e8 B4D8     		bhi	.L107
+  49:../../inc/CommandsInterpreter.hpp ****                         this->_obs->notify(this->cmd);
+ 1981              		.loc 3 49 25 view .LVU447
+  49:../../inc/CommandsInterpreter.hpp ****                         this->_obs->notify(this->cmd);
+ 1982              		.loc 3 49 40 is_stmt 0 view .LVU448
+ 1983 00ea 0023     		movs	r3, #0
+ 1984 00ec 8DF83830 		strb	r3, [sp, #56]
+  50:../../inc/CommandsInterpreter.hpp ****                         _ser->in_flush();
+ 1985              		.loc 3 50 25 is_stmt 1 view .LVU449
+  50:../../inc/CommandsInterpreter.hpp ****                         _ser->in_flush();
+ 1986              		.loc 3 50 31 is_stmt 0 view .LVU450
+ 1987 00f0 0D98     		ldr	r0, [sp, #52]
+  50:../../inc/CommandsInterpreter.hpp ****                         _ser->in_flush();
+ 1988              		.loc 3 50 53 view .LVU451
+ 1989 00f2 0368     		ldr	r3, [r0]
+ 1990 00f4 1B68     		ldr	r3, [r3]
+  50:../../inc/CommandsInterpreter.hpp ****                         _ser->in_flush();
+ 1991              		.loc 3 50 43 view .LVU452
+ 1992 00f6 0EA9     		add	r1, sp, #56
+ 1993 00f8 9847     		blx	r3
+ 1994              	.LVL182:
+  51:../../inc/CommandsInterpreter.hpp ****                         return;
+ 1995              		.loc 3 51 25 is_stmt 1 view .LVU453
+  51:../../inc/CommandsInterpreter.hpp ****                         return;
+ 1996              		.loc 3 51 39 is_stmt 0 view .LVU454
+ 1997 00fa 0C98     		ldr	r0, [sp, #48]
+ 1998 00fc FFF7FEFF 		bl	_ZN6Serial8in_flushEv
+ 1999              	.LVL183:
+  52:../../inc/CommandsInterpreter.hpp ****                     }
+ 2000              		.loc 3 52 25 is_stmt 1 view .LVU455
+ 2001 0100 ABE7     		b	.L108
+ 2002              	.L112:
+ 2003 0102 00BF     		.align	2
+ 2004              	.L111:
+ 2005 0104 08000000 		.word	_ZTVN19CommandsInterpreter8ObserserE+8
+ 2006 0108 08000000 		.word	_ZTV15CommandListener+8
+ 2007 010c 00000000 		.word	controllerTaskHandle
+ 2008 0110 00000000 		.word	.LANCHOR4
+ 2009 0114 00000000 		.word	huart1
+ 2010 0118 00000000 		.word	.LANCHOR7
+ 2011 011c 10000000 		.word	.LC7
+ 2012 0120 00000000 		.word	.LC6
+ 2013 0124 18000000 		.word	.LC2
+ 2014 0128 18000000 		.word	.LC8
+ 2015 012c 20000000 		.word	.LC9
+ 2016              	.LBE159:
+ 2017              	.LBE166:
+ 2018              		.cfi_endproc
+ 2019              	.LFE134:
+ 2021              		.section	.text._GLOBAL__sub_I_HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 2022              		.align	1
+ 2023              		.syntax unified
+ 2024              		.thumb
+ 2025              		.thumb_func
+ 2027              	_GLOBAL__sub_I_HAL_GPIO_EXTI_Callback:
+ 2028              	.LFB142:
+ 2029              		.loc 4 270 1 view -0
+ARM GAS  /tmp/ccociAVi.s 			page 49
+
+
+ 2030              		.cfi_startproc
+ 2031              		@ args = 0, pretend = 0, frame = 0
+ 2032              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2033 0000 08B5     		push	{r3, lr}
+ 2034              	.LCFI29:
+ 2035              		.cfi_def_cfa_offset 8
+ 2036              		.cfi_offset 3, -8
+ 2037              		.cfi_offset 14, -4
+ 2038              		.loc 4 270 1 is_stmt 0 view .LVU457
+ 2039 0002 4FF6FF71 		movw	r1, #65535
+ 2040 0006 0120     		movs	r0, #1
+ 2041 0008 FFF7FEFF 		bl	_Z41__static_initialization_and_destruction_0ii
+ 2042              	.LVL184:
+ 2043 000c 08BD     		pop	{r3, pc}
+ 2044              		.cfi_endproc
+ 2045              	.LFE142:
+ 2047              		.section	.init_array,"aw",%init_array
+ 2048              		.align	2
+ 2049 0000 00000000 		.word	_GLOBAL__sub_I_HAL_GPIO_EXTI_Callback(target1)
+ 2050              		.weak	_ZTSN19AccelerometerSensor13EventListenerE
+ 2051              		.section	.rodata._ZTSN19AccelerometerSensor13EventListenerE,"aG",%progbits,_ZTSN19AccelerometerSen
+ 2052              		.align	2
+ 2055              	_ZTSN19AccelerometerSensor13EventListenerE:
+ 2056 0000 4E313941 		.ascii	"N19AccelerometerSensor13EventListenerE\000"
+ 2056      6363656C 
+ 2056      65726F6D 
+ 2056      65746572 
+ 2056      53656E73 
+ 2057              		.weak	_ZTIN19AccelerometerSensor13EventListenerE
+ 2058              		.section	.rodata._ZTIN19AccelerometerSensor13EventListenerE,"aG",%progbits,_ZTIN19AccelerometerSen
+ 2059              		.align	2
+ 2062              	_ZTIN19AccelerometerSensor13EventListenerE:
+ 2063 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 2064 0004 00000000 		.word	_ZTSN19AccelerometerSensor13EventListenerE
+ 2065              		.weak	_ZTSN19AccelerometerSensor6DriverE
+ 2066              		.section	.rodata._ZTSN19AccelerometerSensor6DriverE,"aG",%progbits,_ZTSN19AccelerometerSensor6Driv
+ 2067              		.align	2
+ 2070              	_ZTSN19AccelerometerSensor6DriverE:
+ 2071 0000 4E313941 		.ascii	"N19AccelerometerSensor6DriverE\000"
+ 2071      6363656C 
+ 2071      65726F6D 
+ 2071      65746572 
+ 2071      53656E73 
+ 2072              		.weak	_ZTIN19AccelerometerSensor6DriverE
+ 2073              		.section	.rodata._ZTIN19AccelerometerSensor6DriverE,"aG",%progbits,_ZTIN19AccelerometerSensor6Driv
+ 2074              		.align	2
+ 2077              	_ZTIN19AccelerometerSensor6DriverE:
+ 2078 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 2079 0004 00000000 		.word	_ZTSN19AccelerometerSensor6DriverE
+ 2080              		.weak	_ZTS6Serial
+ 2081              		.section	.rodata._ZTS6Serial,"aG",%progbits,_ZTS6Serial,comdat
+ 2082              		.align	2
+ 2085              	_ZTS6Serial:
+ 2086 0000 36536572 		.ascii	"6Serial\000"
+ 2086      69616C00 
+ 2087              		.weak	_ZTI6Serial
+ 2088              		.section	.rodata._ZTI6Serial,"aG",%progbits,_ZTI6Serial,comdat
+ARM GAS  /tmp/ccociAVi.s 			page 50
+
+
+ 2089              		.align	2
+ 2092              	_ZTI6Serial:
+ 2093 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 2094 0004 00000000 		.word	_ZTS6Serial
+ 2095              		.weak	_ZTSN19CommandsInterpreter8ObserserE
+ 2096              		.section	.rodata._ZTSN19CommandsInterpreter8ObserserE,"aG",%progbits,_ZTSN19CommandsInterpreter8Ob
+ 2097              		.align	2
+ 2100              	_ZTSN19CommandsInterpreter8ObserserE:
+ 2101 0000 4E313943 		.ascii	"N19CommandsInterpreter8ObserserE\000"
+ 2101      6F6D6D61 
+ 2101      6E647349 
+ 2101      6E746572 
+ 2101      70726574 
+ 2102              		.weak	_ZTIN19CommandsInterpreter8ObserserE
+ 2103              		.section	.rodata._ZTIN19CommandsInterpreter8ObserserE,"aG",%progbits,_ZTIN19CommandsInterpreter8Ob
+ 2104              		.align	2
+ 2107              	_ZTIN19CommandsInterpreter8ObserserE:
+ 2108 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 2109 0004 00000000 		.word	_ZTSN19CommandsInterpreter8ObserserE
+ 2110              		.weak	_ZTS10UartSerial
+ 2111              		.section	.rodata._ZTS10UartSerial,"aG",%progbits,_ZTS10UartSerial,comdat
+ 2112              		.align	2
+ 2115              	_ZTS10UartSerial:
+ 2116 0000 31305561 		.ascii	"10UartSerial\000"
+ 2116      72745365 
+ 2116      7269616C 
+ 2116      00
+ 2117              		.weak	_ZTI10UartSerial
+ 2118              		.section	.rodata._ZTI10UartSerial,"aG",%progbits,_ZTI10UartSerial,comdat
+ 2119              		.align	2
+ 2122              	_ZTI10UartSerial:
+ 2123 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 2124 0004 00000000 		.word	_ZTS10UartSerial
+ 2125 0008 00000000 		.word	_ZTI6Serial
+ 2126              		.weak	_ZTS23SensorTaskEventListener
+ 2127              		.section	.rodata._ZTS23SensorTaskEventListener,"aG",%progbits,_ZTS23SensorTaskEventListener,comdat
+ 2128              		.align	2
+ 2131              	_ZTS23SensorTaskEventListener:
+ 2132 0000 32335365 		.ascii	"23SensorTaskEventListener\000"
+ 2132      6E736F72 
+ 2132      5461736B 
+ 2132      4576656E 
+ 2132      744C6973 
+ 2133              		.weak	_ZTI23SensorTaskEventListener
+ 2134              		.section	.rodata._ZTI23SensorTaskEventListener,"aG",%progbits,_ZTI23SensorTaskEventListener,comdat
+ 2135              		.align	2
+ 2138              	_ZTI23SensorTaskEventListener:
+ 2139 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 2140 0004 00000000 		.word	_ZTS23SensorTaskEventListener
+ 2141 0008 00000000 		.word	_ZTIN19AccelerometerSensor13EventListenerE
+ 2142              		.weak	_ZTS13LIS3DH_Driver
+ 2143              		.section	.rodata._ZTS13LIS3DH_Driver,"aG",%progbits,_ZTS13LIS3DH_Driver,comdat
+ 2144              		.align	2
+ 2147              	_ZTS13LIS3DH_Driver:
+ 2148 0000 31334C49 		.ascii	"13LIS3DH_Driver\000"
+ 2148      53334448 
+ 2148      5F447269 
+ARM GAS  /tmp/ccociAVi.s 			page 51
+
+
+ 2148      76657200 
+ 2149              		.weak	_ZTI13LIS3DH_Driver
+ 2150              		.section	.rodata._ZTI13LIS3DH_Driver,"aG",%progbits,_ZTI13LIS3DH_Driver,comdat
+ 2151              		.align	2
+ 2154              	_ZTI13LIS3DH_Driver:
+ 2155 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 2156 0004 00000000 		.word	_ZTS13LIS3DH_Driver
+ 2157 0008 00000000 		.word	_ZTIN19AccelerometerSensor6DriverE
+ 2158              		.weak	_ZTS15CommandListener
+ 2159              		.section	.rodata._ZTS15CommandListener,"aG",%progbits,_ZTS15CommandListener,comdat
+ 2160              		.align	2
+ 2163              	_ZTS15CommandListener:
+ 2164 0000 3135436F 		.ascii	"15CommandListener\000"
+ 2164      6D6D616E 
+ 2164      644C6973 
+ 2164      74656E65 
+ 2164      7200
+ 2165              		.weak	_ZTI15CommandListener
+ 2166              		.section	.rodata._ZTI15CommandListener,"aG",%progbits,_ZTI15CommandListener,comdat
+ 2167              		.align	2
+ 2170              	_ZTI15CommandListener:
+ 2171 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 2172 0004 00000000 		.word	_ZTS15CommandListener
+ 2173 0008 00000000 		.word	_ZTIN19CommandsInterpreter8ObserserE
+ 2174              		.weak	_ZTVN19AccelerometerSensor13EventListenerE
+ 2175              		.section	.rodata._ZTVN19AccelerometerSensor13EventListenerE,"aG",%progbits,_ZTVN19AccelerometerSen
+ 2176              		.align	2
+ 2179              	_ZTVN19AccelerometerSensor13EventListenerE:
+ 2180 0000 00000000 		.word	0
+ 2181 0004 00000000 		.word	_ZTIN19AccelerometerSensor13EventListenerE
+ 2182 0008 00000000 		.word	_ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv
+ 2183 000c 00000000 		.word	_ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv
+ 2184 0010 00000000 		.word	_ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv
+ 2185              		.weak	_ZTVN19AccelerometerSensor6DriverE
+ 2186              		.section	.rodata._ZTVN19AccelerometerSensor6DriverE,"aG",%progbits,_ZTVN19AccelerometerSensor6Driv
+ 2187              		.align	2
+ 2190              	_ZTVN19AccelerometerSensor6DriverE:
+ 2191 0000 00000000 		.word	0
+ 2192 0004 00000000 		.word	_ZTIN19AccelerometerSensor6DriverE
+ 2193 0008 00000000 		.word	_ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE
+ 2194 000c 00000000 		.word	_ZN19AccelerometerSensor6Driver4readEPhm
+ 2195 0010 00000000 		.word	_ZN19AccelerometerSensor6Driver9getConfigEv
+ 2196 0014 00000000 		.word	_ZN19AccelerometerSensor6Driver9availableEv
+ 2197 0018 00000000 		.word	_ZN19AccelerometerSensor6DriverD1Ev
+ 2198 001c 00000000 		.word	_ZN19AccelerometerSensor6DriverD0Ev
+ 2199              		.weak	_ZTV6Serial
+ 2200              		.section	.rodata._ZTV6Serial,"aG",%progbits,_ZTV6Serial,comdat
+ 2201              		.align	2
+ 2204              	_ZTV6Serial:
+ 2205 0000 00000000 		.word	0
+ 2206 0004 00000000 		.word	_ZTI6Serial
+ 2207 0008 00000000 		.word	_ZN6Serial4initEv
+ 2208 000c 00000000 		.word	_ZN6Serial5writeEPKcm
+ 2209              		.weak	_ZTVN19CommandsInterpreter8ObserserE
+ 2210              		.section	.rodata._ZTVN19CommandsInterpreter8ObserserE,"aG",%progbits,_ZTVN19CommandsInterpreter8Ob
+ 2211              		.align	2
+ 2214              	_ZTVN19CommandsInterpreter8ObserserE:
+ARM GAS  /tmp/ccociAVi.s 			page 52
+
+
+ 2215 0000 00000000 		.word	0
+ 2216 0004 00000000 		.word	_ZTIN19CommandsInterpreter8ObserserE
+ 2217 0008 00000000 		.word	_ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE
+ 2218              		.weak	_ZTV10UartSerial
+ 2219              		.section	.rodata._ZTV10UartSerial,"aG",%progbits,_ZTV10UartSerial,comdat
+ 2220              		.align	2
+ 2223              	_ZTV10UartSerial:
+ 2224 0000 00000000 		.word	0
+ 2225 0004 00000000 		.word	_ZTI10UartSerial
+ 2226 0008 00000000 		.word	_ZN6Serial4initEv
+ 2227 000c 00000000 		.word	_ZN10UartSerial5writeEPKcm
+ 2228              		.weak	_ZTV23SensorTaskEventListener
+ 2229              		.section	.rodata._ZTV23SensorTaskEventListener,"aG",%progbits,_ZTV23SensorTaskEventListener,comdat
+ 2230              		.align	2
+ 2233              	_ZTV23SensorTaskEventListener:
+ 2234 0000 00000000 		.word	0
+ 2235 0004 00000000 		.word	_ZTI23SensorTaskEventListener
+ 2236 0008 00000000 		.word	_ZN23SensorTaskEventListener17OnFullBufferEventEv
+ 2237 000c 00000000 		.word	_ZN23SensorTaskEventListener18OnEmptyBufferEventEv
+ 2238 0010 00000000 		.word	_ZN23SensorTaskEventListener23OnNewDataAvailableEventEv
+ 2239              		.weak	_ZTV13LIS3DH_Driver
+ 2240              		.section	.rodata._ZTV13LIS3DH_Driver,"aG",%progbits,_ZTV13LIS3DH_Driver,comdat
+ 2241              		.align	2
+ 2244              	_ZTV13LIS3DH_Driver:
+ 2245 0000 00000000 		.word	0
+ 2246 0004 00000000 		.word	_ZTI13LIS3DH_Driver
+ 2247 0008 00000000 		.word	_ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE
+ 2248 000c 00000000 		.word	_ZN13LIS3DH_Driver4readEPhm
+ 2249 0010 00000000 		.word	_ZN13LIS3DH_Driver9getConfigEv
+ 2250 0014 00000000 		.word	_ZN13LIS3DH_Driver9availableEv
+ 2251 0018 00000000 		.word	_ZN13LIS3DH_DriverD1Ev
+ 2252 001c 00000000 		.word	_ZN13LIS3DH_DriverD0Ev
+ 2253              		.weak	_ZTV15CommandListener
+ 2254              		.section	.rodata._ZTV15CommandListener,"aG",%progbits,_ZTV15CommandListener,comdat
+ 2255              		.align	2
+ 2258              	_ZTV15CommandListener:
+ 2259 0000 00000000 		.word	0
+ 2260 0004 00000000 		.word	_ZTI15CommandListener
+ 2261 0008 00000000 		.word	_ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE
+ 2262              		.section	.rodata
+ 2263              		.align	2
+ 2264              		.set	.LANCHOR5,. + 0
+ 2265              	.LC0:
+ 2266 0000 4369616F 		.ascii	"Ciao bel from FreeRTOS controller task!\012\000"
+ 2266      2062656C 
+ 2266      2066726F 
+ 2266      6D204672 
+ 2266      65655254 
+ 2267 0029 00000000 		.space	9
+ 2267      00000000 
+ 2267      00
+ 2268              		.section	.bss._ZL12messageQueue,"aw",%nobits
+ 2269              		.align	2
+ 2270              		.set	.LANCHOR0,. + 0
+ 2273              	_ZL12messageQueue:
+ 2274 0000 00000000 		.space	4
+ 2275              		.section	.bss._ZL3acc,"aw",%nobits
+ARM GAS  /tmp/ccociAVi.s 			page 53
+
+
+ 2276              		.align	2
+ 2277              		.set	.LANCHOR3,. + 0
+ 2280              	_ZL3acc:
+ 2281 0000 00000000 		.space	252
+ 2281      00000000 
+ 2281      00000000 
+ 2281      00000000 
+ 2281      00000000 
+ 2282              		.section	.bss._ZL3drv,"aw",%nobits
+ 2283              		.align	2
+ 2284              		.set	.LANCHOR1,. + 0
+ 2287              	_ZL3drv:
+ 2288 0000 00000000 		.space	16
+ 2288      00000000 
+ 2288      00000000 
+ 2288      00000000 
+ 2289              		.section	.bss._ZL6config,"aw",%nobits
+ 2290              		.align	2
+ 2291              		.set	.LANCHOR6,. + 0
+ 2294              	_ZL6config:
+ 2295 0000 00000000 		.space	12
+ 2295      00000000 
+ 2295      00000000 
+ 2296              		.section	.bss._ZL6serial,"aw",%nobits
+ 2297              		.align	2
+ 2298              		.set	.LANCHOR4,. + 0
+ 2301              	_ZL6serial:
+ 2302 0000 00000000 		.space	216
+ 2302      00000000 
+ 2302      00000000 
+ 2302      00000000 
+ 2302      00000000 
+ 2303              		.section	.bss._ZL7rx_data,"aw",%nobits
+ 2304              		.set	.LANCHOR7,. + 0
+ 2307              	_ZL7rx_data:
+ 2308 0000 00       		.space	1
+ 2309              		.section	.bss._ZL8listener,"aw",%nobits
+ 2310              		.align	2
+ 2311              		.set	.LANCHOR2,. + 0
+ 2314              	_ZL8listener:
+ 2315 0000 00000000 		.space	8
+ 2315      00000000 
+ 2316              		.text
+ 2317              	.Letext0:
+ 2318              		.file 5 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 2319              		.file 6 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/_default_types.h"
+ 2320              		.file 7 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_stdint.h"
+ 2321              		.file 8 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdint.h"
+ 2322              		.file 9 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 2323              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ 2324              		.file 11 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 2325              		.file 12 "Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 2326              		.file 13 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 2327              		.file 14 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 2328              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 2329              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 2330              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ARM GAS  /tmp/ccociAVi.s 			page 54
+
+
+ 2331              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 2332              		.file 19 "Core/Inc/lis3dh_driver.h"
+ 2333              		.file 20 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 2334              		.file 21 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/cstring"
+ 2335              		.file 22 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi
+ 2336              		.file 23 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/string.h"
+ 2337              		.file 24 "Core/Inc/usart.h"
+ 2338              		.file 25 "/home/luca/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h"
+ 2339              		.file 26 "<built-in>"
+ARM GAS  /tmp/ccociAVi.s 			page 55
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 appTasks.cpp
-     /tmp/ccRc6kBV.s:18     .rodata.StartControllerTask.str1.4:0000000000000000 $d
-     /tmp/ccRc6kBV.s:22     .text.StartControllerTask:0000000000000000 $t
-     /tmp/ccRc6kBV.s:28     .text.StartControllerTask:0000000000000000 StartControllerTask
-     /tmp/ccRc6kBV.s:84     .text.StartControllerTask:0000000000000040 $d
-     /tmp/ccRc6kBV.s:90     .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
-     /tmp/ccRc6kBV.s:96     .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
-     /tmp/ccRc6kBV.s:141    .text.HAL_GPIO_EXTI_Callback:000000000000001c $d
-     /tmp/ccRc6kBV.s:146    .rodata.StartSensorTask.str1.4:0000000000000000 $d
-     /tmp/ccRc6kBV.s:153    .text.StartSensorTask:0000000000000000 $t
-     /tmp/ccRc6kBV.s:159    .text.StartSensorTask:0000000000000000 StartSensorTask
-     /tmp/ccRc6kBV.s:237    .text.StartSensorTask:0000000000000058 $d
+     /tmp/ccociAVi.s:18     .text._ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv:0000000000000000 $t
+     /tmp/ccociAVi.s:24     .text._ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv:0000000000000000 _ZN19AccelerometerSensor13EventListener17OnFullBufferEventEv
+     /tmp/ccociAVi.s:39     .text._ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv:0000000000000000 $t
+     /tmp/ccociAVi.s:45     .text._ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv:0000000000000000 _ZN19AccelerometerSensor13EventListener18OnEmptyBufferEventEv
+     /tmp/ccociAVi.s:59     .text._ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv:0000000000000000 $t
+     /tmp/ccociAVi.s:65     .text._ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv:0000000000000000 _ZN19AccelerometerSensor13EventListener23OnNewDataAvailableEventEv
+     /tmp/ccociAVi.s:79     .text._ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE:0000000000000000 $t
+     /tmp/ccociAVi.s:85     .text._ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE:0000000000000000 _ZN19AccelerometerSensor6Driver9setConfigERKNS_22accelerometer_config_tE
+     /tmp/ccociAVi.s:103    .text._ZN19AccelerometerSensor6Driver4readEPhm:0000000000000000 $t
+     /tmp/ccociAVi.s:109    .text._ZN19AccelerometerSensor6Driver4readEPhm:0000000000000000 _ZN19AccelerometerSensor6Driver4readEPhm
+     /tmp/ccociAVi.s:127    .text._ZN19AccelerometerSensor6Driver9getConfigEv:0000000000000000 $t
+     /tmp/ccociAVi.s:133    .text._ZN19AccelerometerSensor6Driver9getConfigEv:0000000000000000 _ZN19AccelerometerSensor6Driver9getConfigEv
+     /tmp/ccociAVi.s:151    .text._ZN19AccelerometerSensor6Driver9availableEv:0000000000000000 $t
+     /tmp/ccociAVi.s:157    .text._ZN19AccelerometerSensor6Driver9availableEv:0000000000000000 _ZN19AccelerometerSensor6Driver9availableEv
+     /tmp/ccociAVi.s:175    .text._ZN19AccelerometerSensor6DriverD2Ev:0000000000000000 $t
+     /tmp/ccociAVi.s:181    .text._ZN19AccelerometerSensor6DriverD2Ev:0000000000000000 _ZN19AccelerometerSensor6DriverD2Ev
+     /tmp/ccociAVi.s:199    .text._ZN19AccelerometerSensor6DriverD2Ev:0000000000000008 $d
+     /tmp/ccociAVi.s:2190   .rodata._ZTVN19AccelerometerSensor6DriverE:0000000000000000 _ZTVN19AccelerometerSensor6DriverE
+     /tmp/ccociAVi.s:181    .text._ZN19AccelerometerSensor6DriverD2Ev:0000000000000000 _ZN19AccelerometerSensor6DriverD1Ev
+     /tmp/ccociAVi.s:206    .text._ZN6Serial4initEv:0000000000000000 $t
+     /tmp/ccociAVi.s:212    .text._ZN6Serial4initEv:0000000000000000 _ZN6Serial4initEv
+     /tmp/ccociAVi.s:227    .text._ZN6Serial5writeEPKcm:0000000000000000 $t
+     /tmp/ccociAVi.s:233    .text._ZN6Serial5writeEPKcm:0000000000000000 _ZN6Serial5writeEPKcm
+     /tmp/ccociAVi.s:251    .text._ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE:0000000000000000 $t
+     /tmp/ccociAVi.s:257    .text._ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE:0000000000000000 _ZN19CommandsInterpreter8Obserser6notifyERKNS_9command_tE
+     /tmp/ccociAVi.s:272    .text._ZN23SensorTaskEventListener18OnEmptyBufferEventEv:0000000000000000 $t
+     /tmp/ccociAVi.s:278    .text._ZN23SensorTaskEventListener18OnEmptyBufferEventEv:0000000000000000 _ZN23SensorTaskEventListener18OnEmptyBufferEventEv
+     /tmp/ccociAVi.s:293    .text._ZN23SensorTaskEventListener17OnFullBufferEventEv:0000000000000000 $t
+     /tmp/ccociAVi.s:299    .text._ZN23SensorTaskEventListener17OnFullBufferEventEv:0000000000000000 _ZN23SensorTaskEventListener17OnFullBufferEventEv
+     /tmp/ccociAVi.s:313    .text._ZN13LIS3DH_Driver9getConfigEv:0000000000000000 $t
+     /tmp/ccociAVi.s:319    .text._ZN13LIS3DH_Driver9getConfigEv:0000000000000000 _ZN13LIS3DH_Driver9getConfigEv
+     /tmp/ccociAVi.s:337    .text._ZN13LIS3DH_DriverD2Ev:0000000000000000 $t
+     /tmp/ccociAVi.s:343    .text._ZN13LIS3DH_DriverD2Ev:0000000000000000 _ZN13LIS3DH_DriverD2Ev
+     /tmp/ccociAVi.s:373    .text._ZN13LIS3DH_DriverD2Ev:000000000000000c $d
+     /tmp/ccociAVi.s:2244   .rodata._ZTV13LIS3DH_Driver:0000000000000000 _ZTV13LIS3DH_Driver
+     /tmp/ccociAVi.s:343    .text._ZN13LIS3DH_DriverD2Ev:0000000000000000 _ZN13LIS3DH_DriverD1Ev
+     /tmp/ccociAVi.s:381    .text._ZN10UartSerial5writeEPKcm:0000000000000000 $t
+     /tmp/ccociAVi.s:387    .text._ZN10UartSerial5writeEPKcm:0000000000000000 _ZN10UartSerial5writeEPKcm
+     /tmp/ccociAVi.s:421    .text._ZN10UartSerial5writeEPKcm:0000000000000014 $d
+     /tmp/ccociAVi.s:426    .text._ZN23SensorTaskEventListener23OnNewDataAvailableEventEv:0000000000000000 $t
+     /tmp/ccociAVi.s:432    .text._ZN23SensorTaskEventListener23OnNewDataAvailableEventEv:0000000000000000 _ZN23SensorTaskEventListener23OnNewDataAvailableEventEv
+     /tmp/ccociAVi.s:471    .text._ZN23SensorTaskEventListener23OnNewDataAvailableEventEv:000000000000001c $d
+     /tmp/ccociAVi.s:476    .text._ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE:0000000000000000 $t
+     /tmp/ccociAVi.s:482    .text._ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE:0000000000000000 _ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE
+     /tmp/ccociAVi.s:575    .text._ZN15CommandListener6notifyERKN19CommandsInterpreter9command_tE:0000000000000058 $d
+     /tmp/ccociAVi.s:580    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $t
+     /tmp/ccociAVi.s:585    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccociAVi.s:733    .text._Z41__static_initialization_and_destruction_0ii:0000000000000060 $d
+     /tmp/ccociAVi.s:2179   .rodata._ZTVN19AccelerometerSensor13EventListenerE:0000000000000000 _ZTVN19AccelerometerSensor13EventListenerE
+     /tmp/ccociAVi.s:2233   .rodata._ZTV23SensorTaskEventListener:0000000000000000 _ZTV23SensorTaskEventListener
+     /tmp/ccociAVi.s:2204   .rodata._ZTV6Serial:0000000000000000 _ZTV6Serial
+     /tmp/ccociAVi.s:2223   .rodata._ZTV10UartSerial:0000000000000000 _ZTV10UartSerial
+     /tmp/ccociAVi.s:751    .text._ZN13LIS3DH_DriverD0Ev:0000000000000000 $t
+     /tmp/ccociAVi.s:757    .text._ZN13LIS3DH_DriverD0Ev:0000000000000000 _ZN13LIS3DH_DriverD0Ev
+     /tmp/ccociAVi.s:804    .text._ZN13LIS3DH_DriverD0Ev:0000000000000014 $d
+ARM GAS  /tmp/ccociAVi.s 			page 56
+
+
+     /tmp/ccociAVi.s:810    .text._ZN19AccelerometerSensor6DriverD0Ev:0000000000000000 $t
+     /tmp/ccociAVi.s:816    .text._ZN19AccelerometerSensor6DriverD0Ev:0000000000000000 _ZN19AccelerometerSensor6DriverD0Ev
+     /tmp/ccociAVi.s:853    .text._ZN19AccelerometerSensor6DriverD0Ev:0000000000000010 $d
+     /tmp/ccociAVi.s:858    .text._ZN13LIS3DH_Driver9availableEv:0000000000000000 $t
+     /tmp/ccociAVi.s:864    .text._ZN13LIS3DH_Driver9availableEv:0000000000000000 _ZN13LIS3DH_Driver9availableEv
+     /tmp/ccociAVi.s:912    .text._ZN13LIS3DH_Driver4readEPhm:0000000000000000 $t
+     /tmp/ccociAVi.s:918    .text._ZN13LIS3DH_Driver4readEPhm:0000000000000000 _ZN13LIS3DH_Driver4readEPhm
+     /tmp/ccociAVi.s:1054   .text._ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE:0000000000000000 $t
+     /tmp/ccociAVi.s:1060   .text._ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE:0000000000000000 _ZN13LIS3DH_Driver9setConfigERKN19AccelerometerSensor22accelerometer_config_tE
+     /tmp/ccociAVi.s:1153   .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
+     /tmp/ccociAVi.s:1159   .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
+     /tmp/ccociAVi.s:1174   .rodata.StartControllerTask.str1.4:0000000000000000 $d
+     /tmp/ccociAVi.s:1190   .text.StartControllerTask:0000000000000000 $t
+     /tmp/ccociAVi.s:1196   .text.StartControllerTask:0000000000000000 StartControllerTask
+     /tmp/ccociAVi.s:1503   .text.StartControllerTask:000000000000012c $d
+     /tmp/ccociAVi.s:1521   .text.StartSensorTask:0000000000000000 $t
+     /tmp/ccociAVi.s:1527   .text.StartSensorTask:0000000000000000 StartSensorTask
+     /tmp/ccociAVi.s:1579   .text.StartSensorTask:000000000000001c $d
+     /tmp/ccociAVi.s:1587   .text.HAL_UART_RxCpltCallback:0000000000000000 $t
+     /tmp/ccociAVi.s:1593   .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
+     /tmp/ccociAVi.s:1627   .text.HAL_UART_RxCpltCallback:0000000000000018 $d
+     /tmp/ccociAVi.s:1634   .text.HAL_UART_ErrorCallback:0000000000000000 $t
+     /tmp/ccociAVi.s:1640   .text.HAL_UART_ErrorCallback:0000000000000000 HAL_UART_ErrorCallback
+     /tmp/ccociAVi.s:1667   .text.HAL_UART_ErrorCallback:0000000000000010 $d
+     /tmp/ccociAVi.s:1673   .rodata.StartSerialTask.str1.4:0000000000000000 $d
+     /tmp/ccociAVi.s:1686   .text.StartSerialTask:0000000000000000 $t
+     /tmp/ccociAVi.s:1692   .text.StartSerialTask:0000000000000000 StartSerialTask
+     /tmp/ccociAVi.s:2005   .text.StartSerialTask:0000000000000104 $d
+     /tmp/ccociAVi.s:2214   .rodata._ZTVN19CommandsInterpreter8ObserserE:0000000000000000 _ZTVN19CommandsInterpreter8ObserserE
+     /tmp/ccociAVi.s:2258   .rodata._ZTV15CommandListener:0000000000000000 _ZTV15CommandListener
+     /tmp/ccociAVi.s:2022   .text._GLOBAL__sub_I_HAL_GPIO_EXTI_Callback:0000000000000000 $t
+     /tmp/ccociAVi.s:2027   .text._GLOBAL__sub_I_HAL_GPIO_EXTI_Callback:0000000000000000 _GLOBAL__sub_I_HAL_GPIO_EXTI_Callback
+     /tmp/ccociAVi.s:2048   .init_array:0000000000000000 $d
+     /tmp/ccociAVi.s:2055   .rodata._ZTSN19AccelerometerSensor13EventListenerE:0000000000000000 _ZTSN19AccelerometerSensor13EventListenerE
+     /tmp/ccociAVi.s:2052   .rodata._ZTSN19AccelerometerSensor13EventListenerE:0000000000000000 $d
+     /tmp/ccociAVi.s:2062   .rodata._ZTIN19AccelerometerSensor13EventListenerE:0000000000000000 _ZTIN19AccelerometerSensor13EventListenerE
+     /tmp/ccociAVi.s:2059   .rodata._ZTIN19AccelerometerSensor13EventListenerE:0000000000000000 $d
+     /tmp/ccociAVi.s:2070   .rodata._ZTSN19AccelerometerSensor6DriverE:0000000000000000 _ZTSN19AccelerometerSensor6DriverE
+     /tmp/ccociAVi.s:2067   .rodata._ZTSN19AccelerometerSensor6DriverE:0000000000000000 $d
+     /tmp/ccociAVi.s:2077   .rodata._ZTIN19AccelerometerSensor6DriverE:0000000000000000 _ZTIN19AccelerometerSensor6DriverE
+     /tmp/ccociAVi.s:2074   .rodata._ZTIN19AccelerometerSensor6DriverE:0000000000000000 $d
+     /tmp/ccociAVi.s:2085   .rodata._ZTS6Serial:0000000000000000 _ZTS6Serial
+     /tmp/ccociAVi.s:2082   .rodata._ZTS6Serial:0000000000000000 $d
+     /tmp/ccociAVi.s:2092   .rodata._ZTI6Serial:0000000000000000 _ZTI6Serial
+     /tmp/ccociAVi.s:2089   .rodata._ZTI6Serial:0000000000000000 $d
+     /tmp/ccociAVi.s:2100   .rodata._ZTSN19CommandsInterpreter8ObserserE:0000000000000000 _ZTSN19CommandsInterpreter8ObserserE
+     /tmp/ccociAVi.s:2097   .rodata._ZTSN19CommandsInterpreter8ObserserE:0000000000000000 $d
+     /tmp/ccociAVi.s:2107   .rodata._ZTIN19CommandsInterpreter8ObserserE:0000000000000000 _ZTIN19CommandsInterpreter8ObserserE
+     /tmp/ccociAVi.s:2104   .rodata._ZTIN19CommandsInterpreter8ObserserE:0000000000000000 $d
+     /tmp/ccociAVi.s:2115   .rodata._ZTS10UartSerial:0000000000000000 _ZTS10UartSerial
+     /tmp/ccociAVi.s:2112   .rodata._ZTS10UartSerial:0000000000000000 $d
+     /tmp/ccociAVi.s:2122   .rodata._ZTI10UartSerial:0000000000000000 _ZTI10UartSerial
+     /tmp/ccociAVi.s:2119   .rodata._ZTI10UartSerial:0000000000000000 $d
+     /tmp/ccociAVi.s:2131   .rodata._ZTS23SensorTaskEventListener:0000000000000000 _ZTS23SensorTaskEventListener
+     /tmp/ccociAVi.s:2128   .rodata._ZTS23SensorTaskEventListener:0000000000000000 $d
+     /tmp/ccociAVi.s:2138   .rodata._ZTI23SensorTaskEventListener:0000000000000000 _ZTI23SensorTaskEventListener
+     /tmp/ccociAVi.s:2135   .rodata._ZTI23SensorTaskEventListener:0000000000000000 $d
+ARM GAS  /tmp/ccociAVi.s 			page 57
+
+
+     /tmp/ccociAVi.s:2147   .rodata._ZTS13LIS3DH_Driver:0000000000000000 _ZTS13LIS3DH_Driver
+     /tmp/ccociAVi.s:2144   .rodata._ZTS13LIS3DH_Driver:0000000000000000 $d
+     /tmp/ccociAVi.s:2154   .rodata._ZTI13LIS3DH_Driver:0000000000000000 _ZTI13LIS3DH_Driver
+     /tmp/ccociAVi.s:2151   .rodata._ZTI13LIS3DH_Driver:0000000000000000 $d
+     /tmp/ccociAVi.s:2163   .rodata._ZTS15CommandListener:0000000000000000 _ZTS15CommandListener
+     /tmp/ccociAVi.s:2160   .rodata._ZTS15CommandListener:0000000000000000 $d
+     /tmp/ccociAVi.s:2170   .rodata._ZTI15CommandListener:0000000000000000 _ZTI15CommandListener
+     /tmp/ccociAVi.s:2167   .rodata._ZTI15CommandListener:0000000000000000 $d
+     /tmp/ccociAVi.s:2176   .rodata._ZTVN19AccelerometerSensor13EventListenerE:0000000000000000 $d
+     /tmp/ccociAVi.s:2187   .rodata._ZTVN19AccelerometerSensor6DriverE:0000000000000000 $d
+     /tmp/ccociAVi.s:2201   .rodata._ZTV6Serial:0000000000000000 $d
+     /tmp/ccociAVi.s:2211   .rodata._ZTVN19CommandsInterpreter8ObserserE:0000000000000000 $d
+     /tmp/ccociAVi.s:2220   .rodata._ZTV10UartSerial:0000000000000000 $d
+     /tmp/ccociAVi.s:2230   .rodata._ZTV23SensorTaskEventListener:0000000000000000 $d
+     /tmp/ccociAVi.s:2241   .rodata._ZTV13LIS3DH_Driver:0000000000000000 $d
+     /tmp/ccociAVi.s:2255   .rodata._ZTV15CommandListener:0000000000000000 $d
+     /tmp/ccociAVi.s:2263   .rodata:0000000000000000 $d
+     /tmp/ccociAVi.s:2269   .bss._ZL12messageQueue:0000000000000000 $d
+     /tmp/ccociAVi.s:2273   .bss._ZL12messageQueue:0000000000000000 _ZL12messageQueue
+     /tmp/ccociAVi.s:2276   .bss._ZL3acc:0000000000000000 $d
+     /tmp/ccociAVi.s:2280   .bss._ZL3acc:0000000000000000 _ZL3acc
+     /tmp/ccociAVi.s:2283   .bss._ZL3drv:0000000000000000 $d
+     /tmp/ccociAVi.s:2287   .bss._ZL3drv:0000000000000000 _ZL3drv
+     /tmp/ccociAVi.s:2290   .bss._ZL6config:0000000000000000 $d
+     /tmp/ccociAVi.s:2294   .bss._ZL6config:0000000000000000 _ZL6config
+     /tmp/ccociAVi.s:2297   .bss._ZL6serial:0000000000000000 $d
+     /tmp/ccociAVi.s:2301   .bss._ZL6serial:0000000000000000 _ZL6serial
+     /tmp/ccociAVi.s:2307   .bss._ZL7rx_data:0000000000000000 _ZL7rx_data
+     /tmp/ccociAVi.s:2308   .bss._ZL7rx_data:0000000000000000 $d
+     /tmp/ccociAVi.s:2310   .bss._ZL8listener:0000000000000000 $d
+     /tmp/ccociAVi.s:2314   .bss._ZL8listener:0000000000000000 _ZL8listener
+                           .group:0000000000000000 _ZN19AccelerometerSensor6DriverD5Ev
+                           .group:0000000000000000 _ZN13LIS3DH_DriverD5Ev
 
 UNDEFINED SYMBOLS
-strlen
 HAL_UART_Transmit
-vTaskDelay
 huart1
-vTaskNotifyGiveFromISR
-sensorTaskHandle
+xQueueGenericSend
+xTaskGenericNotify
+__aeabi_atexit
+__dso_handle
+_ZdlPv
+LIS3DH_GetFifoSourceFSS
+__aeabi_i2f
+__aeabi_fmul
+LIS3DH_GetAccAxesRaw
 LIS3DH_GetWHO_AM_I
-sprintf
+LIS3DH_SetFullScale
+LIS3DH_SetMode
 LIS3DH_SetODR
+LIS3DH_FIFOModeEnable
+xQueueGenericCreate
+strlen
+vTaskSuspendAll
+_ZN19AccelerometerSensor9availableEv
+_ZN19AccelerometerSensor4readEPNS_9samples_tEm
+xTaskResumeAll
+ARM GAS  /tmp/ccociAVi.s 			page 58
+
+
+xQueueReceive
+sprintf
+_ZN19AccelerometerSensor9setConfigERKNS_22accelerometer_config_tE
+vTaskDelay
+controllerTaskHandle
+_ZN6Serial10appendCharEc
+HAL_UART_Receive_IT
+_ZN6Serial9in_bufferEv
+strstr
+_ZN6Serial8in_flushEv
+_ZNK6Serial9availableEv
+sscanf
+_ZTVN10__cxxabiv117__class_type_infoE
+_ZTVN10__cxxabiv120__si_class_type_infoE

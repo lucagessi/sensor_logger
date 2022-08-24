@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccpeUeUY.s 			page 1
+ARM GAS  /tmp/ccQFuNLL.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
   29:Core/Src/lis3dh_driver.c **** /* Private macro -------------------------------------------------------------*/
   30:Core/Src/lis3dh_driver.c **** /* Private variables ---------------------------------------------------------*/
   31:Core/Src/lis3dh_driver.c **** /* Private function prototypes -----------------------------------------------*/
-ARM GAS  /tmp/ccpeUeUY.s 			page 2
+ARM GAS  /tmp/ccQFuNLL.s 			page 2
 
 
   32:Core/Src/lis3dh_driver.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
   66:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
   67:Core/Src/lis3dh_driver.c ****   
   68:Core/Src/lis3dh_driver.c ****   return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 3
+ARM GAS  /tmp/ccQFuNLL.s 			page 3
 
 
   48              		.loc 1 68 10 view .LVU6
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
   88              	.L5:
   85:Core/Src/lis3dh_driver.c **** }
   89              		.loc 1 85 1 view .LVU15
-ARM GAS  /tmp/ccpeUeUY.s 			page 4
+ARM GAS  /tmp/ccQFuNLL.s 			page 4
 
 
   90 000e 08BD     		pop	{r3, pc}
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  131              		.loc 1 100 5 view .LVU23
  132 0012 0346     		mov	r3, r0
  133 0014 D0B1     		cbz	r0, .L8
-ARM GAS  /tmp/ccpeUeUY.s 			page 5
+ARM GAS  /tmp/ccQFuNLL.s 			page 5
 
 
  101:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  139:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
  140:Core/Src/lis3dh_driver.c ****     }
  141:Core/Src/lis3dh_driver.c ****     else{  
-ARM GAS  /tmp/ccpeUeUY.s 			page 6
+ARM GAS  /tmp/ccQFuNLL.s 			page 6
 
 
  142:Core/Src/lis3dh_driver.c ****       *val = MEMS_RESET;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  165 0034 65D0     		beq	.L33
  181:Core/Src/lis3dh_driver.c ****     if(value &= LIS3DH_STATUS_AUX_1DA){     
  182:Core/Src/lis3dh_driver.c ****       *val = MEMS_SET;
-ARM GAS  /tmp/ccpeUeUY.s 			page 7
+ARM GAS  /tmp/ccQFuNLL.s 			page 7
 
 
  183:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  201 0056 0123     		movs	r3, #1
  202 0058 F8E7     		b	.L8
  203              	.L27:
-ARM GAS  /tmp/ccpeUeUY.s 			page 8
+ARM GAS  /tmp/ccQFuNLL.s 			page 8
 
 
  115:Core/Src/lis3dh_driver.c ****       *val = MEMS_SET;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  240              		.loc 1 128 14 is_stmt 0 view .LVU69
  241 0088 E0E7     		b	.L8
  242              	.L14:
-ARM GAS  /tmp/ccpeUeUY.s 			page 9
+ARM GAS  /tmp/ccQFuNLL.s 			page 9
 
 
  131:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  280 00b6 8DF80730 		strb	r3, [sp, #7]
  148:Core/Src/lis3dh_driver.c ****       *val = MEMS_SET;
  281              		.loc 1 148 7 view .LVU87
-ARM GAS  /tmp/ccpeUeUY.s 			page 10
+ARM GAS  /tmp/ccQFuNLL.s 			page 10
 
 
  282 00ba 13B1     		cbz	r3, .L18
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  165:Core/Src/lis3dh_driver.c ****     }   
  319              		.loc 1 165 7 is_stmt 1 view .LVU105
  165:Core/Src/lis3dh_driver.c ****     }   
-ARM GAS  /tmp/ccpeUeUY.s 			page 11
+ARM GAS  /tmp/ccQFuNLL.s 			page 11
 
 
  320              		.loc 1 165 14 is_stmt 0 view .LVU106
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  358 0112 2B70     		strb	r3, [r5]
  183:Core/Src/lis3dh_driver.c ****     }
  359              		.loc 1 183 7 is_stmt 1 view .LVU123
-ARM GAS  /tmp/ccpeUeUY.s 			page 12
+ARM GAS  /tmp/ccQFuNLL.s 			page 12
 
 
  183:Core/Src/lis3dh_driver.c ****     }
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  203:Core/Src/lis3dh_driver.c ****   
  204:Core/Src/lis3dh_driver.c ****   if( !LIS3DH_ReadReg(LIS3DH_CTRL_REG1, &value) )
  400              		.loc 1 204 3 view .LVU132
-ARM GAS  /tmp/ccpeUeUY.s 			page 13
+ARM GAS  /tmp/ccQFuNLL.s 			page 13
 
 
  401              		.loc 1 204 8 is_stmt 0 view .LVU133
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  438 0034 EDD0     		beq	.L35
  213:Core/Src/lis3dh_driver.c **** }
  439              		.loc 1 213 10 view .LVU144
-ARM GAS  /tmp/ccpeUeUY.s 			page 14
+ARM GAS  /tmp/ccQFuNLL.s 			page 14
 
 
  440 0036 0120     		movs	r0, #1
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  230:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
  231:Core/Src/lis3dh_driver.c ****   
  232:Core/Src/lis3dh_driver.c ****   value &= 0xBF;
-ARM GAS  /tmp/ccpeUeUY.s 			page 15
+ARM GAS  /tmp/ccQFuNLL.s 			page 15
 
 
  233:Core/Src/lis3dh_driver.c ****   value |= state<<LIS3DH_TEMP_EN;
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  522              	LIS3DH_SetADCAux:
  523              	.LVL19:
  524              	.LFB5:
-ARM GAS  /tmp/ccpeUeUY.s 			page 16
+ARM GAS  /tmp/ccQFuNLL.s 			page 16
 
 
  240:Core/Src/lis3dh_driver.c **** 
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  556              		@ sp needed
  557 0014 10BD     		pop	{r4, pc}
  558              	.L45:
-ARM GAS  /tmp/ccpeUeUY.s 			page 17
+ARM GAS  /tmp/ccQFuNLL.s 			page 17
 
 
  559              	.LCFI17:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  597              		@ args = 0, pretend = 0, frame = 8
  598              		@ frame_needed = 0, uses_anonymous_args = 0
  599              		.loc 1 272 53 is_stmt 0 view .LVU178
-ARM GAS  /tmp/ccpeUeUY.s 			page 18
+ARM GAS  /tmp/ccQFuNLL.s 			page 18
 
 
  600 0000 10B5     		push	{r4, lr}
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  625 0016 02B0     		add	sp, sp, #8
  626              	.LCFI20:
  627              		.cfi_remember_state
-ARM GAS  /tmp/ccpeUeUY.s 			page 19
+ARM GAS  /tmp/ccQFuNLL.s 			page 19
 
 
  628              		.cfi_def_cfa_offset 8
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  669 0050 FFF7FEFF 		bl	LIS3DH_ReadReg
  670              	.LVL29:
  287:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
-ARM GAS  /tmp/ccpeUeUY.s 			page 20
+ARM GAS  /tmp/ccQFuNLL.s 			page 20
 
 
  671              		.loc 1 287 5 view .LVU199
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  710              		.loc 1 298 17 view .LVU214
  711 0092 43EA0223 		orr	r3, r3, r2, lsl #8
  298:Core/Src/lis3dh_driver.c ****   
-ARM GAS  /tmp/ccpeUeUY.s 			page 21
+ARM GAS  /tmp/ccQFuNLL.s 			page 21
 
 
  712              		.loc 1 298 15 view .LVU215
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  752              	.LVL33:
  753              		.loc 1 315 8 view .LVU224
  754 000c FFF7FEFF 		bl	LIS3DH_ReadReg
-ARM GAS  /tmp/ccpeUeUY.s 			page 22
+ARM GAS  /tmp/ccQFuNLL.s 			page 22
 
 
  755              	.LVL34:
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  793              		.global	LIS3DH_SetMode
  794              		.syntax unified
  795              		.thumb
-ARM GAS  /tmp/ccpeUeUY.s 			page 23
+ARM GAS  /tmp/ccQFuNLL.s 			page 23
 
 
  796              		.thumb_func
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  346:Core/Src/lis3dh_driver.c ****     value = value | (ODR_old_value & 0xF0); //if it comes from POWERDOWN  
  347:Core/Src/lis3dh_driver.c ****   
  348:Core/Src/lis3dh_driver.c ****   switch(md) {
-ARM GAS  /tmp/ccpeUeUY.s 			page 24
+ARM GAS  /tmp/ccQFuNLL.s 			page 24
 
 
  349:Core/Src/lis3dh_driver.c ****     
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  849 0026 0028     		cmp	r0, #0
  850 0028 F4D0     		beq	.L55
  345:Core/Src/lis3dh_driver.c ****     value = value | (ODR_old_value & 0xF0); //if it comes from POWERDOWN  
-ARM GAS  /tmp/ccpeUeUY.s 			page 25
+ARM GAS  /tmp/ccQFuNLL.s 			page 25
 
 
  851              		.loc 1 345 3 is_stmt 1 view .LVU248
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  891 0066 2020     		movs	r0, #32
  892 0068 FFF7FEFF 		bl	LIS3DH_WriteReg
  893              	.LVL41:
-ARM GAS  /tmp/ccpeUeUY.s 			page 26
+ARM GAS  /tmp/ccQFuNLL.s 			page 26
 
 
  373:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  933 00ac 03F0F703 		and	r3, r3, #247
  934 00b0 8DF80730 		strb	r3, [sp, #7]
  364:Core/Src/lis3dh_driver.c ****     value2 &= 0xF7;
-ARM GAS  /tmp/ccpeUeUY.s 			page 27
+ARM GAS  /tmp/ccQFuNLL.s 			page 27
 
 
  935              		.loc 1 364 5 is_stmt 1 view .LVU278
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  975              	.LCFI31:
  976              		.cfi_def_cfa_offset 16
  977 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/ccpeUeUY.s 			page 28
+ARM GAS  /tmp/ccQFuNLL.s 			page 28
 
 
  392:Core/Src/lis3dh_driver.c ****   u8_t value;
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1014              	.LVL46:
  399:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;   
  1015              		.loc 1 399 5 view .LVU298
-ARM GAS  /tmp/ccpeUeUY.s 			page 29
+ARM GAS  /tmp/ccQFuNLL.s 			page 29
 
 
  1016 0032 0028     		cmp	r0, #0
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1058 0010 08B9     		cbnz	r0, .L73
  1059              	.L71:
  417:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
-ARM GAS  /tmp/ccpeUeUY.s 			page 30
+ARM GAS  /tmp/ccQFuNLL.s 			page 30
 
 
  418:Core/Src/lis3dh_driver.c ****   
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1098              		.thumb
  1099              		.thumb_func
  1101              	LIS3DH_SetBDU:
-ARM GAS  /tmp/ccpeUeUY.s 			page 31
+ARM GAS  /tmp/ccQFuNLL.s 			page 31
 
 
  1102              	.LVL51:
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1133              		.cfi_remember_state
  1134              		.cfi_def_cfa_offset 8
  1135              		@ sp needed
-ARM GAS  /tmp/ccpeUeUY.s 			page 32
+ARM GAS  /tmp/ccQFuNLL.s 			page 32
 
 
  1136 0014 10BD     		pop	{r4, pc}
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1174              		.loc 1 459 48 is_stmt 1 view -0
  1175              		.cfi_startproc
  1176              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/ccpeUeUY.s 			page 33
+ARM GAS  /tmp/ccQFuNLL.s 			page 33
 
 
  1177              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1215              		.loc 1 466 3 is_stmt 1 view .LVU342
  466:Core/Src/lis3dh_driver.c ****   
  1216              		.loc 1 466 9 is_stmt 0 view .LVU343
-ARM GAS  /tmp/ccpeUeUY.s 			page 34
+ARM GAS  /tmp/ccQFuNLL.s 			page 34
 
 
  1217 0022 41EA8411 		orr	r1, r1, r4, lsl #6
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1258              		.loc 1 483 3 is_stmt 1 view .LVU350
  484:Core/Src/lis3dh_driver.c ****   
  485:Core/Src/lis3dh_driver.c ****   if( !LIS3DH_ReadReg(LIS3DH_CTRL_REG4, &value) )
-ARM GAS  /tmp/ccpeUeUY.s 			page 35
+ARM GAS  /tmp/ccQFuNLL.s 			page 35
 
 
  1259              		.loc 1 485 3 view .LVU351
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1296 0032 0028     		cmp	r0, #0
  1297 0034 EDD0     		beq	.L83
  494:Core/Src/lis3dh_driver.c **** }
-ARM GAS  /tmp/ccpeUeUY.s 			page 36
+ARM GAS  /tmp/ccQFuNLL.s 			page 36
 
 
  1298              		.loc 1 494 10 view .LVU363
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  510:Core/Src/lis3dh_driver.c ****   
  511:Core/Src/lis3dh_driver.c ****   value &= 0xFB;
  512:Core/Src/lis3dh_driver.c ****   value |= (hpfe<<LIS3DH_HPCLICK);
-ARM GAS  /tmp/ccpeUeUY.s 			page 37
+ARM GAS  /tmp/ccQFuNLL.s 			page 37
 
 
  513:Core/Src/lis3dh_driver.c ****   
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1382              	.LVL67:
  1383              	.LFB15:
  519:Core/Src/lis3dh_driver.c **** 
-ARM GAS  /tmp/ccpeUeUY.s 			page 38
+ARM GAS  /tmp/ccQFuNLL.s 			page 38
 
 
  520:Core/Src/lis3dh_driver.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1416 0014 10BD     		pop	{r4, pc}
  1417              	.L93:
  1418              	.LCFI57:
-ARM GAS  /tmp/ccpeUeUY.s 			page 39
+ARM GAS  /tmp/ccQFuNLL.s 			page 39
 
 
  1419              		.cfi_restore_state
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1457              		.loc 1 551 45 is_stmt 0 view .LVU397
  1458 0000 10B5     		push	{r4, lr}
  1459              	.LCFI58:
-ARM GAS  /tmp/ccpeUeUY.s 			page 40
+ARM GAS  /tmp/ccQFuNLL.s 			page 40
 
 
  1460              		.cfi_def_cfa_offset 8
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1497 0026 C9B2     		uxtb	r1, r1
  1498 0028 8DF80710 		strb	r1, [sp, #7]
  560:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
-ARM GAS  /tmp/ccpeUeUY.s 			page 41
+ARM GAS  /tmp/ccQFuNLL.s 			page 41
 
 
  1499              		.loc 1 560 3 is_stmt 1 view .LVU408
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1538              		.loc 1 578 3 view .LVU415
  1539              		.loc 1 578 8 is_stmt 0 view .LVU416
  1540 0006 0DF10701 		add	r1, sp, #7
-ARM GAS  /tmp/ccpeUeUY.s 			page 42
+ARM GAS  /tmp/ccQFuNLL.s 			page 42
 
 
  1541 000a 2120     		movs	r0, #33
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1577              		.loc 1 587 10 view .LVU427
  1578 0036 0120     		movs	r0, #1
  1579 0038 EBE7     		b	.L99
-ARM GAS  /tmp/ccpeUeUY.s 			page 43
+ARM GAS  /tmp/ccQFuNLL.s 			page 43
 
 
  1580              		.cfi_endproc
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  598:Core/Src/lis3dh_driver.c ****   u8_t value;
  1609              		.loc 1 598 58 view .LVU434
  1610 0008 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccpeUeUY.s 			page 44
+ARM GAS  /tmp/ccQFuNLL.s 			page 44
 
 
  1611              	.LCFI66:
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  610:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
  1655              		.loc 1 610 5 view .LVU446
  1656 003a 0028     		cmp	r0, #0
-ARM GAS  /tmp/ccpeUeUY.s 			page 45
+ARM GAS  /tmp/ccQFuNLL.s 			page 45
 
 
  1657 003c EDD0     		beq	.L103
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1699              	.L112:
  629:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
  630:Core/Src/lis3dh_driver.c ****   
-ARM GAS  /tmp/ccpeUeUY.s 			page 46
+ARM GAS  /tmp/ccQFuNLL.s 			page 46
 
 
  631:Core/Src/lis3dh_driver.c ****   value &= 0xF7;
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1738              		.thumb
  1739              		.thumb_func
  1741              	LIS3DH_SetInt1Pin:
-ARM GAS  /tmp/ccpeUeUY.s 			page 47
+ARM GAS  /tmp/ccQFuNLL.s 			page 47
 
 
  1742              	.LVL89:
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  666:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
  667:Core/Src/lis3dh_driver.c ****   
  668:Core/Src/lis3dh_driver.c ****   return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 48
+ARM GAS  /tmp/ccQFuNLL.s 			page 48
 
 
  669:Core/Src/lis3dh_driver.c **** }
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  675:Core/Src/lis3dh_driver.c **** * Input          : LIS3DH_CLICK_ON_PIN_INT2_ENABLE/DISABLE   | LIS3DH_I2_INT1_ON_PIN_INT2_ENABLE/DI
  676:Core/Src/lis3dh_driver.c ****                    LIS3DH_I2_INT2_ON_PIN_INT2_ENABLE/DISABLE | LIS3DH_I2_BOOT_ON_INT2_ENABLE/DISABL
  677:Core/Src/lis3dh_driver.c ****                    LIS3DH_INT_ACTIVE_HIGH/LOW
-ARM GAS  /tmp/ccpeUeUY.s 			page 49
+ARM GAS  /tmp/ccQFuNLL.s 			page 49
 
 
  678:Core/Src/lis3dh_driver.c **** * example        : LIS3DH_SetInt2Pin(LIS3DH_CLICK_ON_PIN_INT2_ENABLE/DISABLE | LIS3DH_I2_INT1_ON_PI
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1845              	.L122:
  1846              	.LCFI81:
  1847              		.cfi_restore_state
-ARM GAS  /tmp/ccpeUeUY.s 			page 50
+ARM GAS  /tmp/ccQFuNLL.s 			page 50
 
 
  691:Core/Src/lis3dh_driver.c ****   value |= pinConf;
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1882              		@ args = 0, pretend = 0, frame = 8
  1883              		@ frame_needed = 0, uses_anonymous_args = 0
  1884              		.loc 1 712 42 is_stmt 0 view .LVU497
-ARM GAS  /tmp/ccpeUeUY.s 			page 51
+ARM GAS  /tmp/ccQFuNLL.s 			page 51
 
 
  1885 0000 10B5     		push	{r4, lr}
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  1922              		.loc 1 719 9 is_stmt 0 view .LVU507
  1923 0022 2143     		orrs	r1, r1, r4
  1924 0024 8DF80710 		strb	r1, [sp, #7]
-ARM GAS  /tmp/ccpeUeUY.s 			page 52
+ARM GAS  /tmp/ccQFuNLL.s 			page 52
 
 
  721:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  738:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
  739:Core/Src/lis3dh_driver.c ****   
  740:Core/Src/lis3dh_driver.c ****   if( !LIS3DH_WriteReg(LIS3DH_CLICK_THS, ths) )
-ARM GAS  /tmp/ccpeUeUY.s 			page 53
+ARM GAS  /tmp/ccQFuNLL.s 			page 53
 
 
  1964              		.loc 1 740 3 is_stmt 1 view .LVU516
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2005              		@ frame_needed = 0, uses_anonymous_args = 0
  755:Core/Src/lis3dh_driver.c ****   
  756:Core/Src/lis3dh_driver.c ****   if(t_limit>127)     
-ARM GAS  /tmp/ccpeUeUY.s 			page 54
+ARM GAS  /tmp/ccQFuNLL.s 			page 54
 
 
  2006              		.loc 1 756 3 view .LVU525
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2053              	.LVL111:
  2054              	.LFB25:
  764:Core/Src/lis3dh_driver.c **** 
-ARM GAS  /tmp/ccpeUeUY.s 			page 55
+ARM GAS  /tmp/ccQFuNLL.s 			page 55
 
 
  765:Core/Src/lis3dh_driver.c **** 
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  783:Core/Src/lis3dh_driver.c **** * Function Name  : LIS3DH_SetClickWINDOW
  784:Core/Src/lis3dh_driver.c **** * Description    : Set Click Interrupt Time Window
  785:Core/Src/lis3dh_driver.c **** * Input          : Click-click Time Window value [0-255]
-ARM GAS  /tmp/ccpeUeUY.s 			page 56
+ARM GAS  /tmp/ccQFuNLL.s 			page 56
 
 
  786:Core/Src/lis3dh_driver.c **** * Output         : None
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  804:Core/Src/lis3dh_driver.c **** *******************************************************************************/
  805:Core/Src/lis3dh_driver.c **** status_t LIS3DH_GetClickResponse(u8_t* res) {
  2131              		.loc 1 805 45 is_stmt 1 view -0
-ARM GAS  /tmp/ccpeUeUY.s 			page 57
+ARM GAS  /tmp/ccQFuNLL.s 			page 57
 
 
  2132              		.cfi_startproc
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2172 002c 13F0080F 		tst	r3, #8
  2173 0030 1AD0     		beq	.L151
  820:Core/Src/lis3dh_driver.c ****         if (value & LIS3DH_CLICK_Z) {
-ARM GAS  /tmp/ccpeUeUY.s 			page 58
+ARM GAS  /tmp/ccQFuNLL.s 			page 58
 
 
  2174              		.loc 1 820 9 is_stmt 1 view .LVU567
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  842:Core/Src/lis3dh_driver.c ****         if (value & LIS3DH_CLICK_X) {
  843:Core/Src/lis3dh_driver.c ****           *res = LIS3DH_DCLICK_X_P;   
  844:Core/Src/lis3dh_driver.c ****           return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 59
+ARM GAS  /tmp/ccQFuNLL.s 			page 59
 
 
  845:Core/Src/lis3dh_driver.c ****         }
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  822:Core/Src/lis3dh_driver.c ****         }
  2219              		.loc 1 822 11 is_stmt 1 view .LVU584
  822:Core/Src/lis3dh_driver.c ****         }
-ARM GAS  /tmp/ccpeUeUY.s 			page 60
+ARM GAS  /tmp/ccQFuNLL.s 			page 60
 
 
  2220              		.loc 1 822 18 is_stmt 0 view .LVU585
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  836:Core/Src/lis3dh_driver.c ****         }
  2258              		.loc 1 836 11 is_stmt 1 view .LVU602
  836:Core/Src/lis3dh_driver.c ****         }
-ARM GAS  /tmp/ccpeUeUY.s 			page 61
+ARM GAS  /tmp/ccQFuNLL.s 			page 61
 
 
  2259              		.loc 1 836 18 is_stmt 0 view .LVU603
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  851:Core/Src/lis3dh_driver.c ****           return MEMS_SUCCESS;
  2297              		.loc 1 851 11 is_stmt 1 view .LVU620
  851:Core/Src/lis3dh_driver.c ****           return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 62
+ARM GAS  /tmp/ccQFuNLL.s 			page 62
 
 
  2298              		.loc 1 851 16 is_stmt 0 view .LVU621
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  865:Core/Src/lis3dh_driver.c ****           return MEMS_SUCCESS;
  2336              		.loc 1 865 11 is_stmt 1 view .LVU638
  865:Core/Src/lis3dh_driver.c ****           return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 63
+ARM GAS  /tmp/ccQFuNLL.s 			page 63
 
 
  2337              		.loc 1 865 16 is_stmt 0 view .LVU639
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2377              	.LCFI97:
  2378              		.cfi_def_cfa_offset 16
  2379 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/ccpeUeUY.s 			page 64
+ARM GAS  /tmp/ccQFuNLL.s 			page 64
 
 
  891:Core/Src/lis3dh_driver.c ****   u8_t value;
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2415 002e FFF7FEFF 		bl	LIS3DH_WriteReg
  2416              	.LVL124:
  899:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
-ARM GAS  /tmp/ccpeUeUY.s 			page 65
+ARM GAS  /tmp/ccQFuNLL.s 			page 65
 
 
  2417              		.loc 1 899 5 view .LVU660
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2456 0010 0120     		movs	r0, #1
  2457              	.L176:
  920:Core/Src/lis3dh_driver.c **** }
-ARM GAS  /tmp/ccpeUeUY.s 			page 66
+ARM GAS  /tmp/ccQFuNLL.s 			page 66
 
 
  2458              		.loc 1 920 1 view .LVU668
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2500              		.loc 1 934 5 view .LVU675
  2501 0010 08B9     		cbnz	r0, .L181
  2502              	.L179:
-ARM GAS  /tmp/ccpeUeUY.s 			page 67
+ARM GAS  /tmp/ccQFuNLL.s 			page 67
 
 
  935:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2540              		.thumb
  2541              		.thumb_func
  2543              	LIS3DH_SetIntMode:
-ARM GAS  /tmp/ccpeUeUY.s 			page 68
+ARM GAS  /tmp/ccQFuNLL.s 			page 68
 
 
  2544              	.LVL130:
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2574              	.LCFI109:
  2575              		.cfi_remember_state
  2576              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccpeUeUY.s 			page 69
+ARM GAS  /tmp/ccQFuNLL.s 			page 69
 
 
  2577              		@ sp needed
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  978:Core/Src/lis3dh_driver.c **** status_t LIS3DH_SetInt6D4DConfiguration(LIS3DH_INT_6D_4D_t ic) {
  2616              		.loc 1 978 64 is_stmt 1 view -0
  2617              		.cfi_startproc
-ARM GAS  /tmp/ccpeUeUY.s 			page 70
+ARM GAS  /tmp/ccQFuNLL.s 			page 70
 
 
  2618              		@ args = 0, pretend = 0, frame = 8
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1007:Core/Src/lis3dh_driver.c ****   
 1008:Core/Src/lis3dh_driver.c ****   if( !LIS3DH_WriteReg(LIS3DH_INT1_CFG, value) )
 1009:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
-ARM GAS  /tmp/ccpeUeUY.s 			page 71
+ARM GAS  /tmp/ccQFuNLL.s 			page 71
 
 
 1010:Core/Src/lis3dh_driver.c ****   if( !LIS3DH_WriteReg(LIS3DH_CTRL_REG5, value2) )
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2682 003c 8DF80730 		strb	r3, [sp, #7]
 1003:Core/Src/lis3dh_driver.c ****     value2 &= 0xFB; 
  2683              		.loc 1 1003 5 is_stmt 1 view .LVU721
-ARM GAS  /tmp/ccpeUeUY.s 			page 72
+ARM GAS  /tmp/ccQFuNLL.s 			page 72
 
 
 1004:Core/Src/lis3dh_driver.c ****     value2 |= (MEMS_DISABLE<<LIS3DH_D4D_INT1);
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  990:Core/Src/lis3dh_driver.c ****     value2 |= (MEMS_DISABLE<<LIS3DH_D4D_INT1);
  2724              		.loc 1 990 5 is_stmt 1 view .LVU736
  990:Core/Src/lis3dh_driver.c ****     value2 |= (MEMS_DISABLE<<LIS3DH_D4D_INT1);
-ARM GAS  /tmp/ccpeUeUY.s 			page 73
+ARM GAS  /tmp/ccQFuNLL.s 			page 73
 
 
  2725              		.loc 1 990 12 is_stmt 0 view .LVU737
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1023:Core/Src/lis3dh_driver.c **** *******************************************************************************/
 1024:Core/Src/lis3dh_driver.c **** status_t LIS3DH_Get6DPosition(u8_t* val){
  2764              		.loc 1 1024 41 is_stmt 1 view -0
-ARM GAS  /tmp/ccpeUeUY.s 			page 74
+ARM GAS  /tmp/ccQFuNLL.s 			page 74
 
 
  2765              		.cfi_startproc
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2811 0034 28       		.byte	(.L204-.L198)/2
  2812 0035 28       		.byte	(.L204-.L198)/2
  2813 0036 28       		.byte	(.L204-.L198)/2
-ARM GAS  /tmp/ccpeUeUY.s 			page 75
+ARM GAS  /tmp/ccQFuNLL.s 			page 75
 
 
  2814 0037 28       		.byte	(.L204-.L198)/2
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2845              		.loc 1 1037 5 is_stmt 1 view .LVU762
 1037:Core/Src/lis3dh_driver.c ****     break;
  2846              		.loc 1 1037 10 is_stmt 0 view .LVU763
-ARM GAS  /tmp/ccpeUeUY.s 			page 76
+ARM GAS  /tmp/ccQFuNLL.s 			page 76
 
 
  2847 0052 4223     		movs	r3, #66
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1049:Core/Src/lis3dh_driver.c ****     break;
  2886              		.loc 1 1049 10 is_stmt 0 view .LVU783
  2887 0072 5023     		movs	r3, #80
-ARM GAS  /tmp/ccpeUeUY.s 			page 77
+ARM GAS  /tmp/ccQFuNLL.s 			page 77
 
 
  2888 0074 2370     		strb	r3, [r4]
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  2928 0006 08B5     		push	{r3, lr}
  2929              	.LCFI118:
  2930              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccpeUeUY.s 			page 78
+ARM GAS  /tmp/ccQFuNLL.s 			page 78
 
 
  2931              		.cfi_offset 3, -8
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1080:Core/Src/lis3dh_driver.c **** * Return         : Status [MEMS_ERROR, MEMS_SUCCESS]
 1081:Core/Src/lis3dh_driver.c **** *******************************************************************************/
 1082:Core/Src/lis3dh_driver.c **** status_t LIS3DH_SetInt1Duration(LIS3DH_Int1Conf_t id) {
-ARM GAS  /tmp/ccpeUeUY.s 			page 79
+ARM GAS  /tmp/ccQFuNLL.s 			page 79
 
 
  2972              		.loc 1 1082 55 is_stmt 1 view -0
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3016              		.align	1
  3017              		.global	LIS3DH_FIFOModeEnable
  3018              		.syntax unified
-ARM GAS  /tmp/ccpeUeUY.s 			page 80
+ARM GAS  /tmp/ccQFuNLL.s 			page 80
 
 
  3019              		.thumb
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1120:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;   
 1121:Core/Src/lis3dh_driver.c ****   }
 1122:Core/Src/lis3dh_driver.c ****   
-ARM GAS  /tmp/ccpeUeUY.s 			page 81
+ARM GAS  /tmp/ccQFuNLL.s 			page 81
 
 
 1123:Core/Src/lis3dh_driver.c ****   if(fm == LIS3DH_FIFO_BYPASS_MODE)   {  
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1163:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;
 1164:Core/Src/lis3dh_driver.c ****     
 1165:Core/Src/lis3dh_driver.c ****     value &= 0xBF;
-ARM GAS  /tmp/ccpeUeUY.s 			page 82
+ARM GAS  /tmp/ccQFuNLL.s 			page 82
 
 
 1166:Core/Src/lis3dh_driver.c ****     value |= MEMS_SET<<LIS3DH_FIFO_EN;
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1106:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;
  3079              		.loc 1 1106 5 is_stmt 1 view .LVU829
 1106:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;
-ARM GAS  /tmp/ccpeUeUY.s 			page 83
+ARM GAS  /tmp/ccQFuNLL.s 			page 83
 
 
  3080              		.loc 1 1106 10 is_stmt 0 view .LVU830
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1119:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;   
  3121              		.loc 1 1119 5 is_stmt 1 view .LVU844
 1119:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;   
-ARM GAS  /tmp/ccpeUeUY.s 			page 84
+ARM GAS  /tmp/ccQFuNLL.s 			page 84
 
 
  3122              		.loc 1 1119 10 is_stmt 0 view .LVU845
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3163 00aa 2E20     		movs	r0, #46
  3164 00ac FFF7FEFF 		bl	LIS3DH_ReadReg
  3165              	.LVL163:
-ARM GAS  /tmp/ccpeUeUY.s 			page 85
+ARM GAS  /tmp/ccQFuNLL.s 			page 85
 
 
 1132:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3206              		.loc 1 1147 5 is_stmt 1 view .LVU872
 1147:Core/Src/lis3dh_driver.c ****     
  3207              		.loc 1 1147 11 is_stmt 0 view .LVU873
-ARM GAS  /tmp/ccpeUeUY.s 			page 86
+ARM GAS  /tmp/ccQFuNLL.s 			page 86
 
 
  3208 00f6 41F04001 		orr	r1, r1, #64
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3249              	.L231:
 1162:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;
  3250              		.loc 1 1162 5 is_stmt 1 view .LVU887
-ARM GAS  /tmp/ccpeUeUY.s 			page 87
+ARM GAS  /tmp/ccQFuNLL.s 			page 87
 
 
 1162:Core/Src/lis3dh_driver.c ****       return MEMS_ERROR;
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3291 018a 03F01F03 		and	r3, r3, #31
  3292 018e 8DF80730 		strb	r3, [sp, #7]
 1174:Core/Src/lis3dh_driver.c ****     
-ARM GAS  /tmp/ccpeUeUY.s 			page 88
+ARM GAS  /tmp/ccQFuNLL.s 			page 88
 
 
  3293              		.loc 1 1174 5 is_stmt 1 view .LVU902
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3333              		.loc 1 1187 7 view .LVU916
  3334 01d8 0346     		mov	r3, r0
  3335 01da 0028     		cmp	r0, #0
-ARM GAS  /tmp/ccpeUeUY.s 			page 89
+ARM GAS  /tmp/ccQFuNLL.s 			page 89
 
 
  3336 01dc 3FF41FAF 		beq	.L222
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3381              	.LFB37:
 1201:Core/Src/lis3dh_driver.c **** 
 1202:Core/Src/lis3dh_driver.c **** 
-ARM GAS  /tmp/ccpeUeUY.s 			page 90
+ARM GAS  /tmp/ccQFuNLL.s 			page 90
 
 
 1203:Core/Src/lis3dh_driver.c **** /*******************************************************************************
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3415              	.L236:
  3416              	.LCFI129:
  3417              		.cfi_restore_state
-ARM GAS  /tmp/ccpeUeUY.s 			page 91
+ARM GAS  /tmp/ccQFuNLL.s 			page 91
 
 
 1216:Core/Src/lis3dh_driver.c ****   value |= (tr<<LIS3DH_TR); 
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1234:Core/Src/lis3dh_driver.c ****   u8_t value;
  3456              		.loc 1 1234 3 view .LVU945
 1235:Core/Src/lis3dh_driver.c ****   
-ARM GAS  /tmp/ccpeUeUY.s 			page 92
+ARM GAS  /tmp/ccQFuNLL.s 			page 92
 
 
 1236:Core/Src/lis3dh_driver.c ****   if(wtm > 31)
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3492              		.cfi_remember_state
  3493              		.cfi_def_cfa_offset 8
  3494              		@ sp needed
-ARM GAS  /tmp/ccpeUeUY.s 			page 93
+ARM GAS  /tmp/ccQFuNLL.s 			page 93
 
 
  3495 001c 10BD     		pop	{r4, pc}
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3533              		.cfi_startproc
  3534              		@ args = 0, pretend = 0, frame = 0
  3535              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccpeUeUY.s 			page 94
+ARM GAS  /tmp/ccQFuNLL.s 			page 94
 
 
  3536              		.loc 1 1259 41 is_stmt 0 view .LVU965
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3574              		.loc 1 1277 57 is_stmt 0 view .LVU973
  3575 0000 30B5     		push	{r4, r5, lr}
  3576              	.LCFI135:
-ARM GAS  /tmp/ccpeUeUY.s 			page 95
+ARM GAS  /tmp/ccQFuNLL.s 			page 95
 
 
  3577              		.cfi_def_cfa_offset 12
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3625 003f 87       		.byte	(.L269-.L253)/2
  3626 0040 87       		.byte	(.L269-.L253)/2
  3627 0041 3E       		.byte	(.L254-.L253)/2
-ARM GAS  /tmp/ccpeUeUY.s 			page 96
+ARM GAS  /tmp/ccQFuNLL.s 			page 96
 
 
  3628 0042 87       		.byte	(.L269-.L253)/2
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1292:Core/Src/lis3dh_driver.c ****     }  
 1293:Core/Src/lis3dh_driver.c ****   case LIS3DH_STATUS_REG_ZOR:       
 1294:Core/Src/lis3dh_driver.c ****     if(value &= LIS3DH_STATUS_REG_ZOR){     
-ARM GAS  /tmp/ccpeUeUY.s 			page 97
+ARM GAS  /tmp/ccQFuNLL.s 			page 97
 
 
  3674              		.loc 1 1294 5 is_stmt 1 view .LVU992
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3714              		.loc 1 1308 12 is_stmt 0 view .LVU1011
  3715 00a6 0023     		movs	r3, #0
  3716 00a8 2B70     		strb	r3, [r5]
-ARM GAS  /tmp/ccpeUeUY.s 			page 98
+ARM GAS  /tmp/ccQFuNLL.s 			page 98
 
 
 1309:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1323:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
  3757              		.loc 1 1323 7 is_stmt 1 view .LVU1030
  3758              		.loc 1 1323 14 is_stmt 0 view .LVU1031
-ARM GAS  /tmp/ccpeUeUY.s 			page 99
+ARM GAS  /tmp/ccQFuNLL.s 			page 99
 
 
  3759 00dc 31E0     		b	.L250
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3797 0106 03F00203 		and	r3, r3, #2
  3798 010a 8DF80730 		strb	r3, [sp, #7]
  3799              		.loc 1 1339 7 view .LVU1049
-ARM GAS  /tmp/ccpeUeUY.s 			page 100
+ARM GAS  /tmp/ccQFuNLL.s 			page 100
 
 
  3800 010e 13B1     		cbz	r3, .L266
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3839              		.loc 1 1354 14 is_stmt 0 view .LVU1068
  3840 0138 2346     		mov	r3, r4
  3841 013a 02E0     		b	.L250
-ARM GAS  /tmp/ccpeUeUY.s 			page 101
+ARM GAS  /tmp/ccQFuNLL.s 			page 101
 
 
  3842              	.L268:
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3881              		.loc 1 1369 48 is_stmt 0 view .LVU1073
  3882 0000 10B5     		push	{r4, lr}
  3883              	.LCFI139:
-ARM GAS  /tmp/ccpeUeUY.s 			page 102
+ARM GAS  /tmp/ccQFuNLL.s 			page 102
 
 
  3884              		.cfi_def_cfa_offset 8
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1399:Core/Src/lis3dh_driver.c **** }
  3909              		.loc 1 1399 1 view .LVU1082
  3910 0014 1046     		mov	r0, r2
-ARM GAS  /tmp/ccpeUeUY.s 			page 103
+ARM GAS  /tmp/ccQFuNLL.s 			page 103
 
 
  3911 0016 02B0     		add	sp, sp, #8
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1385:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
  3953              		.loc 1 1385 8 view .LVU1095
  3954 0044 2B20     		movs	r0, #43
-ARM GAS  /tmp/ccpeUeUY.s 			page 104
+ARM GAS  /tmp/ccQFuNLL.s 			page 104
 
 
  3955 0046 FFF7FEFF 		bl	LIS3DH_ReadReg
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  3994              		.loc 1 1398 10 is_stmt 0 view .LVU1110
  3995 007c 0122     		movs	r2, #1
  3996 007e C9E7     		b	.L273
-ARM GAS  /tmp/ccpeUeUY.s 			page 105
+ARM GAS  /tmp/ccQFuNLL.s 			page 105
 
 
  3997              		.cfi_endproc
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4038              		.section	.text.LIS3DH_GetInt1SrcBit,"ax",%progbits
  4039              		.align	1
  4040              		.global	LIS3DH_GetInt1SrcBit
-ARM GAS  /tmp/ccpeUeUY.s 			page 106
+ARM GAS  /tmp/ccQFuNLL.s 			page 106
 
 
  4041              		.syntax unified
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4079              		.loc 1 1432 5 is_stmt 0 view .LVU1128
  4080 0016 402C     		cmp	r4, #64
  4081 0018 0DD0     		beq	.L296
-ARM GAS  /tmp/ccpeUeUY.s 			page 107
+ARM GAS  /tmp/ccQFuNLL.s 			page 107
 
 
 1433:Core/Src/lis3dh_driver.c ****     if(value &= LIS3DH_INT1_SRC_IA){     
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1475:Core/Src/lis3dh_driver.c ****   
 1476:Core/Src/lis3dh_driver.c ****   if(statusBIT == LIS3DH_INT1_SRC_YL){
  4094              		.loc 1 1476 3 is_stmt 1 view .LVU1135
-ARM GAS  /tmp/ccpeUeUY.s 			page 108
+ARM GAS  /tmp/ccQFuNLL.s 			page 108
 
 
  4095              		.loc 1 1476 5 is_stmt 0 view .LVU1136
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4115              		.loc 1 1433 7 view .LVU1144
  4116 0042 23B1     		cbz	r3, .L282
 1434:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 109
+ARM GAS  /tmp/ccQFuNLL.s 			page 109
 
 
  4117              		.loc 1 1434 7 is_stmt 1 view .LVU1145
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4157 0068 EEE7     		b	.L280
  4158              	.L284:
 1449:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
-ARM GAS  /tmp/ccpeUeUY.s 			page 110
+ARM GAS  /tmp/ccQFuNLL.s 			page 110
 
 
  4159              		.loc 1 1449 7 is_stmt 1 view .LVU1160
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1466:Core/Src/lis3dh_driver.c ****       *val = MEMS_SET;
  4197              		.loc 1 1466 7 view .LVU1177
  4198 009a 13B1     		cbz	r3, .L288
-ARM GAS  /tmp/ccpeUeUY.s 			page 111
+ARM GAS  /tmp/ccQFuNLL.s 			page 111
 
 
 1467:Core/Src/lis3dh_driver.c ****       return MEMS_SUCCESS;
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4235              		.loc 1 1483 7 is_stmt 1 view .LVU1195
 1483:Core/Src/lis3dh_driver.c ****     }  
  4236              		.loc 1 1483 14 is_stmt 0 view .LVU1196
-ARM GAS  /tmp/ccpeUeUY.s 			page 112
+ARM GAS  /tmp/ccQFuNLL.s 			page 112
 
 
  4237 00c2 0123     		movs	r3, #1
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1500:Core/Src/lis3dh_driver.c ****     }
  4275              		.loc 1 1500 7 is_stmt 1 view .LVU1213
 1500:Core/Src/lis3dh_driver.c ****     }
-ARM GAS  /tmp/ccpeUeUY.s 			page 113
+ARM GAS  /tmp/ccQFuNLL.s 			page 113
 
 
  4276              		.loc 1 1500 14 is_stmt 0 view .LVU1214
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4316              		.loc 1 1520 8 view .LVU1223
  4317 0006 FFF7FEFF 		bl	LIS3DH_ReadReg
  4318              	.LVL221:
-ARM GAS  /tmp/ccpeUeUY.s 			page 114
+ARM GAS  /tmp/ccQFuNLL.s 			page 114
 
 
  4319              		.loc 1 1520 5 view .LVU1224
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4357              		.loc 1 1538 8 is_stmt 0 view .LVU1231
  4358 0008 0DF10701 		add	r1, sp, #7
  4359              	.LVL223:
-ARM GAS  /tmp/ccpeUeUY.s 			page 115
+ARM GAS  /tmp/ccQFuNLL.s 			page 115
 
 
  4360              		.loc 1 1538 8 view .LVU1232
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1572:Core/Src/lis3dh_driver.c ****   }
 1573:Core/Src/lis3dh_driver.c ****   return MEMS_ERROR;
  4381              		.loc 1 1573 10 view .LVU1241
-ARM GAS  /tmp/ccpeUeUY.s 			page 116
+ARM GAS  /tmp/ccQFuNLL.s 			page 116
 
 
  4382 0022 0023     		movs	r3, #0
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4422 0046 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
  4423 004a 03F04003 		and	r3, r3, #64
  4424 004e 8DF80730 		strb	r3, [sp, #7]
-ARM GAS  /tmp/ccpeUeUY.s 			page 117
+ARM GAS  /tmp/ccQFuNLL.s 			page 117
 
 
 1554:Core/Src/lis3dh_driver.c ****       *val = MEMS_SET;
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4461 0076 0023     		movs	r3, #0
  4462 0078 2B70     		strb	r3, [r5]
 1570:Core/Src/lis3dh_driver.c ****     }  
-ARM GAS  /tmp/ccpeUeUY.s 			page 118
+ARM GAS  /tmp/ccQFuNLL.s 			page 118
 
 
  4463              		.loc 1 1570 7 is_stmt 1 view .LVU1274
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
 1588:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
 1589:Core/Src/lis3dh_driver.c ****   
 1590:Core/Src/lis3dh_driver.c ****   value &= 0x1F;
-ARM GAS  /tmp/ccpeUeUY.s 			page 119
+ARM GAS  /tmp/ccQFuNLL.s 			page 119
 
 
  4505              		.loc 1 1590 3 is_stmt 1 view .LVU1283
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4546              		.cfi_offset 14, -4
  4547 0002 82B0     		sub	sp, sp, #8
  4548              	.LCFI157:
-ARM GAS  /tmp/ccpeUeUY.s 			page 120
+ARM GAS  /tmp/ccQFuNLL.s 			page 120
 
 
  4549              		.cfi_def_cfa_offset 16
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4584 0028 2320     		movs	r0, #35
  4585 002a FFF7FEFF 		bl	LIS3DH_WriteReg
  4586              	.LVL233:
-ARM GAS  /tmp/ccpeUeUY.s 			page 121
+ARM GAS  /tmp/ccQFuNLL.s 			page 121
 
 
 1614:Core/Src/lis3dh_driver.c ****     return MEMS_ERROR;
@@ -7218,117 +7218,117 @@ ARM GAS  /tmp/ccpeUeUY.s 			page 1
  4602              		.text
  4603              	.Letext0:
  4604              		.file 2 "Core/Inc/lis3dh_driver.h"
-ARM GAS  /tmp/ccpeUeUY.s 			page 122
+ARM GAS  /tmp/ccQFuNLL.s 			page 122
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 lis3dh_driver.c
-     /tmp/ccpeUeUY.s:18     .text.LIS3DH_GetWHO_AM_I:0000000000000000 $t
-     /tmp/ccpeUeUY.s:24     .text.LIS3DH_GetWHO_AM_I:0000000000000000 LIS3DH_GetWHO_AM_I
-     /tmp/ccpeUeUY.s:57     .text.LIS3DH_GetStatusAUX:0000000000000000 $t
-     /tmp/ccpeUeUY.s:63     .text.LIS3DH_GetStatusAUX:0000000000000000 LIS3DH_GetStatusAUX
-     /tmp/ccpeUeUY.s:95     .text.LIS3DH_GetStatusAUXBit:0000000000000000 $t
-     /tmp/ccpeUeUY.s:101    .text.LIS3DH_GetStatusAUXBit:0000000000000000 LIS3DH_GetStatusAUXBit
-     /tmp/ccpeUeUY.s:376    .text.LIS3DH_SetODR:0000000000000000 $t
-     /tmp/ccpeUeUY.s:382    .text.LIS3DH_SetODR:0000000000000000 LIS3DH_SetODR
-     /tmp/ccpeUeUY.s:446    .text.LIS3DH_SetTemperature:0000000000000000 $t
-     /tmp/ccpeUeUY.s:452    .text.LIS3DH_SetTemperature:0000000000000000 LIS3DH_SetTemperature
-     /tmp/ccpeUeUY.s:516    .text.LIS3DH_SetADCAux:0000000000000000 $t
-     /tmp/ccpeUeUY.s:522    .text.LIS3DH_SetADCAux:0000000000000000 LIS3DH_SetADCAux
-     /tmp/ccpeUeUY.s:586    .text.LIS3DH_GetAuxRaw:0000000000000000 $t
-     /tmp/ccpeUeUY.s:592    .text.LIS3DH_GetAuxRaw:0000000000000000 LIS3DH_GetAuxRaw
-     /tmp/ccpeUeUY.s:723    .text.LIS3DH_GetTempRaw:0000000000000000 $t
-     /tmp/ccpeUeUY.s:729    .text.LIS3DH_GetTempRaw:0000000000000000 LIS3DH_GetTempRaw
-     /tmp/ccpeUeUY.s:792    .text.LIS3DH_SetMode:0000000000000000 $t
-     /tmp/ccpeUeUY.s:798    .text.LIS3DH_SetMode:0000000000000000 LIS3DH_SetMode
-     /tmp/ccpeUeUY.s:950    .text.LIS3DH_SetMode:00000000000000cc $d
-     /tmp/ccpeUeUY.s:955    .text.LIS3DH_SetAxis:0000000000000000 $t
-     /tmp/ccpeUeUY.s:961    .text.LIS3DH_SetAxis:0000000000000000 LIS3DH_SetAxis
-     /tmp/ccpeUeUY.s:1025   .text.LIS3DH_SetFullScale:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1031   .text.LIS3DH_SetFullScale:0000000000000000 LIS3DH_SetFullScale
-     /tmp/ccpeUeUY.s:1095   .text.LIS3DH_SetBDU:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1101   .text.LIS3DH_SetBDU:0000000000000000 LIS3DH_SetBDU
-     /tmp/ccpeUeUY.s:1165   .text.LIS3DH_SetBLE:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1171   .text.LIS3DH_SetBLE:0000000000000000 LIS3DH_SetBLE
-     /tmp/ccpeUeUY.s:1235   .text.LIS3DH_SetSelfTest:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1241   .text.LIS3DH_SetSelfTest:0000000000000000 LIS3DH_SetSelfTest
-     /tmp/ccpeUeUY.s:1305   .text.LIS3DH_HPFClickEnable:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1311   .text.LIS3DH_HPFClickEnable:0000000000000000 LIS3DH_HPFClickEnable
-     /tmp/ccpeUeUY.s:1375   .text.LIS3DH_HPFAOI1Enable:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1381   .text.LIS3DH_HPFAOI1Enable:0000000000000000 LIS3DH_HPFAOI1Enable
-     /tmp/ccpeUeUY.s:1444   .text.LIS3DH_HPFAOI2Enable:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1450   .text.LIS3DH_HPFAOI2Enable:0000000000000000 LIS3DH_HPFAOI2Enable
-     /tmp/ccpeUeUY.s:1514   .text.LIS3DH_SetHPFMode:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1520   .text.LIS3DH_SetHPFMode:0000000000000000 LIS3DH_SetHPFMode
-     /tmp/ccpeUeUY.s:1584   .text.LIS3DH_SetHPFCutOFF:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1590   .text.LIS3DH_SetHPFCutOFF:0000000000000000 LIS3DH_SetHPFCutOFF
-     /tmp/ccpeUeUY.s:1665   .text.LIS3DH_SetFilterDataSel:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1671   .text.LIS3DH_SetFilterDataSel:0000000000000000 LIS3DH_SetFilterDataSel
-     /tmp/ccpeUeUY.s:1735   .text.LIS3DH_SetInt1Pin:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1741   .text.LIS3DH_SetInt1Pin:0000000000000000 LIS3DH_SetInt1Pin
-     /tmp/ccpeUeUY.s:1803   .text.LIS3DH_SetInt2Pin:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1809   .text.LIS3DH_SetInt2Pin:0000000000000000 LIS3DH_SetInt2Pin
-     /tmp/ccpeUeUY.s:1871   .text.LIS3DH_SetClickCFG:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1877   .text.LIS3DH_SetClickCFG:0000000000000000 LIS3DH_SetClickCFG
-     /tmp/ccpeUeUY.s:1940   .text.LIS3DH_SetClickTHS:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1946   .text.LIS3DH_SetClickTHS:0000000000000000 LIS3DH_SetClickTHS
-     /tmp/ccpeUeUY.s:1993   .text.LIS3DH_SetClickLIMIT:0000000000000000 $t
-     /tmp/ccpeUeUY.s:1999   .text.LIS3DH_SetClickLIMIT:0000000000000000 LIS3DH_SetClickLIMIT
-     /tmp/ccpeUeUY.s:2046   .text.LIS3DH_SetClickLATENCY:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2052   .text.LIS3DH_SetClickLATENCY:0000000000000000 LIS3DH_SetClickLATENCY
-     /tmp/ccpeUeUY.s:2084   .text.LIS3DH_SetClickWINDOW:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2090   .text.LIS3DH_SetClickWINDOW:0000000000000000 LIS3DH_SetClickWINDOW
-ARM GAS  /tmp/ccpeUeUY.s 			page 123
+     /tmp/ccQFuNLL.s:18     .text.LIS3DH_GetWHO_AM_I:0000000000000000 $t
+     /tmp/ccQFuNLL.s:24     .text.LIS3DH_GetWHO_AM_I:0000000000000000 LIS3DH_GetWHO_AM_I
+     /tmp/ccQFuNLL.s:57     .text.LIS3DH_GetStatusAUX:0000000000000000 $t
+     /tmp/ccQFuNLL.s:63     .text.LIS3DH_GetStatusAUX:0000000000000000 LIS3DH_GetStatusAUX
+     /tmp/ccQFuNLL.s:95     .text.LIS3DH_GetStatusAUXBit:0000000000000000 $t
+     /tmp/ccQFuNLL.s:101    .text.LIS3DH_GetStatusAUXBit:0000000000000000 LIS3DH_GetStatusAUXBit
+     /tmp/ccQFuNLL.s:376    .text.LIS3DH_SetODR:0000000000000000 $t
+     /tmp/ccQFuNLL.s:382    .text.LIS3DH_SetODR:0000000000000000 LIS3DH_SetODR
+     /tmp/ccQFuNLL.s:446    .text.LIS3DH_SetTemperature:0000000000000000 $t
+     /tmp/ccQFuNLL.s:452    .text.LIS3DH_SetTemperature:0000000000000000 LIS3DH_SetTemperature
+     /tmp/ccQFuNLL.s:516    .text.LIS3DH_SetADCAux:0000000000000000 $t
+     /tmp/ccQFuNLL.s:522    .text.LIS3DH_SetADCAux:0000000000000000 LIS3DH_SetADCAux
+     /tmp/ccQFuNLL.s:586    .text.LIS3DH_GetAuxRaw:0000000000000000 $t
+     /tmp/ccQFuNLL.s:592    .text.LIS3DH_GetAuxRaw:0000000000000000 LIS3DH_GetAuxRaw
+     /tmp/ccQFuNLL.s:723    .text.LIS3DH_GetTempRaw:0000000000000000 $t
+     /tmp/ccQFuNLL.s:729    .text.LIS3DH_GetTempRaw:0000000000000000 LIS3DH_GetTempRaw
+     /tmp/ccQFuNLL.s:792    .text.LIS3DH_SetMode:0000000000000000 $t
+     /tmp/ccQFuNLL.s:798    .text.LIS3DH_SetMode:0000000000000000 LIS3DH_SetMode
+     /tmp/ccQFuNLL.s:950    .text.LIS3DH_SetMode:00000000000000cc $d
+     /tmp/ccQFuNLL.s:955    .text.LIS3DH_SetAxis:0000000000000000 $t
+     /tmp/ccQFuNLL.s:961    .text.LIS3DH_SetAxis:0000000000000000 LIS3DH_SetAxis
+     /tmp/ccQFuNLL.s:1025   .text.LIS3DH_SetFullScale:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1031   .text.LIS3DH_SetFullScale:0000000000000000 LIS3DH_SetFullScale
+     /tmp/ccQFuNLL.s:1095   .text.LIS3DH_SetBDU:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1101   .text.LIS3DH_SetBDU:0000000000000000 LIS3DH_SetBDU
+     /tmp/ccQFuNLL.s:1165   .text.LIS3DH_SetBLE:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1171   .text.LIS3DH_SetBLE:0000000000000000 LIS3DH_SetBLE
+     /tmp/ccQFuNLL.s:1235   .text.LIS3DH_SetSelfTest:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1241   .text.LIS3DH_SetSelfTest:0000000000000000 LIS3DH_SetSelfTest
+     /tmp/ccQFuNLL.s:1305   .text.LIS3DH_HPFClickEnable:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1311   .text.LIS3DH_HPFClickEnable:0000000000000000 LIS3DH_HPFClickEnable
+     /tmp/ccQFuNLL.s:1375   .text.LIS3DH_HPFAOI1Enable:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1381   .text.LIS3DH_HPFAOI1Enable:0000000000000000 LIS3DH_HPFAOI1Enable
+     /tmp/ccQFuNLL.s:1444   .text.LIS3DH_HPFAOI2Enable:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1450   .text.LIS3DH_HPFAOI2Enable:0000000000000000 LIS3DH_HPFAOI2Enable
+     /tmp/ccQFuNLL.s:1514   .text.LIS3DH_SetHPFMode:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1520   .text.LIS3DH_SetHPFMode:0000000000000000 LIS3DH_SetHPFMode
+     /tmp/ccQFuNLL.s:1584   .text.LIS3DH_SetHPFCutOFF:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1590   .text.LIS3DH_SetHPFCutOFF:0000000000000000 LIS3DH_SetHPFCutOFF
+     /tmp/ccQFuNLL.s:1665   .text.LIS3DH_SetFilterDataSel:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1671   .text.LIS3DH_SetFilterDataSel:0000000000000000 LIS3DH_SetFilterDataSel
+     /tmp/ccQFuNLL.s:1735   .text.LIS3DH_SetInt1Pin:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1741   .text.LIS3DH_SetInt1Pin:0000000000000000 LIS3DH_SetInt1Pin
+     /tmp/ccQFuNLL.s:1803   .text.LIS3DH_SetInt2Pin:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1809   .text.LIS3DH_SetInt2Pin:0000000000000000 LIS3DH_SetInt2Pin
+     /tmp/ccQFuNLL.s:1871   .text.LIS3DH_SetClickCFG:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1877   .text.LIS3DH_SetClickCFG:0000000000000000 LIS3DH_SetClickCFG
+     /tmp/ccQFuNLL.s:1940   .text.LIS3DH_SetClickTHS:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1946   .text.LIS3DH_SetClickTHS:0000000000000000 LIS3DH_SetClickTHS
+     /tmp/ccQFuNLL.s:1993   .text.LIS3DH_SetClickLIMIT:0000000000000000 $t
+     /tmp/ccQFuNLL.s:1999   .text.LIS3DH_SetClickLIMIT:0000000000000000 LIS3DH_SetClickLIMIT
+     /tmp/ccQFuNLL.s:2046   .text.LIS3DH_SetClickLATENCY:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2052   .text.LIS3DH_SetClickLATENCY:0000000000000000 LIS3DH_SetClickLATENCY
+     /tmp/ccQFuNLL.s:2084   .text.LIS3DH_SetClickWINDOW:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2090   .text.LIS3DH_SetClickWINDOW:0000000000000000 LIS3DH_SetClickWINDOW
+ARM GAS  /tmp/ccQFuNLL.s 			page 123
 
 
-     /tmp/ccpeUeUY.s:2122   .text.LIS3DH_GetClickResponse:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2128   .text.LIS3DH_GetClickResponse:0000000000000000 LIS3DH_GetClickResponse
-     /tmp/ccpeUeUY.s:2357   .text.LIS3DH_Int1LatchEnable:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2363   .text.LIS3DH_Int1LatchEnable:0000000000000000 LIS3DH_Int1LatchEnable
-     /tmp/ccpeUeUY.s:2427   .text.LIS3DH_ResetInt1Latch:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2433   .text.LIS3DH_ResetInt1Latch:0000000000000000 LIS3DH_ResetInt1Latch
-     /tmp/ccpeUeUY.s:2468   .text.LIS3DH_SetIntConfiguration:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2474   .text.LIS3DH_SetIntConfiguration:0000000000000000 LIS3DH_SetIntConfiguration
-     /tmp/ccpeUeUY.s:2537   .text.LIS3DH_SetIntMode:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2543   .text.LIS3DH_SetIntMode:0000000000000000 LIS3DH_SetIntMode
-     /tmp/ccpeUeUY.s:2607   .text.LIS3DH_SetInt6D4DConfiguration:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2613   .text.LIS3DH_SetInt6D4DConfiguration:0000000000000000 LIS3DH_SetInt6D4DConfiguration
-     /tmp/ccpeUeUY.s:2755   .text.LIS3DH_Get6DPosition:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2761   .text.LIS3DH_Get6DPosition:0000000000000000 LIS3DH_Get6DPosition
-     /tmp/ccpeUeUY.s:2801   .text.LIS3DH_Get6DPosition:000000000000002a $d
-     /tmp/ccpeUeUY.s:2833   .text.LIS3DH_Get6DPosition:000000000000004a $t
-     /tmp/ccpeUeUY.s:2910   .text.LIS3DH_SetInt1Threshold:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2916   .text.LIS3DH_SetInt1Threshold:0000000000000000 LIS3DH_SetInt1Threshold
-     /tmp/ccpeUeUY.s:2963   .text.LIS3DH_SetInt1Duration:0000000000000000 $t
-     /tmp/ccpeUeUY.s:2969   .text.LIS3DH_SetInt1Duration:0000000000000000 LIS3DH_SetInt1Duration
-     /tmp/ccpeUeUY.s:3016   .text.LIS3DH_FIFOModeEnable:0000000000000000 $t
-     /tmp/ccpeUeUY.s:3022   .text.LIS3DH_FIFOModeEnable:0000000000000000 LIS3DH_FIFOModeEnable
-     /tmp/ccpeUeUY.s:3373   .text.LIS3DH_SetTriggerInt:0000000000000000 $t
-     /tmp/ccpeUeUY.s:3379   .text.LIS3DH_SetTriggerInt:0000000000000000 LIS3DH_SetTriggerInt
-     /tmp/ccpeUeUY.s:3443   .text.LIS3DH_SetWaterMark:0000000000000000 $t
-     /tmp/ccpeUeUY.s:3449   .text.LIS3DH_SetWaterMark:0000000000000000 LIS3DH_SetWaterMark
-     /tmp/ccpeUeUY.s:3523   .text.LIS3DH_GetStatusReg:0000000000000000 $t
-     /tmp/ccpeUeUY.s:3529   .text.LIS3DH_GetStatusReg:0000000000000000 LIS3DH_GetStatusReg
-     /tmp/ccpeUeUY.s:3561   .text.LIS3DH_GetStatusBit:0000000000000000 $t
-     /tmp/ccpeUeUY.s:3567   .text.LIS3DH_GetStatusBit:0000000000000000 LIS3DH_GetStatusBit
-     /tmp/ccpeUeUY.s:3612   .text.LIS3DH_GetStatusBit:0000000000000032 $d
-     /tmp/ccpeUeUY.s:3644   .text.LIS3DH_GetStatusBit:0000000000000052 $t
-     /tmp/ccpeUeUY.s:3868   .text.LIS3DH_GetAccAxesRaw:0000000000000000 $t
-     /tmp/ccpeUeUY.s:3874   .text.LIS3DH_GetAccAxesRaw:0000000000000000 LIS3DH_GetAccAxesRaw
-     /tmp/ccpeUeUY.s:4001   .text.LIS3DH_GetInt1Src:0000000000000000 $t
-     /tmp/ccpeUeUY.s:4007   .text.LIS3DH_GetInt1Src:0000000000000000 LIS3DH_GetInt1Src
-     /tmp/ccpeUeUY.s:4039   .text.LIS3DH_GetInt1SrcBit:0000000000000000 $t
-     /tmp/ccpeUeUY.s:4045   .text.LIS3DH_GetInt1SrcBit:0000000000000000 LIS3DH_GetInt1SrcBit
-     /tmp/ccpeUeUY.s:4292   .text.LIS3DH_GetFifoSourceReg:0000000000000000 $t
-     /tmp/ccpeUeUY.s:4298   .text.LIS3DH_GetFifoSourceReg:0000000000000000 LIS3DH_GetFifoSourceReg
-     /tmp/ccpeUeUY.s:4330   .text.LIS3DH_GetFifoSourceBit:0000000000000000 $t
-     /tmp/ccpeUeUY.s:4336   .text.LIS3DH_GetFifoSourceBit:0000000000000000 LIS3DH_GetFifoSourceBit
-     /tmp/ccpeUeUY.s:4471   .text.LIS3DH_GetFifoSourceFSS:0000000000000000 $t
-     /tmp/ccpeUeUY.s:4477   .text.LIS3DH_GetFifoSourceFSS:0000000000000000 LIS3DH_GetFifoSourceFSS
-     /tmp/ccpeUeUY.s:4528   .text.LIS3DH_SetSPIInterface:0000000000000000 $t
-     /tmp/ccpeUeUY.s:4534   .text.LIS3DH_SetSPIInterface:0000000000000000 LIS3DH_SetSPIInterface
-     /tmp/ccpeUeUY.s:4600   .bss.ODR_old_value.0:0000000000000000 ODR_old_value.0
-     /tmp/ccpeUeUY.s:4601   .bss.ODR_old_value.0:0000000000000000 $d
+     /tmp/ccQFuNLL.s:2122   .text.LIS3DH_GetClickResponse:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2128   .text.LIS3DH_GetClickResponse:0000000000000000 LIS3DH_GetClickResponse
+     /tmp/ccQFuNLL.s:2357   .text.LIS3DH_Int1LatchEnable:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2363   .text.LIS3DH_Int1LatchEnable:0000000000000000 LIS3DH_Int1LatchEnable
+     /tmp/ccQFuNLL.s:2427   .text.LIS3DH_ResetInt1Latch:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2433   .text.LIS3DH_ResetInt1Latch:0000000000000000 LIS3DH_ResetInt1Latch
+     /tmp/ccQFuNLL.s:2468   .text.LIS3DH_SetIntConfiguration:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2474   .text.LIS3DH_SetIntConfiguration:0000000000000000 LIS3DH_SetIntConfiguration
+     /tmp/ccQFuNLL.s:2537   .text.LIS3DH_SetIntMode:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2543   .text.LIS3DH_SetIntMode:0000000000000000 LIS3DH_SetIntMode
+     /tmp/ccQFuNLL.s:2607   .text.LIS3DH_SetInt6D4DConfiguration:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2613   .text.LIS3DH_SetInt6D4DConfiguration:0000000000000000 LIS3DH_SetInt6D4DConfiguration
+     /tmp/ccQFuNLL.s:2755   .text.LIS3DH_Get6DPosition:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2761   .text.LIS3DH_Get6DPosition:0000000000000000 LIS3DH_Get6DPosition
+     /tmp/ccQFuNLL.s:2801   .text.LIS3DH_Get6DPosition:000000000000002a $d
+     /tmp/ccQFuNLL.s:2833   .text.LIS3DH_Get6DPosition:000000000000004a $t
+     /tmp/ccQFuNLL.s:2910   .text.LIS3DH_SetInt1Threshold:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2916   .text.LIS3DH_SetInt1Threshold:0000000000000000 LIS3DH_SetInt1Threshold
+     /tmp/ccQFuNLL.s:2963   .text.LIS3DH_SetInt1Duration:0000000000000000 $t
+     /tmp/ccQFuNLL.s:2969   .text.LIS3DH_SetInt1Duration:0000000000000000 LIS3DH_SetInt1Duration
+     /tmp/ccQFuNLL.s:3016   .text.LIS3DH_FIFOModeEnable:0000000000000000 $t
+     /tmp/ccQFuNLL.s:3022   .text.LIS3DH_FIFOModeEnable:0000000000000000 LIS3DH_FIFOModeEnable
+     /tmp/ccQFuNLL.s:3373   .text.LIS3DH_SetTriggerInt:0000000000000000 $t
+     /tmp/ccQFuNLL.s:3379   .text.LIS3DH_SetTriggerInt:0000000000000000 LIS3DH_SetTriggerInt
+     /tmp/ccQFuNLL.s:3443   .text.LIS3DH_SetWaterMark:0000000000000000 $t
+     /tmp/ccQFuNLL.s:3449   .text.LIS3DH_SetWaterMark:0000000000000000 LIS3DH_SetWaterMark
+     /tmp/ccQFuNLL.s:3523   .text.LIS3DH_GetStatusReg:0000000000000000 $t
+     /tmp/ccQFuNLL.s:3529   .text.LIS3DH_GetStatusReg:0000000000000000 LIS3DH_GetStatusReg
+     /tmp/ccQFuNLL.s:3561   .text.LIS3DH_GetStatusBit:0000000000000000 $t
+     /tmp/ccQFuNLL.s:3567   .text.LIS3DH_GetStatusBit:0000000000000000 LIS3DH_GetStatusBit
+     /tmp/ccQFuNLL.s:3612   .text.LIS3DH_GetStatusBit:0000000000000032 $d
+     /tmp/ccQFuNLL.s:3644   .text.LIS3DH_GetStatusBit:0000000000000052 $t
+     /tmp/ccQFuNLL.s:3868   .text.LIS3DH_GetAccAxesRaw:0000000000000000 $t
+     /tmp/ccQFuNLL.s:3874   .text.LIS3DH_GetAccAxesRaw:0000000000000000 LIS3DH_GetAccAxesRaw
+     /tmp/ccQFuNLL.s:4001   .text.LIS3DH_GetInt1Src:0000000000000000 $t
+     /tmp/ccQFuNLL.s:4007   .text.LIS3DH_GetInt1Src:0000000000000000 LIS3DH_GetInt1Src
+     /tmp/ccQFuNLL.s:4039   .text.LIS3DH_GetInt1SrcBit:0000000000000000 $t
+     /tmp/ccQFuNLL.s:4045   .text.LIS3DH_GetInt1SrcBit:0000000000000000 LIS3DH_GetInt1SrcBit
+     /tmp/ccQFuNLL.s:4292   .text.LIS3DH_GetFifoSourceReg:0000000000000000 $t
+     /tmp/ccQFuNLL.s:4298   .text.LIS3DH_GetFifoSourceReg:0000000000000000 LIS3DH_GetFifoSourceReg
+     /tmp/ccQFuNLL.s:4330   .text.LIS3DH_GetFifoSourceBit:0000000000000000 $t
+     /tmp/ccQFuNLL.s:4336   .text.LIS3DH_GetFifoSourceBit:0000000000000000 LIS3DH_GetFifoSourceBit
+     /tmp/ccQFuNLL.s:4471   .text.LIS3DH_GetFifoSourceFSS:0000000000000000 $t
+     /tmp/ccQFuNLL.s:4477   .text.LIS3DH_GetFifoSourceFSS:0000000000000000 LIS3DH_GetFifoSourceFSS
+     /tmp/ccQFuNLL.s:4528   .text.LIS3DH_SetSPIInterface:0000000000000000 $t
+     /tmp/ccQFuNLL.s:4534   .text.LIS3DH_SetSPIInterface:0000000000000000 LIS3DH_SetSPIInterface
+     /tmp/ccQFuNLL.s:4600   .bss.ODR_old_value.0:0000000000000000 ODR_old_value.0
+     /tmp/ccQFuNLL.s:4601   .bss.ODR_old_value.0:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 LIS3DH_ReadReg

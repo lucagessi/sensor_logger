@@ -9,7 +9,8 @@ build/appTasks.o: Core/Src/appTasks.cpp \
  Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/list.h Core/Inc/main.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/queue.h Core/Inc/main.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  Core/Inc/stm32f1xx_hal_conf.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -35,7 +36,9 @@ build/appTasks.o: Core/Src/appTasks.cpp \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h Core/Inc/spi.h \
  Core/Inc/main.h Core/Inc/usart.h Core/Inc/gpio.h \
- Core/Inc/lis3dh_driver.h
+ Core/Inc/lis3dh_driver.h ../../inc/AccelerometerSensor.hpp \
+ ../../inc/CommandsInterpreter.hpp ../../inc/Serial.hpp \
+ ../../inc/Serial.hpp
 Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 Core/Inc/FreeRTOSConfig.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -47,6 +50,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 Core/Inc/main.h:
 Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 Core/Inc/stm32f1xx_hal_conf.h:
@@ -79,3 +83,7 @@ Core/Inc/main.h:
 Core/Inc/usart.h:
 Core/Inc/gpio.h:
 Core/Inc/lis3dh_driver.h:
+../../inc/AccelerometerSensor.hpp:
+../../inc/CommandsInterpreter.hpp:
+../../inc/Serial.hpp:
+../../inc/Serial.hpp:
