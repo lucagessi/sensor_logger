@@ -13,7 +13,7 @@ except:
     sys.exit()
 finally:
     pass
-seconds = 2
+seconds = 3
 odr = 25
 sample_format = 'f'
 bytes_per_samples = 4*3

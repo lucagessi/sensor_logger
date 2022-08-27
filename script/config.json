@@ -1,0 +1,13 @@
+{
+    "classes" : [
+        "unknown",
+        "circle_counterwise",
+        "circle_counterclockwise",
+        "leftright_hor",
+        "rightleft_hor"
+    ],
+    "portname" : "/dev/ttyUSB0",
+    "baudrate" : 115200,
+    "odr"      : 25,
+    "bytes_per_samples" : 12
+}
