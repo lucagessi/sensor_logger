@@ -151,14 +151,19 @@ while goon:
         row = { "class": sel_class_idx, "x" : [capture["x"]], "y" : [capture["y"]], "z" : [capture["z"]] }
         row = pd.DataFrame(data=row)
         print(row)
-        df = pd.concat( [df, row] )
+        df = pd.concat( [df, row], ignore_index=True )
         num_captures = num_captures + 1
         print("\nNum of capture registered :"+str(num_captures))
 
 
 now = datetime.now()
-df_name = "capture_ODR"+str(odr)+"_SECS"+str(seconds)+"_CLASS"+str(sel_class_idx)+"_N"+str(num_captures)+"_"+now.strftime("%d-%m-%Y %H:%M")+".csv"
+df_name = "capture_ODR"+str(odr)+"_SECS"+str(seconds)+"_CLASS"+str(sel_class_idx)+"_N"+str(num_captures)+"_"+now.strftime("%d-%m-%Y %H:%M")+".json"
 
 print("Saving dataframe file to disk: "+str(df_name))
 
-df.to_csv(df_name, index=False)
+#df.to_csv(df_name, index=False)
+#df.reset_index(inplace=True)
+#data = df.to_dict(orient='split')
+#print(data)
+print( df )
+df.to_json(df_name)

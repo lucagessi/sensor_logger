@@ -6,12 +6,12 @@ import struct
 import pandas as pd
 from datetime import datetime
 
-df = pd.read_csv( "capture_c1_27-08-2022 11:06.csv" )
+df = pd.read_json( "dataset_28-08-2022 08:35.json" )
 
 print(df)
-x = df.x.str.split(' ', expand=True).apply(pd.to_numeric, errors='coerce').values
-#df.iloc[0]['x']
+cell = df.iloc[0]['x']
+
 print("Printing x value example")
-print(x)
-print("Printing x single value")
-print(x[0][1])
+print(cell)
+print("Printing x single values")
+print(cell[0])

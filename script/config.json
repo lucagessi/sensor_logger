@@ -9,5 +9,6 @@
     "portname" : "/dev/ttyUSB0",
     "baudrate" : 115200,
     "odr"      : 25,
-    "bytes_per_samples" : 12
+    "bytes_per_samples" : 12,
+    "dataset_format" : "json"
 }
